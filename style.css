@@ -9,6 +9,11 @@
     --gradient-intl: linear-gradient(135deg, #667eea, #764ba2);
 }
 
+html {
+    scroll-behavior: smooth; /* Rolagem suave ao clicar em #pricing */
+    height: 100%;
+}
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
@@ -24,7 +29,7 @@ body {
 /* Navbar */
 nav { padding: 20px 0; display: flex; justify-content: space-between; align-items: center; }
 .logo { font-weight: 700; font-size: 1.2rem; color: #fff; text-decoration: none; }
-.nav-link { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+.nav-link { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; margin-left: 20px; }
 .nav-link:hover { color: #fff; }
 
 /* Hero */
@@ -49,7 +54,7 @@ h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 20px; background: linear-
 .card h3 { margin-bottom: 10px; color: #fff; }
 .card p { font-size: 0.9rem; color: var(--text-muted); }
 
-/* Bridge Page Specific */
+/* Bridge Page Specific (Usado na página de checkout) */
 .bridge-container {
     min-height: 80vh; display: flex; flex-direction: column;
     align-items: center; justify-content: center; max-width: 500px; margin: 0 auto;
