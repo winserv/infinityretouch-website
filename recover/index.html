@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recover License - Infinity Backdrop Cleaner</title>
+    <meta name="description" content="Recover your Infinity Backdrop Cleaner license key">
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        
+        .recovery-container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 500px;
+            width: 100%;
+            padding: 50px 40px;
+            text-align: center;
+        }
+        
+        .icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 28px;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 35px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+        
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        
+        input[type="email"] {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid #e1e8ed;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: border-color 0.3s;
+        }
+        
+        input[type="email"]:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .btn-recover {
+            width: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 16px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+        
+        .btn-recover:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+        
+        .btn-recover:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .status-message {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            display: none;
+        }
+        
+        .status-message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            display: block;
+        }
+        
+        .status-message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            display: block;
+        }
+        
+        .status-message.info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+            display: block;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            color: #667eea;
+            text-decoration: none;
+            font-size: 14px;
+            transition: opacity 0.2s;
+        }
+        
+        .back-link:hover {
+            opacity: 0.7;
+        }
+        
+        .note {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 13px;
+            color: #666;
+            margin-top: 25px;
+            text-align: left;
+        }
+        
+        .note strong {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="recovery-container">
+        <div class="icon">🔑</div>
+        <h1>Recover Your License</h1>
+        <p class="subtitle">
+            Enter the email address you used to purchase Infinity Backdrop Cleaner. 
+            We'll send your license key to that email.
+        </p>
+        
+        <form id="recoveryForm">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="your@email.com"
+                    required
+                    autocomplete="email"
+                />
+            </div>
+            
+            <button type="submit" class="btn-recover" id="submitBtn">
+                Send License Key
+            </button>
+        </form>
+        
+        <div id="statusMessage" class="status-message"></div>
+        
+        <div class="note">
+            <strong>📧 Check your spam folder</strong><br>
+            If you don't receive the email within 5 minutes, check your spam/junk folder. 
+            Still having issues? Contact <a href="mailto:sales@infinityretouch.com" style="color: #667eea;">sales@infinityretouch.com</a>
+        </div>
+        
+        <a href="/" class="back-link">← Back to Homepage</a>
+    </div>
+    
+    <script>
+        const form = document.getElementById('recoveryForm');
+        const emailInput = document.getElementById('email');
+        const submitBtn = document.getElementById('submitBtn');
+        const statusMessage = document.getElementById('statusMessage');
+        
+        // Make.com webhook URL (SUBSTITUA PELA URL REAL DO SEU WEBHOOK)
+        const WEBHOOK_URL = 'https://hook.us2.make.com/SEU_WEBHOOK_AQUI';
+        
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const email = emailInput.value.trim();
+            
+            if (!email) {
+                showMessage('Please enter your email address.', 'error');
+                return;
+            }
+            
+            // Disable form
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Searching...';
+            statusMessage.style.display = 'none';
+            
+            try {
+                // Send to Make.com webhook
+                const response = await fetch(WEBHOOK_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        email: email,
+                        timestamp: new Date().toISOString(),
+                        source: 'web_recovery_page'
+                    })
+                });
+                
+                if (response.ok) {
+                    showMessage(
+                        '✅ Success! If a license exists for this email, you\'ll receive it within a few minutes. Check your inbox (and spam folder).',
+                        'success'
+                    );
+                    emailInput.value = '';
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+                
+            } catch (error) {
+                console.error('Recovery error:', error);
+                showMessage(
+                    '⚠️ Something went wrong. Please try again or contact support at sales@infinityretouch.com',
+                    'error'
+                );
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send License Key';
+            }
+        });
+        
+        function showMessage(text, type) {
+            statusMessage.textContent = text;
+            statusMessage.className = 'status-message ' + type;
+            statusMessage.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
