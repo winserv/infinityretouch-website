@@ -293,3 +293,9 @@ footer a:hover { color: #fff; }
 }
 .price-tag { font-size: 2rem; font-weight: 700; margin: 10px 0; display: block; color: #fff; }
 .details { font-size: 0.85rem; color: var(--text-muted); margin-top: 10px; display: block; }
+
+@media (max-width: 600px) {
+    nav { flex-direction: column; gap: 15px; }
+    .nav-link { margin-left: 10px; margin-right: 10px; }
+    h1 { font-size: 2.2rem; } /* Ajusta o título gigante no celular */
+}
