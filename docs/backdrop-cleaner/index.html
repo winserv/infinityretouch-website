@@ -3,459 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Manual - Infinity Backdrop Cleaner</title>
-    <meta name="description" content="Complete guide for using Infinity Backdrop Cleaner Photoshop plugin">
+    <title>Manual - Infinity Backdrop Cleaner</title>
     <link rel="icon" href="/marketplace-icon.png" type="image/png">
     <link rel="stylesheet" href="/style.css">
-    <style>
-        body { line-height: 1.7; color: #333; }
-        .manual-container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-            margin-bottom: 40px;
-            border-bottom: 1px solid #eee;
-        }
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-            color: #1a1a1a;
-            font-weight: 600;
-        }
-        .logo img { width: 32px; height: 32px; }
-        .breadcrumb {
-            font-size: 14px;
-            color: #666;
-        }
-        .breadcrumb a {
-            color: #667eea;
-            text-decoration: none;
-        }
-        h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .subtitle {
-            color: #666;
-            font-size: 18px;
-            margin-bottom: 60px;
-        }
-        h2 {
-            font-size: 28px;
-            margin-top: 60px;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #667eea;
-        }
-        h3 {
-            font-size: 20px;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            color: #1a1a1a;
-        }
-        .step {
-            background: #f8f9fa;
-            padding: 25px;
-            border-left: 4px solid #667eea;
-            border-radius: 4px;
-            margin: 25px 0;
-        }
-        .step strong {
-            display: block;
-            font-size: 16px;
-            margin-bottom: 10px;
-            color: #667eea;
-        }
-        .note {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 20px;
-            margin: 25px 0;
-            border-radius: 4px;
-        }
-        .note strong {
-            color: #856404;
-        }
-        .warning {
-            background: #f8d7da;
-            border-left: 4px solid #dc3545;
-            padding: 20px;
-            margin: 25px 0;
-            border-radius: 4px;
-        }
-        code {
-            background: #f1f1f1;
-            padding: 3px 8px;
-            border-radius: 3px;
-            font-family: 'Courier New', monospace;
-            font-size: 14px;
-        }
-        ul, ol {
-            margin: 15px 0;
-            padding-left: 25px;
-        }
-        li {
-            margin: 8px 0;
-        }
-        .toc {
-            background: #f8f9fa;
-            padding: 25px;
-            border-radius: 8px;
-            margin: 40px 0;
-        }
-        .toc h3 {
-            margin-top: 0;
-        }
-        .toc ul {
-            list-style: none;
-            padding: 0;
-        }
-        .toc li {
-            margin: 10px 0;
-        }
-        .toc a {
-            color: #667eea;
-            text-decoration: none;
-        }
-        .toc a:hover {
-            text-decoration: underline;
-        }
-        .contact-box {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 40px;
-            border-radius: 12px;
-            text-align: center;
-            margin: 60px 0;
-        }
-        .contact-box h3 {
-            color: white;
-            margin-top: 0;
-        }
-        .contact-box a {
-            color: white;
-            font-weight: 600;
-        }
-    </style>
 </head>
 <body>
-    <div class="manual-container">
-        <!-- Navigation -->
+    <div class="container manual-container">
+        <!-- NAV -->
         <nav>
             <a href="/" class="logo">
-                <img src="../../marketplace-icon.png" alt="Infinity Retouch">
-                <span>Infinity Retouch</span>
+                <img src="/marketplace-icon.png" alt="Logo"> Infinity Retouch
             </a>
-            <div class="breadcrumb">
-                <a href="/docs/">Help Center</a> / Backdrop Cleaner
+            <div style="display: flex; align-items: center;">
+                <a href="/docs/" class="nav-link">Help Center</a>
+                <a href="/buy/backdrop-cleaner/" class="nav-link" style="color: var(--accent);">Buy License</a>
             </div>
         </nav>
 
-        <!-- Header -->
-        <h1>📖 Infinity Backdrop Cleaner</h1>
-        <p class="subtitle">Complete User Manual & Guide</p>
+        <!-- HEADER -->
+        <header style="text-align: center; margin-bottom: 60px;">
+            <h1 style="font-size: 2.5rem;">Infinity Backdrop Cleaner</h1>
+            <p class="subtitle">Complete User Guide & Troubleshooting</p>
+        </header>
 
-        <!-- Table of Contents -->
-        <div class="toc">
-            <h3>📑 Table of Contents</h3>
+        <!-- CONTENT -->
+        <div class="doc-section">
+            <h2>🚀 Quick Start</h2>
+            
+            <div class="step-item">
+                <span class="step-number">Step 1</span>
+                <h3>Open Your Image</h3>
+                <p>Open a photo in Photoshop. Works best with studio photos (seamless paper, cyclorama) where the subject is clearly visible.</p>
+            </div>
+
+            <div class="step-item">
+                <span class="step-number">Step 2</span>
+                <h3>Prepare for Painting</h3>
+                <p>Click the blue button <strong>"Prepare for Painting"</strong>. The AI will mask your subject automatically and select the Brush tool.</p>
+            </div>
+
+            <div class="step-item">
+                <span class="step-number">Step 3</span>
+                <h3>Sample & Paint</h3>
+                <p>Hold <code>Alt</code> (Mac: Option) and click on a clean area of the background to sample the color. Then, paint over the dirt, wrinkles, or shadows you want to remove.</p>
+            </div>
+
+            <div class="step-item">
+                <span class="step-number">Step 4</span>
+                <h3>Process Image</h3>
+                <p>Click <strong>"Process Image"</strong>. The plugin will generate a clean background while preserving the original shadows in a separate layer.</p>
+            </div>
+
+            <div class="note">
+                <strong>💡 Pro Tip:</strong> Don't worry about painting over the subject's feet shadow. The plugin uses smart masking to preserve real contact shadows.
+            </div>
+        </div>
+
+        <div class="doc-section">
+            <h2>⚙️ Advanced Features</h2>
             <ul>
-                <li><a href="#quick-start">🚀 Quick Start Guide</a></li>
-                <li><a href="#installation">💿 Installation</a></li>
-                <li><a href="#activation">🔑 License Activation</a></li>
-                <li><a href="#usage">🎨 How to Use</a></li>
-                <li><a href="#advanced">⚙️ Advanced Features</a></li>
-                <li><a href="#faq">❓ Frequently Asked Questions</a></li>
-                <li><a href="#troubleshooting">🔧 Troubleshooting</a></li>
-                <li><a href="#support">📧 Contact Support</a></li>
+                <li><strong>16-Bit Processing:</strong> The plugin automatically converts to 16-bit to prevent banding.</li>
+                <li><strong>Blur Type:</strong> Use <em>Gaussian</em> for smooth paper or <em>Surface</em> to keep texture.</li>
+                <li><strong>Noise:</strong> Adds grain to match the original photo ISO.</li>
             </ul>
         </div>
 
-        <!-- Quick Start -->
-        <h2 id="quick-start">🚀 Quick Start Guide</h2>
-        <p>Get started with Infinity Backdrop Cleaner in 5 simple steps:</p>
-        
-        <div class="step">
-            <strong>Step 1: Install & Activate</strong>
-            <p>Download from Creative Cloud, install, and activate with your license key.</p>
+        <div class="doc-section">
+            <h2>❓ FAQ & Troubleshooting</h2>
+            
+            <h3>How to activate?</h3>
+            <p>After purchase, copy the key from your email. Open the plugin > Activate > Paste the key.</p>
+
+            <h3>Processing is slow?</h3>
+            <p>High-resolution images (50MP+) take more time due to the 16-bit processing engine. This ensures quality.</p>
+
+            <h3>"Subject not found" error?</h3>
+            <p>Ensure the layer is visible. If the AI fails, make a rough selection of the subject before clicking "Prepare".</p>
         </div>
 
-        <div class="step">
-            <strong>Step 2: Open Your Image</strong>
-            <p>Open a photo with an infinite backdrop in Photoshop (works best with white/gray seamless backgrounds).</p>
-        </div>
-
-        <div class="step">
-            <strong>Step 3: Prepare for Painting</strong>
-            <p>Click "Prepare for Painting" button in the plugin panel. This creates a mask and configures your brush.</p>
-        </div>
-
-        <div class="step">
-            <strong>Step 4: Paint Over Imperfections</strong>
-            <p>Hold <code>Alt</code> (Option on Mac) and click on a clean background area to sample color. Then paint over shadows, wrinkles, or imperfections.</p>
-        </div>
-
-        <div class="step">
-            <strong>Step 5: Process Image</strong>
-            <p>Click "Process Image" to generate the seamless backdrop. Use eraser tool on "Original Background" layer to recover subject details if needed.</p>
-        </div>
-
-        <div class="note">
-            <strong>💡 Pro Tip:</strong> Don't worry about painting over your subject! The plugin preserves the original in a separate layer, so you can easily recover any details using the eraser tool.
-        </div>
-
-        <!-- Installation -->
-        <h2 id="installation">💿 Installation</h2>
-
-        <h3>System Requirements</h3>
-        <ul>
-            <li><strong>Adobe Photoshop:</strong> 2023 or newer (version 24.x+)</li>
-            <li><strong>Operating System:</strong> Windows 10/11 or macOS 11+</li>
-            <li><strong>Internet:</strong> Required only for license activation</li>
-            <li><strong>RAM:</strong> 8GB minimum, 16GB recommended</li>
-        </ul>
-
-        <h3>Installation Steps</h3>
-        <ol>
-            <li>Open <strong>Creative Cloud Desktop App</strong></li>
-            <li>Go to <strong>Plugins</strong> section</li>
-            <li>Search for <strong>"Infinity Backdrop Cleaner"</strong></li>
-            <li>Click <strong>Install</strong></li>
-            <li>Wait for installation to complete</li>
-            <li>Restart Photoshop if it's already open</li>
-        </ol>
-
-        <h3>Opening the Plugin</h3>
-        <p>In Photoshop, go to: <code>Window → Extensions → Infinity Backdrop Cleaner</code></p>
-
-        <!-- License Activation -->
-        <h2 id="activation">🔑 License Activation</h2>
-
-        <h3>After Purchase</h3>
-        <p>You'll receive an email with your license key within 5 minutes. The key format looks like:</p>
-        <code style="display: block; padding: 15px; background: #f8f9fa; margin: 20px 0;">ABCD1234-EFGH5678-IJKL9012-MNOP3456</code>
-
-        <h3>Activation Steps</h3>
-        <ol>
-            <li>Open the plugin in Photoshop</li>
-            <li>Click <strong>"Activate"</strong> button</li>
-            <li>Paste your license key</li>
-            <li>Click <strong>"Activate License"</strong></li>
-            <li>You'll see a confirmation message</li>
-        </ol>
-
-        <h3>License Details</h3>
-        <ul>
-            <li>✅ <strong>Lifetime license</strong> - one-time payment, no subscription</li>
-            <li>✅ <strong>2 computers</strong> - activate on up to 2 machines</li>
-            <li>✅ <strong>Self-service deactivation</strong> - switch computers anytime</li>
-            <li>✅ <strong>Free updates</strong> - 1 year of updates included</li>
-        </ul>
-
-        <h3>Switching Computers</h3>
-        <p>To move your license to a new computer:</p>
-        <ol>
-            <li>On the old computer: Open plugin → <strong>Manage License → Deactivate</strong></li>
-            <li>On the new computer: Activate with your key</li>
-        </ol>
-
-        <div class="note">
-            <strong>💡 Tip:</strong> If you no longer have access to the old computer, you can deactivate all devices from the plugin's "Manage License" screen.
-        </div>
-
-        <!-- How to Use -->
-        <h2 id="usage">🎨 How to Use</h2>
-
-        <h3>Detailed Workflow</h3>
-
-        <h4>1. Prepare Your Image</h4>
-        <p>For best results, your image should have:</p>
-        <ul>
-            <li>A white, gray, or light-colored seamless backdrop</li>
-            <li>Subject clearly separated from background</li>
-            <li>Good lighting (studio setup works best)</li>
-        </ul>
-
-        <h4>2. Mask & Prepare Phase</h4>
-        <p>Click <strong>"Prepare for Painting"</strong>. The plugin will:</p>
-        <ul>
-            <li>Automatically detect your subject using AI</li>
-            <li>Create a protective mask</li>
-            <li>Configure brush settings optimally</li>
-        </ul>
-
-        <div class="note">
-            <strong>Advanced Controls:</strong> Click "Show Advanced Controls" to adjust mask expansion and feathering if the automatic detection isn't perfect.
-        </div>
-
-        <h4>3. Paint Over Imperfections</h4>
-        <p>With the painting layer active:</p>
-        <ol>
-            <li>Hold <code>Alt</code> (Option on Mac)</li>
-            <li>Click on a clean background area to sample the color</li>
-            <li>Release <code>Alt</code> and paint over shadows, wrinkles, or marks</li>
-            <li>Paint generously - don't worry about covering the subject</li>
-        </ol>
-
-        <div class="note">
-            <strong>💡 Pro Tip:</strong> Use a large, soft brush (200-500px) for faster coverage. The plugin preserves your subject, so paint freely!
-        </div>
-
-        <h4>4. Process & Finalize</h4>
-        <p>Click <strong>"Process Image"</strong>. The plugin will:</p>
-        <ul>
-            <li>Analyze your painting</li>
-            <li>Generate seamless backdrop</li>
-            <li>Preserve original in "Original Background" layer</li>
-            <li>Apply professional blur and noise reduction</li>
-        </ul>
-
-        <h4>5. Refine (Optional)</h4>
-        <p>If any subject details were affected:</p>
-        <ol>
-            <li>Select the Eraser tool</li>
-            <li>Erase on the "Original Background" layer</li>
-            <li>This reveals the clean backdrop underneath</li>
-        </ol>
-
-        <!-- Advanced Features -->
-        <h2 id="advanced">⚙️ Advanced Features</h2>
-
-        <h3>Blur Types</h3>
-        <p>The plugin offers two blur algorithms:</p>
-        <ul>
-            <li><strong>Gaussian Blur:</strong> Smoother, more uniform blur. Best for most cases.</li>
-            <li><strong>Surface Blur:</strong> Edge-preserving blur. Use when you want to keep some texture detail.</li>
-        </ul>
-
-        <h3>Advanced Controls</h3>
-        <p>Click "Show Advanced Controls" in Step 2 to access:</p>
-        <ul>
-            <li><strong>Expand:</strong> Enlarges the cleaned area</li>
-            <li><strong>Feather:</strong> Softens edges for smoother blending</li>
-            <li><strong>Blur Radius:</strong> Controls blur intensity</li>
-            <li><strong>Noise:</strong> Adds subtle grain to prevent banding (especially useful for prints)</li>
-        </ul>
-
-        <h3>16-Bit Processing</h3>
-        <p>The plugin automatically processes in 16-bit mode to preserve maximum quality. This prevents color banding and ensures smooth gradients, especially important for:</p>
-        <ul>
-            <li>RAW files</li>
-            <li>High-end prints</li>
-            <li>Professional retouching</li>
-        </ul>
-
-        <!-- FAQ -->
-        <h2 id="faq">❓ Frequently Asked Questions</h2>
-
-        <h3>Can I use it with RAW files?</h3>
-        <p>Yes! Convert your RAW layer to a Smart Object first, then use the plugin. This maintains non-destructive editing capabilities.</p>
-
-        <h3>Does it work with dark backgrounds?</h3>
-        <p>The plugin is optimized for light-colored infinite backdrops (white, gray, cream). Dark backgrounds may require more manual refinement.</p>
-
-        <h3>Why isn't my subject detected correctly?</h3>
-        <p>Try these solutions:</p>
-        <ul>
-            <li>Ensure sufficient contrast between subject and background</li>
-            <li>Manually adjust the mask using "Advanced Controls"</li>
-            <li>Use Photoshop's Quick Selection tool to refine the mask first</li>
-        </ul>
-
-        <h3>Can I process multiple images at once?</h3>
-        <p>Currently, the plugin processes one image at a time. We recommend using Photoshop Actions to batch process if needed.</p>
-
-        <h3>What's your refund policy?</h3>
-        <p>14-day money-back guarantee, no questions asked. If you're not satisfied, contact <a href="mailto:sales@infinityretouch.com">sales@infinityretouch.com</a> for a full refund.</p>
-
-        <!-- Troubleshooting -->
-        <h2 id="troubleshooting">🔧 Troubleshooting</h2>
-
-        <h3>Plugin doesn't appear in Photoshop</h3>
-        <p><strong>Solution:</strong></p>
-        <ol>
-            <li>Go to: <code>Window → Extensions → Infinity Backdrop Cleaner</code></li>
-            <li>If not listed, restart Photoshop</li>
-            <li>Still missing? Reinstall from Creative Cloud Desktop</li>
-        </ol>
-
-        <h3>License activation fails</h3>
-        <p><strong>Possible causes:</strong></p>
-        <ul>
-            <li><strong>No internet connection:</strong> Check your connection</li>
-            <li><strong>Incorrect key:</strong> Copy/paste the key from the email (don't type manually)</li>
-            <li><strong>Already activated twice:</strong> Deactivate an old device first</li>
-        </ul>
-
-        <h3>Processing is very slow</h3>
-        <p><strong>Solutions:</strong></p>
-        <ul>
-            <li>Large images (>50MP) can take 30-60 seconds - this is normal</li>
-            <li>For faster preview, resize image before processing</li>
-            <li>Close other applications to free up RAM</li>
-            <li>Ensure Photoshop has adequate scratch disk space</li>
-        </ul>
-
-        <h3>"Could not detect subject" error</h3>
-        <p><strong>Solutions:</strong></p>
-        <ul>
-            <li>Create a manual selection with Quick Selection tool first</li>
-            <li>Ensure your image has sufficient contrast</li>
-            <li>Convert layer to Smart Object if working with RAW</li>
-        </ul>
-
-        <div class="warning">
-            <strong>⚠️ Still having issues?</strong> Contact our support team with:
-            <ul style="margin-top: 10px;">
-                <li>Screenshot of the error</li>
-                <li>Photoshop version</li>
-                <li>Operating system version</li>
-                <li>Brief description of the problem</li>
-            </ul>
-        </div>
-
-        <!-- Contact Support -->
-        <h2 id="support">📧 Contact Support</h2>
-        
-        <div class="contact-box">
-            <h3>Need More Help?</h3>
-            <p>Our support team typically responds within 24 hours.</p>
-            <p style="margin-top: 20px;">
-                <strong>Email:</strong> <a href="mailto:sales@infinityretouch.com">sales@infinityretouch.com</a>
-            </p>
-            <p style="margin-top: 15px; opacity: 0.9; font-size: 14px;">
-                Include your license key and Photoshop version for faster assistance
-            </p>
-        </div>
-
-        <!-- Footer -->
-        <footer style="text-align: center; padding: 60px 0 40px; margin-top: 80px; border-top: 1px solid #eee;">
-            <p style="color: #666; margin-bottom: 20px;">
-                Infinity Backdrop Cleaner v1.0.0
-            </p>
-            <p style="margin-bottom: 15px;">
-                <a href="/docs/" style="color: #667eea; text-decoration: none; margin: 0 15px;">← Back to Help Center</a>
-                <a href="/" style="color: #667eea; text-decoration: none; margin: 0 15px;">Home</a>
-            </p>
-            <p style="color: #999; font-size: 14px; margin-top: 30px;">
-                &copy; 2026 Infinity Retouch / WINSERV TECNOLOGIA DA INFORMACAO
-            </p>
-            <p style="color: #999; font-size: 14px; margin-top: 10px;">
-                <a href="/privacy.html" style="color: #999; margin: 0 10px;">Privacy</a>
-                <a href="/terms.html" style="color: #999; margin: 0 10px;">Terms</a>
-                <a href="/refund.html" style="color: #999; margin: 0 10px;">Refunds</a>
-            </p>
+        <!-- FOOTER -->
+        <footer>
+            <p>&copy; 2026 Infinity Retouch / WINSERV TECNOLOGIA DA INFORMACAO.</p>
+            <p><a href="mailto:sales@infinityretouch.com">Contact Support</a></p>
         </footer>
     </div>
 </body>
