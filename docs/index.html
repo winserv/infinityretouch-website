@@ -4,189 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Help Center - Infinity Retouch</title>
-    <meta name="description" content="Documentation and support for Infinity Retouch plugins">
     <link rel="icon" href="/marketplace-icon.png" type="image/png">
     <link rel="stylesheet" href="/style.css">
-    <style>
-        .help-hero {
-            text-align: center;
-            padding: 80px 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-radius: 16px;
-            margin-bottom: 60px;
-        }
-        .help-hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-        .help-hero p {
-            font-size: 20px;
-            opacity: 0.9;
-        }
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin: 60px 0;
-        }
-        .product-card {
-            background: white;
-            border-radius: 16px;
-            padding: 40px;
-            text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .product-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-        }
-        .product-card.coming-soon {
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
-        .product-icon {
-            font-size: 64px;
-            margin-bottom: 20px;
-        }
-        .product-card h3 {
-            font-size: 24px;
-            margin-bottom: 15px;
-            color: #1a1a1a;
-        }
-        .product-card p {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 25px;
-        }
-        .btn-manual {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 12px 32px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: opacity 0.3s;
-        }
-        .btn-manual:hover {
-            opacity: 0.9;
-        }
-        .coming-soon-badge {
-            display: inline-block;
-            background: #f0f0f0;
-            color: #999;
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 600;
-        }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-            margin-bottom: 40px;
-        }
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-            color: #1a1a1a;
-            font-weight: 600;
-            font-size: 18px;
-        }
-        .logo img {
-            width: 40px;
-            height: 40px;
-        }
-        .nav-link {
-            color: #666;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        .nav-link:hover {
-            color: #667eea;
-        }
-    </style>
 </head>
 <body>
-    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-        <!-- Navigation -->
+    <div class="container">
         <nav>
             <a href="/" class="logo">
-                <img src="../marketplace-icon.png" alt="Infinity Retouch">
-                <span>Infinity Retouch</span>
+                <img src="/marketplace-icon.png" alt="Logo"> Infinity Retouch
             </a>
             <a href="/" class="nav-link">← Back to Home</a>
         </nav>
 
-        <!-- Hero Section -->
-        <div class="help-hero">
-            <h1>📚 Help Center</h1>
-            <p>Documentation, guides, and support for all Infinity Retouch products</p>
-        </div>
+        <section class="hero">
+            <h1>Help Center</h1>
+            <p class="subtitle">Documentation, guides, and support.</p>
+        </section>
 
-        <!-- Products Grid -->
-        <div class="products-grid">
-            
-            <!-- Backdrop Cleaner -->
-            <div class="product-card">
-                <div class="product-icon">∞</div>
-                <h3>Infinity Backdrop Cleaner</h3>
-                <p>
-                    Complete manual with installation guide, step-by-step tutorials, 
-                    troubleshooting, and FAQs.
-                </p>
-                <a href="/docs/backdrop-cleaner/" class="btn-manual">
-                    View Manual →
-                </a>
+        <div class="grid">
+            <!-- Produto 1 -->
+            <div class="card" style="text-align: center;">
+                <div style="font-size: 3rem; margin-bottom: 15px;">∞</div>
+                <h3>Backdrop Cleaner</h3>
+                <p>Manual, installation guide and troubleshooting.</p>
+                <br>
+                <a href="/docs/backdrop-cleaner/" class="btn btn-accent" style="width: 100%">Read Manual</a>
             </div>
 
-            <!-- Skin Retoucher - Coming Soon -->
-            <div class="product-card coming-soon">
-                <div class="product-icon">✨</div>
-                <h3>Skin Retoucher AI</h3>
-                <p>
-                    Professional skin retouching with AI-powered tools. 
-                    Documentation coming soon.
-                </p>
-                <span class="coming-soon-badge">Coming Soon</span>
+            <!-- Produto 2 -->
+            <div class="card" style="text-align: center; opacity: 0.6;">
+                <div style="font-size: 3rem; margin-bottom: 15px;">✨</div>
+                <h3>Skin Retoucher</h3>
+                <p>Coming soon. Advanced frequency separation tools.</p>
+                <br>
+                <button class="btn btn-outline" disabled style="width: 100%; cursor: default;">Coming Soon</button>
             </div>
-
-            <!-- Placeholder for Future Product -->
-            <div class="product-card coming-soon">
-                <div class="product-icon">🎨</div>
-                <h3>Future Product</h3>
-                <p>
-                    More professional tools for photographers and retouchers. 
-                    Stay tuned!
-                </p>
-                <span class="coming-soon-badge">Coming Soon</span>
-            </div>
-
         </div>
 
-        <!-- Contact Section -->
-        <div style="text-align: center; padding: 60px 20px; background: #f8f9fa; border-radius: 16px; margin-top: 60px;">
-            <h2 style="margin-bottom: 20px;">Need More Help?</h2>
-            <p style="color: #666; margin-bottom: 30px; font-size: 18px;">
-                Can't find what you're looking for? Our support team is here to help.
-            </p>
-            <a href="mailto:sales@infinityretouch.com" style="display: inline-block; background: linear-gradient(135deg, #38ef7d 0%, #11998e 100%); color: white; padding: 15px 40px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px;">
-                Contact Support
-            </a>
-        </div>
-
-        <!-- Footer -->
-        <footer style="text-align: center; padding: 40px 0; margin-top: 80px; border-top: 1px solid #eee; color: #666; font-size: 14px;">
-            <p>&copy; 2026 Infinity Retouch / WINSERV TECNOLOGIA DA INFORMACAO</p>
-            <p style="margin-top: 10px;">
-                <a href="/privacy.html" style="color: #667eea; text-decoration: none; margin: 0 10px;">Privacy</a>
-                <a href="/terms.html" style="color: #667eea; text-decoration: none; margin: 0 10px;">Terms</a>
-                <a href="/refund.html" style="color: #667eea; text-decoration: none; margin: 0 10px;">Refunds</a>
+        <footer>
+            <p>&copy; 2026 Infinity Retouch / WINSERV TECNOLOGIA DA INFORMACAO.</p>
+            <p>
+                <a href="/privacy.html">Privacy</a>
+                <a href="/terms.html">Terms</a>
+                <a href="/refund.html">Refunds</a>
+                <a href="mailto:sales@infinityretouch.com">Support</a>
             </p>
         </footer>
     </div>
