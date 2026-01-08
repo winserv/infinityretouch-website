@@ -7,13 +7,21 @@
     <meta name="robots" content="noindex">
     <link rel="icon" href="../../marketplace-icon.png" type="image/png">
     <link rel="stylesheet" href="../../style.css">
+    <style>
+        /* Estilo extra apenas para o hover do link de voltar */
+        .back-link:hover { color: #888 !important; }
+        .logo-link:hover { transform: scale(1.05); }
+    </style>
 </head>
 <body>
     <div class="container bridge-container">
+        
+        <!-- HEADER COM LOGO CLICÁVEL -->
         <div style="text-align: center; margin-bottom: 30px;">
-            <!-- LOGO GRANDE -->
             <div style="margin-bottom: 20px;">
-                <img src="../../marketplace-icon.png" alt="Infinity Logo" style="width: 80px; border-radius: 50%; box-shadow: 0 4px 20px rgba(56, 239, 125, 0.2);">
+                <a href="/" class="logo-link" title="Return to Home" style="display: inline-block; transition: transform 0.2s;">
+                    <img src="../../marketplace-icon.png" alt="Infinity Logo" style="width: 80px; border-radius: 50%; box-shadow: 0 4px 20px rgba(56, 239, 125, 0.2);">
+                </a>
             </div>
             <h2>Complete Your Purchase</h2>
             <p style="color: var(--text-muted);">Choose your region for secure checkout:</p>
@@ -23,7 +31,6 @@
         <div class="payment-option">
             <h3>🇧🇷 Brasil</h3>
             <span class="price-tag">R$ 145,00</span>
-            <!-- SEU LINK DA KIWIFY -->
             <a href="https://pay.kiwify.com.br/rAGSeeK" class="btn btn-br">Pagar com Pix ou Cartão</a>
             <span class="details">Entrega imediata • Parcele em até 12x</span>
         </div>
@@ -32,19 +39,27 @@
         <div class="payment-option">
             <h3>🌍 International</h3>
             <span class="price-tag">$29.00 USD</span>
-            <!-- SEU LINK DO PADDLE -->
             <a href="https://buy.paddle.com/product/894371" class="btn btn-intl">Pay with Card or PayPal</a>
             <span class="details">Instant delivery • Lifetime license • Secure by Paddle</span>
         </div>
 
         <div style="margin-top: 30px; text-align: center; font-size: 0.8rem; color: #555;">
             <p>Secure SSL Payment. 14-Day Money Back Guarantee.</p>
+            
             <p style="margin-top: 10px;">
                 <a href="/privacy.html" style="color: #777; margin: 0 5px;">Privacy</a> • 
                 <a href="/terms.html" style="color: #777; margin: 0 5px;">Terms</a> • 
                 <a href="/refund.html" style="color: #777; margin: 0 5px;">Refunds</a>
             </p>
+            
             <p style="margin-top: 10px;">Having trouble? <a href="mailto:sales@infinityretouch.com" style="color: #777;">Contact Support</a></p>
+
+            <!-- LINK DE RETORNO DISCRETO -->
+            <p style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #222;">
+                <a href="/" class="back-link" style="color: #444; text-decoration: none; transition: color 0.2s;">
+                    ← Cancel and return to website
+                </a>
+            </p>
         </div>
     </div>
 </body>
