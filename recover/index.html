@@ -5,161 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recover License - Infinity Backdrop Cleaner</title>
     <meta name="description" content="Recover your Infinity Backdrop Cleaner license key">
-    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="icon" href="/marketplace-icon.png" type="image/png">
+    <!-- Usa o CSS global do site -->
     <link rel="stylesheet" href="/style.css">
     <style>
+        /* Estilos específicos para centralizar o card */
         body {
             display: flex;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            /* Removemos o background linear aqui para usar o do body global, 
+               ou mantemos se quiser diferenciar essa página */
+            background: var(--bg); 
             padding: 20px;
         }
-        
-        .recovery-container {
-            background: white;
+
+        .recovery-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
             border-radius: 16px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
             max-width: 500px;
             width: 100%;
             padding: 50px 40px;
             text-align: center;
         }
-        
-        .icon {
-            font-size: 64px;
-            margin-bottom: 20px;
-        }
-        
-        h1 {
-            font-size: 28px;
-            color: #1a1a1a;
-            margin-bottom: 15px;
-        }
-        
-        .subtitle {
-            color: #666;
-            font-size: 15px;
-            line-height: 1.6;
-            margin-bottom: 35px;
-        }
-        
-        .form-group {
-            margin-bottom: 25px;
-            text-align: left;
-        }
-        
+
+        .icon { font-size: 64px; margin-bottom: 20px; }
+
+        .form-group { margin-bottom: 25px; text-align: left; }
+
         label {
             display: block;
-            font-size: 14px;
+            font-size: 0.9rem;
             font-weight: 600;
-            color: #333;
+            color: #fff;
             margin-bottom: 8px;
         }
-        
+
         input[type="email"] {
             width: 100%;
             padding: 14px 16px;
-            border: 2px solid #e1e8ed;
+            background: #000;
+            border: 1px solid #333;
             border-radius: 8px;
-            font-size: 15px;
+            font-size: 1rem;
+            color: #fff;
             transition: border-color 0.3s;
         }
-        
+
         input[type="email"]:focus {
             outline: none;
-            border-color: #667eea;
+            border-color: var(--accent);
         }
-        
-        .btn-recover {
-            width: 100%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 16px;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.2s, opacity 0.2s;
-        }
-        
-        .btn-recover:hover {
-            transform: translateY(-2px);
-            opacity: 0.9;
-        }
-        
-        .btn-recover:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-            transform: none;
-        }
-        
+
         .status-message {
             margin-top: 20px;
             padding: 15px;
             border-radius: 8px;
-            font-size: 14px;
+            font-size: 0.9rem;
             display: none;
-        }
-        
-        .status-message.success {
-            background: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-            display: block;
-        }
-        
-        .status-message.error {
-            background: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-            display: block;
-        }
-        
-        .status-message.info {
-            background: #d1ecf1;
-            color: #0c5460;
-            border: 1px solid #bee5eb;
-            display: block;
-        }
-        
-        .back-link {
-            display: inline-block;
-            margin-top: 30px;
-            color: #667eea;
-            text-decoration: none;
-            font-size: 14px;
-            transition: opacity 0.2s;
-        }
-        
-        .back-link:hover {
-            opacity: 0.7;
-        }
-        
-        .note {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 8px;
-            font-size: 13px;
-            color: #666;
-            margin-top: 25px;
             text-align: left;
         }
-        
-        .note strong {
-            color: #333;
+
+        .status-message.success {
+            background: rgba(56, 239, 125, 0.1);
+            color: #38ef7d;
+            border: 1px solid #38ef7d;
+        }
+
+        .status-message.error {
+            background: rgba(220, 38, 38, 0.1);
+            color: #ef4444;
+            border: 1px solid #ef4444;
         }
     </style>
 </head>
 <body>
-    <div class="recovery-container">
+    <div class="recovery-card">
         <div class="icon">🔑</div>
-        <h1>Recover Your License</h1>
-        <p class="subtitle">
-            Enter the email address you used to purchase Infinity Backdrop Cleaner. 
-            We'll send your license key to that email.
+        
+        <h1 style="font-size: 2rem; margin-bottom: 10px; color: #fff;">Recover License</h1>
+        
+        <p style="color: var(--text-muted); margin-bottom: 30px;">
+            Enter the email address used to purchase. We'll send your key instantly.
         </p>
         
         <form id="recoveryForm">
@@ -175,20 +105,21 @@
                 />
             </div>
             
-            <button type="submit" class="btn-recover" id="submitBtn">
+            <button type="submit" class="btn btn-intl" id="submitBtn" style="width: 100%;">
                 Send License Key
             </button>
         </form>
         
         <div id="statusMessage" class="status-message"></div>
         
-        <div class="note">
+        <div class="note" style="margin-top: 30px; text-align: left; font-size: 0.9rem;">
             <strong>📧 Check your spam folder</strong><br>
-            If you don't receive the email within 5 minutes, check your spam/junk folder. 
-            Still having issues? Contact <a href="mailto:sales@infinityretouch.com" style="color: #667eea;">sales@infinityretouch.com</a>
+            <span style="font-size: 0.85rem;">If not received in 5 minutes, contact <a href="mailto:sales@infinityretouch.com" style="color: var(--accent);">support</a>.</span>
         </div>
         
-        <a href="/" class="back-link">← Back to Homepage</a>
+        <div style="margin-top: 30px;">
+            <a href="/" style="color: var(--text-muted); font-size: 0.9rem;">← Back to Homepage</a>
+        </div>
     </div>
     
     <script>
@@ -197,7 +128,7 @@
         const submitBtn = document.getElementById('submitBtn');
         const statusMessage = document.getElementById('statusMessage');
         
-        // Make.com webhook URL (SUBSTITUA PELA URL REAL DO SEU WEBHOOK)
+        // SEU WEBHOOK DO MAKE PARA RECUPERAÇÃO
         const WEBHOOK_URL = 'https://hook.us2.make.com/esacv2suiw1fpbvenntdku2x7wl6yr4p';
         
         form.addEventListener('submit', async (e) => {
@@ -213,15 +144,14 @@
             // Disable form
             submitBtn.disabled = true;
             submitBtn.textContent = 'Searching...';
+            submitBtn.style.opacity = '0.7';
             statusMessage.style.display = 'none';
             
             try {
                 // Send to Make.com webhook
                 const response = await fetch(WEBHOOK_URL, {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
+                    headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                         email: email,
                         timestamp: new Date().toISOString(),
@@ -231,7 +161,7 @@
                 
                 if (response.ok) {
                     showMessage(
-                        '✅ Success! If a license exists for this email, you\'ll receive it within a few minutes. Check your inbox (and spam folder).',
+                        '✅ Success! If a license exists, you\'ll receive an email shortly.',
                         'success'
                     );
                     emailInput.value = '';
@@ -242,12 +172,13 @@
             } catch (error) {
                 console.error('Recovery error:', error);
                 showMessage(
-                    '⚠️ Something went wrong. Please try again or contact support at sales@infinityretouch.com',
+                    '⚠️ Error connecting to server. Please try again later.',
                     'error'
                 );
             } finally {
                 submitBtn.disabled = false;
                 submitBtn.textContent = 'Send License Key';
+                submitBtn.style.opacity = '1';
             }
         });
         
