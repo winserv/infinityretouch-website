@@ -12,6 +12,7 @@
 
     <link rel="icon" href="/favicon.png" type="image/png">
     <link rel="stylesheet" href="/style.css">
+    
     <style>
         .back-link:hover { color: #888 !important; }
         .logo-link:hover { transform: scale(1.05); }
@@ -31,7 +32,7 @@
             <p style="color: var(--text-muted);">Escolha seu método de pagamento:</p>
         </div>
 
-        <!-- OPÇÃO BRASIL (DESTAQUE) -->
+        <!-- OPÇÃO BRASIL (ATIVO - KIWIFY) -->
         <div class="payment-option" style="border-color: var(--success);">
             <h3>🇧🇷 Brasil (Recomendado)</h3>
             <span class="price-tag">R$ 145,00</span>
@@ -39,20 +40,26 @@
             <span class="details">Entrega imediata • Parcele em até 12x • NF-e</span>
         </div>
 
-        <!-- OPÇÃO GLOBAL -->
-        <div class="payment-option" style="opacity: 0.8; transform: scale(0.95);">
+        <!-- OPÇÃO GLOBAL (TRAVADO - PADDLE) -->
+        <div class="payment-option" style="opacity: 0.6;">
             <h3>🌍 Internacional (USD)</h3>
             <span class="price-tag">$29.00 USD</span>
-            <a href="https://buy.paddle.com/product/894371" class="btn btn-intl">Pagar em Dólar (PayPal/Card)</a>
-            <span class="details">Licença vitalícia • Pagamento internacional</span>
+            
+            <!-- Botão Travado Visualmente -->
+            <a href="#" class="btn btn-intl" style="background: #444; cursor: not-allowed; pointer-events: none; border-color: #555;">
+                Em Breve (Atualização)
+            </a>
+            
+            <span class="details">Pagamentos internacionais pausados temporariamente para verificação.</span>
         </div>
 
         <div style="margin-top: 30px; text-align: center; font-size: 0.8rem; color: #555;">
-            <p>Pagamento Seguro SSL. Garantia de 7 dias.</p>
+            <p>Pagamento Seguro SSL. Garantia de 7 dias (BR) / 14 dias (Global).</p>
             
             <p style="margin-top: 10px;">
-                <a href="/privacy.html" style="color: #777; margin: 0 5px;">Privacidade</a> • 
-                <a href="/terms.html" style="color: #777; margin: 0 5px;">Termos</a>
+                <a href="/br/privacy.html" style="color: #777; margin: 0 5px;">Privacidade</a> • 
+                <a href="/br/terms.html" style="color: #777; margin: 0 5px;">Termos</a> •
+                <a href="/br/refund.html" style="color: #777; margin: 0 5px;">Reembolso</a>
             </p>
             
             <p style="margin-top: 10px;">Precisa de ajuda? <a href="mailto:sales@infinityretouch.com" style="color: #777;">Fale com o Suporte</a></p>
