@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Complete Purchase - Infinity Backdrop</title>
     <meta name="robots" content="noindex">
+    <!-- Usando caminhos absolutos (/) para garantir que funcione em qualquer pasta -->
     <link rel="icon" href="/favicon.png" type="image/png">
     <link rel="stylesheet" href="/style.css">
     <style>
@@ -20,14 +21,14 @@
         <div style="text-align: center; margin-bottom: 30px;">
             <div style="margin-bottom: 20px;">
                 <a href="/" class="logo-link" title="Return to Home" style="display: inline-block; transition: transform 0.2s;">
-                    <img src="../../marketplace-icon.png" alt="Infinity Logo" style="width: 80px; border-radius: 50%; box-shadow: 0 4px 20px rgba(56, 239, 125, 0.2);">
+                    <img src="/marketplace-icon.png" alt="Infinity Logo" style="width: 80px; border-radius: 50%; box-shadow: 0 4px 20px rgba(56, 239, 125, 0.2);">
                 </a>
             </div>
             <h2>Complete Your Purchase</h2>
             <p style="color: var(--text-muted);">Choose your region for secure checkout:</p>
         </div>
 
-        <!-- OPÇÃO BRASIL (KIWIFY) -->
+        <!-- OPÇÃO BRASIL (KIWIFY) - ATIVO -->
         <div class="payment-option">
             <h3>🇧🇷 Brasil</h3>
             <span class="price-tag">R$ 145,00</span>
@@ -35,12 +36,15 @@
             <span class="details">Entrega imediata • Parcele em até 12x</span>
         </div>
 
-        <!-- OPÇÃO GLOBAL (PADDLE) -->
-        <div class="payment-option">
+        <!-- OPÇÃO GLOBAL (PADDLE) - TEMPORARIAMENTE PAUSADA -->
+        <div class="payment-option" style="opacity: 0.6;">
             <h3>🌍 International</h3>
             <span class="price-tag">$29.00 USD</span>
-            <a href="https://buy.paddle.com/product/894371" class="btn btn-intl">Pay with Card or PayPal</a>
-            <span class="details">Instant delivery • Lifetime license • Secure by Paddle</span>
+            <!-- Botão travado visualmente -->
+            <a href="#" class="btn btn-intl" style="background: #444; cursor: not-allowed; pointer-events: none; border-color: #555;">
+                Coming Soon (System Update)
+            </a>
+            <span class="details">International payments are momentarily paused for verification.</span>
         </div>
 
         <div style="margin-top: 30px; text-align: center; font-size: 0.8rem; color: #555;">
