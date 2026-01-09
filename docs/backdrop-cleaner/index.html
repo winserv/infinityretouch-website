@@ -7,16 +7,13 @@
     <link rel="icon" href="/favicon.png" type="image/png">
     <link rel="stylesheet" href="/style.css">
     <style>
-        /* Estilos específicos para a TOC e sub-listas desta página */
         .toc-list { list-style: none !important; margin-left: 0 !important; columns: 2; }
         .toc-list li { margin-bottom: 10px; }
         .toc-list a { color: var(--accent); font-weight: 600; }
         .toc-list a:hover { text-decoration: underline; }
         
-        /* Ajuste para sub-titulos dentro do texto */
         h4 { color: #fff; margin-top: 20px; margin-bottom: 10px; font-size: 1.1rem; }
         
-        /* Caixa de código para a chave */
         .license-key-box {
             background: #222;
             border: 1px dashed #555;
@@ -29,7 +26,6 @@
             border-radius: 8px;
         }
         
-        /* Aviso Vermelho */
         .warning-box {
             background: rgba(220, 38, 38, 0.1);
             border-left: 4px solid #dc2626;
@@ -70,6 +66,7 @@
                 <li><a href="#quick-start">🚀 Quick Start Guide</a></li>
                 <li><a href="#installation">💿 Installation</a></li>
                 <li><a href="#activation">🔑 License Activation</a></li>
+                <li><a href="#recovery">🔐 Lost License?</a></li> <!-- NOVO -->
                 <li><a href="#usage">🎨 How to Use</a></li>
                 <li><a href="#advanced">⚙️ Advanced Features</a></li>
                 <li><a href="#faq">❓ FAQ</a></li>
@@ -150,7 +147,7 @@
 
             <h3>After Purchase</h3>
             <p>You'll receive an email with your license key within 5 minutes. The key format looks like:</p>
-            <div class="license-key-box">ABC123-DEF456-GHI789-JKL876-MNO543-V3</div>
+            <div class="license-key-box">ABCD1234-EFGH5678-IJKL9012-MNOP3456</div>
 
             <h3>Activation Steps</h3>
             <ol>
@@ -178,6 +175,19 @@
 
             <div class="note">
                 <strong>💡 Tip:</strong> If you no longer have access to the old computer, you can deactivate all devices from the plugin's "Manage License" screen.
+            </div>
+        </div>
+
+        <!-- RECOVERY (NOVO) -->
+        <div id="recovery" class="doc-section">
+            <h2>🔐 Lost Your License?</h2>
+            <p>If you lost your email with the license key, don't worry. You can recover it instantly using our automated tool.</p>
+            
+            <div class="card" style="text-align: left; border-left: 4px solid var(--accent);">
+                <h3>Recover License Key</h3>
+                <p>Enter the email address you used during checkout to receive your key again.</p>
+                <br>
+                <a href="/recover/" class="btn btn-accent">Go to Recovery Page</a>
             </div>
         </div>
 
@@ -302,19 +312,19 @@
 
         <!-- CONTACT -->
         <div id="support" style="text-align: center; margin-top: 60px;">
-            <div class="card" style="display: inline-block; max-width: 600px;">
+            <div class="contact-box">
                 <h3>📧 Need More Help?</h3>
                 <p>Our support team typically responds within 24 hours.</p>
                 <br>
-                <a href="mailto:sales@infinityretouch.com" class="btn btn-br">sales@infinityretouch.com</a>
-                <p style="margin-top: 15px; font-size: 0.9rem; color: var(--text-muted);">Include your license key for faster assistance.</p>
+                <a href="mailto:sales@infinityretouch.com">sales@infinityretouch.com</a>
+                <p style="margin-top: 15px; font-size: 0.9rem; color: rgba(255,255,255,0.8);">Include your license key for faster assistance.</p>
             </div>
         </div>
 
         <!-- FOOTER -->
         <footer>
             <p style="color: #666; margin-bottom: 20px;">Infinity Backdrop Cleaner v1.0.0</p>
-            <p>&copy; 2026 Infinity Retouch / WINSERV TECNOLOGIA DA INFORMACAO.</p>
+            <p>&copy; 2026 Infinity Retouch / WINSERV TECNOLOGIA DA INFORMACAO</p>
             <p>
                 <a href="/privacy.html">Privacy</a>
                 <a href="/terms.html">Terms</a>
