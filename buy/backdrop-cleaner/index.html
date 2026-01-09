@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Complete Purchase - Infinity Backdrop</title>
     <meta name="robots" content="noindex">
-    <!-- Usando caminhos absolutos (/) para garantir que funcione em qualquer pasta -->
     <link rel="icon" href="/favicon.png" type="image/png">
     <link rel="stylesheet" href="/style.css">
     <style>
-        /* Estilo extra apenas para o hover do link de voltar */
         .back-link:hover { color: #888 !important; }
         .logo-link:hover { transform: scale(1.05); }
     </style>
@@ -17,18 +15,18 @@
 <body>
     <div class="container bridge-container">
         
-        <!-- HEADER COM LOGO CLICÁVEL -->
+        <!-- HEADER -->
         <div style="text-align: center; margin-bottom: 30px;">
             <div style="margin-bottom: 20px;">
-                <a href="/" class="logo-link" title="Return to Home" style="display: inline-block; transition: transform 0.2s;">
-                    <img src="/infinity-retouch-logo.png" alt="Infinity Logo" style="width: 80px; border-radius: 50%; box-shadow: 0 4px 20px rgba(56, 239, 125, 0.2);">
+                <a href="/" class="logo-link" title="Return to Home">
+                    <img src="/infinity-retouch-logo.png" alt="Logo" style="width: 80px; border-radius: 50%; box-shadow: 0 4px 20px rgba(56, 239, 125, 0.2);">
                 </a>
             </div>
             <h2>Complete Your Purchase</h2>
             <p style="color: var(--text-muted);">Choose your region for secure checkout:</p>
         </div>
 
-        <!-- OPÇÃO BRASIL (KIWIFY) - ATIVO -->
+        <!-- OPÇÃO BRASIL (KIWIFY) -->
         <div class="payment-option">
             <h3>🇧🇷 Brasil</h3>
             <span class="price-tag">R$ 145,00</span>
@@ -36,11 +34,10 @@
             <span class="details">Entrega imediata • Parcele em até 12x</span>
         </div>
 
-        <!-- OPÇÃO GLOBAL (PADDLE) - TEMPORARIAMENTE PAUSADA -->
+        <!-- OPÇÃO GLOBAL (PADDLE) - TRAVADA -->
         <div class="payment-option" style="opacity: 0.6;">
             <h3>🌍 International</h3>
             <span class="price-tag">$29.00 USD</span>
-            <!-- Botão travado visualmente -->
             <a href="#" class="btn btn-intl" style="background: #444; cursor: not-allowed; pointer-events: none; border-color: #555;">
                 Coming Soon (System Update)
             </a>
@@ -49,18 +46,13 @@
 
         <div style="margin-top: 30px; text-align: center; font-size: 0.8rem; color: #555;">
             <p>Secure SSL Payment. 14-Day Money Back Guarantee.</p>
-            
             <p style="margin-top: 10px;">
                 <a href="/privacy.html" style="color: #777; margin: 0 5px;">Privacy</a> • 
                 <a href="/terms.html" style="color: #777; margin: 0 5px;">Terms</a> • 
                 <a href="/refund.html" style="color: #777; margin: 0 5px;">Refunds</a>
             </p>
-            
-            <p style="margin-top: 10px;">Having trouble? <a href="mailto:sales@infinityretouch.com" style="color: #777;">Contact Support</a></p>
-
-            <!-- LINK DE RETORNO DISCRETO -->
             <p style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #222;">
-                <a href="/" class="back-link" style="color: #444; text-decoration: none; transition: color 0.2s;">
+                <a href="/" class="back-link" style="color: #444; text-decoration: none;">
                     ← Cancel and return to website
                 </a>
             </p>
