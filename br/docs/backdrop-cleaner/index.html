@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual - Infinity Backdrop Cleaner</title>
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .toc-list { list-style: none !important; margin-left: 0 !important; columns: 2; }
+        .toc-list li { margin-bottom: 10px; }
+        .toc-list a { color: var(--accent); font-weight: 600; }
+        .toc-list a:hover { text-decoration: underline; }
+        
+        h4 { color: #fff; margin-top: 20px; margin-bottom: 10px; font-size: 1.1rem; }
+        
+        .license-key-box {
+            background: #222;
+            border: 1px dashed #555;
+            color: var(--success);
+            padding: 15px;
+            text-align: center;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1rem;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .warning-box {
+            background: rgba(220, 38, 38, 0.1);
+            border-left: 4px solid #dc2626;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 30px 0;
+            color: #ffb3b3;
+        }
+        .warning-box strong { color: #ff6b6b; display: block; margin-bottom: 5px; }
+
+        @media (max-width: 600px) { .toc-list { columns: 1; } }
+    </style>
+</head>
+<body>
+    <div class="container manual-container">
+        <!-- NAV -->
+        <nav>
+            <a href="/br/" class="logo">
+                <img src="/infinity-retouch-logo.png" alt="Logo"> Infinity Retouch
+            </a>
+            <div style="display: flex; align-items: center;">
+                <a href="/br/docs/" class="nav-link">Ajuda</a>
+                <span style="color: #444; margin: 0 10px;">/</span>
+                <span style="color: #fff; font-size: 0.9rem;">Backdrop Cleaner</span>
+            </div>
+        </nav>
+
+        <!-- HEADER -->
+        <header style="text-align: center; margin-bottom: 50px;">
+            <h1 style="font-size: 2.5rem;">📖 Infinity Backdrop Cleaner</h1>
+            <p class="subtitle">Manual do Usuário e Guia Completo</p>
+        </header>
+
+        <!-- TABLE OF CONTENTS -->
+        <div class="card" style="margin-bottom: 60px;">
+            <h3 style="margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 10px;">📑 Índice</h3>
+            <ul class="toc-list">
+                <li><a href="#quick-start">🚀 Guia Rápido</a></li>
+                <li><a href="#installation">💿 Instalação</a></li>
+                <li><a href="#activation">🔑 Ativação da Licença</a></li>
+                <li><a href="#recovery">🔐 Perdeu a Chave?</a></li>
+                <li><a href="#usage">🎨 Como Usar</a></li>
+                <li><a href="#advanced">⚙️ Funções Avançadas</a></li>
+                <li><a href="#faq">❓ Perguntas Frequentes</a></li>
+                <li><a href="#troubleshooting">🔧 Solução de Problemas</a></li>
+                <li><a href="#support">📧 Contato</a></li>
+            </ul>
+        </div>
+
+        <!-- QUICK START -->
+        <div id="quick-start" class="doc-section">
+            <h2>🚀 Guia Rápido</h2>
+            <p>Comece a usar o Infinity Backdrop Cleaner em 5 passos simples:</p>
+            
+            <div class="step-item">
+                <span class="step-number">Passo 1</span>
+                <h3>Instalar e Ativar</h3>
+                <p>Baixe o arquivo .ccx, instale no Photoshop e ative com sua chave de licença.</p>
+            </div>
+
+            <div class="step-item">
+                <span class="step-number">Passo 2</span>
+                <h3>Abrir sua Imagem</h3>
+                <p>Abra uma foto com fundo infinito no Photoshop (funciona melhor com fundos brancos/cinzas lisos).</p>
+            </div>
+
+            <div class="step-item">
+                <span class="step-number">Passo 3</span>
+                <h3>Preparar para Pintura</h3>
+                <p>Clique no botão "Prepare for Painting" no painel. Isso cria uma máscara e configura seu pincel.</p>
+            </div>
+
+            <div class="step-item">
+                <span class="step-number">Passo 4</span>
+                <h3>Pintar sobre Imperfeições</h3>
+                <p>Segure <code>Alt</code> (Option no Mac) e clique em uma área limpa do fundo para copiar a cor. Depois, pinte sobre sombras, amassados ou sujeira.</p>
+            </div>
+
+            <div class="step-item">
+                <span class="step-number">Passo 5</span>
+                <h3>Processar Imagem</h3>
+                <p>Clique em "Process Image" para gerar o fundo perfeito. Use a borracha na camada "Fundo Original" para recuperar detalhes do assunto se necessário.</p>
+            </div>
+
+            <div class="note">
+                <strong>💡 Dica Pro:</strong> Não se preocupe em pintar sobre o assunto! O plugin preserva o original em uma camada separada, então você pode recuperar detalhes facilmente usando a borracha.
+            </div>
+        </div>
+
+        <!-- INSTALLATION -->
+        <div id="installation" class="doc-section">
+            <h2>💿 Instalação</h2>
+
+            <h3>Requisitos do Sistema</h3>
+            <ul>
+                <li><strong>Adobe Photoshop:</strong> 2023 ou mais recente (versão 24.x+)</li>
+                <li><strong>Sistema Operacional:</strong> Windows 10/11 ou macOS 11+</li>
+                <li><strong>Internet:</strong> Necessária apenas para ativação</li>
+                <li><strong>RAM:</strong> 8GB mínimo, 16GB recomendado</li>
+            </ul>
+
+            <h3>Passos de Instalação</h3>
+            <ol>
+                <li>Baixe o arquivo <strong>.ccx</strong> do link recebido no e-mail</li>
+                <li>Certifique-se que o aplicativo <strong>Creative Cloud Desktop</strong> está rodando</li>
+                <li>Dê um duplo clique no arquivo .ccx</li>
+                <li>Clique em <strong>Instalar</strong> quando solicitado (Install Locally)</li>
+                <li>Reinicie o Photoshop se ele já estiver aberto</li>
+            </ol>
+
+            <h3>Abrindo o Plugin</h3>
+            <p>No Photoshop, vá em: <code>Janela (Window) → Plugins → Infinity Backdrop Cleaner</code></p>
+        </div>
+
+        <!-- ACTIVATION -->
+        <div id="activation" class="doc-section">
+            <h2>🔑 Ativação da Licença</h2>
+
+            <h3>Após a Compra</h3>
+            <p>Você receberá um e-mail com sua chave de licença em até 5 minutos. O formato da chave é assim:</p>
+            <div class="license-key-box">ABCD1234-EFGH5678-IJKL9012-MNOP3456</div>
+
+            <h3>Passos para Ativar</h3>
+            <ol>
+                <li>Abra o plugin no Photoshop</li>
+                <li>Clique no botão <strong>"Activate"</strong></li>
+                <li>Cole sua chave de licença</li>
+                <li>Clique em <strong>"Activate License"</strong></li>
+                <li>Você verá uma mensagem de confirmação</li>
+            </ol>
+
+            <h3>Detalhes da Licença</h3>
+            <ul>
+                <li>✅ <strong>Licença Vitalícia</strong> - pagamento único, sem assinatura</li>
+                <li>✅ <strong>2 Computadores</strong> - ative em até 2 máquinas</li>
+                <li>✅ <strong>Desativação Fácil</strong> - troque de computador a qualquer momento</li>
+                <li>✅ <strong>Atualizações Grátis</strong> - 1 ano de updates inclusos</li>
+            </ul>
+
+            <h3>Trocando de Computador</h3>
+            <p>Para mover sua licença para um novo PC:</p>
+            <ol>
+                <li>No computador antigo: Abra o plugin → <strong>Manage License → Deactivate Device</strong></li>
+                <li>No computador novo: Ative normalmente com sua chave</li>
+            </ol>
+
+            <div class="note">
+                <strong>💡 Dica:</strong> Se você formatou o PC ou não tem mais acesso ao antigo, você pode usar a opção "Deactivate Old Devices" na tela de erro de ativação do plugin.
+            </div>
+        </div>
+
+        <!-- RECOVERY -->
+        <div id="recovery" class="doc-section">
+            <h2>🔐 Perdeu sua Chave?</h2>
+            <p>Se você perdeu o e-mail com a chave de licença, não se preocupe. Você pode recuperá-la instantaneamente.</p>
+            
+            <div class="card" style="text-align: left; border-left: 4px solid var(--accent);">
+                <h3>Recuperar Licença</h3>
+                <p>Digite o e-mail usado na compra para receber sua chave novamente.</p>
+                <br>
+                <a href="/recover/" class="btn btn-accent">Ir para Recuperação</a>
+            </div>
+        </div>
+
+        <!-- HOW TO USE -->
+        <div id="usage" class="doc-section">
+            <h2>🎨 Detalhes do Fluxo de Trabalho</h2>
+
+            <h3>1. Prepare sua Imagem</h3>
+            <p>Para melhores resultados, sua imagem deve ter:</p>
+            <ul>
+                <li>Fundo infinito claro (branco, cinza, bege)</li>
+                <li>Assunto claramente separado do fundo</li>
+                <li>Boa iluminação (fotos de estúdio funcionam melhor)</li>
+            </ul>
+
+            <h3>2. Fase de Máscara (Prepare)</h3>
+            <p>Ao clicar em "Prepare for Painting", o plugin irá:</p>
+            <ul>
+                <li>Detectar o assunto automaticamente com IA</li>
+                <li>Criar uma máscara de proteção</li>
+                <li>Configurar o pincel ideal</li>
+            </ul>
+            <p><strong>Controles Avançados:</strong> Clique em "Show Advanced Controls" para ajustar a expansão da máscara (Expand) ou a suavidade da borda (Feather) se a detecção automática falhar.</p>
+
+            <h3>3. Pintura</h3>
+            <p>Com a camada de pintura ativa:</p>
+            <ol>
+                <li>Segure <code>Alt</code> (Option no Mac)</li>
+                <li>Clique numa área limpa do fundo para copiar a cor</li>
+                <li>Solte o <code>Alt</code> e pinte sobre as sujeiras</li>
+                <li>Pinte generosamente - a IA protege o sujeito!</li>
+            </ol>
+            <div class="note">
+                <strong>💡 Dica Pro:</strong> Use um pincel grande e suave (200-500px) para cobrir mais rápido.
+            </div>
+
+            <h3>4. Processamento</h3>
+            <p>Clique em "Process Image". O plugin analisa sua pintura, gera o fundo limpo, preserva o original na camada "Fundo Original" e aplica o desfoque profissional com redução de ruído.</p>
+
+            <h3>5. Refino (Opcional)</h3>
+            <p>Se algum detalhe do assunto (como véu ou cabelo fino) foi afetado, selecione a ferramenta Borracha e apague na camada "Fundo Original". Isso revela a imagem original por baixo.</p>
+        </div>
+
+        <!-- ADVANCED -->
+        <div id="advanced" class="doc-section">
+            <h2>⚙️ Recursos Avançados</h2>
+            
+            <h3>Tipos de Blur</h3>
+            <p>O plugin oferece dois algoritmos:</p>
+            <ul>
+                <li><strong>Gaussian Blur:</strong> Mais suave e uniforme. Melhor para a maioria dos casos.</li>
+                <li><strong>Surface Blur:</strong> Preserva bordas. Use quando quiser manter alguma textura do piso.</li>
+            </ul>
+
+            <h3>Controles Avançados</h3>
+            <p>Clique em "Show Advanced Controls" no Passo 2 para acessar:</p>
+            <ul>
+                <li><strong>Expand:</strong> Aumenta a área limpa ao redor do sujeito.</li>
+                <li><strong>Feather:</strong> Suaviza a transição da máscara.</li>
+                <li><strong>Blur Radius:</strong> Controla a intensidade do desfoque.</li>
+                <li><strong>Noise (Ruído):</strong> Adiciona grão sutil para evitar "banding" (faixas feias no degradê), essencial para impressão.</li>
+            </ul>
+
+            <h3>Processamento 16-Bit</h3>
+            <p>O plugin converte automaticamente para o modo 16-bit durante o processamento para garantir qualidade máxima. Isso previne faixas de cor e garante degradês suaves, vital para arquivos RAW e fotos High-end.</p>
+        </div>
+
+        <!-- FAQ -->
+        <div id="faq" class="doc-section">
+            <h2>❓ Perguntas Frequentes</h2>
+
+            <div class="faq-item">
+                <h3>Funciona com arquivos RAW?</h3>
+                <p>Sim! Recomendamos abrir o RAW como Objeto Inteligente ou achatar ajustes básicos antes de rodar o plugin para melhor performance.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Funciona com fundos escuros/pretos?</h3>
+                <p>O plugin é otimizado para fundos infinitos claros (branco, cinza, creme). Fundos pretos ou muito escuros podem exigir mais ajuste manual.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Por que o assunto não foi detectado?</h3>
+                <p>Tente estas soluções: Garanta que há contraste entre o fundo e o sujeito, ou use a ferramenta "Quick Selection" do Photoshop para fazer uma seleção grosseira antes de clicar em "Prepare".</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Posso processar várias fotos de uma vez?</h3>
+                <p>Atualmente o plugin processa uma imagem por vez. Recomendamos criar uma Action do Photoshop gravando os passos do plugin para processamento em lote.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Qual a política de reembolso?</h3>
+                <p>Oferecemos garantia de 7 dias para compras no Brasil. Se não estiver satisfeito, contate o suporte para reembolso total.</p>
+            </div>
+        </div>
+
+        <!-- TROUBLESHOOTING -->
+        <div id="troubleshooting" class="doc-section">
+            <h2>🔧 Solução de Problemas</h2>
+
+            <div class="faq-item">
+                <h3>Plugin não aparece no Photoshop</h3>
+                <p>Vá em: <code>Janela → Plugins → Infinity Backdrop Cleaner</code>. Se não estiver listado, reinicie o Photoshop. Ainda sumido? Reinstale pelo arquivo .ccx.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Ativação da licença falha</h3>
+                <p><strong>Causas possíveis:</strong> Sem internet, Chave incorreta (Copie e cole do e-mail, não digite), ou já ativado em 2 máquinas (Desative uma antiga primeiro).</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Processamento muito lento</h3>
+                <p>Imagens grandes (>50MP) podem levar 30-60 segundos devido ao motor de 16-bit. Feche outros apps para liberar RAM ou verifique se o Photoshop tem espaço em disco.</p>
+            </div>
+
+            <div class="warning-box">
+                <strong>⚠️ Ainda com problemas?</strong>
+                <p>Entre em contato com o suporte enviando um print do erro, versão do Photoshop e descrição do problema.</p>
+            </div>
+        </div>
+
+        <!-- CONTACT -->
+        <div id="support" style="text-align: center; margin-top: 60px;">
+            <div class="contact-box">
+                <h3>📧 Precisa de Ajuda?</h3>
+                <p>Nosso time responde geralmente em até 24 horas.</p>
+                <br>
+                <a href="mailto:sales@infinityretouch.com">sales@infinityretouch.com</a>
+                <p style="margin-top: 15px; font-size: 0.9rem; color: rgba(255,255,255,0.8);">Inclua sua chave de licença para atendimento mais rápido.</p>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <p style="color: #666; margin-bottom: 20px;">Infinity Backdrop Cleaner v1.0.0</p>
+            <p>&copy; 2026 Infinity Retouch / WINSERV TECNOLOGIA DA INFORMACAO.</p>
+            <p>
+                <a href="/br/privacy.html">Privacidade</a>
+                <a href="/br/terms.html">Termos</a>
+                <a href="/br/refund.html">Reembolso</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
