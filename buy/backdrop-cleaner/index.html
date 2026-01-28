@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Complete Purchase - Infinity Backdrop</title>
     <meta name="robots" content="noindex">
-    <link rel="icon" href="/favicon.png" type="image/png">
+    
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="en" href="https://infinityretouch.com/buy/backdrop-cleaner/" />
+    <link rel="alternate" hreflang="pt-br" href="https://infinityretouch.com/br/buy/backdrop-cleaner/" />
+
+    <link rel="icon" href="/infinity-retouch-logo.png" type="image/png">
     <link rel="stylesheet" href="/style.css">
+    
     <style>
         .back-link:hover { color: #888 !important; }
         .logo-link:hover { transform: scale(1.05); }
@@ -15,7 +21,7 @@
 <body>
     <div class="container bridge-container">
         
-        <!-- HEADER COM LOGO CLICÁVEL -->
+        <!-- HEADER -->
         <div style="text-align: center; margin-bottom: 30px;">
             <div style="margin-bottom: 20px;">
                 <a href="/" class="logo-link" title="Return to Home" style="display: inline-block; transition: transform 0.2s;">
@@ -26,17 +32,9 @@
             <p style="color: var(--text-muted);">Choose your region for secure checkout:</p>
         </div>
 
-        <!-- OPÇÃO BRASIL (KIWIFY BRL) -->
-        <div class="payment-option">
-            <h3>🇧🇷 Brasil</h3>
-            <span class="price-tag">R$ 145,00</span>
-            <a href="https://pay.kiwify.com.br/rAGSeeK" class="btn btn-br">Pagar com Pix ou Cartão</a>
-            <span class="details">Entrega imediata • Parcele em até 12x</span>
-        </div>
-
-        <!-- OPÇÃO GLOBAL (KIWIFY USD) - ATIVO -->
-        <div class="payment-option">
-            <h3>🌍 International</h3>
+        <!-- OPÇÃO GLOBAL (DESTAQUE) -->
+        <div class="payment-option" style="border-color: var(--accent);">
+            <h3>🌍 International (USD)</h3>
             <span class="price-tag">$29.00 USD</span>
             
             <!-- Link Direto Kiwify Global -->
@@ -47,8 +45,16 @@
             <span class="details">Instant delivery • Lifetime license • Secure SSL</span>
         </div>
 
+        <!-- OPÇÃO BRASIL (SECUNDÁRIA) -->
+        <div class="payment-option" style="opacity: 0.9; transform: scale(0.98);">
+            <h3>🇧🇷 Brasil (BRL)</h3>
+            <span class="price-tag">R$ 145,00</span>
+            <a href="https://pay.kiwify.com.br/rAGSeeK" class="btn btn-br">Pagar com Pix ou Cartão</a>
+            <span class="details">Brazil Only • Installments available</span>
+        </div>
+
         <div style="margin-top: 30px; text-align: center; font-size: 0.8rem; color: #555;">
-            <p>Secure SSL Payment. 14-Day Money Back Guarantee.</p>
+            <p>Secure SSL Payment. 7-Day Money Back Guarantee.</p>
             
             <p style="margin-top: 10px;">
                 <a href="/privacy.html" style="color: #777; margin: 0 5px;">Privacy</a> • 
