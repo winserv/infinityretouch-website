@@ -10,12 +10,36 @@
     <link rel="alternate" hreflang="en" href="https://infinityretouch.com/buy/backdrop-cleaner/" />
     <link rel="alternate" hreflang="pt-br" href="https://infinityretouch.com/br/buy/backdrop-cleaner/" />
 
-    <link rel="icon" href="/infinity-retouch-logo.png" type="image/png">
+    <link rel="icon" href="/favicon.png" type="image/png">
     <link rel="stylesheet" href="/style.css">
     
     <style>
         .back-link:hover { color: #888 !important; }
         .logo-link:hover { transform: scale(1.05); }
+        
+        /* Botão de Idioma Flutuante */
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+        .lang-switch a { 
+            color: var(--text-muted); 
+            text-decoration: none; 
+            font-weight: 600; 
+            font-size: 0.9rem;
+            border: 1px solid var(--border);
+            padding: 8px 15px;
+            border-radius: 20px;
+            background: var(--surface);
+            transition: all 0.2s;
+        }
+        .lang-switch a:hover { 
+            color: #fff; 
+            border-color: #666;
+            background: var(--surface-hover);
+        }
     </style>
     
     <!-- Google tag (gtag.js) -->
@@ -28,6 +52,11 @@
     </script> 
 </head>
 <body>
+    <!-- BOTÃO PARA MUDAR DE IDIOMA -->
+    <div class="lang-switch">
+        <a href="/buy/backdrop-cleaner/" title="Switch to English">🇺🇸 EN</a>
+    </div>
+
     <div class="container bridge-container">
         
         <!-- HEADER -->
@@ -41,20 +70,19 @@
             <p style="color: var(--text-muted);">Escolha seu método de pagamento:</p>
         </div>
 
-        <!-- OPÇÃO BRASIL (KIWIFY BRL) -->
+        <!-- OPÇÃO BRASIL (DESTAQUE) -->
         <div class="payment-option" style="border-color: var(--success);">
             <h3>🇧🇷 Brasil (Recomendado)</h3>
             <span class="price-tag">R$ 145,00</span>
             <a href="https://pay.kiwify.com.br/rAGSeeK" class="btn btn-br">Pagar com Pix ou Cartão</a>
-            <span class="details">Entrega imediata • Parcele em até 12x</span>
+            <span class="details">Entrega imediata • Parcele em até 12x • NF-e</span>
         </div>
 
-        <!-- OPÇÃO GLOBAL (KIWIFY USD) - AGORA ATIVO -->
-        <div class="payment-option">
+        <!-- OPÇÃO GLOBAL (SECUNDÁRIA) -->
+        <div class="payment-option" style="opacity: 0.9; transform: scale(0.98);">
             <h3>🌍 Internacional (USD)</h3>
             <span class="price-tag">$29.00 USD</span>
             
-            <!-- Link Kiwify Global -->
             <a href="https://pay.kiwify.com.br/itYbaeF" class="btn btn-intl">
                 Pagar em Dólar (Cartão)
             </a>
