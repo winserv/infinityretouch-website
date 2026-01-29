@@ -10,12 +10,36 @@
     <link rel="alternate" hreflang="en" href="https://infinityretouch.com/buy/backdrop-cleaner/" />
     <link rel="alternate" hreflang="pt-br" href="https://infinityretouch.com/br/buy/backdrop-cleaner/" />
 
-    <link rel="icon" href="/infinity-retouch-logo.png" type="image/png">
+    <link rel="icon" href="/favicon.png" type="image/png">
     <link rel="stylesheet" href="/style.css">
     
     <style>
         .back-link:hover { color: #888 !important; }
         .logo-link:hover { transform: scale(1.05); }
+        
+        /* Botão de Idioma Flutuante */
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+        .lang-switch a { 
+            color: var(--text-muted); 
+            text-decoration: none; 
+            font-weight: 600; 
+            font-size: 0.9rem;
+            border: 1px solid var(--border);
+            padding: 8px 15px;
+            border-radius: 20px;
+            background: var(--surface);
+            transition: all 0.2s;
+        }
+        .lang-switch a:hover { 
+            color: #fff; 
+            border-color: #666;
+            background: var(--surface-hover);
+        }
     </style>
     
     <!-- Google tag (gtag.js) -->
@@ -28,12 +52,17 @@
     </script> 
 </head>
 <body>
+    <!-- BOTÃO PARA MUDAR DE IDIOMA -->
+    <div class="lang-switch">
+        <a href="/br/buy/backdrop-cleaner/" title="Mudar para Português">🇧🇷 BR</a>
+    </div>
+
     <div class="container bridge-container">
         
         <!-- HEADER -->
         <div style="text-align: center; margin-bottom: 30px; margin-top: 30px;">
             <div style="margin-bottom: 20px;">
-                <a href="/" class="logo-link" title="Return to Home" style="display: inline-block; transition: transform 0.2s;">
+                <a href="/" class="logo-link" title="Return to Home">
                     <img src="/infinity-retouch-logo.png" alt="Infinity Logo" style="width: 80px; border-radius: 50%; box-shadow: 0 4px 20px rgba(56, 239, 125, 0.2);">
                 </a>
             </div>
@@ -45,12 +74,9 @@
         <div class="payment-option" style="border-color: var(--accent);">
             <h3>🌍 International (USD)</h3>
             <span class="price-tag">$29.00 USD</span>
-            
-            <!-- Link Direto Kiwify Global -->
             <a href="https://pay.kiwify.com.br/itYbaeF" class="btn btn-intl">
                 Pay with Credit Card
             </a>
-            
             <span class="details">Instant delivery • Lifetime license • Secure SSL</span>
         </div>
 
