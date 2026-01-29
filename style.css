@@ -284,32 +284,9 @@ footer a:hover { color: #fff; }
 
 /* --- BRIDGE PAGE --- */
 .bridge-container {
-            position: relative; /* Importante para segurar o botão */
-            padding-top: 40px; /* Espaço extra no topo para o botão não sobrepor o logo */
-        }
-        
-        .lang-switch {
-            /* Removemos o absolute global */
-            /* O estilo inline no HTML (top:0 right:0) já resolve */
-        }
-        
-        .lang-switch a { 
-            color: var(--text-muted); 
-            text-decoration: none; 
-            font-weight: 600; 
-            font-size: 0.85rem;
-            border: 1px solid var(--border);
-            padding: 6px 12px;
-            border-radius: 20px;
-            background: var(--surface);
-            transition: all 0.2s;
-            display: inline-block;
-        }
-        .lang-switch a:hover { 
-            color: #fff; 
-            border-color: #666;
-            background: var(--surface-hover);
-        }
+    min-height: 80vh; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; max-width: 500px; margin: 0 auto;
+}
 .payment-option {
     background: var(--surface); border: 1px solid var(--border);
     padding: 25px; border-radius: 12px; width: 100%; margin-bottom: 15px;
