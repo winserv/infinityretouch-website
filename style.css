@@ -60,7 +60,7 @@ nav {
 .hero { 
     text-align: center; 
     /* Ajustamos para um respiro elegante, sem exageros */
-    padding-top: 30px !important; 
+    padding-top: 20px !important; 
     margin-top: 0 !important; /* Removemos o valor negativo */
 }
 
