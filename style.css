@@ -57,7 +57,7 @@ nav {
 .nav-link:hover { color: #fff; }
 
 /* --- HERO & GENERAL --- */
-.hero { text-align: center; padding: 60px 0; }
+.hero { text-align: center; padding: 40px 0; }
 h1 {
     font-size: 3rem;
     line-height: 1.1;
