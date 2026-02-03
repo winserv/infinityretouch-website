@@ -59,28 +59,31 @@ nav {
 /* --- HERO & GENERAL --- */
 .hero { 
     text-align: center; 
-    padding-top: 10px !important; /* Força o topo a subir */
-    margin-top: 10px !important; /* Puxa a seção para cima do limite */
+    /* Ajustamos para um respiro elegante, sem exageros */
+    padding-top: 40px !important; 
+    margin-top: 0 !important; /* Removemos o valor negativo */
 }
 
 h1 {
     font-size: 3rem;
     line-height: 1.1;
     margin-top: 0 !important;
-    padding-top: 0 !important;
-    margin-bottom: 10px !important;
+    margin-bottom: 20px !important; /* Espaço entre título e subtítulo */
+    background: linear-gradient(to right, #fff, #b3b3b3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 nav {
-    padding: 10px 0 !important;
-    margin-bottom: 5px !important;
+    padding: 20px 0 !important;
+    margin-bottom: 20px !important; /* Aumentamos de 5px para 20px */
 }
 
 p.subtitle {
     font-size: 1.1rem;
     color: var(--text-muted);
     max-width: 650px;
-    margin: 0 auto 35px; /* Ajustado espaçamento para o slider */
+    margin: 0 auto 40px; /* Espaço confortável antes do slider */
 }
 
 /* --- CARDS & GRID --- */
