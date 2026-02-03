@@ -18,22 +18,59 @@
     <link rel="icon" href="/favicon.png" type="image/png">
     <link rel="stylesheet" href="/style.css">
 
+    <!-- Web Component para o Slider -->
     <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"/>    
     
+    <style>
+        /* Estilização customizada do Slider */
+        img-comparison-slider {
+            --divider-width: 2px;
+            --divider-color: #fff;
+            --default-handle-width: 50px;
+            margin-bottom: 20px;
+            outline: none;
+        }
+
+        .comparison-container {
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #333;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            background: #111;
+        }
+
+        .zoom-label {
+            display: block;
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Label flutuante "Before/After" */
+        .slider-label {
+            position: absolute;
+            bottom: 20px;
+            background: rgba(0,0,0,0.6);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            z-index: 10;
+            pointer-events: none;
+        }
+    </style>
+
     <!-- Open Graph / Facebook / WhatsApp -->
    <meta property="og:type" content="website">
    <meta property="og:url" content="https://infinityretouch.com/">
    <meta property="og:title" content="Infinity Backdrop Cleaner - Perfect Backgrounds in Seconds">
    <meta property="og:description" content="Automate infinite background cleaning in Photoshop with 16-bit processing. The professional plugin for studio photographers.">
    <meta property="og:image" content="https://infinityretouch.com/hero-image.webp">
-
-   <!-- Twitter -->
-   <meta property="twitter:card" content="summary_large_image">
-   <meta property="twitter:url" content="https://infinityretouch.com/">
-   <meta property="twitter:title" content="Infinity Backdrop Cleaner">
-   <meta property="twitter:description" content="Automate infinite background cleaning in Photoshop with 16-bit processing.">
-   <meta property="twitter:image" content="https://infinityretouch.com/hero-image.webp">
 
    <!-- Google tag (gtag.js) -->
    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RN28DZF26K"></script>
@@ -65,29 +102,24 @@
             <h1>Perfect Infinite Backdrops <br>in Seconds.</h1>
             <p class="subtitle">The professional Photoshop plugin that cleans seamless backgrounds while preserving real shadows and textures. 16-bit processing.</p>
             
-        <!-- Container para limitar o tamanho se necessário -->
-        <div style="max-width: 800px; margin: 0 auto; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
-          
-          <img-comparison-slider>
-            <!-- Imagem da Esquerda (ANTES / SUJO) -->
-            <img slot="first" src="/foto-antes.webp" width="100%" alt="Fundo sujo antes do retoque" />
-            <!-- Imagem da Direita (DEPOIS / LIMPO) -->
-            <img slot="second" src="/foto-depois.webp" width="100%" alt="Fundo limpo após Infinity Retouch" />
-          </img-comparison-slider>
-        
-        </div>
+            <!-- SLIDER 1: VISÃO GERAL -->
+            <div class="comparison-container">
+                <img-comparison-slider>
+                    <img slot="first" src="/foto-antes.webp" width="100%" alt="Before retouching" />
+                    <img slot="second" src="/foto-depois.webp" width="100%" alt="After Infinity Retouch" />
+                </img-comparison-slider>
+            </div>
 
-        <div style="max-width: 800px; margin: 0 auto; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
-          
-          <img-comparison-slider>
-            <!-- Imagem da Esquerda (ANTES / SUJO) -->
-            <img slot="first" src="/foto-zoom-antes.webp" width="100%" alt="Fundo sujo antes do retoque - zoom" />
-            <!-- Imagem da Direita (DEPOIS / LIMPO) -->
-            <img slot="second" src="/foto-zoom-depois.webp" width="100%" alt="Fundo limpo após Infinity Retouch - zoom" />
-          </img-comparison-slider>
-        
-        </div>
-            <a href="/buy/backdrop-cleaner/" class="btn btn-primary">Get Lifetime License - $29</a>
+            <!-- SLIDER 2: ZOOM DETALHES -->
+            <span class="zoom-label">Detail Preservation (200% Zoom)</span>
+            <div class="comparison-container" style="max-width: 600px;">
+                <img-comparison-slider>
+                    <img slot="first" src="/foto-zoom-antes.webp" width="100%" alt="Before zoom" />
+                    <img slot="second" src="/foto-zoom-depois.webp" width="100%" alt="After zoom" />
+                </img-comparison-slider>
+            </div>
+            
+            <a href="/buy/backdrop-cleaner/" class="btn btn-primary" style="margin-top: 20px;">Get Lifetime License - $29</a>
         </section>
 
         <!-- FEATURES GRID -->
@@ -106,7 +138,7 @@
             </div>
         </div>
 
-        <!-- FOOTER (Paddle Compliance) -->
+        <!-- FOOTER -->
         <footer>
             <p>&copy; 2026 Infinity Retouch / WINSERV TECNOLOGIA DA INFORMACAO.</p>
             <p>
