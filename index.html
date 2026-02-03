@@ -6,7 +6,7 @@
     
     <!-- SEO & Meta Tags -->
     <title>Infinity Backdrop Cleaner - Professional Photoshop Plugin</title>
-    <meta name="description" content="Automate infinite background cleaning in Photoshop with 16-bit processing. The professional UXP plugin for studio photographers. Lifetime license.">
+    <meta name="description" content="Automate infinite background cleaning in Photoshop with 16-bit processing. Includes a 7-day free trial. Professional UXP plugin for studio photographers.">
     <link rel="canonical" href="https://infinityretouch.com/">
     
     <!-- Hreflang (SEO Internacional) -->
@@ -16,7 +16,7 @@
 
     <!-- Favicon & Style -->
     <link rel="icon" href="/favicon.png" type="image/png">
-    <link rel="stylesheet" href="/style.css?v=1.5">
+    <link rel="stylesheet" href="/style.css?v=1.6">
 
     <!-- Web Component para o Slider -->
     <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
@@ -51,46 +51,43 @@
             letter-spacing: 1px;
         }
 
-        /* Label flutuante "Before/After" */
-        .slider-label {
-            position: absolute;
-            bottom: 20px;
-            background: rgba(0,0,0,0.6);
-            color: white;
-            padding: 5px 12px;
-            border-radius: 4px;
-            font-size: 12px;
-            z-index: 10;
-            pointer-events: none;
-        }
-
         /* Ajustes específicos para encurtar a dobra inicial */
         nav {
-            margin-bottom: 20px !important; /* Original era 40px */
-            padding: 15px 0 !important;    /* Original era 20px */
+            margin-bottom: 20px !important; 
+            padding: 15px 0 !important;    
         }
         .hero {
-            padding-top: 30px !important;    /* Original era 60px */
+            padding-top: 30px !important;    
         }
         h1 {
-            margin-bottom: 15px !important; /* Reduz o espaço para o subtítulo */
+            margin-bottom: 15px !important; 
         }
+
+        .trial-badge {
+            display: inline-block;
+            background: rgba(56, 239, 125, 0.1);
+            color: var(--success);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            border: 1px solid rgba(56, 239, 125, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
         @media (max-width: 600px) {
-            nav {
-                margin-bottom: 5px !important;
-                gap: 10px !important;
-            }
-            .hero {
-                padding-top: 10px !important;
-            }
+            nav { margin-bottom: 5px !important; gap: 10px !important; }
+            .hero { padding-top: 10px !important; }
         }
-      </style>
+    </style>
 
     <!-- Open Graph / Facebook / WhatsApp -->
    <meta property="og:type" content="website">
    <meta property="og:url" content="https://infinityretouch.com/">
    <meta property="og:title" content="Infinity Backdrop Cleaner - Perfect Backgrounds in Seconds">
-   <meta property="og:description" content="Automate infinite background cleaning in Photoshop with 16-bit processing. The professional plugin for studio photographers.">
+   <meta property="og:description" content="Automate infinite background cleaning in Photoshop with 16-bit processing. Includes a 7-day free trial.">
    <meta property="og:image" content="https://infinityretouch.com/hero-image.webp">
 
    <!-- Google tag (gtag.js) -->
@@ -119,6 +116,7 @@
 
         <!-- HERO SECTION -->
         <section class="hero" id="pricing">
+            <div class="trial-badge">✨ 7-Day Free Trial Included</div>
             <h1>Perfect Infinite Backdrops <br>in Seconds.</h1>
             <p class="subtitle">The professional Photoshop plugin that cleans seamless backgrounds while preserving real shadows and textures. 16-bit processing.</p>
             
@@ -131,7 +129,7 @@
             </div>
 
             <!-- SLIDER 2: ZOOM DETALHES -->
-            <span class="zoom-label">Preservation of details and shadows (200% Zoom)</span>
+            <span class="zoom-label">Detail Preservation (200% Zoom)</span>
             <div class="comparison-container" style="max-width: 600px;">
                 <img-comparison-slider>
                     <img slot="first" src="/foto-zoom-antes.webp?v=1.1" width="100%" alt="Before zoom" />
@@ -139,7 +137,14 @@
                 </img-comparison-slider>
             </div>
             
-            <a href="/buy/backdrop-cleaner/" class="btn btn-intl " style="margin-top: 20px;">Get Lifetime License - $29</a>
+            <div style="margin-top: 30px; display: flex; flex-direction: column; align-items: center; gap: 15px;">
+                <a href="/buy/backdrop-cleaner/" class="btn btn-intl" style="width: 100%; max-width: 320px; font-size: 1.1rem;">
+                    Get Lifetime License - $29
+                </a>
+                <a href="/docs/backdrop-cleaner/#installation" style="color: var(--text-muted); text-decoration: underline; font-size: 0.9rem;">
+                    Or start your 7-day free trial now
+                </a>
+            </div>
         </section>
 
         <!-- FEATURES GRID -->
@@ -152,9 +157,9 @@
                 <h3>🎨 16-Bit Quality</h3>
                 <p>Zero color banding. We process internally at high depth to ensure smooth gradients.</p>
             </div>
-            <div class="card">
-                <h3>🛡️ AI-Safe</h3>
-                <p>No hallucinations. We clean the floor without distorting feet or clothes.</p>
+            <div class="card" style="border-color: rgba(56, 239, 125, 0.3);">
+                <h3>🛡️ Risk Free Trial</h3>
+                <p>Test every feature for 7 days. No credit card required to start your professional cleanup.</p>
             </div>
         </div>
 
