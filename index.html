@@ -17,6 +17,9 @@
     <!-- Favicon & Style -->
     <link rel="icon" href="/favicon.png" type="image/png">
     <link rel="stylesheet" href="/style.css">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"/>    
     
     <!-- Open Graph / Facebook / WhatsApp -->
    <meta property="og:type" content="website">
@@ -62,11 +65,34 @@
             <h1>Perfect Infinite Backdrops <br>in Seconds.</h1>
             <p class="subtitle">The professional Photoshop plugin that cleans seamless backgrounds while preserving real shadows and textures. 16-bit processing.</p>
             
-            <div style="margin-bottom: 40px;">
-                <img src="/hero-image.webp" 
-                     alt="Infinity Backdrop Cleaner Photoshop Plugin - Before and After Result" 
-                     style="width: 100%; border-radius: 12px; border: 1px solid #333; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
-            </div>
+        <!-- Container para limitar o tamanho se necessário -->
+        <div style="max-width: 800px; margin: 0 auto; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+          
+          <img-comparison-slider>
+            <!-- Imagem da Esquerda (ANTES / SUJO) -->
+            <img slot="first" src="/foto-antes.jpg" width="100%" alt="Fundo sujo antes do retoque" />
+            
+            <!-- Imagem da Direita (DEPOIS / LIMPO) -->
+            <img slot="second" src="/foto-depois.jpg" width="100%" alt="Fundo limpo após Infinity Retouch" />
+            
+            <!-- Opcional: Personalizar o Handle (o botão do meio) -->
+            <svg slot="handle" class="custom-animated-handle" xmlns="http://www.w3.org/2000/svg" width="100" viewBox="-8 -3 16 6">
+              <path stroke="#fff" d="M -5 -2 L -7 0 L -5 2 M -5 -2 L -5 2 M 5 -2 L 7 0 L 5 2 M 5 -2 L 5 2" stroke-width="1" fill="#fff" vector-effect="non-scaling-stroke"></path>
+            </svg>
+          </img-comparison-slider>
+        
+        </div>
+        
+        <!-- Estilo Opcional para deixar o handle com a cor da sua marca -->
+        <style>
+          img-comparison-slider {
+            --divider-width: 2px;
+            --divider-color: #ffffff;
+            --default-handle-opacity: 1;
+            --default-handle-width: 50px;
+            --default-handle-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+          }
+        </style>
             
             <a href="/buy/backdrop-cleaner/" class="btn btn-primary">Get Lifetime License - $29</a>
         </section>
