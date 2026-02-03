@@ -110,8 +110,8 @@ p.subtitle {
 .btn-outline { border: 1px solid var(--border); color: #fff; background: transparent; }
 .btn-outline:hover { border-color: #fff; }
 
-.btn-br { background: linear-gradient(135deg, #38ef7d, #11998e); color: #fff; width: 600px; }
-.btn-intl { background: var(--accent-gradient); color: #fff; width: 600px; }
+.btn-br { background: linear-gradient(135deg, #38ef7d, #11998e); color: #fff; width: 100%; }
+.btn-intl { background: var(--accent-gradient); color: #fff; width: 100%; }
 
 /* --- DOCS / MANUAL SPECIFIC (Melhorado) --- */
 .manual-container { 
