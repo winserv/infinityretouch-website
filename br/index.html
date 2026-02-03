@@ -17,6 +17,41 @@
     <!-- Favicon & Style -->
     <link rel="icon" href="/favicon.png" type="image/png">
     <link rel="stylesheet" href="/style.css">
+
+    <!-- Web Component para o Slider de Antes/Depois -->
+    <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"/>    
+    
+    <style>
+        /* Ajustes do Slider para o tema escuro do site */
+        img-comparison-slider {
+            --divider-width: 2px;
+            --divider-color: #fff;
+            --default-handle-width: 50px;
+            margin-bottom: 20px;
+            outline: none;
+        }
+
+        .comparison-container {
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #333;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            background: #111;
+        }
+
+        .zoom-label {
+            display: block;
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
+
     <!-- Open Graph / Facebook / WhatsApp (Versão BR) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://infinityretouch.com/br/">
@@ -49,25 +84,36 @@
                 Infinity Retouch
             </a>
             <div>
-                <a href="/" class="nav-link" title="Switch to English">🇺🇸 EN</a>
+                <a href="/" class="nav-link" title="Mudar para Inglês">🇺🇸 EN</a>
                 <a href="/br/#pricing" class="nav-link">Preço</a>
                 <a href="/br/docs/" class="nav-link">Ajuda</a>
-                <a href="/br/buy/backdrop-cleaner/" class="nav-link btn-buy" style="color: #fff; border: 1px solid #444; padding: 5px 15px; border-radius: 6px;">Comprar</a>
+                <a href="/br/buy/backdrop-cleaner/" class="nav-link btn-buy" style="color: #fff; border: 1px solid #444; padding: 5px 15px; border-radius: 6px;">Comprar Licença</a>
             </div>
         </nav>
 
         <!-- HERO SECTION -->
         <section class="hero" id="pricing">
             <h1>Fundos Infinitos Perfeitos <br>em Segundos.</h1>
-            <p class="subtitle">O plugin profissional para Photoshop que limpa o fundo mantendo sombras reais e texturas. Processamento nativo em 16-bit.</p>
+            <p class="subtitle">O plugin profissional para Photoshop que limpa o fundo infinito mantendo sombras reais e texturas originais. Processamento nativo em 16-bit.</p>
             
-            <div style="margin-bottom: 40px;">
-                <img src="/hero-image.webp" 
-                     alt="Plugin Infinity Backdrop Cleaner - Antes e Depois" 
-                     style="width: 100%; border-radius: 12px; border: 1px solid #333; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+            <!-- SLIDER 1: VISÃO GERAL -->
+            <div class="comparison-container">
+                <img-comparison-slider>
+                    <img slot="first" src="/foto-antes.webp" width="100%" alt="Fundo sujo antes do retoque" />
+                    <img slot="second" src="/foto-depois.webp" width="100%" alt="Fundo limpo após Infinity Retouch" />
+                </img-comparison-slider>
+            </div>
+
+            <!-- SLIDER 2: ZOOM NOS DETALHES -->
+            <span class="zoom-label">Preservação de Textura (Zoom 200%)</span>
+            <div class="comparison-container" style="max-width: 600px;">
+                <img-comparison-slider>
+                    <img slot="first" src="/foto-zoom-antes.webp" width="100%" alt="Zoom antes do retoque" />
+                    <img slot="second" src="/foto-zoom-depois.webp" width="100%" alt="Zoom depois do retoque" />
+                </img-comparison-slider>
             </div>
             
-            <a href="/br/buy/backdrop-cleaner/" class="btn btn-br">Licença Vitalícia - R$ 145</a>
+            <a href="/br/buy/backdrop-cleaner/" class="btn btn-br" style="margin-top: 20px;">Garantir Licença Vitalícia - R$ 145</a>
         </section>
 
         <!-- FEATURES GRID -->
@@ -78,11 +124,11 @@
             </div>
             <div class="card">
                 <h3>🎨 Qualidade 16-Bit</h3>
-                <p>Zero "banding" (faixas). Processamos internamente em alta profundidade para garantir degradês perfeitos.</p>
+                <p>Zero "banding". Processamos internamente em alta profundidade para garantir degradês e cores perfeitas.</p>
             </div>
             <div class="card">
-                <h3>🛡️ Seguro (Sem IA Generativa)</h3>
-                <p>Sem alucinações. Limpamos o chão sem distorcer pés, sapatos ou roupas.</p>
+                <h3>🛡️ Seguro e Preciso</h3>
+                <p>Sem alucinações de IA. Limpamos o chão e o fundo sem distorcer pés, sapatos ou roupas.</p>
             </div>
         </div>
 
@@ -92,8 +138,8 @@
             <p>
                 <a href="/br/docs/">Central de Ajuda</a>
                 <a href="/br/privacy.html">Privacidade</a>
-                <a href="/br/terms.html">Termos</a>
-                <a href="/br/refund.html">Reembolso</a>
+                <a href="/br/terms.html">Termos de Uso</a>
+                <a href="/br/refund.html">Política de Reembolso</a>
                 <a href="mailto:sales@infinityretouch.com">Suporte</a>
             </p>
         </footer>
