@@ -6,7 +6,7 @@
     
     <!-- SEO & Meta Tags -->
     <title>Infinity Backdrop Cleaner - Plugin Photoshop Profissional</title>
-    <meta name="description" content="Limpe fundos infinitos no Photoshop automaticamente com processamento 16-bit. O plugin essencial para fotógrafos de estúdio. Licença vitalícia.">
+    <meta name="description" content="Limpe fundos infinitos no Photoshop automaticamente com processamento 16-bit. Inclui 7 dias de teste grátis. O plugin essencial para fotógrafos de estúdio.">
     <link rel="canonical" href="https://infinityretouch.com/br/">
     
     <!-- Hreflang -->
@@ -16,7 +16,7 @@
 
     <!-- Favicon & Style -->
     <link rel="icon" href="/favicon.png" type="image/png">
-    <link rel="stylesheet" href="/style.css?v=1.5">
+    <link rel="stylesheet" href="/style.css?v=1.6">
 
     <!-- Web Component para o Slider de Antes/Depois -->
     <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
@@ -50,25 +50,36 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
+
         /* Ajustes específicos para encurtar a dobra inicial */
         nav {
-            margin-bottom: 20px !important; /* Original era 40px */
-            padding: 15px 0 !important;    /* Original era 20px */
+            margin-bottom: 20px !important; 
+            padding: 15px 0 !important;    
         }
         .hero {
-            padding-top: 30px !important;    /* Original era 60px */
+            padding-top: 30px !important;    
         }
         h1 {
-            margin-bottom: 15px !important; /* Reduz o espaço para o subtítulo */
+            margin-bottom: 15px !important; 
         }
+
+        .trial-badge {
+            display: inline-block;
+            background: rgba(56, 239, 125, 0.1);
+            color: var(--success);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            border: 1px solid rgba(56, 239, 125, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
         @media (max-width: 600px) {
-            nav {
-                margin-bottom: 5px !important;
-                gap: 10px !important;
-            }
-            .hero {
-                padding-top: 10px !important;
-            }
+            nav { margin-bottom: 5px !important; gap: 10px !important; }
+            .hero { padding-top: 10px !important; }
         }
       </style>
 
@@ -76,14 +87,14 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://infinityretouch.com/br/">
     <meta property="og:title" content="Infinity Backdrop Cleaner - Fundos Perfeitos em Segundos">
-    <meta property="og:description" content="Automatize a limpeza de fundo infinito no Photoshop com processamento 16-bit. O plugin profissional para fotógrafos de estúdio. Licença vitalícia.">
+    <meta property="og:description" content="Limpeza de fundo infinito no Photoshop com processamento 16-bit. Inclui 7 dias de teste grátis. Licença vitalícia.">
     <meta property="og:image" content="https://infinityretouch.com/hero-image.webp">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://infinityretouch.com/br/">
     <meta property="twitter:title" content="Infinity Backdrop Cleaner - Plugin Photoshop">
-    <meta property="twitter:description" content="Automatize a limpeza de fundo infinito no Photoshop com processamento 16-bit. Licença vitalícia.">
+    <meta property="twitter:description" content="Automatize a limpeza de fundo infinito. Processamento 16-bit e teste grátis por 7 dias.">
     <meta property="twitter:image" content="https://infinityretouch.com/hero-image.webp">
     
     <!-- Google tag (gtag.js) -->
@@ -104,7 +115,7 @@
                 Infinity Retouch
             </a>
             <div>
-                <a href="/" class="nav-link" title="Mudar para Inglês">🇺🇸 EN</a>
+                <a href="/" class="nav-link" title="Switch to English">🇺🇸 EN</a>
                 <a href="/br/docs/" class="nav-link">Ajuda</a>
                 <a href="/br/buy/backdrop-cleaner/" class="nav-link btn-buy" style="color: #fff; border: 1px solid #444; padding: 5px 15px; border-radius: 6px;">Comprar Licença</a>
             </div>
@@ -112,6 +123,7 @@
 
         <!-- HERO SECTION -->
         <section class="hero" id="pricing">
+            <div class="trial-badge">✨ Inclui 7 dias de teste grátis</div>
             <h1>Fundos Infinitos Perfeitos <br>em Segundos.</h1>
             <p class="subtitle">O plugin profissional para Photoshop que limpa o fundo infinito mantendo sombras reais e texturas originais. Processamento nativo em 16-bit.</p>
             
@@ -132,7 +144,14 @@
                 </img-comparison-slider>
             </div>
             
-            <a href="/br/buy/backdrop-cleaner/" class="btn btn-br" style="margin-top: 20px;">Garantir Licença Vitalícia - R$ 145</a>
+            <div style="margin-top: 30px; display: flex; flex-direction: column; align-items: center; gap: 15px;">
+                <a href="/br/buy/backdrop-cleaner/" class="btn btn-br" style="width: 100%; max-width: 320px; font-size: 1.1rem;">
+                    Garantir Licença Vitalícia - R$ 145
+                </a>
+                <a href="/br/docs/backdrop-cleaner/#instalação" style="color: var(--text-muted); text-decoration: underline; font-size: 0.9rem;">
+                    Ou comece seu teste gratuito de 7 dias agora
+                </a>
+            </div>
         </section>
 
         <!-- FEATURES GRID -->
@@ -145,9 +164,9 @@
                 <h3>🎨 Qualidade 16-Bit</h3>
                 <p>Zero "banding". Processamos internamente em alta profundidade para garantir degradês e cores perfeitas.</p>
             </div>
-            <div class="card">
-                <h3>🛡️ Seguro e Preciso</h3>
-                <p>Sem alucinações de IA. Limpamos o chão e o fundo sem distorcer pés, sapatos ou roupas.</p>
+            <div class="card" style="border-color: rgba(56, 239, 125, 0.3);">
+                <h3>🛡️ Teste Sem Riscos</h3>
+                <p>Experimente todas as funções por 7 dias. Sem necessidade de cartão de crédito para começar o seu retoque profissional.</p>
             </div>
         </div>
 
