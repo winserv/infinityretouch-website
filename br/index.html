@@ -9,58 +9,27 @@
     <meta name="description" content="Limpe fundos infinitos no Photoshop automaticamente com processamento 16-bit. Inclui 7 dias de teste grátis. O plugin essencial para fotógrafos de estúdio.">
     <link rel="canonical" href="https://infinityretouch.com/br/">
     
-    <!-- Hreflang -->
+    <!-- Hreflang (SEO Internacional) -->
     <link rel="alternate" hreflang="en" href="https://infinityretouch.com/" />
     <link rel="alternate" hreflang="pt-br" href="https://infinityretouch.com/br/" />
     <link rel="alternate" hreflang="x-default" href="https://infinityretouch.com/" />
 
     <!-- Favicon & Style -->
     <link rel="icon" href="/favicon.png" type="image/png">
-    <link rel="stylesheet" href="/style.css?v=1.6">
+    <link rel="stylesheet" href="/style.css?v=2.0">
 
     <!-- Web Component para o Slider de Antes/Depois -->
     <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"/>    
     
     <style>
-        /* Ajustes do Slider para o tema escuro do site */
+        /* Ajustes específicos para Sliders e Badge na versão BR */
         img-comparison-slider {
             --divider-width: 2px;
             --divider-color: #fff;
             --default-handle-width: 50px;
             margin-bottom: 20px;
             outline: none;
-        }
-
-        .comparison-container {
-            max-width: 800px;
-            margin: 0 auto 40px auto;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid #333;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-            background: #111;
-        }
-
-        .zoom-label {
-            display: block;
-            font-size: 14px;
-            color: #888;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Ajustes específicos para encurtar a dobra inicial */
-        nav {
-            margin-bottom: 20px !important; 
-            padding: 15px 0 !important;    
-        }
-        .hero {
-            padding-top: 30px !important;    
-        }
-        h1 {
-            margin-bottom: 15px !important; 
         }
 
         .trial-badge {
@@ -76,12 +45,7 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-
-        @media (max-width: 600px) {
-            nav { margin-bottom: 5px !important; gap: 10px !important; }
-            .hero { padding-top: 10px !important; }
-        }
-      </style>
+    </style>
 
     <!-- Open Graph / Facebook / WhatsApp (Versão BR) -->
     <meta property="og:type" content="website">
@@ -90,13 +54,6 @@
     <meta property="og:description" content="Limpeza de fundo infinito no Photoshop com processamento 16-bit. Inclui 7 dias de teste grátis. Licença vitalícia.">
     <meta property="og:image" content="https://infinityretouch.com/hero-image.webp">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://infinityretouch.com/br/">
-    <meta property="twitter:title" content="Infinity Backdrop Cleaner - Plugin Photoshop">
-    <meta property="twitter:description" content="Automatize a limpeza de fundo infinito. Processamento 16-bit e teste grátis por 7 dias.">
-    <meta property="twitter:image" content="https://infinityretouch.com/hero-image.webp">
-    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RN28DZF26K"></script>
     <script>
@@ -127,23 +84,34 @@
             <h1>Fundos Infinitos Perfeitos <br>em Segundos.</h1>
             <p class="subtitle">O plugin profissional para Photoshop que limpa o fundo infinito mantendo sombras reais e texturas originais. Processamento nativo em 16-bit.</p>
             
-            <!-- SLIDER 1: VISÃO GERAL -->
+            <!-- 1. VÍDEO NO TOPO (DEMONSTRAÇÃO DE VELOCIDADE) -->
+            <span class="section-label">Assista o Workflow em Ação</span>
+            <div class="video-container">
+                <video autoplay loop muted playsinline disablePictureInPicture>
+                    <source src="/demo-plugin-01.mp4" type="video/mp4">
+                    Seu navegador não suporta a tag de vídeo.
+                </video>
+            </div>
+
+            <!-- 2. SLIDER GERAL (TESTE DE QUALIDADE) -->
+            <span class="section-label">Teste de Qualidade Interativo</span>
             <div class="comparison-container">
                 <img-comparison-slider>
                     <img slot="first" src="/foto-antes.webp?v=1.1" width="100%" alt="Fundo sujo antes do retoque" />
-                    <img slot="second" src="/foto-depois.webp?v=1.1" width="100%" alt="Fundo limpo após Infinity Retouch" />
+                    <img slot="second" src="/foto-depois.webp?v=1.1" width="100%" alt="Fundo limpo após o plugin" />
                 </img-comparison-slider>
             </div>
 
-            <!-- SLIDER 2: ZOOM NOS DETALHES -->
-            <span class="zoom-label">Detalhes, Textura e Sombras (Zoom 200%)</span>
+            <!-- 3. SLIDER ZOOM (DETALHE TÉCNICO) -->
+            <span class="section-label">Preservação de Textura (Zoom 200%)</span>
             <div class="comparison-container" style="max-width: 600px;">
                 <img-comparison-slider>
-                    <img slot="first" src="/foto-zoom-antes.webp?v=1.1" width="100%" alt="Zoom antes do retoque" />
-                    <img slot="second" src="/foto-zoom-depois.webp?v=1.1" width="100%" alt="Zoom depois do retoque" />
+                    <img slot="first" src="/foto-zoom-antes.webp?v=1.1" width="100%" alt="Zoom antes" />
+                    <img slot="second" src="/foto-zoom-depois.webp?v=1.1" width="100%" alt="Zoom depois" />
                 </img-comparison-slider>
             </div>
             
+            <!-- CHAMADA PARA AÇÃO (CTA) -->
             <div style="margin-top: 30px; display: flex; flex-direction: column; align-items: center; gap: 15px;">
                 <a href="/br/buy/backdrop-cleaner/" class="btn btn-br" style="width: 100%; max-width: 375px; font-size: 1.1rem;">
                     Garantir Licença Vitalícia - R$ 145
