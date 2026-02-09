@@ -30,12 +30,12 @@ a { text-decoration: none; transition: 0.2s; }
 
 /* --- NAVIGATION --- */
 nav {
-    padding: 20px 0;
+    padding: 15px 0; /* Ajustado de 20px */
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--border);
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Reduzido de 40px para subir o conteúdo */
 }
 
 .logo {
@@ -57,20 +57,53 @@ nav {
 .nav-link:hover { color: #fff; }
 
 /* --- HERO & GENERAL --- */
-.hero { text-align: center; padding: 40px 0; }
+.hero { 
+    text-align: center; 
+    padding: 25px 0 60px 0; /* Reduzido o topo para o título subir */
+}
+
 h1 {
     font-size: 3rem;
     line-height: 1.1;
+    margin-top: 0; /* Remove espaço extra no topo */
     margin-bottom: 20px;
     background: linear-gradient(to right, #fff, #b3b3b3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 p.subtitle {
     font-size: 1.2rem;
     color: var(--text-muted);
     max-width: 600px;
-    margin: 0 auto 20px;
+    margin: 0 auto 30px;
+}
+
+/* --- SLIDERS & VIDEO CONTAINERS --- */
+.section-label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.comparison-container, .video-container {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    background: #111;
+}
+
+.video-container video {
+    width: 100%;
+    display: block;
+    outline: none;
 }
 
 /* --- CARDS & GRID --- */
@@ -113,7 +146,7 @@ p.subtitle {
 .btn-br { background: linear-gradient(135deg, #38ef7d, #11998e); color: #fff; width: 100%; }
 .btn-intl { background: var(--accent-gradient); color: #fff; width: 100%; }
 
-/* --- DOCS / MANUAL SPECIFIC (Melhorado) --- */
+/* --- DOCS / MANUAL SPECIFIC --- */
 .manual-container { 
     max-width: 800px; 
     margin: 0 auto; 
@@ -182,10 +215,9 @@ p.subtitle {
 }
 
 .step-item h3 { margin-top: 0; margin-bottom: 15px; }
-
 .step-item p { margin-bottom: 0; }
 
-/* Callouts / Notes */
+/* Callouts / Notes / Warnings */
 .note {
     background: rgba(234, 179, 8, 0.05);
     border: 1px solid rgba(234, 179, 8, 0.2);
@@ -195,9 +227,7 @@ p.subtitle {
     margin: 40px 0;
 }
 .note strong { color: #eab308; font-size: 1.1rem; display: block; margin-bottom: 10px; }
-.note p { color: #dedede; margin-bottom: 0; }
 
-/* Warnings */
 .warning {
     background: rgba(220, 38, 38, 0.05);
     border: 1px solid rgba(220, 38, 38, 0.2);
@@ -207,9 +237,8 @@ p.subtitle {
     margin: 40px 0;
 }
 .warning strong { color: #ef4444; font-size: 1.1rem; display: block; margin-bottom: 10px; }
-.warning ul { margin-bottom: 0; }
 
-/* License Key Box */
+/* License Key Box & Code */
 .license-key-box {
     background: #000;
     border: 1px dashed #444;
@@ -223,7 +252,6 @@ p.subtitle {
     letter-spacing: 1px;
 }
 
-/* Code Snippets */
 code {
     background: #222;
     border: 1px solid #333;
@@ -242,8 +270,6 @@ code {
     margin-bottom: 20px;
     border: 1px solid var(--border);
 }
-.faq-item h3 { margin-top: 0; font-size: 1.2rem; }
-.faq-item p { margin-bottom: 0; }
 
 /* Table of Contents */
 .toc {
@@ -258,7 +284,6 @@ code {
 .toc-list li { margin-bottom: 10px; }
 .toc-list a { color: var(--text-muted); font-weight: 500; text-decoration: none; }
 .toc-list a:hover { color: var(--accent); text-decoration: underline; }
-@media (max-width: 600px) { .toc-list { columns: 1; } }
 
 /* Contact Box */
 .contact-box {
@@ -270,9 +295,6 @@ code {
     margin: 80px 0;
     box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
 }
-.contact-box h3 { color: white; margin-top: 0; }
-.contact-box p { color: rgba(255,255,255,0.9); }
-.contact-box a { color: white; font-weight: 700; text-decoration: underline; }
 
 /* --- FOOTER --- */
 footer {
@@ -282,20 +304,11 @@ footer {
 footer a { color: #777; margin: 0 10px; }
 footer a:hover { color: #fff; }
 
-/* --- BRIDGE PAGE --- */
-.bridge-container {
-    min-height: 80vh; display: flex; flex-direction: column;
-    align-items: center; justify-content: center; max-width: 500px; margin: 0 auto;
-}
-.payment-option {
-    background: var(--surface); border: 1px solid var(--border);
-    padding: 25px; border-radius: 12px; width: 100%; margin-bottom: 15px;
-}
-.price-tag { font-size: 2rem; font-weight: 700; margin: 10px 0; display: block; color: #fff; }
-.details { font-size: 0.85rem; color: var(--text-muted); margin-top: 10px; display: block; }
-
+/* --- RESPONSIVIDADE --- */
 @media (max-width: 600px) {
-    nav { flex-direction: column; gap: 15px; }
-    .nav-link { margin-left: 10px; margin-right: 10px; }
-    h1 { font-size: 2.2rem; } /* Ajusta o título gigante no celular */
+    nav { flex-direction: column; gap: 10px; margin-bottom: 10px; }
+    .nav-link { margin-left: 10px; margin-right: 10px; font-size: 0.85rem; }
+    h1 { font-size: 2.1rem; }
+    .hero { padding: 15px 0 40px 0; }
+    .toc-list { columns: 1; }
 }
