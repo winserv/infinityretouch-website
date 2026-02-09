@@ -16,14 +16,14 @@
 
     <!-- Favicon & Style -->
     <link rel="icon" href="/favicon.png" type="image/png">
-    <link rel="stylesheet" href="/style.css?v=1.8">
+    <link rel="stylesheet" href="/style.css?v=2.0">
 
     <!-- Web Component para o Slider Interativo -->
     <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"/>    
     
     <style>
-        /* Estilização específica para os Sliders (Web Component) */
+        /* Estilização específica para Sliders e Badge */
         img-comparison-slider {
             --divider-width: 2px;
             --divider-color: #fff;
@@ -44,6 +44,11 @@
             border: 1px solid rgba(56, 239, 125, 0.2);
             text-transform: uppercase;
             letter-spacing: 1px;
+        }
+
+        /* Ajuste de profundidade para o vídeo no topo */
+        .video-container {
+            border: 1px solid #444; /* Borda levemente mais clara para destacar o vídeo */
         }
     </style>
 
@@ -84,31 +89,31 @@
             <h1>Perfect Infinite Backdrops <br>in Seconds.</h1>
             <p class="subtitle">The professional Photoshop plugin that cleans seamless backgrounds while preserving real shadows and textures. 16-bit processing.</p>
             
-            <!-- SLIDER 1: VISÃO GERAL -->
-            <span class="section-label">Interactive Results</span>
-            <div class="comparison-container">
-                <img-comparison-slider>
-                    <img slot="first" src="/foto-antes.webp?v=1.1" width="100%" alt="Before retouching" />
-                    <img slot="second" src="/foto-depois.webp?v=1.1" width="100%" alt="After Infinity Retouch" />
-                </img-comparison-slider>
-            </div>
-
-            <!-- SLIDER 2: ZOOM DETALHES -->
-            <span class="section-label">Detail Preservation (200% Zoom)</span>
-            <div class="comparison-container" style="max-width: 600px;">
-                <img-comparison-slider>
-                    <img slot="first" src="/foto-zoom-antes.webp?v=1.1" width="100%" alt="Before zoom" />
-                    <img slot="second" src="/foto-zoom-depois.webp?v=1.1" width="100%" alt="After zoom" />
-                </img-comparison-slider>
-            </div>
-
-            <!-- VÍDEO: DEMONSTRAÇÃO DO WORKFLOW -->
-            <span class="section-label">Watch it in Action</span>
+            <!-- 1. VÍDEO NO TOPO (DEMONSTRAÇÃO DE VELOCIDADE) -->
+            <span class="section-label">Watch the Workflow</span>
             <div class="video-container">
                 <video autoplay loop muted playsinline disablePictureInPicture>
                     <source src="/demo-plugin-01.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+            </div>
+
+            <!-- 2. SLIDER GERAL (PROVA DE RESULTADO) -->
+            <span class="section-label">Interactive Quality Test</span>
+            <div class="comparison-container">
+                <img-comparison-slider>
+                    <img slot="first" src="/foto-antes.webp?v=1.1" width="100%" alt="Background before retouching" />
+                    <img slot="second" src="/foto-depois.webp?v=1.1" width="100%" alt="Cleaned background" />
+                </img-comparison-slider>
+            </div>
+
+            <!-- 3. SLIDER ZOOM (DETALHE TÉCNICO) -->
+            <span class="section-label">Texture Preservation (200% Zoom)</span>
+            <div class="comparison-container" style="max-width: 600px;">
+                <img-comparison-slider>
+                    <img slot="first" src="/foto-zoom-antes.webp?v=1.1" width="100%" alt="Zoom before" />
+                    <img slot="second" src="/foto-zoom-depois.webp?v=1.1" width="100%" alt="Zoom after" />
+                </img-comparison-slider>
             </div>
             
             <!-- CALL TO ACTION -->
