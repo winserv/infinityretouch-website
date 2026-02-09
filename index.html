@@ -16,51 +16,20 @@
 
     <!-- Favicon & Style -->
     <link rel="icon" href="/favicon.png" type="image/png">
-    <link rel="stylesheet" href="/style.css?v=1.6">
+    <link rel="stylesheet" href="/style.css?v=1.8">
 
-    <!-- Web Component para o Slider -->
+    <!-- Web Component para o Slider Interativo -->
     <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"/>    
     
     <style>
-        /* Estilização customizada do Slider */
+        /* Estilização específica para os Sliders (Web Component) */
         img-comparison-slider {
             --divider-width: 2px;
             --divider-color: #fff;
             --default-handle-width: 50px;
             margin-bottom: 20px;
             outline: none;
-        }
-
-        .comparison-container {
-            max-width: 800px;
-            margin: 0 auto 40px auto;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid #333;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-            background: #111;
-        }
-
-        .zoom-label {
-            display: block;
-            font-size: 14px;
-            color: #888;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Ajustes específicos para encurtar a dobra inicial */
-        nav {
-            margin-bottom: 20px !important; 
-            padding: 15px 0 !important;    
-        }
-        .hero {
-            padding-top: 30px !important;    
-        }
-        h1 {
-            margin-bottom: 15px !important; 
         }
 
         .trial-badge {
@@ -75,11 +44,6 @@
             border: 1px solid rgba(56, 239, 125, 0.2);
             text-transform: uppercase;
             letter-spacing: 1px;
-        }
-
-        @media (max-width: 600px) {
-            nav { margin-bottom: 5px !important; gap: 10px !important; }
-            .hero { padding-top: 10px !important; }
         }
     </style>
 
@@ -121,6 +85,7 @@
             <p class="subtitle">The professional Photoshop plugin that cleans seamless backgrounds while preserving real shadows and textures. 16-bit processing.</p>
             
             <!-- SLIDER 1: VISÃO GERAL -->
+            <span class="section-label">Interactive Results</span>
             <div class="comparison-container">
                 <img-comparison-slider>
                     <img slot="first" src="/foto-antes.webp?v=1.1" width="100%" alt="Before retouching" />
@@ -129,14 +94,24 @@
             </div>
 
             <!-- SLIDER 2: ZOOM DETALHES -->
-            <span class="zoom-label">Detail Preservation (200% Zoom)</span>
+            <span class="section-label">Detail Preservation (200% Zoom)</span>
             <div class="comparison-container" style="max-width: 600px;">
                 <img-comparison-slider>
                     <img slot="first" src="/foto-zoom-antes.webp?v=1.1" width="100%" alt="Before zoom" />
                     <img slot="second" src="/foto-zoom-depois.webp?v=1.1" width="100%" alt="After zoom" />
                 </img-comparison-slider>
             </div>
+
+            <!-- VÍDEO: DEMONSTRAÇÃO DO WORKFLOW -->
+            <span class="section-label">Watch it in Action</span>
+            <div class="video-container">
+                <video autoplay loop muted playsinline disablePictureInPicture>
+                    <source src="/demo-plugin-01.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
             
+            <!-- CALL TO ACTION -->
             <div style="margin-top: 30px; display: flex; flex-direction: column; align-items: center; gap: 15px;">
                 <a href="/buy/backdrop-cleaner/" class="btn btn-intl" style="width: 100%; max-width: 320px; font-size: 1.1rem;">
                     Get Lifetime License - $29
@@ -163,7 +138,7 @@
             </div>
         </div>
 
-        <!-- FOOTER -->
+        <!-- FOOTER (Paddle & Compliance) -->
         <footer>
             <p>&copy; 2026 Infinity Retouch / WINSERV TECNOLOGIA DA INFORMACAO.</p>
             <p>
