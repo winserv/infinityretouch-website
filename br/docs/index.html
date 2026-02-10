@@ -3,66 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Central de Ajuda - Infinity Retouch</title>
+    <title>Manual - Infinity Backdrop Cleaner</title>
     <link rel="icon" href="/favicon.png" type="image/png">
-    <link rel="stylesheet" href="/style.css">
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RN28DZF26K"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-RN28DZF26K');
-    </script> 
+    <link rel="stylesheet" href="/style.css?v=2.7">
+    <style>
+        .manual-container { max-width: 850px; margin: 0 auto; }
+        .toc-list { list-style: none !important; margin-left: 0 !important; columns: 2; padding: 20px 0; }
+        .toc-list li { margin-bottom: 12px; }
+        .toc-list a { color: var(--success); font-weight: 600; text-decoration: none; }
+        .toc-list a:hover { text-decoration: underline; }
+        
+        .doc-section { margin-top: 80px; scroll-margin-top: 100px; }
+        .doc-section h2 { font-size: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 15px; margin-bottom: 30px; color: #fff; }
+        .doc-section h3 { margin-top: 30px; margin-bottom: 15px; color: #fff; }
+        
+        .step-item { background: var(--surface); border: 1px solid var(--border); padding: 25px; border-radius: 12px; margin-bottom: 25px; }
+        .step-number { color: var(--success); font-weight: 800; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; display: block; margin-bottom: 10px; }
+        
+        .note { background: rgba(56, 239, 125, 0.05); border-left: 4px solid var(--success); padding: 20px; border-radius: 6px; margin: 30px 0; color: var(--text-muted); }
+        .note strong { color: var(--success); }
+
+        .warning-box { background: rgba(220, 38, 38, 0.05); border-left: 4px solid #dc2626; padding: 20px; border-radius: 6px; margin: 30px 0; color: #ffb3b3; }
+        .warning-box strong { color: #ff6b6b; display: block; margin-bottom: 5px; }
+
+        .license-key-box { background: #000; border: 1px dashed #444; color: var(--success); padding: 15px; text-align: center; font-family: monospace; font-size: 1.1rem; margin: 20px 0; border-radius: 8px; }
+        
+        .faq-item { background: var(--surface); padding: 20px; border-radius: 10px; margin-bottom: 15px; border: 1px solid var(--border); }
+        .faq-item h3 { font-size: 1.1rem; margin-top: 0; margin-bottom: 10px; color: #fff; }
+
+        .adobe-disclaimer { font-size: 0.7rem; color: #444; margin-top: 20px; line-height: 1.4; }
+
+        @media (max-width: 600px) { .toc-list { columns: 1; } }
+    </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container manual-container">
         <nav>
             <a href="/br/" class="logo">
                 <img src="/infinity-retouch-logo.png" alt="Logo"> Infinity Retouch
             </a>
-            <div>
-            <a href="/docs/" class="nav-link" title="Switch to English">🇺🇸 EN</a>    
-            <a href="/br/" class="nav-link">← Voltar para Home</a>
+            <div style="display: flex; align-items: center;">
+                <a href="/docs/backdrop-cleaner/" class="nav-link">🇺🇸 EN</a>
+                <a href="/br/docs/" class="nav-link">Central de Ajuda</a>
+                <span style="color: #444; margin: 0 10px;">/</span>
+                <span style="color: #fff; font-size: 0.9rem;">Backdrop Cleaner</span>
             </div>
         </nav>
 
-        <section class="hero">
-            <h1>Central de Ajuda</h1>
-            <p class="subtitle">Documentação, guias e suporte.</p>
-        </section>
+        <header style="text-align: center; margin: 60px 0;">
+            <h1 style="font-size: 2.8rem;">📖 Backdrop Cleaner</h1>
+            <p class="subtitle">Manual do Usuário e Guia de Instalação</p>
+        </header>
 
-        <div class="grid">
-            <!-- Produto 1 -->
-            <div class="card" style="text-align: center;">
-                <div style="font-size: 3rem; margin-bottom: 15px;">∞</div>
-                <h3>Backdrop Cleaner</h3>
-                <p>Manual completo, guia de instalação e solução de problemas.</p>
-                <br>
-                <!-- LINK CORRIGIDO PARA BR -->
-                <a href="/br/docs/backdrop-cleaner/" class="btn btn-br" style="width: 100%">Ler Manual</a>
+        <div class="card">
+            <h3>📑 Índice</h3>
+            <ul class="toc-list">
+                <li><a href="#quick-start">🚀 Guia Rápido</a></li>
+                <li><a href="#installation">💿 Instalação</a></li>
+                <li><a href="#activation">🔑 Ativação da Licença</a></li>
+                <li><a href="#usage">🎨 Como Usar</a></li>
+                <li><a href="#faq">❓ Perguntas Frequentes</a></li>
+                <li><a href="#support">📧 Suporte</a></li>
+            </ul>
+        </div>
+
+        <div id="quick-start" class="doc-section">
+            <h2>🚀 Guia Rápido</h2>
+            <div class="step-item">
+                <span class="step-number">Passo 1: Instalar</span>
+                <h3>Obtenha o Plugin</h3>
+                <p>Instale via Adobe Creative Cloud ou clicando duas vezes no arquivo .ccx.</p>
             </div>
-
-            <!-- Produto 2 -->
-            <div class="card" style="text-align: center; opacity: 0.6;">
-                <div style="font-size: 3rem; margin-bottom: 15px;">✨</div>
-                <h3>Skin Retoucher</h3>
-                <p>Em breve. Ferramentas avançadas de separação de frequência.</p>
-                <br>
-                <button class="btn btn-outline" disabled style="width: 100%; cursor: default;">Em Breve</button>
+            <div class="step-item">
+                <span class="step-number">Passo 2: Preparar</span>
+                <h3>Preparar para Pintura</h3>
+                <p>Abra sua imagem e clique em <strong>"Prepare for Painting"</strong>. A IA protegerá seu assunto.</p>
+            </div>
+            <div class="step-item">
+                <span class="step-number">Passo 3: Limpar</span>
+                <h3>Pintar Imperfeições</h3>
+                <p>Copie a cor do fundo (Alt+Clique) e pinte sobre amassados ou sujeira no piso.</p>
+            </div>
+            <div class="step-item">
+                <span class="step-number">Passo 4: Processar</span>
+                <h3>Finalizar</h3>
+                <p>Clique em <strong>"Process Image"</strong> para gerar o fundo perfeito em 16-bit.</p>
             </div>
         </div>
 
-        <!-- FOOTER -->
+        <div id="installation" class="doc-section">
+            <h2>💿 Instalação</h2>
+            <p>O Infinity Backdrop Cleaner é um plugin UXP moderno compatível com o <strong>Adobe® Photoshop® 2023 (v24.x)</strong> ou superior.</p>
+            <h3>Windows & macOS</h3>
+            <ol>
+                <li>Certifique-se que o Adobe Creative Cloud está aberto.</li>
+                <li>Dê um duplo clique no arquivo <code>.ccx</code> baixado.</li>
+                <li>Clique em "Install" na janela da Adobe.</li>
+                <li>Reinicie o Photoshop se ele estava aberto.</li>
+            </ol>
+        </div>
+
+        <div id="activation" class="doc-section">
+            <h2>🔑 Ativação da Licença</h2>
+            <p>Após a compra, sua chave será enviada por e-mail. Ela garante uma <strong>licença vitalícia</strong> para até 2 computadores.</p>
+            <div class="license-key-box">ABC123-DEF456-GHI789-JKL098</div>
+            <p>Para ativar, abra o plugin no Photoshop, clique em <strong>"Manage License"</strong> e cole sua chave.</p>
+        </div>
+
+        <div id="support" class="contact-box" style="margin-top: 100px;">
+            <h3>📧 Precisa de Ajuda?</h3>
+            <p>Nosso time geralmente responde em até 24 horas.</p>
+            <br>
+            <a href="mailto:sales@infinityretouch.com" style="color:#fff; font-weight: bold; text-decoration: underline;">sales@infinityretouch.com</a>
+        </div>
+
         <footer>
             <p>&copy; 2026 Infinity Retouch / WINSERV TECNOLOGIA DA INFORMACAO.</p>
+            <div class="adobe-disclaimer">
+                Adobe® e Photoshop® são marcas registradas da Adobe Inc. Este plugin é um produto independente e não é afiliado à Adobe Inc.
+            </div>
             <p>
                 <a href="/br/docs/">Central de Ajuda</a>
                 <a href="/br/privacy.html">Privacidade</a>
                 <a href="/br/terms.html">Termos</a>
                 <a href="/br/refund.html">Reembolso</a>
-                <a href="mailto:sales@infinityretouch.com">Suporte</a>
             </p>
         </footer>
     </div>
