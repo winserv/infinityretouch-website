@@ -5,87 +5,144 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manual - Infinity Backdrop Cleaner</title>
     <link rel="icon" href="/favicon.png" type="image/png">
-    <link rel="stylesheet" href="/style.css?v=3.1">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RN28DZF26K"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-RN28DZF26K');</script>
+    <link rel="stylesheet" href="/style.css?v=3.5">
+    
     <style>
-        .manual-container { max-width: 850px; margin: 0 auto; padding-bottom: 80px; }
-        .doc-section { margin-top: 60px; scroll-margin-top: 100px; }
+        .manual-container { max-width: 900px; margin: 0 auto; padding-bottom: 100px; }
+        .toc-list { list-style: none !important; margin-left: 0 !important; columns: 2; border-top: 1px solid var(--border); padding-top: 20px; }
+        .toc-list li { margin-bottom: 10px; }
+        .toc-list a { color: var(--success); font-weight: 600; text-decoration: none; }
+        .toc-list a:hover { text-decoration: underline; }
+        
+        .doc-section { margin-top: 80px; scroll-margin-top: 100px; }
         .doc-section h2 { font-size: 2.2rem; border-bottom: 1px solid var(--border); padding-bottom: 15px; margin-bottom: 30px; color: #fff; }
         .doc-section h3 { margin-top: 40px; margin-bottom: 15px; color: #fff; border-left: 3px solid var(--success); padding-left: 15px; }
-        .step-item { background: var(--surface); border: 1px solid var(--border); padding: 25px; border-radius: 12px; margin-bottom: 25px; }
-        .step-number { color: var(--success); font-weight: 800; font-size: 0.8rem; display: block; margin-bottom: 10px; }
-        .license-key-box { background: #000; border: 1px dashed #444; color: var(--success); padding: 20px; text-align: center; font-family: monospace; font-size: 1.1rem; border-radius: 8px; font-weight: bold; }
+        
+        .license-key-box { background: #000; border: 1px dashed #444; color: var(--success); padding: 20px; text-align: center; font-family: 'Courier New', monospace; font-size: 1.1rem; margin: 20px 0; border-radius: 8px; font-weight: bold; letter-spacing: 1px; }
+        
+        .warning-box { background: rgba(220, 38, 38, 0.05); border-left: 4px solid #dc2626; padding: 20px; border-radius: 6px; margin: 30px 0; color: #ffb3b3; }
+        .warning-box strong { color: #ff6b6b; display: block; margin-bottom: 5px; }
+
         .note { background: rgba(255, 255, 255, 0.03); border-left: 4px solid var(--success); padding: 25px; border-radius: 8px; margin: 40px 0; }
-        .toc-list { list-style: none !important; margin-left: 0 !important; columns: 2; padding: 20px 0; border-top: 1px solid var(--border); }
-        .toc-list a { color: var(--text-muted); text-decoration: none; }
-        .toc-list a:hover { color: var(--success); text-decoration: underline; }
+        .note strong { color: var(--success); display: block; margin-bottom: 5px; }
+
+        .faq-item { background: var(--surface); padding: 25px; border-radius: 12px; margin-bottom: 20px; border: 1px solid var(--border); }
+        .faq-item h3 { font-size: 1.2rem; margin-top: 0; margin-bottom: 10px; color: #fff; }
+
+        .adobe-disclaimer { max-width: 800px; margin: 25px auto; font-size: 0.7rem; color: #444; line-height: 1.4; text-align: center; }
+
+        @media (max-width: 600px) { .toc-list { columns: 1; } }
     </style>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RN28DZF26K"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-RN28DZF26K');
+    </script> 
 </head>
 <body>
     <div class="container manual-container">
+        <!-- NAV -->
         <nav>
-            <a href="/br/" class="logo"><img src="/infinity-retouch-logo.png" alt="Logo"> Infinity Retouch</a>
-            <div>
+            <a href="/br/" class="logo">
+                <img src="/infinity-retouch-logo.png" alt="Logo"> Infinity Retouch
+            </a>
+            <div style="display: flex; align-items: center;">
                 <a href="/docs/backdrop-cleaner/" class="nav-link">🇺🇸 EN</a>
                 <a href="/br/docs/" class="nav-link">Ajuda</a>
+                <span style="color: #444; margin: 0 10px;">/</span>
+                <span style="color: #fff; font-size: 0.9rem;">Backdrop Cleaner</span>
             </div>
         </nav>
+
         <header style="text-align: center; margin: 60px 0;">
-            <h1>Manual Backdrop Cleaner</h1>
-            <p class="subtitle">Guia completo para Adobe® Photoshop®</p>
+            <h1 style="font-size: 2.8rem;">📖 Infinity Backdrop Cleaner</h1>
+            <p class="subtitle">Manual do Usuário e Guia Completo</p>
         </header>
 
-        <div class="card">
-            <h3 style="color:#fff">📑 Índice</h3>
+        <!-- TABLE OF CONTENTS -->
+        <div class="card" style="margin-bottom: 60px;">
+            <h3 style="margin-bottom: 20px; color: #fff;">📑 Índice</h3>
             <ul class="toc-list">
                 <li><a href="#quick-start">🚀 Guia Rápido</a></li>
                 <li><a href="#installation">💿 Instalação</a></li>
                 <li><a href="#activation">🔑 Ativação</a></li>
-                <li><a href="#recovery">🔐 Recuperar Chave</a></li>
+                <li><a href="#recovery">🔐 Perdeu a Chave?</a></li>
+                <li><a href="#usage">🎨 Como Usar</a></li>
+                <li><a href="#advanced">⚙️ Funções Avançadas</a></li>
+                <li><a href="#faq">❓ FAQ</a></li>
+                <li><a href="#troubleshooting">🔧 Solução de Problemas</a></li>
                 <li><a href="#support">📧 Suporte</a></li>
             </ul>
         </div>
 
+        <!-- QUICK START -->
         <div id="quick-start" class="doc-section">
             <h2>🚀 Guia Rápido</h2>
             <div class="step-item">
                 <span class="step-number">Passo 1</span>
-                <h3>Preparar Pintura</h3>
-                <p>Abra sua foto e clique em <strong>"Prepare for Painting"</strong>. A IA protegerá seu assunto.</p>
+                <h3>Instalar e Ativar</h3>
+                <p>Instale via Creative Cloud Desktop e ative com sua chave de licença.</p>
             </div>
             <div class="step-item">
                 <span class="step-number">Passo 2</span>
-                <h3>Pintar e Processar</h3>
-                <p>Pinte sobre as imperfeições e clique em <strong>"Process Image"</strong> para finalizar.</p>
+                <h3>Preparar Pintura</h3>
+                <p>Abra sua foto no Adobe® Photoshop® e clique em "Prepare for Painting". A IA criará a máscara.</p>
+            </div>
+            <div class="step-item">
+                <span class="step-number">Passo 3</span>
+                <h3>Pintar Imperfeições</h3>
+                <p>Copie a cor do fundo (Alt+Clique) e pinte sobre amassados ou sujeira no piso.</p>
+            </div>
+            <div class="step-item">
+                <span class="step-number">Passo 4</span>
+                <h3>Processar</h3>
+                <p>Clique em "Process Image" para gerar o fundo perfeito em 16-bit.</p>
             </div>
         </div>
 
+        <!-- ACTIVATION -->
         <div id="activation" class="doc-section">
             <h2>🔑 Ativação da Licença</h2>
-            <p>Sua chave segue este formato:</p>
+            <p>Sua chave segue este padrão:</p>
             <div class="license-key-box">ABC123-DEF456-GHI789-JKL098-MNO765-V3</div>
-            <p style="margin-top:15px">Ative no menu "Manage License" do plugin. Válido para 2 computadores.</p>
+            <p>Ativação válida para <strong>2 computadores</strong>. Gerencie dispositivos na tela "Manage License".</p>
         </div>
 
+        <!-- RECOVERY -->
         <div id="recovery" class="doc-section">
             <h2>🔐 Perdeu sua Chave?</h2>
-            <div class="card" style="border: 1px solid var(--success);">
-                <p>Recupere sua chave instantaneamente usando o e-mail da compra.</p>
+            <div class="card" style="text-align: left; border-left: 4px solid var(--success);">
+                <h3>Recuperar Licença</h3>
+                <p>Digite seu e-mail na página de recuperação para receber sua chave novamente.</p>
                 <br>
-                <a href="/br/recover/" class="btn btn-br" style="max-width: 100%;">Recuperar Licença</a>
+                <a href="/br/recover/" class="btn btn-br" style="max-width: 100%;">Ir para Recuperação</a>
             </div>
         </div>
 
-        <div id="support" class="doc-section" style="text-align: center;">
-            <h2>📧 Suporte por E-mail</h2>
-            <p>Dúvidas? Escreva para:</p>
-            <a href="mailto:sales@infinityretouch.com" style="font-size: 1.3rem; color: var(--success); font-weight: bold;">sales@infinityretouch.com</a>
+        <!-- CONTACT -->
+        <div id="support" style="text-align: center; margin-top: 60px;">
+            <div class="contact-box" style="background: var(--success-gradient); padding: 40px; border-radius: 16px;">
+                <h3 style="color: #fff;">📧 Precisa de Ajuda?</h3>
+                <br>
+                <a href="mailto:sales@infinityretouch.com" style="color: #fff; font-size: 1.2rem; font-weight: bold;">sales@infinityretouch.com</a>
+            </div>
         </div>
 
         <footer>
             <p>&copy; 2026 Infinity Retouch / WINSERV TECNOLOGIA DA INFORMACAO.</p>
-            <p style="font-size: 0.7rem; color: #444; margin: 15px 0;">Adobe® e Photoshop® são marcas registradas da Adobe Inc. Este plugin é um produto independente e não é afiliado à Adobe Inc.</p>
+            <div class="adobe-disclaimer">
+                Adobe® e Photoshop® são marcas registradas da Adobe Inc. Este plugin é um produto independente e não é afiliado à Adobe Inc.
+            </div>
+            <p>
+                <a href="/br/docs/">Central de Ajuda</a>
+                <a href="/br/privacy.html">Privacidade</a>
+                <a href="/br/terms.html">Termos</a>
+                <a href="mailto:sales@infinityretouch.com">Suporte</a>
+            </p>
         </footer>
     </div>
 </body>
