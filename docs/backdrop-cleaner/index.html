@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manual - Infinity Backdrop Cleaner</title>
     <link rel="icon" href="/favicon.png" type="image/png">
-    <link rel="stylesheet" href="/style.css?v=3.5">
+    <link rel="stylesheet" href="/style.css?v=3.6">
     
     <style>
         .manual-container { max-width: 900px; margin: 0 auto; padding-bottom: 100px; }
@@ -20,7 +20,7 @@
         
         .license-key-box { background: #000; border: 1px dashed #555; color: var(--success); padding: 20px; text-align: center; font-family: 'Courier New', monospace; font-size: 1.1rem; margin: 20px 0; border-radius: 8px; font-weight: bold; letter-spacing: 1px; }
         
-        .warning-box { background: rgba(220, 38, 38, 0.05); border-left: 4px solid #dc2626; padding: 20px; border-radius: 6px; margin: 30px 0; color: #ffb3b3; }
+        .warning-box { background: rgba(220, 38, 38, 0.05); border-left: 4px solid #dc2626; padding: 20px; border-radius: 8px; margin: 30px 0; color: #ffb3b3; }
         .warning-box strong { color: #ff6b6b; display: block; margin-bottom: 5px; }
 
         .note { background: rgba(255, 255, 255, 0.03); border-left: 4px solid var(--accent); padding: 25px; border-radius: 8px; margin: 40px 0; }
@@ -28,8 +28,6 @@
 
         .faq-item { background: var(--surface); padding: 25px; border-radius: 12px; margin-bottom: 20px; border: 1px solid var(--border); }
         .faq-item h3 { font-size: 1.2rem; margin-top: 0; margin-bottom: 10px; color: #fff; }
-
-        .adobe-disclaimer { max-width: 800px; margin: 25px auto; font-size: 0.7rem; color: #444; line-height: 1.4; text-align: center; }
 
         @media (max-width: 600px) { .toc-list { columns: 1; } }
     </style>
@@ -45,7 +43,6 @@
 </head>
 <body>
     <div class="container manual-container">
-        <!-- NAV -->
         <nav>
             <a href="/" class="logo">
                 <img src="/infinity-retouch-logo.png" alt="Infinity Retouch Logo">
@@ -64,15 +61,14 @@
             <p class="subtitle">Complete User Manual & Technical Guide</p>
         </header>
 
-        <!-- TABLE OF CONTENTS -->
-        <div class="card" style="margin-bottom: 60px;">
+        <div class="card">
             <h3 style="margin-bottom: 20px; color: #fff;">📑 Table of Contents</h3>
             <ul class="toc-list">
                 <li><a href="#quick-start">🚀 Quick Start Guide</a></li>
                 <li><a href="#installation">💿 Installation</a></li>
                 <li><a href="#activation">🔑 License Activation</a></li>
                 <li><a href="#recovery">🔐 Lost License?</a></li>
-                <li><a href="#usage">🎨 How to Use</a></li>
+                <li><a href="#usage">🎨 Detailed Workflow</a></li>
                 <li><a href="#advanced">⚙️ Advanced Features</a></li>
                 <li><a href="#faq">❓ FAQ</a></li>
                 <li><a href="#troubleshooting">🔧 Troubleshooting</a></li>
@@ -80,7 +76,6 @@
             </ul>
         </div>
 
-        <!-- QUICK START -->
         <div id="quick-start" class="doc-section">
             <h2>🚀 Quick Start Guide</h2>
             <div class="step-item">
@@ -90,28 +85,32 @@
             </div>
             <div class="step-item">
                 <span class="step-number">Step 2</span>
-                <h3>Prepare for Painting</h3>
-                <p>Open your photo in Adobe® Photoshop® and click "Prepare for Painting". AI will mask your subject.</p>
+                <h3>Open Image</h3>
+                <p>Open a photo with an infinite backdrop in Adobe® Photoshop®.</p>
             </div>
             <div class="step-item">
                 <span class="step-number">Step 3</span>
-                <h3>Paint Imperfections</h3>
-                <p>Sample background color (Alt+Click) and paint over shadows or wrinkles on the floor.</p>
+                <h3>Prepare</h3>
+                <p>Click "Prepare for Painting". AI will mask your subject automatically.</p>
             </div>
             <div class="step-item">
                 <span class="step-number">Step 4</span>
+                <h3>Paint</h3>
+                <p>Sample background color (Alt+Click) and paint over floor imperfections.</p>
+            </div>
+            <div class="step-item">
+                <span class="step-number">Step 5</span>
                 <h3>Process</h3>
                 <p>Click "Process Image" to generate the seamless 16-bit backdrop.</p>
             </div>
         </div>
 
-        <!-- INSTALLATION -->
         <div id="installation" class="doc-section">
             <h2>💿 Installation</h2>
             <h3>System Requirements</h3>
             <ul>
-                <li><strong>Adobe Photoshop:</strong> 2023 or newer (v24.x+)</li>
-                <li><strong>OS:</strong> Windows 10/11 or macOS 11+</li>
+                <li>Adobe® Photoshop®: 2023 or newer (v24.x+)</li>
+                <li>OS: Windows 10/11 or macOS 11+</li>
             </ul>
             <h3>Steps</h3>
             <ol>
@@ -121,54 +120,60 @@
             </ol>
         </div>
 
-        <!-- ACTIVATION -->
         <div id="activation" class="doc-section">
             <h2>🔑 License Activation</h2>
             <p>Your license key format looks like this:</p>
             <div class="license-key-box">ABC123-DEF456-GHI789-JKL098-MNO765-V3</div>
-            <p>Activation allows use on <strong>2 computers</strong>. You can manage devices in the "Manage License" screen.</p>
+            <p>One license grants use on up to <strong>2 computers</strong>. Manage devices in the "Manage License" screen.</p>
         </div>
 
-        <!-- RECOVERY -->
         <div id="recovery" class="doc-section">
             <h2>🔐 Lost Your License?</h2>
-            <p>If you lost your purchase email, you can recover it instantly.</p>
+            <p>If you lost your purchase email, you can recover it instantly using our automated tool.</p>
             <div class="card" style="text-align: left; border-left: 4px solid var(--accent);">
                 <h3>Recover License Key</h3>
-                <p>Enter your purchase email on the recovery page to receive your key.</p>
+                <p>Enter your purchase email to receive your key again.</p>
                 <br>
                 <a href="/recover/" class="btn btn-intl" style="max-width: 100%;">Go to Recovery Page</a>
             </div>
         </div>
 
-        <!-- USAGE -->
         <div id="usage" class="doc-section">
             <h2>🎨 Detailed Workflow</h2>
-            <h3>1. Mask & Prepare</h3>
-            <p>The plugin uses AI to separate your subject. If detection fails, use "Show Advanced Controls" to adjust Expand and Feather.</p>
-            <h3>2. Painting</h3>
-            <p>Paint generously over imperfections. The protective mask ensures your subject remains untouched.</p>
+            <h3>1. Prepare Your Image</h3>
+            <p>Works best with white, gray, or light-colored seamless backdrops.</p>
+            <h3>2. Mask & Prepare Phase</h3>
+            <p>If the AI subject detection isn't perfect, use "Show Advanced Controls" to adjust Expand and Feathering.</p>
+            <h3>3. Paint Over Imperfections</h3>
+            <p>Paint generously. The plugin preserves your subject on a separate layer, so you can paint freely.</p>
         </div>
 
-        <!-- FAQ -->
+        <div id="advanced" class="doc-section">
+            <h2>⚙️ Advanced Features</h2>
+            <ul>
+                <li><strong>16-Bit Processing:</strong> Prevents color banding in gradients.</li>
+                <li><strong>Surface Blur:</strong> Edge-preserving blur for keeping some texture.</li>
+                <li><strong>Noise:</strong> Adds subtle grain to match the original photo grain.</li>
+            </ul>
+        </div>
+
         <div id="faq" class="doc-section">
             <h2>❓ FAQ</h2>
             <div class="faq-item">
                 <h3>Can I use it with RAW files?</h3>
-                <p>Yes. Convert your RAW layer to a Smart Object before using the plugin.</p>
+                <p>Yes. Convert your RAW layer to a Smart Object first for best results.</p>
             </div>
             <div class="faq-item">
-                <h3>Refund Policy</h3>
+                <h3>What's your refund policy?</h3>
                 <p>We offer a 7-day money-back guarantee, no questions asked.</p>
             </div>
         </div>
 
-        <!-- TROUBLESHOOTING -->
         <div id="troubleshooting" class="doc-section">
             <h2>🔧 Troubleshooting</h2>
             <div class="faq-item">
-                <h3>Processing is slow</h3>
-                <p>Images over 50MP can take 30-60 seconds due to 16-bit high-quality calculations.</p>
+                <h3>Plugin doesn't appear</h3>
+                <p>Go to: <code>Window → Plugins → Infinity Backdrop Cleaner</code>. If missing, restart Photoshop.</p>
             </div>
             <div class="warning-box">
                 <strong>⚠️ Still having issues?</strong>
@@ -176,7 +181,6 @@
             </div>
         </div>
 
-        <!-- CONTACT -->
         <div id="support" style="text-align: center; margin-top: 60px;">
             <div class="contact-box" style="background: var(--accent-gradient); padding: 40px; border-radius: 16px;">
                 <h3 style="color: #fff;">📧 Need More Help?</h3>
@@ -192,7 +196,7 @@
             </div>
             <p>
                 <a href="/docs/">Help Center</a>
-                <a href="/privacy.html">Privacy Policy</a>
+                <a href="/privacy.html">Privacy</a>
                 <a href="/terms.html">Terms</a>
                 <a href="mailto:sales@infinityretouch.com">Support</a>
             </p>
