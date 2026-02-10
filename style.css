@@ -192,11 +192,44 @@ footer {
 footer a { color: #777; margin: 0 10px; }
 footer a:hover { color: #fff; }
 
-/* --- RESPONSIVIDADE --- */
+/* --- RESPONSIVIDADE (MOBILE FIX) --- */
 @media (max-width: 600px) {
-    h1 { font-size: 2.1rem; }
-    .hero { padding: 15px 0 40px 0; }
-    .btn { width: 100%; }
+    nav {
+        flex-direction: row; /* Mantém em linha */
+        flex-wrap: wrap;    /* Permite quebra se necessário, mas organizada */
+        justify-content: space-between;
+        padding: 10px 0;
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 1rem; /* Diminui o texto do logo no mobile */
+        gap: 8px;
+    }
+
+    .logo img {
+        width: 24px; /* Diminui o ícone do logo */
+        height: 24px;
+    }
+
+    /* Esconde o texto "License" no mobile para economizar espaço */
+    .btn-buy span {
+        display: none;
+    }
+
+    .nav-link {
+        margin-left: 8px;
+        font-size: 0.8rem;
+    }
+
+    h1 {
+        font-size: 2rem; /* Título principal menor no mobile */
+        margin-top: 10px;
+    }
+
+    .hero {
+        padding: 10px 0 30px 0;
+    }
 }
 
 /* Adicione isso ao fim do seu style.css */
