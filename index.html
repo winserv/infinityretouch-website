@@ -76,10 +76,11 @@
             <p class="subtitle">The professional UXP plugin for Adobe® Photoshop® that cleans seamless backgrounds while preserving real shadows and textures.</p>
             
             <span class="section-label">See it in action</span>
-            <div class="video-container">
-                <video autoplay loop muted playsinline poster="/video-poster.jpg">
-                    <source src="/demo-plugin-01.mp4" type="video/mp4">
-                </video>
+                <div class="video-container">
+                    <video id="demoVideo" autoplay loop muted playsinline disablePictureInPicture style="cursor: pointer;" poster="/video-poster.jpg">
+                        <source src="/demo-plugin-01.mp4" type="video/mp4">
+                    </video>
+                </div>
             </div>
 
             <div class="cta-group">
@@ -137,5 +138,37 @@
             </p>
         </footer>
     </div>
+    <script>
+        const video = document.getElementById('demoVideo');
+    
+        video.addEventListener('click', function() {
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            } else if (video.webkitRequestFullscreen) { /* Safari */
+                video.webkitRequestFullscreen();
+            } else if (video.msRequestFullscreen) { /* IE11 */
+                video.msRequestFullscreen();
+            } else if (video.webkitEnterFullscreen) { /* iOS iPhone */
+                video.webkitEnterFullscreen();
+            }
+            
+            // Opcional: Ativar o som ao entrar em tela cheia
+            video.muted = false;
+            // Opcional: Mostrar controles apenas em tela cheia
+            video.controls = true;
+        });
+    
+        // Detectar quando sai da tela cheia para silenciar e remover controles novamente
+        document.addEventListener('fullscreenchange', exitHandler);
+        document.addEventListener('webkitfullscreenchange', exitHandler);
+    
+        function exitHandler() {
+            if (!document.fullscreenElement && !document.webkitIsFullScreen) {
+                video.muted = true;
+                video.controls = false;
+            }
+        }
+    </script>
+    
 </body>
 </html>
