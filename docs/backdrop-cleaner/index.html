@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manual - Infinity Backdrop Cleaner</title>
     <link rel="icon" href="/favicon.png" type="image/png">
-    <link rel="stylesheet" href="/style.css?v=2.8">
+    <link rel="stylesheet" href="/style.css?v=2.9">
     
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RN28DZF26K"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -18,155 +17,94 @@
 
     <style>
         .manual-container { max-width: 850px; margin: 0 auto; padding-bottom: 100px; }
-        .toc-list { list-style: none !important; margin-left: 0 !important; columns: 2; padding: 20px 0; }
+        .toc-list { list-style: none !important; margin-left: 0 !important; columns: 2; padding: 20px 0; border-top: 1px solid var(--border); }
         .toc-list li { margin-bottom: 12px; }
-        .toc-list a { color: var(--success); font-weight: 600; text-decoration: none; }
-        .toc-list a:hover { text-decoration: underline; }
+        .toc-list a { color: var(--text-muted); font-weight: 500; text-decoration: none; transition: 0.2s; }
+        .toc-list a:hover { color: var(--accent); text-decoration: underline; }
         
         .doc-section { margin-top: 80px; scroll-margin-top: 100px; }
         .doc-section h2 { font-size: 2.2rem; border-bottom: 1px solid var(--border); padding-bottom: 15px; margin-bottom: 30px; color: #fff; }
-        .doc-section h3 { margin-top: 40px; margin-bottom: 15px; color: #fff; border-left: 3px solid var(--success); padding-left: 15px; }
+        .doc-section h3 { margin-top: 40px; margin-bottom: 15px; color: #fff; border-left: 3px solid var(--accent); padding-left: 15px; }
         
         .step-item { background: var(--surface); border: 1px solid var(--border); padding: 25px; border-radius: 12px; margin-bottom: 25px; }
-        .step-number { color: var(--success); font-weight: 800; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; display: block; margin-bottom: 10px; }
+        .step-number { color: var(--accent); font-weight: 800; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; display: block; margin-bottom: 10px; }
         
-        .note { background: rgba(56, 239, 125, 0.05); border-left: 4px solid var(--success); padding: 25px; border-radius: 8px; margin: 40px 0; color: var(--text-muted); }
-        .note strong { color: var(--success); display: block; margin-bottom: 5px; }
+        .note { background: rgba(255, 255, 255, 0.03); border-left: 4px solid var(--accent); padding: 25px; border-radius: 8px; margin: 40px 0; color: var(--text-muted); }
+        .note strong { color: var(--accent); display: block; margin-bottom: 5px; }
 
-        .warning-box { background: rgba(220, 38, 38, 0.05); border-left: 4px solid #dc2626; padding: 25px; border-radius: 8px; margin: 40px 0; color: #ffb3b3; }
-        .warning-box strong { color: #ff6b6b; display: block; margin-bottom: 5px; }
-
-        .license-key-box { background: #000; border: 1px dashed #444; color: var(--success); padding: 20px; text-align: center; font-family: monospace; font-size: 1.2rem; margin: 25px 0; border-radius: 8px; letter-spacing: 1px; }
+        .license-key-box { background: #000; border: 1px dashed #444; color: var(--accent); padding: 20px; text-align: center; font-family: monospace; font-size: 1.1rem; margin: 25px 0; border-radius: 8px; font-weight: bold; }
         
-        .faq-item { background: var(--surface); padding: 25px; border-radius: 12px; margin-bottom: 20px; border: 1px solid var(--border); }
-        .faq-item h3 { font-size: 1.2rem; margin-top: 0; margin-bottom: 12px; color: #fff; }
-
-        .recovery-card { background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%); border: 1px solid var(--success); padding: 30px; border-radius: 16px; margin-top: 30px; }
-
-        @media (max-width: 600px) { .toc-list { columns: 1; } h1 { font-size: 2rem; } }
+        .adobe-disclaimer { font-size: 0.7rem; color: #444; margin-top: 20px; line-height: 1.4; }
     </style>
 </head>
 <body>
     <div class="container manual-container">
         <nav>
-            <a href="/br/" class="logo">
+            <a href="/" class="logo">
                 <img src="/infinity-retouch-logo.png" alt="Logo"> Infinity Retouch
             </a>
             <div style="display: flex; align-items: center;">
-                <a href="/docs/backdrop-cleaner/" class="nav-link">🇺🇸 EN</a>
-                <a href="/br/docs/" class="nav-link">Central de Ajuda</a>
+                <a href="/br/docs/backdrop-cleaner/" class="nav-link">🇧🇷 BR</a>
+                <a href="/docs/" class="nav-link">Help Center</a>
             </div>
         </nav>
 
         <header style="text-align: center; margin: 60px 0;">
-            <h1 style="font-size: 3rem;">📖 Infinity Backdrop Cleaner</h1>
-            <p class="subtitle">Manual do Usuário e Documentação Técnica</p>
+            <h1 style="font-size: 3rem;">User Manual</h1>
+            <p class="subtitle">Infinity Backdrop Cleaner for Adobe® Photoshop®</p>
         </header>
 
         <div class="card">
-            <h3 style="margin-bottom: 15px;">📑 Índice</h3>
+            <h3 style="margin-bottom: 15px; color: #fff;">📑 Table of Contents</h3>
             <ul class="toc-list">
-                <li><a href="#quick-start">🚀 Guia Rápido</a></li>
-                <li><a href="#installation">💿 Instalação</a></li>
-                <li><a href="#activation">🔑 Ativação da Licença</a></li>
-                <li><a href="#recovery">🔐 Recuperar Chave</a></li>
-                <li><a href="#usage">🎨 Fluxo Detalhado</a></li>
-                <li><a href="#advanced">⚙️ Funções Avançadas</a></li>
-                <li><a href="#faq">❓ FAQ</a></li>
-                <li><a href="#troubleshooting">🔧 Solução de Problemas</a></li>
+                <li><a href="#quick-start">🚀 Quick Start Guide</a></li>
+                <li><a href="#installation">💿 Installation</a></li>
+                <li><a href="#activation">🔑 License Activation</a></li>
+                <li><a href="#recovery">🔐 Recovery (Lost Key)</a></li>
+                <li><a href="#support">📧 E-mail Support</a></li>
             </ul>
         </div>
 
-        <!-- QUICK START -->
         <div id="quick-start" class="doc-section">
-            <h2>🚀 Guia Rápido</h2>
+            <h2>🚀 Quick Start Guide</h2>
             <div class="step-item">
-                <span class="step-number">Passo 1</span>
-                <h3>Abra sua Imagem</h3>
-                <p>Abra uma foto com fundo infinito no Photoshop. Funciona melhor com arquivos 16-bit.</p>
+                <span class="step-number">Step 1</span>
+                <h3>Prepare for Painting</h3>
+                <p>Click <strong>"Prepare for Painting"</strong>. The AI will detect your subject and create a protection mask.</p>
             </div>
             <div class="step-item">
-                <span class="step-number">Passo 2</span>
-                <h3>Preparar para Pintura</h3>
-                <p>Clique em <strong>"Prepare for Painting"</strong>. O plugin usa IA para detectar o assunto e criar uma máscara de proteção.</p>
+                <span class="step-number">Step 2</span>
+                <h3>Paint Imperfections</h3>
+                <p>Hold <code>Alt</code>, click to sample color, and paint over wrinkles or dirt on the floor.</p>
             </div>
             <div class="step-item">
-                <span class="step-number">Passo 3</span>
-                <h3>Pintar Imperfeições</h3>
-                <p>Segure <code>Alt</code> (Option) e clique para copiar a cor do fundo. Pinte sobre amassados, sujeira ou sombras no chão.</p>
-            </div>
-            <div class="step-item">
-                <span class="step-number">Passo 4</span>
-                <h3>Processar</h3>
-                <p>Clique em <strong>"Process Image"</strong>. O plugin vai gerar o fundo infinito perfeito mantendo as texturas originais.</p>
-            </div>
-            <div class="note">
-                <strong>💡 Dica Pro:</strong> Use a ferramenta Borracha na camada "Original Background" para recuperar detalhes do assunto que possam ter sido pintados por engano.
+                <span class="step-number">Step 3</span>
+                <h3>Process Image</h3>
+                <p>Click <strong>"Process Image"</strong>. The plugin will smoothen the backdrop while keeping textures.</p>
             </div>
         </div>
 
-        <!-- INSTALLATION -->
-        <div id="installation" class="doc-section">
-            <h2>💿 Instalação</h2>
-            <h3>Requisitos do Sistema</h3>
-            <ul>
-                <li>Adobe® Photoshop® 2023 (v24.0) ou mais recente.</li>
-                <li>Windows 10/11 ou macOS Big Sur+.</li>
-                <li>App Creative Cloud Desktop instalado.</li>
-            </ul>
-            <h3>Como Instalar</h3>
-            <ol>
-                <li>Dê um duplo clique no arquivo <code>.ccx</code> que você baixou.</li>
-                <li>O app Adobe Creative Cloud abrirá. Clique em "Instalar Localmente".</li>
-                <li>Reinicie o Photoshop.</li>
-                <li>Vá em <strong>Janela → Plugins → Infinity Backdrop Cleaner</strong>.</li>
-            </ol>
-        </div>
-
-        <!-- ACTIVATION -->
         <div id="activation" class="doc-section">
-            <h2>🔑 Ativação da Licença</h2>
-            <p>Sua chave de licença é enviada por e-mail imediatamente após a compra. Ela permite a ativação em até <strong>2 computadores</strong>.</p>
+            <h2>🔑 License Activation</h2>
+            <p>Format example of your key received via email:</p>
             <div class="license-key-box">ABC123-DEF456-GHI789-JKL098-MNO765-V3</div>
-            <h3>Passos para Ativar</h3>
-            <ol>
-                <li>Clique no botão "Activate" no painel do plugin.</li>
-                <li>Cole sua chave de licença exatamente como recebeu.</li>
-                <li>Clique em "Activate License". É necessária conexão com a internet para este passo.</li>
-            </ol>
+            <p>Activation grants access on up to <strong>2 computers</strong> simultaneously.</p>
         </div>
 
-        <!-- RECOVERY -->
-        <div id="recovery" class="doc-section">
-            <h2>🔐 Perdeu sua Chave de Licença?</h2>
-            <div class="recovery-card">
-                <h3>Recuperação Automática</h3>
-                <p>Se você perdeu o e-mail de compra, pode recuperar sua chave instantaneamente usando o endereço de e-mail que usou no checkout.</p>
-                <br>
-                <a href="/br/recover/" class="btn btn-br" style="max-width: 100%;">Ir para Página de Recuperação</a>
+        <div id="support" class="doc-section">
+            <h2>📧 E-mail Support</h2>
+            <div class="card" style="text-align: center; border: 1px solid var(--border);">
+                <h3 style="color: #fff; margin-bottom: 10px;">Contact Us</h3>
+                <a href="mailto:sales@infinityretouch.com" style="font-size: 1.3rem; color: var(--accent); font-weight: bold; text-decoration: underline;">sales@infinityretouch.com</a>
+                <p style="margin-top: 15px; font-size: 0.85rem; color: var(--text-muted);">We typically respond within 24 hours.</p>
             </div>
         </div>
 
-        <!-- USAGE -->
-        <div id="usage" class="doc-section">
-            <h2>🎨 Fluxo Detalhado</h2>
-            <h3>1. Máscara do Assunto</h3>
-            <p>A fase "Prepare for Painting" usa IA para separar o assunto. Se a detecção não for perfeita, use o "Show Advanced Controls" para ajustar o <strong>Expand</strong> (tamanho da área) e <strong>Feather</strong> (suavidade da borda).</p>
-            <h3>2. Amostragem e Pintura</h3>
-            <p>Sempre colete a cor (sample) perto da área que deseja limpar. Para áreas grandes, use um pincel grande e suave. Para rugas no chão, pinte precisamente sobre as dobras.</p>
-            <h3>3. Blur e Ruído</h3>
-            <p>O passo final aplica um desfoque contínuo. Se o chão parecer muito "falso", reduza o <strong>Blur Radius</strong> ou aumente o <strong>Noise</strong> nos controles avançados para combinar com o grão original.</p>
-        </div>
-
-        <footer style="margin-top: 100px;">
+        <footer>
             <p>&copy; 2026 Infinity Retouch / WINSERV TECNOLOGIA DA INFORMACAO.</p>
-            <p style="font-size: 0.7rem; color: #444; margin: 15px 0;">Adobe® e Photoshop® são marcas registradas da Adobe Inc. Este produto não é afiliado à Adobe Inc.</p>
-            <p>
-                <a href="/br/docs/">Central de Ajuda</a>
-                <a href="/br/privacy.html">Privacidade</a>
-                <a href="/br/terms.html">Termos</a>
-                <a href="mailto:sales@infinityretouch.com">Suporte</a>
-            </p>
+            <div class="adobe-disclaimer">
+                Adobe® and Photoshop® are registered trademarks of Adobe Inc. This product is not affiliated with Adobe Inc.
+            </div>
         </footer>
     </div>
 </body>
