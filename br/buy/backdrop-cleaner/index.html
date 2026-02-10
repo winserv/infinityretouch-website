@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finalizar Compra - Infinity Backdrop</title>
+    <title>Finalizar Compra - Infinity Retouch</title>
     <meta name="robots" content="noindex">
     
     <!-- Hreflang -->
@@ -11,102 +11,144 @@
     <link rel="alternate" hreflang="pt-br" href="https://infinityretouch.com/br/buy/backdrop-cleaner/" />
 
     <link rel="icon" href="/favicon.png" type="image/png">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/style.css?v=2.6">
     
     <style>
-        .back-link:hover { color: #888 !important; }
-        .logo-link:hover { transform: scale(1.05); }
-        
-        /* Botão de Idioma Flutuante */
+        /* CSS ESPECÍFICO DA PÁGINA DE COMPRA (BRIDGE) */
+        .bridge-container {
+            max-width: 550px;
+            margin: 0 auto;
+            padding-bottom: 80px;
+        }
+
+        .payment-option {
+            background: var(--surface);
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* Destaque para a opção Brasil */
+        .payment-option.featured {
+            border-color: var(--success);
+            box-shadow: 0 10px 40px rgba(56, 239, 125, 0.1);
+            transform: scale(1.02);
+        }
+
+        .payment-option h3 {
+            font-size: 1.4rem;
+            color: #fff;
+        }
+
+        .price-tag {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #fff;
+            margin: 10px 0;
+        }
+
+        .details {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 10px;
+        }
+
+        .payment-option .btn {
+            width: 100%;
+            max-width: 100%;
+            padding: 16px;
+            font-size: 1.1rem;
+        }
+
+        .back-link { 
+            color: var(--text-muted); 
+            font-size: 0.9rem; 
+            transition: 0.2s;
+        }
+        .back-link:hover { color: #fff; }
+
+        .logo-link img { 
+            transition: 0.3s; 
+        }
+        .logo-link:hover img { 
+            transform: scale(1.1); 
+            box-shadow: 0 0 30px rgba(56, 239, 125, 0.4);
+        }
+
+        /* Botão de Idioma */
         .lang-switch {
             position: absolute;
             top: 20px;
             right: 20px;
-            z-index: 100;
         }
         .lang-switch a { 
             color: var(--text-muted); 
-            text-decoration: none; 
-            font-weight: 600; 
-            font-size: 0.9rem;
             border: 1px solid var(--border);
-            padding: 8px 15px;
+            padding: 6px 14px;
             border-radius: 20px;
+            font-size: 0.8rem;
             background: var(--surface);
-            transition: all 0.2s;
-        }
-        .lang-switch a:hover { 
-            color: #fff; 
-            border-color: #666;
-            background: var(--surface-hover);
         }
     </style>
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RN28DZF26K"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-RN28DZF26K');
-    </script> 
 </head>
 <body>
-    <!-- BOTÃO PARA MUDAR DE IDIOMA -->
+
     <div class="lang-switch">
-        <a href="/buy/backdrop-cleaner/" title="Switch to English">🇺🇸 EN</a>
+        <a href="/buy/backdrop-cleaner/">🇺🇸 Switch to English</a>
     </div>
 
     <div class="container bridge-container">
         
         <!-- HEADER -->
-        <div style="text-align: center; margin-bottom: 30px; margin-top: 30px;">
-            <div style="margin-bottom: 20px;">
-                <a href="/br/" class="logo-link" title="Voltar para Home">
-                    <img src="/infinity-retouch-logo.png" alt="Infinity Logo" style="width: 80px; border-radius: 50%; box-shadow: 0 4px 20px rgba(56, 239, 125, 0.2);">
-                </a>
-            </div>
-            <h2>Finalizar Compra</h2>
-            <p style="color: var(--text-muted);">Escolha seu método de pagamento:</p>
+        <header style="text-align: center; margin-bottom: 40px; margin-top: 50px;">
+            <a href="/br/" class="logo-link">
+                <img src="/infinity-retouch-logo.png" alt="Infinity Logo" style="width: 85px; border-radius: 50%; border: 2px solid var(--border);">
+            </a>
+            <h2 style="margin-top: 25px; font-size: 2rem;">Finalizar Compra</h2>
+            <p style="color: var(--text-muted); margin-top: 10px;">Escolha a região para pagamento seguro</p>
+        </header>
+
+        <!-- OPÇÃO BRASIL (DESTAQUE VERDE) -->
+        <div class="payment-option featured">
+            <h3>🇧🇷 Brasil (Pix ou Cartão)</h3>
+            <div class="price-tag">R$ 145,00</div>
+            <a href="https://pay.kiwify.com.br/rAGSeeK" class="btn btn-br">
+                Pagar com Pix ou Parcelado
+            </a>
+            <span class="details">Entrega Imediata • Parcele em até 12x • NF-e</span>
         </div>
 
-        <!-- OPÇÃO BRASIL (DESTAQUE) -->
-        <div class="payment-option" style="border-color: var(--success);">
-            <h3>🇧🇷 Brasil (Recomendado)</h3>
-            <span class="price-tag">R$ 145,00</span>
-            <a href="https://pay.kiwify.com.br/rAGSeeK" class="btn btn-br">Pagar com Pix ou Cartão</a>
-            <span class="details">Entrega imediata • Parcele em até 12x • NF-e</span>
-        </div>
-
-        <!-- OPÇÃO GLOBAL (SECUNDÁRIA) -->
-        <div class="payment-option" style="opacity: 0.9; transform: scale(0.98);">
-            <h3>🌍 Internacional (USD)</h3>
-            <span class="price-tag">$29.00 USD</span>
-            
+        <!-- OPÇÃO INTERNACIONAL (ROXA) -->
+        <div class="payment-option" style="opacity: 0.9;">
+            <h3>🌍 International (USD)</h3>
+            <div class="price-tag">$29.00</div>
             <a href="https://pay.kiwify.com.br/itYbaeF" class="btn btn-intl">
                 Pagar em Dólar (Cartão)
             </a>
-            
-            <span class="details">Licença vitalícia • Pagamento internacional seguro</span>
+            <span class="details">Licença Vitalícia • Pagamento Seguro SSL</span>
         </div>
 
-        <div style="margin-top: 30px; text-align: center; font-size: 0.8rem; color: #555;">
-            <p>Pagamento Seguro SSL. Garantia de 7 dias.</p>
-            
-            <p style="margin-top: 10px;">
-                <a href="/br/privacy.html" style="color: #777; margin: 0 5px;">Privacidade</a> • 
-                <a href="/br/terms.html" style="color: #777; margin: 0 5px;">Termos</a> • 
-                <a href="/br/refund.html" style="color: #777; margin: 0 5px;">Reembolso</a>
+        <!-- FOOTER DE SEGURANÇA -->
+        <div style="text-align: center; margin-top: 40px;">
+            <p style="font-size: 0.9rem; color: var(--success); font-weight: 600;">
+                🔒 Pagamento Seguro com Criptografia SSL
             </p>
             
-            <p style="margin-top: 10px;">Precisa de ajuda? <a href="mailto:sales@infinityretouch.com" style="color: #777;">Fale com o Suporte</a></p>
+            <p style="margin-top: 20px; color: #555; font-size: 0.8rem;">
+                Garantia de Reembolso de 7 dias • Suporte: sales@infinityretouch.com
+            </p>
 
-            <p style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #222;">
-                <a href="/br/" class="back-link" style="color: #444; text-decoration: none;">
-                    ← Cancelar e voltar ao site
-                </a>
-            </p>
+            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--border);">
+                <a href="/br/" class="back-link">← Cancelar e voltar ao site</a>
+            </div>
         </div>
     </div>
+
 </body>
 </html>
