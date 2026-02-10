@@ -13,7 +13,7 @@
     <link rel="alternate" hreflang="pt-br" href="https://infinityretouch.com/br/" />
     <link rel="alternate" hreflang="x-default" href="https://infinityretouch.com/" />
 
-    <!-- Open Graph (Sua imagem OG bonitona aqui) -->
+    <!-- Open Graph (Link Sharing) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://infinityretouch.com/">
     <meta property="og:title" content="Infinity Backdrop Cleaner - Perfect Backgrounds in Seconds">
@@ -27,15 +27,36 @@
     <meta name="twitter:image" content="https://infinityretouch.com/og-infinity-backdrop-cleaner.jpg">
 
     <link rel="icon" href="/favicon.png" type="image/png">
-    <link rel="stylesheet" href="/style.css?v=2.2">
+    <link rel="stylesheet" href="/style.css?v=2.3">
     
     <!-- Scripts Externos -->
     <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"/>
+
+    <style>
+        /* Estilos de correção para o Badge e Trial Link */
+        .trial-badge {
+            display: inline-block;
+            background: rgba(56, 239, 125, 0.1);
+            color: var(--success);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            border: 1px solid rgba(56, 239, 125, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .cta-group { margin-top: 30px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+        .trial-link { color: var(--text-muted); font-size: 0.9rem; text-decoration: underline; }
+        .trial-link:hover { color: #fff; }
+        .adobe-disclaimer { max-width: 800px; margin: 20px auto; font-size: 0.7rem; color: #444; line-height: 1.4; }
+    </style>
 </head>
 <body>
     <div class="container">
-        <!-- NAVIGATION -->
+        <!-- NAVBAR -->
         <nav>
             <a href="/" class="logo">
                 <img src="/infinity-retouch-logo.png" alt="Infinity Retouch Logo">
@@ -54,7 +75,6 @@
             <h1>Perfect Infinite Backdrops <br>in Seconds.</h1>
             <p class="subtitle">The professional UXP plugin for Adobe® Photoshop® that cleans seamless backgrounds while preserving real shadows and textures.</p>
             
-            <!-- VIDEO (A Prova de Velocidade) -->
             <span class="section-label">See it in action</span>
             <div class="video-container">
                 <video autoplay loop muted playsinline poster="/video-poster.jpg">
@@ -62,23 +82,14 @@
                 </video>
             </div>
 
-            <!-- CALL TO ACTION PRINCIPAL -->
             <div class="cta-group">
                 <a href="/buy/backdrop-cleaner/" class="btn btn-intl">Get Lifetime License - $29</a>
                 <a href="/docs/backdrop-cleaner/#installation" class="trial-link">Or start your 7-day free trial now</a>
             </div>
         </section>
 
-        <!-- SHOWCASE (Aqui entra sua imagem OG para mostrar a interface) -->
-        <section style="text-align: center; margin: 80px 0;">
-            <span class="section-label">Professional Native Interface</span>
-            <div class="comparison-container" style="border: none; box-shadow: none; background: transparent;">
-                <img src="/og-infinity-backdrop-cleaner.jpg" alt="Infinity Backdrop Cleaner Panel" style="border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
-            </div>
-        </section>
-
-        <!-- QUALITY TEST (Sliders) -->
-        <section style="text-align: center;">
+        <!-- QUALITY PROOF (Sliders) -->
+        <section style="text-align: center; margin-top: 40px;">
             <span class="section-label">Interactive Quality Test</span>
             <div class="comparison-container">
                 <img-comparison-slider>
@@ -87,7 +98,7 @@
                 </img-comparison-slider>
             </div>
 
-            <span class="section-label">Texture Detail (200% Zoom)</span>
+            <span class="section-label">Texture Preservation (200% Zoom)</span>
             <div class="comparison-container" style="max-width: 600px;">
                 <img-comparison-slider>
                     <img slot="first" src="/foto-zoom-antes.webp" alt="Zoom Before" />
@@ -115,12 +126,9 @@
         <!-- FOOTER -->
         <footer>
             <p>&copy; 2026 Infinity Retouch / WINSERV TECNOLOGIA DA INFORMACAO.</p>
-            
-            <!-- DISCLAIMER ADOBE -->
             <p class="adobe-disclaimer">
-                Adobe® and Photoshop® are registered trademarks of Adobe Inc. in the United States and/or other countries. This plugin is an independent product and is not affiliated with, sponsored by, or endorsed by Adobe Inc.
+                Adobe® and Photoshop® are registered trademarks of Adobe Inc. This plugin is an independent product and not affiliated with, sponsored by, or endorsed by Adobe Inc.
             </p>
-            
             <p>
                 <a href="/docs/">Help Center</a>
                 <a href="/privacy.html">Privacy Policy</a>
