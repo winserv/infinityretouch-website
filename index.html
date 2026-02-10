@@ -13,7 +13,7 @@
     <link rel="alternate" hreflang="pt-br" href="https://infinityretouch.com/br/" />
     <link rel="alternate" hreflang="x-default" href="https://infinityretouch.com/" />
 
-    <!-- Open Graph -->
+    <!-- Open Graph (WhatsApp/FB/LinkedIn) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://infinityretouch.com/">
     <meta property="og:title" content="Infinity Backdrop Cleaner - Perfect Backgrounds in Seconds">
@@ -22,26 +22,28 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://infinityretouch.com/og-infinity-backdrop-cleaner.jpg">
+
     <link rel="icon" href="/favicon.png" type="image/png">
-    <link rel="stylesheet" href="/style.css?v=2.4">
+    <link rel="stylesheet" href="/style.css?v=3.0">
     
+    <!-- Scripts Externos -->
     <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"/>
 
+    <!-- Google Analytics (Todas as páginas) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RN28DZF26K"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-RN28DZF26K');
+    </script>
+
     <style>
-        .trial-badge {
-            display: inline-block;
-            background: rgba(56, 239, 125, 0.1);
-            color: var(--success);
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            border: 1px solid rgba(56, 239, 125, 0.2);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+        .trial-badge { display: inline-block; background: rgba(56, 239, 125, 0.1); color: var(--success); padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; margin-bottom: 20px; border: 1px solid rgba(56, 239, 125, 0.2); text-transform: uppercase; letter-spacing: 1px; }
         .cta-group { margin-top: 30px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
         .trial-link { color: var(--text-muted); font-size: 0.9rem; text-decoration: underline; }
         .trial-link:hover { color: #fff; }
@@ -50,6 +52,7 @@
 </head>
 <body>
     <div class="container">
+        <!-- NAVBAR -->
         <nav>
             <a href="/" class="logo">
                 <img src="/infinity-retouch-logo.png" alt="Infinity Retouch Logo">
@@ -62,6 +65,7 @@
             </div>
         </nav>
 
+        <!-- HERO SECTION -->
         <section class="hero">
             <div class="trial-badge">✨ 7-Day Free Trial Included</div>
             <h1>Perfect Infinite Backdrops <br>in Seconds.</h1>
@@ -80,6 +84,7 @@
             </div>
         </section>
 
+        <!-- QUALITY PROOF (Sliders) -->
         <section style="text-align: center; margin-top: 20px;">
             <span class="section-label">Interactive Quality Test</span>
             <div class="comparison-container">
@@ -98,6 +103,7 @@
             </div>
         </section>
 
+        <!-- FEATURES -->
         <div class="grid">
             <div class="card">
                 <h3>⚡ Fast Workflow</h3>
@@ -107,16 +113,17 @@
                 <h3>🎨 16-Bit Quality</h3>
                 <p>Zero color banding. High-depth processing ensures smooth gradients.</p>
             </div>
-            <div class="card">
+            <div class="card" style="border-color: rgba(56, 239, 125, 0.3);">
                 <h3>🛡️ Risk Free</h3>
                 <p>Test every feature for 7 days. No credit card required to start.</p>
             </div>
         </div>
 
+        <!-- FOOTER -->
         <footer>
             <p>&copy; 2026 Infinity Retouch / WINSERV TECNOLOGIA DA INFORMACAO.</p>
             <div class="adobe-disclaimer">
-                Adobe® and Photoshop® are registered trademarks of Adobe Inc. This plugin is an independent product and not affiliated with, sponsored by, or endorsed by Adobe Inc.
+                Adobe® and Photoshop® are registered trademarks of Adobe Inc. in the United States and/or other countries. This plugin is an independent product and is not affiliated with, sponsored by, or endorsed by Adobe Inc.
             </div>
             <p>
                 <a href="/docs/">Help Center</a>
@@ -127,6 +134,7 @@
         </footer>
     </div>
 
+    <!-- Script de Vídeo Fullscreen -->
     <script>
         const video = document.getElementById('demoVideo');
         video.addEventListener('click', function() {
