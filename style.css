@@ -198,3 +198,45 @@ footer a:hover { color: #fff; }
     .hero { padding: 15px 0 40px 0; }
     .btn { width: 100%; }
 }
+
+/* Adicione isso ao fim do seu style.css */
+.trial-badge {
+    display: inline-block;
+    background: rgba(56, 239, 125, 0.1);
+    color: var(--success);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    border: 1px solid rgba(56, 239, 125, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-group {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.trial-link {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-decoration: underline;
+}
+
+.trial-link:hover { color: #fff; }
+
+.adobe-disclaimer {
+    max-width: 800px;
+    margin: 20px auto;
+    font-size: 0.7rem;
+    color: #444;
+    line-height: 1.4;
+}
+
+/* Garante que imagens e vídeos não quebrem o layout */
+img, video { max-width: 100%; height: auto; }
