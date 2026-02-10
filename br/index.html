@@ -6,18 +6,29 @@
     
     <title>Infinity Backdrop Cleaner - Plugin Profissional para Adobe® Photoshop®</title>
     <meta name="description" content="Automatize a limpeza de fundo infinito no Adobe® Photoshop® com processamento 16-bit. Inclui 7 dias de teste grátis.">
-    <link rel="canonical" href="https://infinityretouch.com/br/">
     
+    <!-- SEO & Hreflang -->
+    <link rel="canonical" href="https://infinityretouch.com/br/">
     <link rel="alternate" hreflang="en" href="https://infinityretouch.com/" />
     <link rel="alternate" hreflang="pt-br" href="https://infinityretouch.com/br/" />
     <link rel="alternate" hreflang="x-default" href="https://infinityretouch.com/" />
 
-    <link rel="icon" href="/favicon.png" type="image/png">
-    <link rel="stylesheet" href="/style.css?v=2.1">
+    <!-- Open Graph (Compartilhamento) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://infinityretouch.com/br/">
+    <meta property="og:title" content="Infinity Backdrop Cleaner - Fundos Perfeitos em Segundos">
+    <meta property="og:description" content="Plugin nativo UXP para Adobe® Photoshop®. Limpe fundos mantendo texturas.">
+    <meta property="og:image" content="https://infinityretouch.com/og-infinity-backdrop-cleaner.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
-    <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"/>    
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="stylesheet" href="/style.css?v=2.3">
     
+    <!-- Scripts Externos -->
+    <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"/>
+
     <style>
         .trial-badge {
             display: inline-block;
@@ -32,34 +43,15 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-        .trial-link {
-            display: block;
-            margin-top: 15px;
-            color: var(--success); /* Cor verde para combinar com o botão BR */
-            font-size: 0.9rem;
-            text-decoration: underline;
-            transition: 0.2s;
-        }
-        .trial-link:hover { opacity: 0.8; }
-        .cta-group { margin-top: 30px; text-align: center; }
+        .cta-group { margin-top: 30px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+        .trial-link { color: var(--text-muted); font-size: 0.9rem; text-decoration: underline; }
+        .trial-link:hover { color: #fff; }
+        .adobe-disclaimer { max-width: 800px; margin: 20px auto; font-size: 0.7rem; color: #444; line-height: 1.4; }
     </style>
-
-    <!-- Open Graph (BR) -->
-    <meta property="og:title" content="Infinity Backdrop Cleaner - Fundos Perfeitos em Segundos">
-    <meta property="og:description" content="Limpeza de fundo profissional para Adobe® Photoshop®. Poder 16-bit, movido a IA. Teste grátis.">
-    <meta property="og:image" content="https://infinityretouch.com/og-infinity-backdrop-cleaner.jpg">
-    <meta property="og:url" content="https://infinityretouch.com/br/">
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RN28DZF26K"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-RN28DZF26K');
-    </script> 
 </head>
 <body>
     <div class="container">
+        <!-- NAVIGATION -->
         <nav>
             <a href="/br/" class="logo">
                 <img src="/infinity-retouch-logo.png" alt="Infinity Retouch Logo">
@@ -72,39 +64,48 @@
             </div>
         </nav>
 
+        <!-- HERO SECTION -->
         <section class="hero">
             <div class="trial-badge">✨ Inclui 7 Dias de Teste Grátis</div>
             <h1>Fundos Infinitos Perfeitos <br>em Segundos.</h1>
             <p class="subtitle">O plugin UXP profissional para Adobe® Photoshop® que limpa fundo infinito mantendo sombras reais e texturas originais.</p>
             
-            <span class="section-label">Assista o Workflow em Ação</span>
+            <span class="section-label">Assista o workflow em ação</span>
             <div class="video-container">
-                <video autoplay loop muted playsinline poster="/og-infinity-backdrop-cleaner.jpg">
+                <video autoplay loop muted playsinline poster="/video-poster.jpg">
                     <source src="/demo-plugin-01.mp4" type="video/mp4">
                 </video>
             </div>
 
-            <span class="section-label">Teste de Qualidade Interativo</span>
-            <div class="comparison-container">
-                <img-comparison-slider>
-                    <img slot="first" src="/foto-antes.webp" width="100%" alt="Antes" />
-                    <img slot="second" src="/foto-depois.webp" width="100%" alt="Depois" />
-                </img-comparison-slider>
-            </div>
-
             <div class="cta-group">
-                <a href="/buy/backdrop-cleaner/" class="btn btn-br">
-                    Garantir Licença Vitalícia - R$ 145
-                </a>
-                <a href="/docs/backdrop-cleaner/#installation" class="trial-link">
-                    Ou comece seu teste gratuito de 7 dias agora
-                </a>
+                <a href="/buy/backdrop-cleaner/" class="btn btn-br">Garantir Licença Vitalícia - R$ 145</a>
+                <a href="/docs/backdrop-cleaner/#installation" class="trial-link">Ou comece seu teste gratuito de 7 dias agora</a>
             </div>
         </section>
 
+        <!-- QUALITY PROOF (Sliders) -->
+        <section style="text-align: center; margin-top: 40px;">
+            <span class="section-label">Teste de Qualidade Interativo</span>
+            <div class="comparison-container">
+                <img-comparison-slider>
+                    <img slot="first" src="/foto-antes.webp" alt="Antes" />
+                    <img slot="second" src="/foto-depois.webp" alt="Depois" />
+                </img-comparison-slider>
+            </div>
+
+            <span class="section-label">Preservação de Textura (Zoom 200%)</span>
+            <div class="comparison-container" style="max-width: 600px;">
+                <img-comparison-slider>
+                    <img slot="first" src="/foto-zoom-antes.webp" alt="Zoom Antes" />
+                    <img slot="second" src="/foto-zoom-depois.webp" alt="Zoom Depois" />
+                </img-comparison-slider>
+            </div>
+        </section>
+
+        <!-- FEATURES -->
         <div class="grid">
             <div class="card">
-                <h3>⚡ Fluxo Rápido</h3>
+                <h3>⚡ Fluxo Ágil</h3>
                 <p>Automatize a parte chata do retoque. Economize mais de 10 minutos por foto.</p>
             </div>
             <div class="card">
@@ -112,21 +113,21 @@
                 <p>Zero "banding". Processamento em alta profundidade para degradês perfeitos.</p>
             </div>
             <div class="card">
-                <h3>🛡️ Teste Sem Riscos</h3>
-                <p>Experimente todas as funções por 7 dias. Sem cartão de crédito para começar.</p>
+                <h3>🛡️ Sem Risco</h3>
+                <p>Teste todas as funções por 7 dias. Sem cartão de crédito para começar.</p>
             </div>
         </div>
 
+        <!-- FOOTER -->
         <footer>
             <p>&copy; 2026 Infinity Retouch / WINSERV TECNOLOGIA DA INFORMACAO.</p>
             <p class="adobe-disclaimer">
-                Adobe® e Photoshop® são marcas registradas da Adobe Inc. Este plugin é um produto independente e não é afiliado à Adobe.
+                Adobe® e Photoshop® são marcas registradas da Adobe Inc. Este plugin é um produto independente e não é afiliado, patrocinado ou endossado pela Adobe Inc.
             </p>
             <p>
                 <a href="/docs/">Central de Ajuda</a>
                 <a href="/privacy.html">Privacidade</a>
                 <a href="/terms.html">Termos</a>
-                <a href="/refund.html">Reembolso</a>
                 <a href="mailto:sales@infinityretouch.com">Suporte</a>
             </p>
         </footer>
