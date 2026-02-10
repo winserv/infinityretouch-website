@@ -4,34 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO & Meta Tags -->
-    <title>Infinity Backdrop Cleaner - Plugin Profissional para Photoshop</title>
-    <meta name="description" content="Limpe fundos infinitos no Photoshop automaticamente com processamento 16-bit. Inclui 7 dias de teste grátis. O plugin essencial para fotógrafos de estúdio.">
+    <title>Infinity Backdrop Cleaner - Plugin Profissional para Adobe® Photoshop®</title>
+    <meta name="description" content="Automatize a limpeza de fundo infinito no Adobe® Photoshop® com processamento 16-bit. Inclui 7 dias de teste grátis.">
     <link rel="canonical" href="https://infinityretouch.com/br/">
     
-    <!-- Hreflang (SEO Internacional) -->
     <link rel="alternate" hreflang="en" href="https://infinityretouch.com/" />
     <link rel="alternate" hreflang="pt-br" href="https://infinityretouch.com/br/" />
     <link rel="alternate" hreflang="x-default" href="https://infinityretouch.com/" />
 
-    <!-- Favicon & Style -->
     <link rel="icon" href="/favicon.png" type="image/png">
-    <link rel="stylesheet" href="/style.css?v=2.0">
+    <link rel="stylesheet" href="/style.css?v=2.1">
 
-    <!-- Web Component para o Slider de Antes/Depois -->
     <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"/>    
     
     <style>
-        /* Ajustes específicos para Sliders e Badge na versão BR */
-        img-comparison-slider {
-            --divider-width: 2px;
-            --divider-color: #fff;
-            --default-handle-width: 50px;
-            margin-bottom: 20px;
-            outline: none;
-        }
-
         .trial-badge {
             display: inline-block;
             background: rgba(56, 239, 125, 0.1);
@@ -45,16 +32,24 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
+        .trial-link {
+            display: block;
+            margin-top: 15px;
+            color: var(--success); /* Cor verde para combinar com o botão BR */
+            font-size: 0.9rem;
+            text-decoration: underline;
+            transition: 0.2s;
+        }
+        .trial-link:hover { opacity: 0.8; }
+        .cta-group { margin-top: 30px; text-align: center; }
     </style>
 
-    <!-- Open Graph / Facebook / WhatsApp (Versão BR) -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://infinityretouch.com/br/">
+    <!-- Open Graph (BR) -->
     <meta property="og:title" content="Infinity Backdrop Cleaner - Fundos Perfeitos em Segundos">
-    <meta property="og:description" content="Limpeza de fundo infinito no Photoshop com processamento 16-bit. Inclui 7 dias de teste grátis. Licença vitalícia.">
-    <meta property="og:image" content="https://infinityretouch.com/hero-image.webp">
+    <meta property="og:description" content="Limpeza de fundo profissional para Adobe® Photoshop®. Poder 16-bit, movido a IA. Teste grátis.">
+    <meta property="og:image" content="https://infinityretouch.com/og-infinity-backdrop-cleaner.jpg">
+    <meta property="og:url" content="https://infinityretouch.com/br/">
 
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RN28DZF26K"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -65,64 +60,48 @@
 </head>
 <body>
     <div class="container">
-        <!-- NAVBAR -->
         <nav>
             <a href="/br/" class="logo">
-                <img src="/infinity-retouch-logo.png" alt="Logo Infinity Retouch">
+                <img src="/infinity-retouch-logo.png" alt="Infinity Retouch Logo">
                 Infinity Retouch
             </a>
             <div>
-                <a href="/" class="nav-link" title="Switch to English">🇺🇸 EN</a>
-                <a href="/br/docs/" class="nav-link">Ajuda</a>
-                <a href="/br/buy/backdrop-cleaner/" class="nav-link btn-buy" style="color: #fff; border: 1px solid #444; padding: 5px 15px; border-radius: 6px;">Comprar Licença</a>
+                <a href="/" class="nav-link">🇺🇸 EN</a>
+                <a href="/docs/" class="nav-link">Ajuda</a>
+                <a href="/buy/backdrop-cleaner/" class="nav-link btn-outline" style="padding: 5px 15px; border-radius: 6px;">Comprar Licença</a>
             </div>
         </nav>
 
-        <!-- HERO SECTION -->
-        <section class="hero" id="pricing">
-            <div class="trial-badge">✨ Inclui 7 dias de teste grátis</div>
+        <section class="hero">
+            <div class="trial-badge">✨ Inclui 7 Dias de Teste Grátis</div>
             <h1>Fundos Infinitos Perfeitos <br>em Segundos.</h1>
-            <p class="subtitle">O plugin profissional para Photoshop que limpa o fundo infinito mantendo sombras reais e texturas originais.</p>
+            <p class="subtitle">O plugin UXP profissional para Adobe® Photoshop® que limpa fundo infinito mantendo sombras reais e texturas originais.</p>
             
-            <!-- 1. VÍDEO NO TOPO (DEMONSTRAÇÃO DE VELOCIDADE) -->
             <span class="section-label">Assista o Workflow em Ação</span>
             <div class="video-container">
-                <video autoplay loop muted playsinline disablePictureInPicture>
+                <video autoplay loop muted playsinline poster="/video-poster.jpg">
                     <source src="/demo-plugin-01.mp4" type="video/mp4">
-                    Seu navegador não suporta a tag de vídeo.
                 </video>
             </div>
 
-            <!-- 2. SLIDER GERAL (TESTE DE QUALIDADE) -->
             <span class="section-label">Teste de Qualidade Interativo</span>
             <div class="comparison-container">
                 <img-comparison-slider>
-                    <img slot="first" src="/foto-antes.webp?v=1.1" width="100%" alt="Fundo sujo antes do retoque" />
-                    <img slot="second" src="/foto-depois.webp?v=1.1" width="100%" alt="Fundo limpo após o plugin" />
+                    <img slot="first" src="/foto-antes.webp" width="100%" alt="Antes" />
+                    <img slot="second" src="/foto-depois.webp" width="100%" alt="Depois" />
                 </img-comparison-slider>
             </div>
 
-            <!-- 3. SLIDER ZOOM (DETALHE TÉCNICO) -->
-            <span class="section-label">Preservação de Textura (Zoom 200%)</span>
-            <div class="comparison-container" style="max-width: 600px;">
-                <img-comparison-slider>
-                    <img slot="first" src="/foto-zoom-antes.webp?v=1.1" width="100%" alt="Zoom antes" />
-                    <img slot="second" src="/foto-zoom-depois.webp?v=1.1" width="100%" alt="Zoom depois" />
-                </img-comparison-slider>
-            </div>
-            
-            <!-- CHAMADA PARA AÇÃO (CTA) -->
-            <div style="margin-top: 30px; display: flex; flex-direction: column; align-items: center; gap: 15px;">
-                <a href="/br/buy/backdrop-cleaner/" class="btn btn-br" style="width: 100%; max-width: 375px; font-size: 1.1rem;">
+            <div class="cta-group">
+                <a href="/buy/backdrop-cleaner/" class="btn btn-br">
                     Garantir Licença Vitalícia - R$ 145
                 </a>
-                <a href="/br/docs/backdrop-cleaner/#installation" style="color: var(--text-muted); text-decoration: underline; font-size: 0.9rem;">
+                <a href="/docs/backdrop-cleaner/#installation" class="trial-link">
                     Ou comece seu teste gratuito de 7 dias agora
                 </a>
             </div>
         </section>
 
-        <!-- FEATURES GRID -->
         <div class="grid">
             <div class="card">
                 <h3>⚡ Fluxo Rápido</h3>
@@ -130,22 +109,24 @@
             </div>
             <div class="card">
                 <h3>🎨 Qualidade 16-Bit</h3>
-                <p>Zero "banding". Processamos internamente em alta profundidade para garantir degradês e cores perfeitas.</p>
+                <p>Zero "banding". Processamento em alta profundidade para degradês perfeitos.</p>
             </div>
-            <div class="card" style="border-color: rgba(56, 239, 125, 0.3);">
+            <div class="card">
                 <h3>🛡️ Teste Sem Riscos</h3>
-                <p>Experimente todas as funções por 7 dias. Sem necessidade de cartão de crédito para começar o seu retoque profissional.</p>
+                <p>Experimente todas as funções por 7 dias. Sem cartão de crédito para começar.</p>
             </div>
         </div>
 
-        <!-- FOOTER -->
         <footer>
             <p>&copy; 2026 Infinity Retouch / WINSERV TECNOLOGIA DA INFORMACAO.</p>
+            <p style="margin: 15px 0; line-height: 1.4; color: #444;">
+                Adobe® e Photoshop® são marcas registradas da Adobe Inc. Este plugin é um produto independente e não é afiliado à Adobe.
+            </p>
             <p>
-                <a href="/br/docs/">Central de Ajuda</a>
-                <a href="/br/privacy.html">Privacidade</a>
-                <a href="/br/terms.html">Termos de Uso</a>
-                <a href="/br/refund.html">Política de Reembolso</a>
+                <a href="/docs/">Central de Ajuda</a>
+                <a href="/privacy.html">Privacidade</a>
+                <a href="/terms.html">Termos</a>
+                <a href="/refund.html">Reembolso</a>
                 <a href="mailto:sales@infinityretouch.com">Suporte</a>
             </p>
         </footer>
