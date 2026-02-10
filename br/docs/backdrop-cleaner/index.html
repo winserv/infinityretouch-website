@@ -5,168 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manual - Infinity Backdrop Cleaner</title>
     <link rel="icon" href="/favicon.png" type="image/png">
-    <link rel="stylesheet" href="/style.css?v=2.9">
-    
-    <!-- Google tag (gtag.js) -->
+    <link rel="stylesheet" href="/style.css?v=3.1">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RN28DZF26K"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-RN28DZF26K');
-    </script>
-
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-RN28DZF26K');</script>
     <style>
-        .manual-container { max-width: 850px; margin: 0 auto; padding-bottom: 100px; }
-        .toc-list { list-style: none !important; margin-left: 0 !important; columns: 2; padding: 20px 0; border-top: 1px solid var(--border); }
-        .toc-list li { margin-bottom: 12px; }
-        /* Links do índice em cinza para não poluir, hover em verde */
-        .toc-list a { color: var(--text-muted); font-weight: 500; text-decoration: none; transition: 0.2s; }
-        .toc-list a:hover { color: var(--success); text-decoration: underline; }
-        
-        .doc-section { margin-top: 80px; scroll-margin-top: 100px; }
+        .manual-container { max-width: 850px; margin: 0 auto; padding-bottom: 80px; }
+        .doc-section { margin-top: 60px; scroll-margin-top: 100px; }
         .doc-section h2 { font-size: 2.2rem; border-bottom: 1px solid var(--border); padding-bottom: 15px; margin-bottom: 30px; color: #fff; }
-        /* Títulos secundários com um detalhe em roxo para quebrar o verde */
-        .doc-section h3 { margin-top: 40px; margin-bottom: 15px; color: #fff; border-left: 3px solid var(--accent); padding-left: 15px; }
-        
+        .doc-section h3 { margin-top: 40px; margin-bottom: 15px; color: #fff; border-left: 3px solid var(--success); padding-left: 15px; }
         .step-item { background: var(--surface); border: 1px solid var(--border); padding: 25px; border-radius: 12px; margin-bottom: 25px; }
-        .step-number { color: var(--success); font-weight: 800; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; display: block; margin-bottom: 10px; }
-        
-        .note { background: rgba(255, 255, 255, 0.03); border-left: 4px solid var(--success); padding: 25px; border-radius: 8px; margin: 40px 0; color: var(--text-muted); }
-        .note strong { color: var(--success); display: block; margin-bottom: 5px; }
-
-        .warning-box { background: rgba(220, 38, 38, 0.05); border-left: 4px solid #dc2626; padding: 25px; border-radius: 8px; margin: 40px 0; color: #ffb3b3; }
-        .warning-box strong { color: #ff6b6b; display: block; margin-bottom: 5px; }
-
-        /* Estilo da Chave de Licença solicitado */
-        .license-key-box { background: #000; border: 1px dashed #444; color: var(--success); padding: 20px; text-align: center; font-family: 'Courier New', monospace; font-size: 1.1rem; margin: 25px 0; border-radius: 8px; letter-spacing: 1px; font-weight: bold; }
-        
-        .faq-item { background: var(--surface); padding: 25px; border-radius: 12px; margin-bottom: 20px; border: 1px solid var(--border); }
-        .faq-item h3 { font-size: 1.1rem; margin-top: 0; margin-bottom: 12px; color: #fff; }
-
-        .recovery-card { background: var(--surface); border: 1px solid var(--border); padding: 30px; border-radius: 16px; margin-top: 30px; transition: 0.3s; }
-        .recovery-card:hover { border-color: var(--success); }
-
-        @media (max-width: 600px) { .toc-list { columns: 1; } }
+        .step-number { color: var(--success); font-weight: 800; font-size: 0.8rem; display: block; margin-bottom: 10px; }
+        .license-key-box { background: #000; border: 1px dashed #444; color: var(--success); padding: 20px; text-align: center; font-family: monospace; font-size: 1.1rem; border-radius: 8px; font-weight: bold; }
+        .note { background: rgba(255, 255, 255, 0.03); border-left: 4px solid var(--success); padding: 25px; border-radius: 8px; margin: 40px 0; }
+        .toc-list { list-style: none !important; margin-left: 0 !important; columns: 2; padding: 20px 0; border-top: 1px solid var(--border); }
+        .toc-list a { color: var(--text-muted); text-decoration: none; }
+        .toc-list a:hover { color: var(--success); text-decoration: underline; }
     </style>
 </head>
 <body>
     <div class="container manual-container">
         <nav>
-            <a href="/br/" class="logo">
-                <img src="/infinity-retouch-logo.png" alt="Logo"> Infinity Retouch
-            </a>
-            <div style="display: flex; align-items: center;">
+            <a href="/br/" class="logo"><img src="/infinity-retouch-logo.png" alt="Logo"> Infinity Retouch</a>
+            <div>
                 <a href="/docs/backdrop-cleaner/" class="nav-link">🇺🇸 EN</a>
-                <a href="/br/docs/" class="nav-link">Central de Ajuda</a>
+                <a href="/br/docs/" class="nav-link">Ajuda</a>
             </div>
         </nav>
-
         <header style="text-align: center; margin: 60px 0;">
-            <h1 style="font-size: 3rem;">Manual do Usuário</h1>
-            <p class="subtitle">Infinity Backdrop Cleaner para Adobe® Photoshop®</p>
+            <h1>Manual Backdrop Cleaner</h1>
+            <p class="subtitle">Guia completo para Adobe® Photoshop®</p>
         </header>
 
         <div class="card">
-            <h3 style="margin-bottom: 15px; color: #fff;">📑 Índice</h3>
+            <h3 style="color:#fff">📑 Índice</h3>
             <ul class="toc-list">
                 <li><a href="#quick-start">🚀 Guia Rápido</a></li>
                 <li><a href="#installation">💿 Instalação</a></li>
-                <li><a href="#activation">🔑 Ativação da Licença</a></li>
+                <li><a href="#activation">🔑 Ativação</a></li>
                 <li><a href="#recovery">🔐 Recuperar Chave</a></li>
-                <li><a href="#usage">🎨 Fluxo Detalhado</a></li>
-                <li><a href="#advanced">⚙️ Funções Avançadas</a></li>
-                <li><a href="#faq">❓ FAQ</a></li>
-                <li><a href="#support">📧 Suporte por E-mail</a></li>
+                <li><a href="#support">📧 Suporte</a></li>
             </ul>
         </div>
 
-        <!-- QUICK START -->
         <div id="quick-start" class="doc-section">
             <h2>🚀 Guia Rápido</h2>
             <div class="step-item">
                 <span class="step-number">Passo 1</span>
-                <h3>Prepare para Pintura</h3>
-                <p>Abra sua foto no Photoshop e clique em <strong>"Prepare for Painting"</strong>. O plugin criará uma máscara de proteção automática usando IA.</p>
+                <h3>Preparar Pintura</h3>
+                <p>Abra sua foto e clique em <strong>"Prepare for Painting"</strong>. A IA protegerá seu assunto.</p>
             </div>
             <div class="step-item">
                 <span class="step-number">Passo 2</span>
-                <h3>Pintura de Imperfeições</h3>
-                <p>Segure <code>Alt</code>, clique no fundo para copiar a cor e pinte sobre amassados ou sujeira. Não se preocupe em pintar sobre o assunto, a máscara o protege.</p>
-            </div>
-            <div class="step-item">
-                <span class="step-number">Passo 3</span>
-                <h3>Processar</h3>
-                <p>Clique em <strong>"Process Image"</strong>. O plugin irá suavizar o fundo e remover o ruído mantendo a textura natural.</p>
-            </div>
-            <div class="note">
-                <strong>💡 Dica:</strong> Use a borracha na camada "Original Background" caso precise recuperar detalhes finos do cabelo ou roupas.
+                <h3>Pintar e Processar</h3>
+                <p>Pinte sobre as imperfeições e clique em <strong>"Process Image"</strong> para finalizar.</p>
             </div>
         </div>
 
-        <!-- INSTALLATION -->
-        <div id="installation" class="doc-section">
-            <h2>💿 Instalação</h2>
-            <h3>Requisitos</h3>
-            <ul>
-                <li>Photoshop® 2023 (v24.x) ou superior.</li>
-                <li>Windows 10/11 ou macOS Big Sur+.</li>
-            </ul>
-            <h3>Como Instalar</h3>
-            <ol>
-                <li>Certifique-se que o app Adobe Creative Cloud está aberto.</li>
-                <li>Dê um duplo clique no arquivo <code>.ccx</code> baixado.</li>
-                <li>Clique em "Instalar Localmente".</li>
-                <li>Reinicie o Photoshop e vá em <strong>Plugins → Infinity Backdrop Cleaner</strong>.</li>
-            </ol>
-        </div>
-
-        <!-- ACTIVATION -->
         <div id="activation" class="doc-section">
             <h2>🔑 Ativação da Licença</h2>
-            <p>Sua chave é enviada por e-mail após a compra. Exemplo de formato:</p>
+            <p>Sua chave segue este formato:</p>
             <div class="license-key-box">ABC123-DEF456-GHI789-JKL098-MNO765-V3</div>
-            <ol>
-                <li>No plugin, clique no botão <strong>Activate</strong>.</li>
-                <li>Cole sua chave completa e clique em confirmar.</li>
-                <li>Sua licença permite uso em até <strong>2 computadores</strong> simultâneos.</li>
-            </ol>
+            <p style="margin-top:15px">Ative no menu "Manage License" do plugin. Válido para 2 computadores.</p>
         </div>
 
-        <!-- RECOVERY -->
         <div id="recovery" class="doc-section">
             <h2>🔐 Perdeu sua Chave?</h2>
-            <div class="recovery-card">
-                <h3 style="color: #fff;">Recuperação Automática</h3>
-                <p>Se você não encontrar o e-mail de compra, pode recuperar sua chave informando o e-mail usado no checkout.</p>
+            <div class="card" style="border: 1px solid var(--success);">
+                <p>Recupere sua chave instantaneamente usando o e-mail da compra.</p>
                 <br>
-                <a href="/br/recover/" class="btn btn-br" style="max-width: 100%;">Ir para Página de Recuperação</a>
+                <a href="/br/recover/" class="btn btn-br" style="max-width: 100%;">Recuperar Licença</a>
             </div>
         </div>
 
-        <!-- SUPPORT -->
-        <div id="support" class="doc-section">
+        <div id="support" class="doc-section" style="text-align: center;">
             <h2>📧 Suporte por E-mail</h2>
-            <p>Se você encontrar dificuldades técnicas ou erros de ativação, nossa equipe está pronta para ajudar.</p>
-            <div class="card" style="text-align: center; border: 1px solid var(--border);">
-                <h3 style="color: #fff; margin-bottom: 10px;">Contato Direto</h3>
-                <p>Envie um e-mail para:</p>
-                <a href="mailto:sales@infinityretouch.com" style="font-size: 1.3rem; color: var(--success); font-weight: bold; text-decoration: underline;">sales@infinityretouch.com</a>
-                <p style="margin-top: 20px; font-size: 0.85rem; color: var(--text-muted);">Resposta em até 24h úteis. Por favor, anexe um print do erro se possível.</p>
-            </div>
+            <p>Dúvidas? Escreva para:</p>
+            <a href="mailto:sales@infinityretouch.com" style="font-size: 1.3rem; color: var(--success); font-weight: bold;">sales@infinityretouch.com</a>
         </div>
 
         <footer>
             <p>&copy; 2026 Infinity Retouch / WINSERV TECNOLOGIA DA INFORMACAO.</p>
-            <div class="adobe-disclaimer">
-                Adobe® e Photoshop® são marcas registradas da Adobe Inc. Este plugin é um produto independente e não é afiliado à Adobe Inc.
-            </div>
-            <p>
-                <a href="/br/docs/">Central de Ajuda</a>
-                <a href="/br/privacy.html">Privacidade</a>
-                <a href="/br/terms.html">Termos</a>
-                <a href="mailto:sales@infinityretouch.com">Suporte</a>
-            </p>
+            <p style="font-size: 0.7rem; color: #444; margin: 15px 0;">Adobe® e Photoshop® são marcas registradas da Adobe Inc. Este plugin é um produto independente e não é afiliado à Adobe Inc.</p>
         </footer>
     </div>
 </body>
