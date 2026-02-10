@@ -1,3 +1,4 @@
+/* --- 1. VARIÁVEIS E BASE --- */
 :root {
     --bg: #050505;
     --surface: #121212;
@@ -11,12 +12,9 @@
     --success-gradient: linear-gradient(135deg, #38ef7d 0%, #11998e 100%);
 }
 
-html {
-    scroll-behavior: smooth;
-    height: 100%;
-}
-
 * { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; height: 100%; }
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -27,21 +25,22 @@ body {
 }
 
 a { text-decoration: none; transition: 0.2s; }
+img, video { max-width: 100%; height: auto; display: block; }
 .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
 
-/* --- NAVIGATION --- */
+/* --- 2. NAVEGAÇÃO --- */
 nav {
-    padding: 15px 0;
+    padding: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--border);
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .logo {
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     color: #fff;
     display: flex;
     align-items: center;
@@ -51,35 +50,15 @@ nav {
 
 .nav-link {
     color: var(--text-muted);
-    font-size: 0.9rem;
-    margin-left: 20px;
+    font-size: 0.95rem;
+    margin-left: 25px;
+    font-weight: 500;
 }
 .nav-link:hover { color: #fff; }
 
-/* --- HERO SECTION --- */
-.hero { 
-    text-align: center; 
-    padding: 25px 0 20px 0;
-}
+/* --- 3. HERO SECTION --- */
+.hero { text-align: center; padding: 25px 0 40px 0; }
 
-h1 {
-    font-size: 3rem;
-    line-height: 1.1;
-    margin-top: 0;
-    margin-bottom: 20px;
-    background: linear-gradient(to right, #fff, #b3b3b3);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-p.subtitle {
-    font-size: 1.2rem;
-    color: var(--text-muted);
-    max-width: 600px;
-    margin: 0 auto 30px;
-}
-
-/* NOVO: Estilo do Selo de 7 dias (Badge) */
 .trial-badge {
     display: inline-block;
     background: rgba(56, 239, 125, 0.1);
@@ -94,7 +73,23 @@ p.subtitle {
     letter-spacing: 1px;
 }
 
-/* --- SLIDERS & VIDEO --- */
+h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #fff, #b3b3b3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+/* --- 4. SLIDERS & VIDEO --- */
 .section-label {
     display: block;
     font-size: 12px;
@@ -115,19 +110,13 @@ p.subtitle {
     background: #111;
 }
 
-.video-container video {
-    width: 100%;
-    display: block;
-    outline: none;
-}
-
-/* --- BUTTONS & CTA --- */
+/* --- 5. COMPONENTES (BOTÕES E CARDS) --- */
 .cta-group {
     margin-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 .btn {
@@ -138,138 +127,68 @@ p.subtitle {
     border: none; 
     cursor: pointer; 
     text-align: center;
+    width: 100%;
     max-width: 350px;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    transition: 0.2s;
 }
 .btn:hover { opacity: 0.9; transform: translateY(-1px); }
 
-.btn-br { background: var(--success-gradient); color: #fff; width: 100%; }
-.btn-intl { background: var(--accent-gradient); color: #fff; width: 100%; }
+.btn-br { background: var(--success-gradient); color: #fff; }
+.btn-intl { background: var(--accent-gradient); color: #fff; }
 .btn-outline { border: 1px solid var(--border); color: #fff; background: transparent; }
 
-/* NOVO: Estilo do link de trial abaixo do botão */
 .trial-link {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: var(--text-muted);
     text-decoration: underline;
-    opacity: 0.7;
 }
-.trial-link:hover { opacity: 1; color: #fff; }
+.trial-link:hover { color: #fff; }
 
-/* --- CARDS GRID --- */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
-    margin: 40px 0;
+    margin: 60px 0;
 }
 
 .card {
     background: var(--surface);
-    padding: 30px;
-    border-radius: 12px;
+    padding: 35px;
+    border-radius: 16px;
     border: 1px solid var(--border);
-    transition: 0.2s;
+    transition: 0.3s;
 }
 .card:hover { transform: translateY(-5px); border-color: #444; background: var(--surface-hover); }
-.card h3 { margin-bottom: 10px; color: #fff; font-size: 1.3rem; }
+.card h3 { margin-bottom: 12px; color: #fff; font-size: 1.4rem; }
 .card p { font-size: 0.95rem; color: var(--text-muted); }
 
-/* --- FOOTER & DISCLAIMER --- */
+/* --- 6. FOOTER & COMPLIANCE --- */
 footer {
     text-align: center; padding: 60px 0; color: #555;
     font-size: 0.85rem; border-top: 1px solid var(--border); margin-top: 60px;
 }
 
 .adobe-disclaimer {
-    max-width: 700px;
-    margin: 20px auto;
-    font-size: 0.75rem;
-    line-height: 1.4;
-    color: #444;
-}
-
-footer a { color: #777; margin: 0 10px; }
-footer a:hover { color: #fff; }
-
-/* --- RESPONSIVIDADE (MOBILE FIX) --- */
-@media (max-width: 600px) {
-    nav {
-        flex-direction: row; /* Mantém em linha */
-        flex-wrap: wrap;    /* Permite quebra se necessário, mas organizada */
-        justify-content: space-between;
-        padding: 10px 0;
-        gap: 10px;
-    }
-
-    .logo {
-        font-size: 1rem; /* Diminui o texto do logo no mobile */
-        gap: 8px;
-    }
-
-    .logo img {
-        width: 24px; /* Diminui o ícone do logo */
-        height: 24px;
-    }
-
-    /* Esconde o texto "License" no mobile para economizar espaço */
-    .btn-buy span {
-        display: none;
-    }
-
-    .nav-link {
-        margin-left: 8px;
-        font-size: 0.8rem;
-    }
-
-    h1 {
-        font-size: 2rem; /* Título principal menor no mobile */
-        margin-top: 10px;
-    }
-
-    .hero {
-        padding: 10px 0 30px 0;
-    }
-}
-
-/* Adicione isso ao fim do seu style.css */
-.trial-badge {
-    display: inline-block;
-    background: rgba(56, 239, 125, 0.1);
-    color: var(--success);
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    border: 1px solid rgba(56, 239, 125, 0.2);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.cta-group {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-}
-
-.trial-link {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    text-decoration: underline;
-}
-
-.trial-link:hover { color: #fff; }
-
-.adobe-disclaimer {
     max-width: 800px;
     margin: 20px auto;
     font-size: 0.7rem;
+    line-height: 1.5;
     color: #444;
-    line-height: 1.4;
 }
 
-/* Garante que imagens e vídeos não quebrem o layout */
-img, video { max-width: 100%; height: auto; }
+footer a { color: #777; margin: 0 12px; }
+footer a:hover { color: #fff; }
+
+/* --- 7. RESPONSIVIDADE --- */
+@media (max-width: 600px) {
+    nav { padding: 15px 0; }
+    .logo { font-size: 1.1rem; }
+    .nav-link { margin-left: 15px; font-size: 0.85rem; }
+    
+    h1 { font-size: 2.2rem; }
+    .hero { padding: 10px 0 30px 0; }
+    
+    .card { padding: 25px; }
+    .btn { width: 100%; max-width: 100%; }
+}
