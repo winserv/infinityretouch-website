@@ -3,6 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Purchase - Infinity Retouch</title>
+    <meta name="robots" content="noindex">
+    
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="en" href="https://infinityretouch.com/buy/backdrop-cleaner/" />
+    <link rel="alternate" hreflang="pt-br" href="https://infinityretouch.com/br/buy/backdrop-cleaner/" />
+
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="stylesheet" href="/style.css?v=2.6">
+    
+    <style>
+        /* CSS ESPECÍFICO DA PÁGINA DE COMPRA (BRIDGE) */
+        .bridge-container {
+            max-width: 550px; /* Caixa mais estreita para parecer um checkout */
+            margin: 0 auto;
+            padding-bottom: 80px;
+        }
+
+        .payment-option {
+            background: var(--surface);
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* Destaque para a opção internacional */
+        .payment-option.featured {
+            border-color: var(--accent);
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.15);
+            transform: scale(1.02);
+        }
+
+        .payment-option h3 {
+            font-size: 1.4rem;
+            color: #fff;
+        }
+
+        .price-tag {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #fff;
+            margin: 10px 0;
+        }
+
+        .details {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 10px;
+        }
+
+        .payment-option .btn {
+            width: 100%;
+            max-width: 100%; /* Sobrescreve o limite da home */
+            padding: 16px;
+            font-size: 1.1rem;
+        }
+
+        .back-link { 
+            color: var(--text-muted); 
+            font-size: 0.9rem; 
+            transition: 0.2s;
+        }
+        .back-link:hover { color: #fff; }
+
+        .logo-link img { 
+            transition: 0.3s; 
+        }
+        .logo-link:hover img { 
+            transform: scale(1.1); 
+            box-shadow: 0 0 30px rgba(56, 239, 125, 0.4);
+        }
+
+        /* Botão de Idioma */
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .lang-switch a { 
+            color: var(--text-muted); 
+            border: 1px solid var(--border);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            background: var(--surface);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="lang-switch">
+        <a href="/br/buy/backdrop-cleaner/">🇧🇷 Mudar para Português</a>
+    </div>
+
+    <div class="container bridge-container">
+        
+        <!-- HEADER -->
+        <header style="text-align: center; margin-bottom: 40px; margin-top: 50px;">
+            <a href="/" class="logo-link">
+                <img src="/infinity-retouch-logo.png" alt="Infinity Logo" style="width: 85px; border-radius: 50%; border: 2px solid var(--border);">
+            </a>
+            <h2 style="margin-top: 25px; font-size: 2rem;">Complete Your Purchase</h2>
+            <p style="color: var(--text-muted); margin-top: 10px;">Select your region for a secure checkout</p>
+        </header>
+
+        <!-- OPÇÃO INTERNACIONAL (ROXA) -->
+        <div class="payment-option featured">
+            <h3>🌍 International Checkout</h3>
+            <div class="price-tag">$29.00</div>
+            <a href="https://pay.kiwify.com.br/itYbaeF" class="btn btn-intl">
+                Pay with Credit Card
+            </a>
+            <span class="details">Instant Access • Lifetime License • 16-bit Support</span>
+        </div>
+
+        <!-- OPÇÃO BRASIL (VERDE) -->
+        <div class="payment-option">
+            <h3>🇧🇷 Brasil (Pix ou Cartão)</h3>
+            <div class="price-tag">R$ 145,00</div>
+            <a href="https://pay.kiwify.com.br/rAGSeeK" class="btn btn-br">
+                Pagar com Pix ou Parcelado
+            </a>
+            <span class="details">Exclusivo para o Brasil • Liberação Imediata</span>
+        </div>
+
+        <!-- FOOTER DE SEGURANÇA -->
+        <div style="text-align: center; margin-top: 40px;">
+            <p style="font-size: 0.9rem; color: var(--success); font-weight: 600;">
+                🔒 Secure 256-bit SSL Encrypted Payment
+            </p>
+            
+            <p style="margin-top: 20px; color: #555; font-size: 0.8rem;">
+                7-Day Money Back Guarantee • Support: sales@infinityretouch.com
+            </p>
+
+            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--border);">
+                <a href="/" class="back-link">← Cancel and return to website</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Complete Purchase - Infinity Backdrop</title>
     <meta name="robots" content="noindex">
     
