@@ -5,36 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manual - Infinity Backdrop Cleaner</title>
     <link rel="icon" href="/favicon.png" type="image/png">
-    <link rel="stylesheet" href="/style.css?v=2.7">
+    <link rel="stylesheet" href="/style.css?v=2.8">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RN28DZF26K"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-RN28DZF26K');
+    </script>
+
     <style>
-        /* Estilos específicos do Manual */
-        .manual-container { max-width: 850px; margin: 0 auto; }
+        .manual-container { max-width: 850px; margin: 0 auto; padding-bottom: 100px; }
         .toc-list { list-style: none !important; margin-left: 0 !important; columns: 2; padding: 20px 0; }
         .toc-list li { margin-bottom: 12px; }
         .toc-list a { color: var(--accent); font-weight: 600; text-decoration: none; }
         .toc-list a:hover { text-decoration: underline; }
         
         .doc-section { margin-top: 80px; scroll-margin-top: 100px; }
-        .doc-section h2 { font-size: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 15px; margin-bottom: 30px; color: #fff; }
-        .doc-section h3 { margin-top: 30px; margin-bottom: 15px; color: #fff; }
+        .doc-section h2 { font-size: 2.2rem; border-bottom: 1px solid var(--border); padding-bottom: 15px; margin-bottom: 30px; color: #fff; }
+        .doc-section h3 { margin-top: 40px; margin-bottom: 15px; color: #fff; border-left: 3px solid var(--accent); padding-left: 15px; }
         
         .step-item { background: var(--surface); border: 1px solid var(--border); padding: 25px; border-radius: 12px; margin-bottom: 25px; }
         .step-number { color: var(--accent); font-weight: 800; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; display: block; margin-bottom: 10px; }
         
-        .note { background: rgba(102, 126, 234, 0.05); border-left: 4px solid var(--accent); padding: 20px; border-radius: 6px; margin: 30px 0; color: var(--text-muted); }
-        .note strong { color: var(--accent); }
+        .note { background: rgba(102, 126, 234, 0.05); border-left: 4px solid var(--accent); padding: 25px; border-radius: 8px; margin: 40px 0; color: var(--text-muted); }
+        .note strong { color: var(--accent); display: block; margin-bottom: 5px; }
 
-        .warning-box { background: rgba(220, 38, 38, 0.05); border-left: 4px solid #dc2626; padding: 20px; border-radius: 6px; margin: 30px 0; color: #ffb3b3; }
+        .warning-box { background: rgba(220, 38, 38, 0.05); border-left: 4px solid #dc2626; padding: 25px; border-radius: 8px; margin: 40px 0; color: #ffb3b3; }
         .warning-box strong { color: #ff6b6b; display: block; margin-bottom: 5px; }
 
-        .license-key-box { background: #000; border: 1px dashed #444; color: var(--success); padding: 15px; text-align: center; font-family: monospace; font-size: 1.1rem; margin: 20px 0; border-radius: 8px; }
+        .license-key-box { background: #000; border: 1px dashed #444; color: var(--success); padding: 20px; text-align: center; font-family: monospace; font-size: 1.2rem; margin: 25px 0; border-radius: 8px; letter-spacing: 1px; }
         
-        .faq-item { background: var(--surface); padding: 20px; border-radius: 10px; margin-bottom: 15px; border: 1px solid var(--border); }
-        .faq-item h3 { font-size: 1.1rem; margin-top: 0; margin-bottom: 10px; color: #fff; }
+        .faq-item { background: var(--surface); padding: 25px; border-radius: 12px; margin-bottom: 20px; border: 1px solid var(--border); }
+        .faq-item h3 { font-size: 1.2rem; margin-top: 0; margin-bottom: 12px; color: #fff; }
 
-        .adobe-disclaimer { font-size: 0.7rem; color: #444; margin-top: 20px; line-height: 1.4; }
+        .recovery-card { background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%); border: 1px solid var(--accent); padding: 30px; border-radius: 16px; margin-top: 30px; }
 
-        @media (max-width: 600px) { .toc-list { columns: 1; } }
+        @media (max-width: 600px) { .toc-list { columns: 1; } h1 { font-size: 2rem; } }
     </style>
 </head>
 <body>
@@ -46,100 +55,154 @@
             <div style="display: flex; align-items: center;">
                 <a href="/br/docs/backdrop-cleaner/" class="nav-link">🇧🇷 BR</a>
                 <a href="/docs/" class="nav-link">Help Center</a>
-                <span style="color: #444; margin: 0 10px;">/</span>
-                <span style="color: #fff; font-size: 0.9rem;">Backdrop Cleaner</span>
             </div>
         </nav>
 
         <header style="text-align: center; margin: 60px 0;">
-            <h1 style="font-size: 2.8rem;">📖 Backdrop Cleaner</h1>
-            <p class="subtitle">Official User Manual & Installation Guide</p>
+            <h1 style="font-size: 3rem;">📖 Infinity Backdrop Cleaner</h1>
+            <p class="subtitle">Complete User Manual & Technical Documentation</p>
         </header>
 
         <div class="card">
-            <h3>📑 Table of Contents</h3>
+            <h3 style="margin-bottom: 15px;">📑 Table of Contents</h3>
             <ul class="toc-list">
-                <li><a href="#quick-start">🚀 Quick Start</a></li>
+                <li><a href="#quick-start">🚀 Quick Start Guide</a></li>
                 <li><a href="#installation">💿 Installation</a></li>
                 <li><a href="#activation">🔑 License Activation</a></li>
-                <li><a href="#usage">🎨 How to Use</a></li>
+                <li><a href="#recovery">🔐 Recovery (Lost Key)</a></li>
+                <li><a href="#usage">🎨 Detailed Workflow</a></li>
+                <li><a href="#advanced">⚙️ Advanced Features</a></li>
                 <li><a href="#faq">❓ FAQ</a></li>
-                <li><a href="#support">📧 Support</a></li>
+                <li><a href="#troubleshooting">🔧 Troubleshooting</a></li>
             </ul>
         </div>
 
+        <!-- QUICK START -->
         <div id="quick-start" class="doc-section">
             <h2>🚀 Quick Start Guide</h2>
             <div class="step-item">
-                <span class="step-number">Step 1: Install</span>
-                <h3>Get the Plugin</h3>
-                <p>Install via Adobe Creative Cloud or by double-clicking the .ccx file.</p>
+                <span class="step-number">Step 1</span>
+                <h3>Open Your Image</h3>
+                <p>Open a photo with a seamless backdrop in Photoshop. Works best with 16-bit files.</p>
             </div>
             <div class="step-item">
-                <span class="step-number">Step 2: Prepare</span>
+                <span class="step-number">Step 2</span>
                 <h3>Prepare for Painting</h3>
-                <p>Open your image and click <strong>"Prepare for Painting"</strong>. The AI will mask your subject.</p>
+                <p>Click <strong>"Prepare for Painting"</strong>. The plugin uses AI to detect your subject and create a protection mask.</p>
             </div>
             <div class="step-item">
-                <span class="step-number">Step 3: Clean</span>
+                <span class="step-number">Step 3</span>
                 <h3>Paint Imperfections</h3>
-                <p>Sample the background color (Alt+Click) and paint over wrinkles or dirt on the backdrop.</p>
+                <p>Hold <code>Alt</code> (Option) and click to sample the background color. Paint over wrinkles, dirt, or shadows on the floor.</p>
             </div>
             <div class="step-item">
-                <span class="step-number">Step 4: Process</span>
-                <h3>Finalize</h3>
-                <p>Click <strong>"Process Image"</strong> to generate the seamless 16-bit background.</p>
+                <span class="step-number">Step 4</span>
+                <h3>Process</h3>
+                <p>Click <strong>"Process Image"</strong>. The plugin will generate the seamless backdrop while preserving original textures.</p>
+            </div>
+            <div class="note">
+                <strong>💡 Pro Tip:</strong> Use the Eraser tool on the "Original Background" layer to recover any subject details that might have been painted over.
             </div>
         </div>
 
+        <!-- INSTALLATION -->
         <div id="installation" class="doc-section">
             <h2>💿 Installation</h2>
-            <p>Infinity Backdrop Cleaner is a modern UXP plugin compatible with <strong>Adobe® Photoshop® 2023 (v24.x)</strong> or newer.</p>
-            <h3>Windows & macOS</h3>
+            <h3>System Requirements</h3>
+            <ul>
+                <li>Adobe® Photoshop® 2023 (v24.0) or newer.</li>
+                <li>Windows 10/11 or macOS Big Sur+.</li>
+                <li>Creative Cloud Desktop App installed.</li>
+            </ul>
+            <h3>How to Install</h3>
             <ol>
-                <li>Ensure Adobe Creative Cloud is running.</li>
                 <li>Double-click the <code>.ccx</code> file you downloaded.</li>
-                <li>Click "Install" in the Adobe window.</li>
-                <li>Restart Photoshop if it was open.</li>
+                <li>The Adobe Creative Cloud app will open. Click "Install Locally".</li>
+                <li>Restart Photoshop.</li>
+                <li>Go to <strong>Window → Plugins → Infinity Backdrop Cleaner</strong>.</li>
             </ol>
         </div>
 
+        <!-- ACTIVATION -->
         <div id="activation" class="doc-section">
             <h2>🔑 License Activation</h2>
-            <p>After purchase, your key will be sent via email. It grants a <strong>lifetime license</strong> for up to 2 computers.</p>
-            <div class="license-key-box">ABC123-DEF456-GHI789-JKL098</div>
-            <p>To activate, open the plugin in Photoshop, click <strong>"Manage License"</strong> and paste your key.</p>
+            <p>Your license key is sent via email immediately after purchase. It allows activation on <strong>2 computers</strong>.</p>
+            <div class="license-key-box">XXXXXX-XXXXXX-XXXXXX-XXXXXX</div>
+            <h3>Steps to Activate</h3>
+            <ol>
+                <li>Click the "Activate" button in the plugin panel.</li>
+                <li>Paste your license key exactly as received.</li>
+                <li>Click "Activate License". An internet connection is required for this step.</li>
+            </ol>
         </div>
 
+        <!-- RECOVERY -->
+        <div id="recovery" class="doc-section">
+            <h2>🔐 Lost Your License Key?</h2>
+            <div class="recovery-card">
+                <h3>Automated Key Recovery</h3>
+                <p>If you lost your purchase email, you can recover your key instantly using the email address you used during checkout.</p>
+                <br>
+                <a href="/recover/" class="btn btn-intl" style="max-width: 100%;">Go to License Recovery Page</a>
+            </div>
+        </div>
+
+        <!-- USAGE -->
+        <div id="usage" class="doc-section">
+            <h2>🎨 Detailed Workflow</h2>
+            <h3>1. Subject Masking</h3>
+            <p>The "Prepare for Painting" phase uses AI to separate the subject. If the detection isn't perfect, use "Show Advanced Controls" to adjust <strong>Expand</strong> (area size) and <strong>Feather</strong> (edge softness).</p>
+            <h3>2. Sampling & Painting</h3>
+            <p>Always sample the color close to the area you want to clean. For large areas, use a large, soft brush. For floor wrinkles, paint precisely over the folds.</p>
+            <h3>3. Blur & Noise</h3>
+            <p>The final step applies a seamless blur. If the floor looks too "fake", reduce the <strong>Blur Radius</strong> or increase <strong>Noise</strong> in advanced controls to match the original grain.</p>
+        </div>
+
+        <!-- ADVANCED -->
+        <div id="advanced" class="doc-section">
+            <h2>⚙️ Advanced Features</h2>
+            <ul>
+                <li><strong>16-Bit Processing:</strong> Prevents color banding in gradients.</li>
+                <li><strong>Surface Blur:</strong> Preserves edges while smoothing the surface.</li>
+                <li><strong>Gaussian Blur:</strong> Standard smooth blur for ultra-clean looks.</li>
+                <li><strong>Self-Service Deactivation:</strong> You can deactivate a device directly from the "Manage License" menu to move it to a new computer.</li>
+            </ul>
+        </div>
+
+        <!-- FAQ -->
         <div id="faq" class="doc-section">
             <h2>❓ FAQ</h2>
             <div class="faq-item">
-                <h3>Does it work with RAW files?</h3>
-                <p>Yes. We recommend converting your RAW layer to a Smart Object before processing for best results.</p>
+                <h3>Can I use it on dark backgrounds?</h3>
+                <p>The plugin is optimized for light-to-medium backdrops. For black backgrounds, you may need to adjust the mask manually.</p>
             </div>
             <div class="faq-item">
-                <h3>What is 16-bit mode?</h3>
-                <p>It's a high-depth mode that prevents "banding" (visible lines) in background gradients. Our plugin uses this internally.</p>
+                <h3>What happens if I change my computer?</h3>
+                <p>Simply deactivate the license on the old machine first. If you don't have access to the old machine, contact support.</p>
             </div>
         </div>
 
-        <div id="support" class="contact-box" style="margin-top: 100px;">
-            <h3>📧 Need More Help?</h3>
-            <p>Our team usually responds within 24 hours.</p>
-            <br>
-            <a href="mailto:sales@infinityretouch.com" style="color:#fff; font-weight: bold; text-decoration: underline;">sales@infinityretouch.com</a>
+        <!-- TROUBLESHOOTING -->
+        <div id="troubleshooting" class="doc-section">
+            <h2>🔧 Troubleshooting</h2>
+            <div class="warning-box">
+                <strong>⚠️ Plugin not showing up?</strong>
+                <p>Make sure you are using a version of Photoshop that supports UXP (2023+). Check if the plugin is listed under <strong>Window -> Plugins</strong>.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Slow Processing</h3>
+                <p>For images over 50 megapixels, processing can take up to 40 seconds. This is due to the 16-bit high-quality calculation.</p>
+            </div>
         </div>
 
-        <footer>
+        <footer style="margin-top: 100px;">
             <p>&copy; 2026 Infinity Retouch / WINSERV TECNOLOGIA DA INFORMACAO.</p>
-            <div class="adobe-disclaimer">
-                Adobe® and Photoshop® are registered trademarks of Adobe Inc. This plugin is an independent product and not affiliated with Adobe Inc.
-            </div>
+            <p style="font-size: 0.7rem; color: #444; margin: 15px 0;">Adobe® and Photoshop® are registered trademarks of Adobe Inc. This product is not affiliated with Adobe Inc.</p>
             <p>
                 <a href="/docs/">Help Center</a>
-                <a href="/privacy.html">Privacy</a>
+                <a href="/privacy.html">Privacy Policy</a>
                 <a href="/terms.html">Terms</a>
-                <a href="/refund.html">Refunds</a>
+                <a href="mailto:sales@infinityretouch.com">Support</a>
             </p>
         </footer>
     </div>
