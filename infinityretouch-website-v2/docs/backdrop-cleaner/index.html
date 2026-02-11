@@ -1,14 +1,353 @@
-<!DOCTYPE html><html lang="en" class="scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Preconnect para performance --><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><!-- Favicons corrigidos --><link rel="icon" type="image/png" sizes="32x32" href="/infinityretouch-website-v2/favicon.png"><link rel="icon" type="image/svg+xml" href="/infinityretouch-website-v2/favicon.svg"><link rel="shortcut icon" href="/infinityretouch-website-v2/favicon.ico"><title>Manual - Infinity Backdrop Cleaner</title><meta name="description" content="Complete User Manual &#38; Technical Guide for Adobe® Photoshop® Backdrop Cleaning."><meta name="keywords" content="photoshop plugin, backdrop cleaner, UXP plugin, infinite background, studio photography, photo retouching, background cleaning, photoshop automation"><meta name="author" content="Infinity Retouch"><meta name="theme-color" content="#10b981"><!-- SEO & Hreflang --><link rel="canonical" href="https://infinityretouch.com/infinityretouch-website-v2/docs/backdrop-cleaner/"><link rel="alternate" hreflang="en" href="https://infinityretouch.com/infinityretouch-website-v2/"><link rel="alternate" hreflang="pt-br" href="https://infinityretouch.com/infinityretouch-website-v2/br/"><link rel="alternate" hreflang="x-default" href="https://infinityretouch.com/infinityretouch-website-v2/"><!-- Open Graph (WhatsApp, Facebook, LinkedIn) --><meta property="og:title" content="Manual - Infinity Backdrop Cleaner"><meta property="og:description" content="Complete User Manual &#38; Technical Guide for Adobe® Photoshop® Backdrop Cleaning."><meta property="og:url" content="https://infinityretouch.com/infinityretouch-website-v2/docs/backdrop-cleaner/"><meta property="og:image" content="https://infinityretouch.com/infinityretouch-website-v2/og-infinity-backdrop-cleaner.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:type" content="website"><meta property="og:site_name" content="Infinity Retouch"><meta property="og:locale" content="en_US"><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Manual - Infinity Backdrop Cleaner"><meta name="twitter:description" content="Complete User Manual &#38; Technical Guide for Adobe® Photoshop® Backdrop Cleaning."><meta name="twitter:image" content="https://infinityretouch.com/infinityretouch-website-v2/og-infinity-backdrop-cleaner.jpg"><!-- Google Analytics (gtag.js) - ID G-RN28DZF26K --><script async src="https://www.googletagmanager.com/gtag/js?id=G-RN28DZF26K"></script><script>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!-- Preconnect para performance -->
+		<link rel="preconnect" href="https://www.googletagmanager.com">
+		<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+		
+		<!-- Favicons corrigidos -->
+		<link rel="icon" type="image/png" sizes="32x32" href="/infinityretouch-website-v2/favicon.png">
+		<link rel="icon" type="image/svg+xml" href="/infinityretouch-website-v2/favicon.svg">
+		<link rel="shortcut icon" href="/infinityretouch-website-v2/favicon.ico">
+		
+		<title>Manual - Infinity Backdrop Cleaner</title>
+		<meta name="description" content="Complete User Manual &#38; Technical Guide for Adobe® Photoshop® Backdrop Cleaning.">
+		<meta name="keywords" content="photoshop plugin, backdrop cleaner, UXP plugin, infinite background, studio photography, photo retouching, background cleaning, photoshop automation">
+		<meta name="author" content="Infinity Retouch">
+		<meta name="theme-color" content="#10b981">
+		
+		
+		
+		<!-- SEO & Hreflang -->
+		<link rel="canonical" href="https://infinityretouch.com/infinityretouch-website-v2/docs/backdrop-cleaner/">
+		<link rel="alternate" hreflang="en" href="https://infinityretouch.com/infinityretouch-website-v2/">
+		<link rel="alternate" hreflang="pt-br" href="https://infinityretouch.com/infinityretouch-website-v2/br/">
+		<link rel="alternate" hreflang="x-default" href="https://infinityretouch.com/infinityretouch-website-v2/">
+
+		<!-- Open Graph (WhatsApp, Facebook, LinkedIn) -->
+		<meta property="og:title" content="Manual - Infinity Backdrop Cleaner">
+		<meta property="og:description" content="Complete User Manual &#38; Technical Guide for Adobe® Photoshop® Backdrop Cleaning.">
+		<meta property="og:url" content="https://infinityretouch.com/infinityretouch-website-v2/docs/backdrop-cleaner/">
+		<meta property="og:image" content="https://infinityretouch.com/infinityretouch-website-v2/og-infinity-backdrop-cleaner.jpg">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="Infinity Retouch">
+		<meta property="og:locale" content="en_US">
+		
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Manual - Infinity Backdrop Cleaner">
+		<meta name="twitter:description" content="Complete User Manual &#38; Technical Guide for Adobe® Photoshop® Backdrop Cleaning.">
+		<meta name="twitter:image" content="https://infinityretouch.com/infinityretouch-website-v2/og-infinity-backdrop-cleaner.jpg">
+
+		<!-- Google Analytics (gtag.js) - ID G-RN28DZF26K -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-RN28DZF26K"></script>
+		<script>
 			window.dataLayer = window.dataLayer || [];
 			function gtag(){dataLayer.push(arguments);}
 			gtag('js', new Date());
 			gtag('config', 'G-RN28DZF26K');
-		</script><link rel="stylesheet" href="/infinityretouch-website-v2/_astro/index.CCNY6CxX.css">
-<style>html{scroll-behavior:smooth}
-</style></head> <body class="bg-slate-900 text-white font-sans antialiased"> <!-- O <slot /> é onde o conteúdo de cada página será injetado -->  <nav class="fixed top-0 left-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-white/5"> <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between"> <!-- LOGO E NOME --> <a href="/infinityretouch-website-v2/" class="flex items-center gap-3 group"> <div class="w-10 h-10 rounded-full overflow-hidden border border-emerald-500/30 group-hover:border-emerald-500 transition-all duration-300"> <img src="/infinityretouch-website-v2/infinity-retouch-logo.png" alt="Infinity Retouch Logo" class="w-full h-full object-cover"> </div> <span class="font-black text-xl tracking-tighter text-white italic group-hover:text-emerald-400 transition-colors uppercase">
-INFINITY <span class="text-emerald-500 group-hover:text-white">RETOUCH</span> </span> </a> <!-- LINKS DE NAVEGAÇÃO --> <div class="hidden md:flex items-center gap-8"> <a href="/infinityretouch-website-v2/#features" class="text-[11px] font-black text-slate-400 hover:text-white transition-colors uppercase tracking-[0.2em]">Features</a> <a href="/infinityretouch-website-v2/docs/" class="text-[11px] font-black text-slate-400 hover:text-white transition-colors uppercase tracking-[0.2em]">Docs</a> <!-- BOTÃO DE IDIOMA --> <a href="/infinityretouch-website-v2/br/" class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-[10px] font-black text-slate-500 hover:text-white hover:border-white/20 transition-all uppercase tracking-tighter"> 🇧🇷 BR </a> <!-- CTA BUTTON (VERDE) --> <a href="/infinityretouch-website-v2/buy/backdrop-cleaner/" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-[11px] font-black px-6 py-3 rounded-full transition-all shadow-lg shadow-emerald-500/20 transform hover:-translate-y-0.5 uppercase tracking-widest"> Buy Now - $29 </a> </div> <!-- MOBILE MENU ICON --> <div class="md:hidden text-white opacity-50"> <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path> </svg> </div> </div> </nav> <main class="pt-32 pb-20 px-4 bg-slate-900 min-h-screen" data-astro-cid-s6xkyb6j> <div class="max-w-[900px] mx-auto" data-astro-cid-s6xkyb6j> <!-- BREADCRUMBS --> <div class="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-600 mb-10 border-b border-white/5 pb-4" data-astro-cid-s6xkyb6j> <a href="/infinityretouch-website-v2/docs/" class="hover:text-emerald-400 transition-colors" data-astro-cid-s6xkyb6j>Help Center</a> <span class="text-slate-800" data-astro-cid-s6xkyb6j>/</span> <span class="text-white italic tracking-tighter" data-astro-cid-s6xkyb6j>Backdrop Cleaner</span> </div> <!-- HEADER --> <header class="text-center mb-16" data-astro-cid-s6xkyb6j> <h1 class="text-5xl lg:text-7xl font-black text-white italic tracking-tighter mb-4 uppercase" data-astro-cid-s6xkyb6j>📖 Infinity Backdrop Cleaner</h1> <p class="text-slate-400 text-xl font-medium" data-astro-cid-s6xkyb6j>Complete User Manual & Technical Guide</p> </header> <!-- TABLE OF CONTENTS (2 Columns) --> <div class="bg-slate-800/40 border border-white/10 rounded-3xl p-8 mb-16 shadow-2xl relative overflow-hidden" data-astro-cid-s6xkyb6j> <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 blur-3xl rounded-full" data-astro-cid-s6xkyb6j></div> <h3 class="text-xl font-black text-white mb-6 uppercase tracking-widest border-b border-white/5 pb-4" data-astro-cid-s6xkyb6j>📑 Table of Contents</h3> <ul class="grid md:grid-cols-2 gap-x-12 gap-y-4 text-xs font-bold list-none" data-astro-cid-s6xkyb6j> <li data-astro-cid-s6xkyb6j><a href="#quick-start" class="text-emerald-400 hover:underline" data-astro-cid-s6xkyb6j>🚀 Quick Start Guide</a></li> <li data-astro-cid-s6xkyb6j><a href="#installation" class="text-emerald-400 hover:underline" data-astro-cid-s6xkyb6j>💿 Installation</a></li> <li data-astro-cid-s6xkyb6j><a href="#activation" class="text-emerald-400 hover:underline" data-astro-cid-s6xkyb6j>🔑 License Activation</a></li> <li data-astro-cid-s6xkyb6j><a href="#recovery" class="text-emerald-400 hover:underline" data-astro-cid-s6xkyb6j>🔐 Lost License?</a></li> <li data-astro-cid-s6xkyb6j><a href="#usage" class="text-emerald-400 hover:underline" data-astro-cid-s6xkyb6j>🎨 Detailed Workflow</a></li> <li data-astro-cid-s6xkyb6j><a href="#advanced" class="text-emerald-400 hover:underline" data-astro-cid-s6xkyb6j>⚙️ Advanced Features</a></li> <li data-astro-cid-s6xkyb6j><a href="#faq" class="text-emerald-400 hover:underline" data-astro-cid-s6xkyb6j>❓ FAQ</a></li> <li data-astro-cid-s6xkyb6j><a href="#troubleshooting" class="text-emerald-400 hover:underline" data-astro-cid-s6xkyb6j>🔧 Troubleshooting</a></li> <li data-astro-cid-s6xkyb6j><a href="#support" class="text-emerald-400 hover:underline" data-astro-cid-s6xkyb6j>📧 Contact Support</a></li> </ul> </div> <!-- SECTIONS --> <div class="space-y-32 text-slate-300" data-astro-cid-s6xkyb6j> <!-- QUICK START --> <section id="quick-start" class="scroll-mt-32" data-astro-cid-s6xkyb6j> <h2 class="text-4xl font-black text-white border-b border-white/10 pb-4 mb-10 italic uppercase tracking-tighter" data-astro-cid-s6xkyb6j>🚀 Quick Start Guide</h2> <p class="text-lg mb-10 font-medium" data-astro-cid-s6xkyb6j>Get started with Infinity Backdrop Cleaner in 5 simple steps:</p> <div class="space-y-6" data-astro-cid-s6xkyb6j> <div class="flex gap-6 p-6 bg-slate-800/20 rounded-2xl border border-white/5 items-start hover:border-emerald-500/30 transition-colors group" data-astro-cid-s6xkyb6j> <span class="flex-shrink-0 w-10 h-10 bg-emerald-600 text-white rounded-full flex items-center justify-center font-black text-sm uppercase group-hover:scale-110 transition-transform" data-astro-cid-s6xkyb6j>S1</span> <div data-astro-cid-s6xkyb6j> <h3 class="text-white font-bold text-lg mb-1 uppercase italic tracking-tight" data-astro-cid-s6xkyb6j>Install &amp; Activate</h3> <p class="text-slate-400 m-0 leading-relaxed text-sm font-medium" data-astro-cid-s6xkyb6j>Download from Creative Cloud, install, and activate with your license key.</p> </div> </div><div class="flex gap-6 p-6 bg-slate-800/20 rounded-2xl border border-white/5 items-start hover:border-emerald-500/30 transition-colors group" data-astro-cid-s6xkyb6j> <span class="flex-shrink-0 w-10 h-10 bg-emerald-600 text-white rounded-full flex items-center justify-center font-black text-sm uppercase group-hover:scale-110 transition-transform" data-astro-cid-s6xkyb6j>S2</span> <div data-astro-cid-s6xkyb6j> <h3 class="text-white font-bold text-lg mb-1 uppercase italic tracking-tight" data-astro-cid-s6xkyb6j>Open Your Image</h3> <p class="text-slate-400 m-0 leading-relaxed text-sm font-medium" data-astro-cid-s6xkyb6j>Open a photo with an infinite backdrop in Photoshop (works best with white/gray backgrounds).</p> </div> </div><div class="flex gap-6 p-6 bg-slate-800/20 rounded-2xl border border-white/5 items-start hover:border-emerald-500/30 transition-colors group" data-astro-cid-s6xkyb6j> <span class="flex-shrink-0 w-10 h-10 bg-emerald-600 text-white rounded-full flex items-center justify-center font-black text-sm uppercase group-hover:scale-110 transition-transform" data-astro-cid-s6xkyb6j>S3</span> <div data-astro-cid-s6xkyb6j> <h3 class="text-white font-bold text-lg mb-1 uppercase italic tracking-tight" data-astro-cid-s6xkyb6j>Prepare for Painting</h3> <p class="text-slate-400 m-0 leading-relaxed text-sm font-medium" data-astro-cid-s6xkyb6j>Click &#39;Prepare for Painting&#39; button. This creates an AI subject mask and configures your brush.</p> </div> </div><div class="flex gap-6 p-6 bg-slate-800/20 rounded-2xl border border-white/5 items-start hover:border-emerald-500/30 transition-colors group" data-astro-cid-s6xkyb6j> <span class="flex-shrink-0 w-10 h-10 bg-emerald-600 text-white rounded-full flex items-center justify-center font-black text-sm uppercase group-hover:scale-110 transition-transform" data-astro-cid-s6xkyb6j>S4</span> <div data-astro-cid-s6xkyb6j> <h3 class="text-white font-bold text-lg mb-1 uppercase italic tracking-tight" data-astro-cid-s6xkyb6j>Paint Over Imperfections</h3> <p class="text-slate-400 m-0 leading-relaxed text-sm font-medium" data-astro-cid-s6xkyb6j>Hold Alt (Option) and click to sample color. Then paint over shadows, wrinkles, or footprints.</p> </div> </div><div class="flex gap-6 p-6 bg-slate-800/20 rounded-2xl border border-white/5 items-start hover:border-emerald-500/30 transition-colors group" data-astro-cid-s6xkyb6j> <span class="flex-shrink-0 w-10 h-10 bg-emerald-600 text-white rounded-full flex items-center justify-center font-black text-sm uppercase group-hover:scale-110 transition-transform" data-astro-cid-s6xkyb6j>S5</span> <div data-astro-cid-s6xkyb6j> <h3 class="text-white font-bold text-lg mb-1 uppercase italic tracking-tight" data-astro-cid-s6xkyb6j>Process Image</h3> <p class="text-slate-400 m-0 leading-relaxed text-sm font-medium" data-astro-cid-s6xkyb6j>Click &#39;Process Image&#39; to generate the seamless 16-bit backdrop automatically.</p> </div> </div> </div> <div class="mt-10 p-8 bg-emerald-500/5 border-l-4 border-emerald-500 rounded-r-xl" data-astro-cid-s6xkyb6j> <strong class="text-emerald-400 block mb-2 uppercase tracking-widest text-xs font-black" data-astro-cid-s6xkyb6j>💡 Pro Tip:</strong> <p class="m-0 text-slate-400 italic font-medium leading-relaxed text-sm" data-astro-cid-s6xkyb6j>Don't worry about painting over your subject! The plugin preserves the original in a separate layer, so you can easily recover any details using the eraser tool on the "Original Background" layer.</p> </div> </section> <!-- INSTALLATION --> <section id="installation" class="scroll-mt-32" data-astro-cid-s6xkyb6j> <h2 class="text-4xl font-black text-white border-b border-white/10 pb-4 mb-10 italic uppercase tracking-tighter" data-astro-cid-s6xkyb6j>💿 Installation</h2> <div class="grid md:grid-cols-2 gap-12" data-astro-cid-s6xkyb6j> <div class="space-y-6" data-astro-cid-s6xkyb6j> <h3 class="text-xl font-bold text-white uppercase tracking-tight italic" data-astro-cid-s6xkyb6j>System Requirements</h3> <ul class="space-y-4 text-slate-400 font-bold text-[10px] uppercase tracking-[0.2em] list-none" data-astro-cid-s6xkyb6j> <li class="flex items-center gap-3" data-astro-cid-s6xkyb6j><span class="text-emerald-500" data-astro-cid-s6xkyb6j>→</span> Adobe® Photoshop® 2023+ (v24.x)</li> <li class="flex items-center gap-3" data-astro-cid-s6xkyb6j><span class="text-emerald-500" data-astro-cid-s6xkyb6j>→</span> Windows 10/11 or macOS 11+</li> <li class="flex items-center gap-3" data-astro-cid-s6xkyb6j><span class="text-emerald-500" data-astro-cid-s6xkyb6j>→</span> Intel or Apple Silicon (M1/M2/M3)</li> <li class="flex items-center gap-3" data-astro-cid-s6xkyb6j><span class="text-emerald-500" data-astro-cid-s6xkyb6j>→</span> 8GB RAM Minimum</li> </ul> </div> <div class="bg-black/40 p-8 rounded-3xl border border-white/5" data-astro-cid-s6xkyb6j> <h3 class="text-xl font-bold text-white mb-6 uppercase tracking-tight italic" data-astro-cid-s6xkyb6j>Installation Steps</h3> <ol class="list-decimal pl-6 space-y-3 text-slate-400 font-bold text-[10px] uppercase tracking-[0.2em]" data-astro-cid-s6xkyb6j> <li data-astro-cid-s6xkyb6j>Open <strong data-astro-cid-s6xkyb6j>Creative Cloud App</strong></li> <li data-astro-cid-s6xkyb6j>Go to <strong data-astro-cid-s6xkyb6j>Stock & Marketplace</strong> → Plugins</li> <li data-astro-cid-s6xkyb6j>Search: <strong data-astro-cid-s6xkyb6j>"Infinity Backdrop Cleaner"</strong></li> <li data-astro-cid-s6xkyb6j>Click <strong data-astro-cid-s6xkyb6j>Install</strong></li> <li data-astro-cid-s6xkyb6j>Restart Photoshop if active</li> </ol> </div> </div> </section> <!-- ACTIVATION --> <section id="activation" class="scroll-mt-32" data-astro-cid-s6xkyb6j> <h2 class="text-4xl font-black text-white border-b border-white/10 pb-4 mb-10 italic uppercase tracking-tighter" data-astro-cid-s6xkyb6j>🔑 License Activation</h2> <p class="text-lg mb-6 font-medium" data-astro-cid-s6xkyb6j>Your license key is sent via email after purchase. Format example:</p> <div class="bg-black border border-dashed border-slate-600 text-green-500 p-8 rounded-xl text-center font-mono font-bold tracking-[0.25em] text-xl mb-12 shadow-inner" data-astro-cid-s6xkyb6j>
-ABC123-DEF456-GHI789-JKL098-MNO765-V3
-</div> <div class="grid sm:grid-cols-2 gap-4 text-slate-400 font-black text-[10px] uppercase tracking-[0.2em]" data-astro-cid-s6xkyb6j> <div class="p-5 bg-white/5 rounded-2xl border border-white/5 flex items-center gap-3" data-astro-cid-s6xkyb6j><span class="text-green-500 text-lg" data-astro-cid-s6xkyb6j>✅</span> Lifetime License</div> <div class="p-5 bg-white/5 rounded-2xl border border-white/5 flex items-center gap-3" data-astro-cid-s6xkyb6j><span class="text-green-500 text-lg" data-astro-cid-s6xkyb6j>✅</span> 2 Computers (Desktop + Laptop)</div> <div class="p-5 bg-white/5 rounded-2xl border border-white/5 flex items-center gap-3" data-astro-cid-s6xkyb6j><span class="text-green-500 text-lg" data-astro-cid-s6xkyb6j>✅</span> Self-Service Deactivation</div> <div class="p-5 bg-white/5 rounded-2xl border border-white/5 flex items-center gap-3" data-astro-cid-s6xkyb6j><span class="text-green-500 text-lg" data-astro-cid-s6xkyb6j>✅</span> Free Updates Included</div> </div> <div class="mt-12 p-8 bg-slate-800/40 rounded-3xl border border-white/5" data-astro-cid-s6xkyb6j> <h4 class="text-white font-bold mb-4 uppercase italic tracking-tighter" data-astro-cid-s6xkyb6j>Switching Computers?</h4> <p class="text-sm font-medium leading-relaxed mb-0 text-slate-400" data-astro-cid-s6xkyb6j>To move your license: Open the plugin on the old machine → <strong data-astro-cid-s6xkyb6j>Manage License → Deactivate</strong>. Then simply activate on the new machine with your key. If you no longer have access to the old computer, you can deactivate all devices from the management screen.</p> </div> </section> <!-- RECOVERY --> <section id="recovery" class="scroll-mt-32" data-astro-cid-s6xkyb6j> <h2 class="text-4xl font-black text-white border-b border-white/10 pb-4 mb-10 italic uppercase tracking-tighter" data-astro-cid-s6xkyb6j>🔐 Lost Your License?</h2> <p class="mb-10 text-lg font-medium" data-astro-cid-s6xkyb6j>If you lost your email with the license key, don't worry. You can recover it instantly using our automated tool.</p> <div class="bg-slate-800 border-l-4 border-emerald-500 p-10 rounded-r-3xl shadow-2xl relative overflow-hidden group" data-astro-cid-s6xkyb6j> <div class="absolute -right-10 -bottom-10 text-9xl opacity-[0.03] group-hover:rotate-12 transition-transform duration-700" data-astro-cid-s6xkyb6j>🔑</div> <h3 class="text-2xl font-black text-white mb-4 uppercase tracking-tighter italic" data-astro-cid-s6xkyb6j>Recover License Key</h3> <p class="text-slate-400 mb-8 font-medium" data-astro-cid-s6xkyb6j>Enter the email address you used during checkout to receive your key again.</p> <a href="/infinityretouch-website-v2/recover/" class="inline-block bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black px-12 py-5 rounded-2xl transition-all shadow-xl shadow-emerald-500/20 w-full text-center tracking-widest uppercase relative z-10" data-astro-cid-s6xkyb6j>
-GO TO RECOVERY PAGE
-</a> </div> </section> <!-- USAGE --> <section id="usage" class="scroll-mt-32" data-astro-cid-s6xkyb6j> <h2 class="text-4xl font-black text-white border-b border-white/10 pb-4 mb-10 italic uppercase tracking-tighter" data-astro-cid-s6xkyb6j>🎨 Detailed Workflow</h2> <div class="space-y-12" data-astro-cid-s6xkyb6j> <div data-astro-cid-s6xkyb6j> <h3 class="text-xl font-bold text-white border-l-4 border-emerald-500 pl-4 mb-4 uppercase italic tracking-tight" data-astro-cid-s6xkyb6j>1. Prepare Your Image</h3> <p class="text-sm font-medium leading-relaxed text-slate-400" data-astro-cid-s6xkyb6j>For best results, use white, gray, or light-colored seamless backdrops. Ensure the subject is clearly separated from the background with good studio lighting.</p> </div> <div data-astro-cid-s6xkyb6j> <h3 class="text-xl font-bold text-white border-l-4 border-emerald-500 pl-4 mb-4 uppercase italic tracking-tight" data-astro-cid-s6xkyb6j>2. Mask & Prepare Phase</h3> <p class="text-sm font-medium leading-relaxed text-slate-400" data-astro-cid-s6xkyb6j>The plugin uses AI to detect your subject and creates a protective mask. If the detection isn't perfect, use <strong data-astro-cid-s6xkyb6j>Advanced Controls</strong> to adjust <strong data-astro-cid-s6xkyb6j>Expand</strong> and <strong data-astro-cid-s6xkyb6j>Feather</strong> settings.</p> </div> <div data-astro-cid-s6xkyb6j> <h3 class="text-xl font-bold text-white border-l-4 border-emerald-500 pl-4 mb-4 uppercase italic tracking-tight" data-astro-cid-s6xkyb6j>3. Paint over imperfections</h3> <p class="text-sm font-medium leading-relaxed text-slate-400" data-astro-cid-s6xkyb6j>Hold Alt (Option) to sample color from a clean area. Use a large, soft brush and paint generously over shadows, footprints, or wrinkles. <strong data-astro-cid-s6xkyb6j>Paint freely over the model's edges!</strong></p> </div> <div data-astro-cid-s6xkyb6j> <h3 class="text-xl font-bold text-white border-l-4 border-emerald-500 pl-4 mb-4 uppercase italic tracking-tight" data-astro-cid-s6xkyb6j>4. Process & Finalize</h3> <p class="text-sm font-medium leading-relaxed text-slate-400" data-astro-cid-s6xkyb6j>Click "Process Image". The plugin generates a seamless backdrop, applies 16-bit frequency processing, and adds natural grain to prevent banding.</p> </div> </div> </section> <!-- ADVANCED --> <section id="advanced" class="scroll-mt-32" data-astro-cid-s6xkyb6j> <h2 class="text-4xl font-black text-white border-b border-white/10 pb-4 mb-10 italic uppercase tracking-tighter" data-astro-cid-s6xkyb6j>⚙️ Advanced Features</h2> <div class="grid md:grid-cols-2 gap-8" data-astro-cid-s6xkyb6j> <div class="p-8 bg-white/5 rounded-3xl border border-white/5 transition-all hover:border-emerald-500/20" data-astro-cid-s6xkyb6j> <h4 class="text-white font-black mb-4 uppercase text-xs tracking-[0.2em] text-emerald-400" data-astro-cid-s6xkyb6j>Blur Algorithms</h4> <p class="text-sm text-slate-400 leading-relaxed font-medium" data-astro-cid-s6xkyb6j> <strong data-astro-cid-s6xkyb6j>Gaussian:</strong> Creates perfectly smooth, uniform gradients. Ideal for 90% of studio work.<br data-astro-cid-s6xkyb6j><br data-astro-cid-s6xkyb6j> <strong data-astro-cid-s6xkyb6j>Surface Blur:</strong> Edge-preserving algorithm that keeps some floor texture while cleaning footprints.
-</p> </div> <div class="p-8 bg-white/5 rounded-3xl border border-white/5 transition-all hover:border-emerald-500/20" data-astro-cid-s6xkyb6j> <h4 class="text-white font-black mb-4 uppercase text-xs tracking-[0.2em] text-emerald-400" data-astro-cid-s6xkyb6j>16-Bit Native Engine</h4> <p class="text-sm text-slate-400 leading-relaxed font-medium" data-astro-cid-s6xkyb6j>The plugin automatically upscales processing to 16-bit internally. This is crucial to prevent <strong data-astro-cid-s6xkyb6j>Color Banding</strong> in smooth floor gradients, ensuring professional print quality.</p> </div> </div> </section> <!-- FAQ --> <section id="faq" class="scroll-mt-32" data-astro-cid-s6xkyb6j> <h2 class="text-4xl font-black text-white border-b border-white/10 pb-4 mb-10 italic uppercase tracking-tighter" data-astro-cid-s6xkyb6j>❓ FAQ</h2> <div class="grid gap-6" data-astro-cid-s6xkyb6j> <div class="p-8 bg-slate-800/30 rounded-2xl border border-white/5 group" data-astro-cid-s6xkyb6j> <h4 class="text-white font-bold mb-3 italic tracking-tight group-hover:text-emerald-400 transition-colors" data-astro-cid-s6xkyb6j>Can I use it with RAW files?</h4> <p class="text-slate-400 m-0 leading-relaxed text-sm font-medium" data-astro-cid-s6xkyb6j>Yes! We recommend converting your RAW layer to a Smart Object first. This maintains non-destructive editing and maximum bit depth.</p> </div><div class="p-8 bg-slate-800/30 rounded-2xl border border-white/5 group" data-astro-cid-s6xkyb6j> <h4 class="text-white font-bold mb-3 italic tracking-tight group-hover:text-emerald-400 transition-colors" data-astro-cid-s6xkyb6j>Does it work with dark backgrounds?</h4> <p class="text-slate-400 m-0 leading-relaxed text-sm font-medium" data-astro-cid-s6xkyb6j>Optimized for light-colored backdrops. For black or dark-blue floors, use the Eraser tool on the &#39;Original Background&#39; layer to refine results.</p> </div><div class="p-8 bg-slate-800/30 rounded-2xl border border-white/5 group" data-astro-cid-s6xkyb6j> <h4 class="text-white font-bold mb-3 italic tracking-tight group-hover:text-emerald-400 transition-colors" data-astro-cid-s6xkyb6j>What&#39;s your refund policy?</h4> <p class="text-slate-400 m-0 leading-relaxed text-sm font-medium" data-astro-cid-s6xkyb6j>We offer a 7-day money-back guarantee, no questions asked. We stand behind our product quality.</p> </div> </div> </section> <!-- TROUBLESHOOTING --> <section id="troubleshooting" class="scroll-mt-32" data-astro-cid-s6xkyb6j> <h2 class="text-4xl font-black text-white border-b border-white/10 pb-4 mb-10 italic uppercase tracking-tighter" data-astro-cid-s6xkyb6j>🔧 Troubleshooting</h2> <div class="space-y-6" data-astro-cid-s6xkyb6j> <div class="p-8 bg-slate-800/30 rounded-2xl border border-white/5 flex gap-6 items-center" data-astro-cid-s6xkyb6j> <div class="text-emerald-500 text-3xl font-black italic" data-astro-cid-s6xkyb6j>!</div> <div data-astro-cid-s6xkyb6j> <h4 class="text-white font-bold mb-1 italic" data-astro-cid-s6xkyb6j>Plugin doesn't appear?</h4> <p class="text-slate-400 m-0 text-sm font-medium italic" data-astro-cid-s6xkyb6j>Path: Window → Plugins → Infinity Backdrop Cleaner. If missing, restart Photoshop or reinstall from Creative Cloud Desktop.</p> </div> </div> <div class="bg-red-500/5 border-l-4 border-red-500 p-8 rounded-r-2xl text-red-200 shadow-xl shadow-red-500/5" data-astro-cid-s6xkyb6j> <strong class="text-red-500 block text-lg mb-1 italic uppercase tracking-tighter font-black" data-astro-cid-s6xkyb6j>⚠️ Still having issues?</strong> <p class="m-0 text-sm font-medium leading-relaxed" data-astro-cid-s6xkyb6j>Contact support with a screenshot of the error, your Photoshop version, and OS details. We respond within 24 hours.</p> </div> </div> </section> <!-- SUPPORT --> <section id="support" class="pt-10" data-astro-cid-s6xkyb6j> <div class="bg-gradient-to-br from-emerald-600 to-emerald-900 p-16 rounded-[40px] text-center shadow-2xl relative overflow-hidden group" data-astro-cid-s6xkyb6j> <div class="relative z-10" data-astro-cid-s6xkyb6j> <h3 class="text-4xl font-black text-white mb-4 italic uppercase tracking-tighter leading-none" data-astro-cid-s6xkyb6j>📧 Need More Help?</h3> <p class="text-emerald-100 text-lg mb-10 max-w-md mx-auto font-medium leading-relaxed" data-astro-cid-s6xkyb6j>Our support team is ready to assist you with installation or technical questions.</p> <a href="mailto:sales@infinityretouch.com" class="text-2xl font-black text-white hover:underline underline-offset-8 transition-all hover:scale-105 inline-block" data-astro-cid-s6xkyb6j>sales@infinityretouch.com</a> </div> </div> </section> </div> <!-- FOOTER COMPLETO --> <footer class="mt-32 pt-16 border-t border-white/10 text-center" data-astro-cid-s6xkyb6j> <div class="text-emerald-500 font-black text-2xl mb-8 tracking-tighter italic uppercase" data-astro-cid-s6xkyb6j>INFINITY RETOUCH</div> <p class="text-slate-600 font-bold mb-10 uppercase text-[10px] tracking-[0.3em]" data-astro-cid-s6xkyb6j>© 2026 Infinity Retouch / WINSERV TECNOLOGIA DA INFORMACAO.</p> <nav class="flex justify-center flex-wrap gap-x-12 gap-y-6 text-[11px] font-black uppercase tracking-[0.3em] text-slate-500" data-astro-cid-s6xkyb6j> <a href="/infinityretouch-website-v2/docs/" class="hover:text-white transition-colors" data-astro-cid-s6xkyb6j>Help Center</a> <a href="/infinityretouch-website-v2/privacy-policy/" class="hover:text-white transition-colors" data-astro-cid-s6xkyb6j>Privacy Policy</a> <a href="/infinityretouch-website-v2/terms-of-service/" class="hover:text-white transition-colors" data-astro-cid-s6xkyb6j>Terms of Service</a> <a href="/infinityretouch-website-v2/refund-policy/" class="hover:text-white transition-colors" data-astro-cid-s6xkyb6j>Refund Policy</a> <a href="mailto:sales@infinityretouch.com" class="hover:text-white transition-colors" data-astro-cid-s6xkyb6j>Support</a> </nav> </footer> </div> </main>  </body></html> 
+		</script>
+	<link rel="stylesheet" href="/infinityretouch-website-v2/_astro/index.D2VrShQ3.css">
+<link rel="stylesheet" href="/infinityretouch-website-v2/_astro/index.C6XpIQV4.css"></head>
+
+	<body class="bg-slate-900 text-white font-sans antialiased">
+		<!-- O <slot /> é onde o conteúdo de cada página será injetado -->
+		
+    <nav class="fixed top-0 left-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-white/5">
+  <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+    
+    <!-- LOGO E NOME -->
+    <a href="/infinityretouch-website-v2/" class="flex items-center gap-3 group">
+      <div class="w-10 h-10 rounded-full overflow-hidden border border-emerald-500/30 group-hover:border-emerald-500 transition-all duration-300">
+        <img src="/infinityretouch-website-v2/infinity-retouch-logo.png" alt="Infinity Retouch Logo" class="w-full h-full object-cover">
+      </div>
+      <span class="font-black text-xl tracking-tighter text-white italic group-hover:text-emerald-400 transition-colors uppercase">
+        INFINITY <span class="text-emerald-500 group-hover:text-white">RETOUCH</span>
+      </span>
+    </a>
+
+    <!-- LINKS DE NAVEGAÇÃO -->
+    <div class="hidden md:flex items-center gap-8">
+      <a href="/infinityretouch-website-v2/#features" class="text-[11px] font-black text-slate-400 hover:text-white transition-colors uppercase tracking-[0.2em]">Features</a>
+      <a href="/infinityretouch-website-v2/docs/" class="text-[11px] font-black text-slate-400 hover:text-white transition-colors uppercase tracking-[0.2em]">Docs</a>
+      
+      <!-- BOTÃO DE IDIOMA -->
+      <a href="/infinityretouch-website-v2/br/" class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-[10px] font-black text-slate-500 hover:text-white hover:border-white/20 transition-all uppercase tracking-tighter">
+        🇧🇷 BR
+      </a>
+
+      <!-- CTA BUTTON (VERDE) -->
+      <a href="/infinityretouch-website-v2/buy/backdrop-cleaner/" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-[11px] font-black px-6 py-3 rounded-full transition-all shadow-lg shadow-emerald-500/20 transform hover:-translate-y-0.5 uppercase tracking-widest">
+        Buy Now - $29
+      </a>
+    </div>
+
+    <!-- MOBILE MENU ICON -->
+    <div class="md:hidden text-white opacity-50">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+    </div>
+  </div>
+</nav>
+
+    <main class="pt-32 pb-20 px-4 bg-slate-900 min-h-screen" data-astro-cid-s6xkyb6j>
+        <div class="max-w-[900px] mx-auto" data-astro-cid-s6xkyb6j>
+            
+            <!-- BREADCRUMBS -->
+            <div class="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-600 mb-10 border-b border-white/5 pb-4" data-astro-cid-s6xkyb6j>
+                <a href="/infinityretouch-website-v2/docs/" class="hover:text-emerald-400 transition-colors" data-astro-cid-s6xkyb6j>Help Center</a>
+                <span class="text-slate-800" data-astro-cid-s6xkyb6j>/</span>
+                <span class="text-white italic tracking-tighter" data-astro-cid-s6xkyb6j>Backdrop Cleaner</span>
+            </div>
+
+            <!-- HEADER -->
+            <header class="text-center mb-16" data-astro-cid-s6xkyb6j>
+                <h1 class="text-5xl lg:text-7xl font-black text-white italic tracking-tighter mb-4 uppercase" data-astro-cid-s6xkyb6j>📖 Infinity Backdrop Cleaner</h1>
+                <p class="text-slate-400 text-xl font-medium" data-astro-cid-s6xkyb6j>Complete User Manual & Technical Guide</p>
+            </header>
+
+            <!-- TABLE OF CONTENTS (2 Columns) -->
+            <div class="bg-slate-800/40 border border-white/10 rounded-3xl p-8 mb-16 shadow-2xl relative overflow-hidden" data-astro-cid-s6xkyb6j>
+                <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 blur-3xl rounded-full" data-astro-cid-s6xkyb6j></div>
+                <h3 class="text-xl font-black text-white mb-6 uppercase tracking-widest border-b border-white/5 pb-4" data-astro-cid-s6xkyb6j>📑 Table of Contents</h3>
+                <ul class="grid md:grid-cols-2 gap-x-12 gap-y-4 text-xs font-bold list-none" data-astro-cid-s6xkyb6j>
+                    <li data-astro-cid-s6xkyb6j><a href="#quick-start" class="text-emerald-400 hover:underline" data-astro-cid-s6xkyb6j>🚀 Quick Start Guide</a></li>
+                    <li data-astro-cid-s6xkyb6j><a href="#installation" class="text-emerald-400 hover:underline" data-astro-cid-s6xkyb6j>💿 Installation</a></li>
+                    <li data-astro-cid-s6xkyb6j><a href="#activation" class="text-emerald-400 hover:underline" data-astro-cid-s6xkyb6j>🔑 License Activation</a></li>
+                    <li data-astro-cid-s6xkyb6j><a href="#recovery" class="text-emerald-400 hover:underline" data-astro-cid-s6xkyb6j>🔐 Lost License?</a></li>
+                    <li data-astro-cid-s6xkyb6j><a href="#usage" class="text-emerald-400 hover:underline" data-astro-cid-s6xkyb6j>🎨 Detailed Workflow</a></li>
+                    <li data-astro-cid-s6xkyb6j><a href="#advanced" class="text-emerald-400 hover:underline" data-astro-cid-s6xkyb6j>⚙️ Advanced Features</a></li>
+                    <li data-astro-cid-s6xkyb6j><a href="#faq" class="text-emerald-400 hover:underline" data-astro-cid-s6xkyb6j>❓ FAQ</a></li>
+                    <li data-astro-cid-s6xkyb6j><a href="#troubleshooting" class="text-emerald-400 hover:underline" data-astro-cid-s6xkyb6j>🔧 Troubleshooting</a></li>
+                    <li data-astro-cid-s6xkyb6j><a href="#support" class="text-emerald-400 hover:underline" data-astro-cid-s6xkyb6j>📧 Contact Support</a></li>
+                </ul>
+            </div>
+
+            <!-- SECTIONS -->
+            <div class="space-y-32 text-slate-300" data-astro-cid-s6xkyb6j>
+                
+                <!-- QUICK START -->
+                <section id="quick-start" class="scroll-mt-32" data-astro-cid-s6xkyb6j>
+                    <h2 class="text-4xl font-black text-white border-b border-white/10 pb-4 mb-10 italic uppercase tracking-tighter" data-astro-cid-s6xkyb6j>🚀 Quick Start Guide</h2>
+                    <p class="text-lg mb-10 font-medium" data-astro-cid-s6xkyb6j>Get started with Infinity Backdrop Cleaner in 5 simple steps:</p>
+                    
+                    <div class="space-y-6" data-astro-cid-s6xkyb6j>
+                        <div class="flex gap-6 p-6 bg-slate-800/20 rounded-2xl border border-white/5 items-start hover:border-emerald-500/30 transition-colors group" data-astro-cid-s6xkyb6j>
+                                <span class="flex-shrink-0 w-10 h-10 bg-emerald-600 text-white rounded-full flex items-center justify-center font-black text-sm uppercase group-hover:scale-110 transition-transform" data-astro-cid-s6xkyb6j>S1</span>
+                                <div data-astro-cid-s6xkyb6j>
+                                    <h3 class="text-white font-bold text-lg mb-1 uppercase italic tracking-tight" data-astro-cid-s6xkyb6j>Install &amp; Activate</h3>
+                                    <p class="text-slate-400 m-0 leading-relaxed text-sm font-medium" data-astro-cid-s6xkyb6j>Download from Creative Cloud, install, and activate with your license key.</p>
+                                </div>
+                            </div><div class="flex gap-6 p-6 bg-slate-800/20 rounded-2xl border border-white/5 items-start hover:border-emerald-500/30 transition-colors group" data-astro-cid-s6xkyb6j>
+                                <span class="flex-shrink-0 w-10 h-10 bg-emerald-600 text-white rounded-full flex items-center justify-center font-black text-sm uppercase group-hover:scale-110 transition-transform" data-astro-cid-s6xkyb6j>S2</span>
+                                <div data-astro-cid-s6xkyb6j>
+                                    <h3 class="text-white font-bold text-lg mb-1 uppercase italic tracking-tight" data-astro-cid-s6xkyb6j>Open Your Image</h3>
+                                    <p class="text-slate-400 m-0 leading-relaxed text-sm font-medium" data-astro-cid-s6xkyb6j>Open a photo with an infinite backdrop in Photoshop (works best with white/gray backgrounds).</p>
+                                </div>
+                            </div><div class="flex gap-6 p-6 bg-slate-800/20 rounded-2xl border border-white/5 items-start hover:border-emerald-500/30 transition-colors group" data-astro-cid-s6xkyb6j>
+                                <span class="flex-shrink-0 w-10 h-10 bg-emerald-600 text-white rounded-full flex items-center justify-center font-black text-sm uppercase group-hover:scale-110 transition-transform" data-astro-cid-s6xkyb6j>S3</span>
+                                <div data-astro-cid-s6xkyb6j>
+                                    <h3 class="text-white font-bold text-lg mb-1 uppercase italic tracking-tight" data-astro-cid-s6xkyb6j>Prepare for Painting</h3>
+                                    <p class="text-slate-400 m-0 leading-relaxed text-sm font-medium" data-astro-cid-s6xkyb6j>Click &#39;Prepare for Painting&#39; button. This creates an AI subject mask and configures your brush.</p>
+                                </div>
+                            </div><div class="flex gap-6 p-6 bg-slate-800/20 rounded-2xl border border-white/5 items-start hover:border-emerald-500/30 transition-colors group" data-astro-cid-s6xkyb6j>
+                                <span class="flex-shrink-0 w-10 h-10 bg-emerald-600 text-white rounded-full flex items-center justify-center font-black text-sm uppercase group-hover:scale-110 transition-transform" data-astro-cid-s6xkyb6j>S4</span>
+                                <div data-astro-cid-s6xkyb6j>
+                                    <h3 class="text-white font-bold text-lg mb-1 uppercase italic tracking-tight" data-astro-cid-s6xkyb6j>Paint Over Imperfections</h3>
+                                    <p class="text-slate-400 m-0 leading-relaxed text-sm font-medium" data-astro-cid-s6xkyb6j>Hold Alt (Option) and click to sample color. Then paint over shadows, wrinkles, or footprints.</p>
+                                </div>
+                            </div><div class="flex gap-6 p-6 bg-slate-800/20 rounded-2xl border border-white/5 items-start hover:border-emerald-500/30 transition-colors group" data-astro-cid-s6xkyb6j>
+                                <span class="flex-shrink-0 w-10 h-10 bg-emerald-600 text-white rounded-full flex items-center justify-center font-black text-sm uppercase group-hover:scale-110 transition-transform" data-astro-cid-s6xkyb6j>S5</span>
+                                <div data-astro-cid-s6xkyb6j>
+                                    <h3 class="text-white font-bold text-lg mb-1 uppercase italic tracking-tight" data-astro-cid-s6xkyb6j>Process Image</h3>
+                                    <p class="text-slate-400 m-0 leading-relaxed text-sm font-medium" data-astro-cid-s6xkyb6j>Click &#39;Process Image&#39; to generate the seamless 16-bit backdrop automatically.</p>
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="mt-10 p-8 bg-emerald-500/5 border-l-4 border-emerald-500 rounded-r-xl" data-astro-cid-s6xkyb6j>
+                        <strong class="text-emerald-400 block mb-2 uppercase tracking-widest text-xs font-black" data-astro-cid-s6xkyb6j>💡 Pro Tip:</strong>
+                        <p class="m-0 text-slate-400 italic font-medium leading-relaxed text-sm" data-astro-cid-s6xkyb6j>Don't worry about painting over your subject! The plugin preserves the original in a separate layer, so you can easily recover any details using the eraser tool on the "Original Background" layer.</p>
+                    </div>
+                </section>
+
+                <!-- INSTALLATION -->
+                <section id="installation" class="scroll-mt-32" data-astro-cid-s6xkyb6j>
+                    <h2 class="text-4xl font-black text-white border-b border-white/10 pb-4 mb-10 italic uppercase tracking-tighter" data-astro-cid-s6xkyb6j>💿 Installation</h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-12" data-astro-cid-s6xkyb6j>
+                        <div class="space-y-6" data-astro-cid-s6xkyb6j>
+                            <h3 class="text-xl font-bold text-white uppercase tracking-tight italic" data-astro-cid-s6xkyb6j>System Requirements</h3>
+                            <ul class="space-y-4 text-slate-400 font-bold text-[10px] uppercase tracking-[0.2em] list-none" data-astro-cid-s6xkyb6j>
+                                <li class="flex items-center gap-3" data-astro-cid-s6xkyb6j><span class="text-emerald-500" data-astro-cid-s6xkyb6j>→</span> Adobe® Photoshop® 2023+ (v24.x)</li>
+                                <li class="flex items-center gap-3" data-astro-cid-s6xkyb6j><span class="text-emerald-500" data-astro-cid-s6xkyb6j>→</span> Windows 10/11 or macOS 11+</li>
+                                <li class="flex items-center gap-3" data-astro-cid-s6xkyb6j><span class="text-emerald-500" data-astro-cid-s6xkyb6j>→</span> Intel or Apple Silicon (M1/M2/M3)</li>
+                                <li class="flex items-center gap-3" data-astro-cid-s6xkyb6j><span class="text-emerald-500" data-astro-cid-s6xkyb6j>→</span> 8GB RAM Minimum</li>
+                            </ul>
+                        </div>
+                        <div class="bg-black/40 p-8 rounded-3xl border border-white/5" data-astro-cid-s6xkyb6j>
+                            <h3 class="text-xl font-bold text-white mb-6 uppercase tracking-tight italic" data-astro-cid-s6xkyb6j>Installation Steps</h3>
+                            <ol class="list-decimal pl-6 space-y-3 text-slate-400 font-bold text-[10px] uppercase tracking-[0.2em]" data-astro-cid-s6xkyb6j>
+                                <li data-astro-cid-s6xkyb6j>Open <strong data-astro-cid-s6xkyb6j>Creative Cloud App</strong></li>
+                                <li data-astro-cid-s6xkyb6j>Go to <strong data-astro-cid-s6xkyb6j>Stock & Marketplace</strong> → Plugins</li>
+                                <li data-astro-cid-s6xkyb6j>Search: <strong data-astro-cid-s6xkyb6j>"Infinity Backdrop Cleaner"</strong></li>
+                                <li data-astro-cid-s6xkyb6j>Click <strong data-astro-cid-s6xkyb6j>Install</strong></li>
+                                <li data-astro-cid-s6xkyb6j>Restart Photoshop if active</li>
+                            </ol>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ACTIVATION -->
+                <section id="activation" class="scroll-mt-32" data-astro-cid-s6xkyb6j>
+                    <h2 class="text-4xl font-black text-white border-b border-white/10 pb-4 mb-10 italic uppercase tracking-tighter" data-astro-cid-s6xkyb6j>🔑 License Activation</h2>
+                    <p class="text-lg mb-6 font-medium" data-astro-cid-s6xkyb6j>Your license key is sent via email after purchase. Format example:</p>
+                    <div class="bg-black border border-dashed border-slate-600 text-green-500 p-8 rounded-xl text-center font-mono font-bold tracking-[0.25em] text-xl mb-12 shadow-inner" data-astro-cid-s6xkyb6j>
+                        ABC123-DEF456-GHI789-JKL098-MNO765-V3
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 gap-4 text-slate-400 font-black text-[10px] uppercase tracking-[0.2em]" data-astro-cid-s6xkyb6j>
+                        <div class="p-5 bg-white/5 rounded-2xl border border-white/5 flex items-center gap-3" data-astro-cid-s6xkyb6j><span class="text-green-500 text-lg" data-astro-cid-s6xkyb6j>✅</span> Lifetime License</div>
+                        <div class="p-5 bg-white/5 rounded-2xl border border-white/5 flex items-center gap-3" data-astro-cid-s6xkyb6j><span class="text-green-500 text-lg" data-astro-cid-s6xkyb6j>✅</span> 2 Computers (Desktop + Laptop)</div>
+                        <div class="p-5 bg-white/5 rounded-2xl border border-white/5 flex items-center gap-3" data-astro-cid-s6xkyb6j><span class="text-green-500 text-lg" data-astro-cid-s6xkyb6j>✅</span> Self-Service Deactivation</div>
+                        <div class="p-5 bg-white/5 rounded-2xl border border-white/5 flex items-center gap-3" data-astro-cid-s6xkyb6j><span class="text-green-500 text-lg" data-astro-cid-s6xkyb6j>✅</span> Free Updates Included</div>
+                    </div>
+
+                    <div class="mt-12 p-8 bg-slate-800/40 rounded-3xl border border-white/5" data-astro-cid-s6xkyb6j>
+                        <h4 class="text-white font-bold mb-4 uppercase italic tracking-tighter" data-astro-cid-s6xkyb6j>Switching Computers?</h4>
+                        <p class="text-sm font-medium leading-relaxed mb-0 text-slate-400" data-astro-cid-s6xkyb6j>To move your license: Open the plugin on the old machine → <strong data-astro-cid-s6xkyb6j>Manage License → Deactivate</strong>. Then simply activate on the new machine with your key. If you no longer have access to the old computer, you can deactivate all devices from the management screen.</p>
+                    </div>
+                </section>
+
+                <!-- RECOVERY -->
+                <section id="recovery" class="scroll-mt-32" data-astro-cid-s6xkyb6j>
+                    <h2 class="text-4xl font-black text-white border-b border-white/10 pb-4 mb-10 italic uppercase tracking-tighter" data-astro-cid-s6xkyb6j>🔐 Lost Your License?</h2>
+                    <p class="mb-10 text-lg font-medium" data-astro-cid-s6xkyb6j>If you lost your email with the license key, don't worry. You can recover it instantly using our automated tool.</p>
+                    
+                    <div class="bg-slate-800 border-l-4 border-emerald-500 p-10 rounded-r-3xl shadow-2xl relative overflow-hidden group" data-astro-cid-s6xkyb6j>
+                        <div class="absolute -right-10 -bottom-10 text-9xl opacity-[0.03] group-hover:rotate-12 transition-transform duration-700" data-astro-cid-s6xkyb6j>🔑</div>
+                        <h3 class="text-2xl font-black text-white mb-4 uppercase tracking-tighter italic" data-astro-cid-s6xkyb6j>Recover License Key</h3>
+                        <p class="text-slate-400 mb-8 font-medium" data-astro-cid-s6xkyb6j>Enter the email address you used during checkout to receive your key again.</p>
+                        <a href="/infinityretouch-website-v2/recover/" class="inline-block bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black px-12 py-5 rounded-2xl transition-all shadow-xl shadow-emerald-500/20 w-full text-center tracking-widest uppercase relative z-10" data-astro-cid-s6xkyb6j>
+                            GO TO RECOVERY PAGE
+                        </a>
+                    </div>
+                </section>
+
+                <!-- USAGE -->
+                <section id="usage" class="scroll-mt-32" data-astro-cid-s6xkyb6j>
+                    <h2 class="text-4xl font-black text-white border-b border-white/10 pb-4 mb-10 italic uppercase tracking-tighter" data-astro-cid-s6xkyb6j>🎨 Detailed Workflow</h2>
+                    <div class="space-y-12" data-astro-cid-s6xkyb6j>
+                        <div data-astro-cid-s6xkyb6j>
+                            <h3 class="text-xl font-bold text-white border-l-4 border-emerald-500 pl-4 mb-4 uppercase italic tracking-tight" data-astro-cid-s6xkyb6j>1. Prepare Your Image</h3>
+                            <p class="text-sm font-medium leading-relaxed text-slate-400" data-astro-cid-s6xkyb6j>For best results, use white, gray, or light-colored seamless backdrops. Ensure the subject is clearly separated from the background with good studio lighting.</p>
+                        </div>
+                        <div data-astro-cid-s6xkyb6j>
+                            <h3 class="text-xl font-bold text-white border-l-4 border-emerald-500 pl-4 mb-4 uppercase italic tracking-tight" data-astro-cid-s6xkyb6j>2. Mask & Prepare Phase</h3>
+                            <p class="text-sm font-medium leading-relaxed text-slate-400" data-astro-cid-s6xkyb6j>The plugin uses AI to detect your subject and creates a protective mask. If the detection isn't perfect, use <strong data-astro-cid-s6xkyb6j>Advanced Controls</strong> to adjust <strong data-astro-cid-s6xkyb6j>Expand</strong> and <strong data-astro-cid-s6xkyb6j>Feather</strong> settings.</p>
+                        </div>
+                        <div data-astro-cid-s6xkyb6j>
+                            <h3 class="text-xl font-bold text-white border-l-4 border-emerald-500 pl-4 mb-4 uppercase italic tracking-tight" data-astro-cid-s6xkyb6j>3. Paint over imperfections</h3>
+                            <p class="text-sm font-medium leading-relaxed text-slate-400" data-astro-cid-s6xkyb6j>Hold Alt (Option) to sample color from a clean area. Use a large, soft brush and paint generously over shadows, footprints, or wrinkles. <strong data-astro-cid-s6xkyb6j>Paint freely over the model's edges!</strong></p>
+                        </div>
+                        <div data-astro-cid-s6xkyb6j>
+                            <h3 class="text-xl font-bold text-white border-l-4 border-emerald-500 pl-4 mb-4 uppercase italic tracking-tight" data-astro-cid-s6xkyb6j>4. Process & Finalize</h3>
+                            <p class="text-sm font-medium leading-relaxed text-slate-400" data-astro-cid-s6xkyb6j>Click "Process Image". The plugin generates a seamless backdrop, applies 16-bit frequency processing, and adds natural grain to prevent banding.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ADVANCED -->
+                <section id="advanced" class="scroll-mt-32" data-astro-cid-s6xkyb6j>
+                    <h2 class="text-4xl font-black text-white border-b border-white/10 pb-4 mb-10 italic uppercase tracking-tighter" data-astro-cid-s6xkyb6j>⚙️ Advanced Features</h2>
+                    <div class="grid md:grid-cols-2 gap-8" data-astro-cid-s6xkyb6j>
+                        <div class="p-8 bg-white/5 rounded-3xl border border-white/5 transition-all hover:border-emerald-500/20" data-astro-cid-s6xkyb6j>
+                            <h4 class="text-white font-black mb-4 uppercase text-xs tracking-[0.2em] text-emerald-400" data-astro-cid-s6xkyb6j>Blur Algorithms</h4>
+                            <p class="text-sm text-slate-400 leading-relaxed font-medium" data-astro-cid-s6xkyb6j>
+                                <strong data-astro-cid-s6xkyb6j>Gaussian:</strong> Creates perfectly smooth, uniform gradients. Ideal for 90% of studio work.<br data-astro-cid-s6xkyb6j><br data-astro-cid-s6xkyb6j>
+                                <strong data-astro-cid-s6xkyb6j>Surface Blur:</strong> Edge-preserving algorithm that keeps some floor texture while cleaning footprints.
+                            </p>
+                        </div>
+                        <div class="p-8 bg-white/5 rounded-3xl border border-white/5 transition-all hover:border-emerald-500/20" data-astro-cid-s6xkyb6j>
+                            <h4 class="text-white font-black mb-4 uppercase text-xs tracking-[0.2em] text-emerald-400" data-astro-cid-s6xkyb6j>16-Bit Native Engine</h4>
+                            <p class="text-sm text-slate-400 leading-relaxed font-medium" data-astro-cid-s6xkyb6j>The plugin automatically upscales processing to 16-bit internally. This is crucial to prevent <strong data-astro-cid-s6xkyb6j>Color Banding</strong> in smooth floor gradients, ensuring professional print quality.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FAQ -->
+                <section id="faq" class="scroll-mt-32" data-astro-cid-s6xkyb6j>
+                    <h2 class="text-4xl font-black text-white border-b border-white/10 pb-4 mb-10 italic uppercase tracking-tighter" data-astro-cid-s6xkyb6j>❓ FAQ</h2>
+                    <div class="grid gap-6" data-astro-cid-s6xkyb6j>
+                        <div class="p-8 bg-slate-800/30 rounded-2xl border border-white/5 group" data-astro-cid-s6xkyb6j>
+                                <h4 class="text-white font-bold mb-3 italic tracking-tight group-hover:text-emerald-400 transition-colors" data-astro-cid-s6xkyb6j>Can I use it with RAW files?</h4>
+                                <p class="text-slate-400 m-0 leading-relaxed text-sm font-medium" data-astro-cid-s6xkyb6j>Yes! We recommend converting your RAW layer to a Smart Object first. This maintains non-destructive editing and maximum bit depth.</p>
+                            </div><div class="p-8 bg-slate-800/30 rounded-2xl border border-white/5 group" data-astro-cid-s6xkyb6j>
+                                <h4 class="text-white font-bold mb-3 italic tracking-tight group-hover:text-emerald-400 transition-colors" data-astro-cid-s6xkyb6j>Does it work with dark backgrounds?</h4>
+                                <p class="text-slate-400 m-0 leading-relaxed text-sm font-medium" data-astro-cid-s6xkyb6j>Optimized for light-colored backdrops. For black or dark-blue floors, use the Eraser tool on the &#39;Original Background&#39; layer to refine results.</p>
+                            </div><div class="p-8 bg-slate-800/30 rounded-2xl border border-white/5 group" data-astro-cid-s6xkyb6j>
+                                <h4 class="text-white font-bold mb-3 italic tracking-tight group-hover:text-emerald-400 transition-colors" data-astro-cid-s6xkyb6j>What&#39;s your refund policy?</h4>
+                                <p class="text-slate-400 m-0 leading-relaxed text-sm font-medium" data-astro-cid-s6xkyb6j>We offer a 7-day money-back guarantee, no questions asked. We stand behind our product quality.</p>
+                            </div>
+                    </div>
+                </section>
+
+                <!-- TROUBLESHOOTING -->
+                <section id="troubleshooting" class="scroll-mt-32" data-astro-cid-s6xkyb6j>
+                    <h2 class="text-4xl font-black text-white border-b border-white/10 pb-4 mb-10 italic uppercase tracking-tighter" data-astro-cid-s6xkyb6j>🔧 Troubleshooting</h2>
+                    <div class="space-y-6" data-astro-cid-s6xkyb6j>
+                        <div class="p-8 bg-slate-800/30 rounded-2xl border border-white/5 flex gap-6 items-center" data-astro-cid-s6xkyb6j>
+                            <div class="text-emerald-500 text-3xl font-black italic" data-astro-cid-s6xkyb6j>!</div>
+                            <div data-astro-cid-s6xkyb6j>
+                                <h4 class="text-white font-bold mb-1 italic" data-astro-cid-s6xkyb6j>Plugin doesn't appear?</h4>
+                                <p class="text-slate-400 m-0 text-sm font-medium italic" data-astro-cid-s6xkyb6j>Path: Window → Plugins → Infinity Backdrop Cleaner. If missing, restart Photoshop or reinstall from Creative Cloud Desktop.</p>
+                            </div>
+                        </div>
+                        <div class="bg-red-500/5 border-l-4 border-red-500 p-8 rounded-r-2xl text-red-200 shadow-xl shadow-red-500/5" data-astro-cid-s6xkyb6j>
+                            <strong class="text-red-500 block text-lg mb-1 italic uppercase tracking-tighter font-black" data-astro-cid-s6xkyb6j>⚠️ Still having issues?</strong>
+                            <p class="m-0 text-sm font-medium leading-relaxed" data-astro-cid-s6xkyb6j>Contact support with a screenshot of the error, your Photoshop version, and OS details. We respond within 24 hours.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SUPPORT -->
+                <section id="support" class="pt-10" data-astro-cid-s6xkyb6j>
+                    <div class="bg-gradient-to-br from-emerald-600 to-emerald-900 p-16 rounded-[40px] text-center shadow-2xl relative overflow-hidden group" data-astro-cid-s6xkyb6j>
+                        <div class="relative z-10" data-astro-cid-s6xkyb6j>
+                            <h3 class="text-4xl font-black text-white mb-4 italic uppercase tracking-tighter leading-none" data-astro-cid-s6xkyb6j>📧 Need More Help?</h3>
+                            <p class="text-emerald-100 text-lg mb-10 max-w-md mx-auto font-medium leading-relaxed" data-astro-cid-s6xkyb6j>Our support team is ready to assist you with installation or technical questions.</p>
+                            <a href="mailto:sales@infinityretouch.com" class="text-2xl font-black text-white hover:underline underline-offset-8 transition-all hover:scale-105 inline-block" data-astro-cid-s6xkyb6j>sales@infinityretouch.com</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+
+            <!-- FOOTER COMPLETO -->
+            <footer class="mt-32 pt-16 border-t border-white/10 text-center" data-astro-cid-s6xkyb6j>
+                <div class="max-w-7xl mx-auto" data-astro-cid-s6xkyb6j>
+                    <div class="text-emerald-500 font-black text-xl mb-6 tracking-tighter italic uppercase" data-astro-cid-s6xkyb6j>INFINITY RETOUCH</div>
+                    <p class="text-slate-500 font-bold mb-4 uppercase text-[9px] tracking-[0.2em]" data-astro-cid-s6xkyb6j>© 2026 Infinity Retouch / WINSERV TECNOLOGIA DA INFORMACAO.</p>
+
+                    <div class="max-w-4xl mx-auto mb-10 text-[9px] text-slate-800 leading-relaxed uppercase tracking-[0.2em] font-bold" data-astro-cid-s6xkyb6j>
+                        Adobe® and Photoshop® are registered trademarks of Adobe Inc. in the United States and/or other countries. This plugin is an independent product and is not affiliated with, sponsored by, or endorsed by Adobe Inc.
+                    </div>
+                    <nav class="flex flex-wrap justify-center gap-x-12 gap-y-6 text-[11px] font-black uppercase tracking-[0.3em] text-slate-600" data-astro-cid-s6xkyb6j>
+                        <a href="/infinityretouch-website-v2/docs/" class="hover:text-white transition-colors" data-astro-cid-s6xkyb6j>Help Center</a>
+                        <a href="/infinityretouch-website-v2/privacy-policy/" class="hover:text-white transition-colors" data-astro-cid-s6xkyb6j>Privacy Policy</a>
+                        <a href="/infinityretouch-website-v2/terms-of-service/" class="hover:text-white transition-colors" data-astro-cid-s6xkyb6j>Terms of Service</a>
+                        <a href="/infinityretouch-website-v2/refund-policy/" class="hover:text-white transition-colors" data-astro-cid-s6xkyb6j>Refund Policy</a>
+                        <a href="mailto:sales@infinityretouch.com" class="hover:text-white transition-colors" data-astro-cid-s6xkyb6j>Support</a>
+                    </nav>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+	</body></html>
