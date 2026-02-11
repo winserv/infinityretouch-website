@@ -1,0 +1,5 @@
+# Adicionar em /public/robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://infinityretouch.com/sitemap-index.xml
