@@ -1,0 +1,42 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description: string;
+	lang: string;
+}
+
+const { title, description, lang } = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang} class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		
+		<!-- Tags Hreflang para SEO Local -->
+		<link rel="alternate" hreflang="en" href="https://infinityretouch.com/" />
+		<link rel="alternate" hreflang="pt-br" href="https://infinityretouch.com/br/" />
+
+		<!-- Open Graph / Facebook / WhatsApp -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={Astro.url} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content="https://infinityretouch.com/og-image.jpg" />
+
+		<title>{title}</title>
+	</head>
+	<body class="bg-slate-900 text-white font-sans antialiased">
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	/* Se precisar de fontes personalizadas, importe aqui */
+</style>

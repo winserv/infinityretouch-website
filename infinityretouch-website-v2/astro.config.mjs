@@ -1,6 +1,15 @@
-// astro.config.mjs
+// @ts-check
+import { defineConfig } from 'astro/config';
+
+import tailwindcss from '@tailwindcss/vite';
+
+import sitemap from '@astrojs/sitemap';
+
+// https://astro.build/config
 export default defineConfig({
-  site: 'https://infinityretouch.com',
-  base: '/infinityretouch-website-v2', // <--- Isso avisa ao Astro que ele está em uma subpasta
-  integrations: [tailwind()],
+  vite: {
+    plugins: [tailwindcss()]
+  },
+
+  integrations: [sitemap()]
 });

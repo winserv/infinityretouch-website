@@ -1,0 +1,91 @@
+---
+interface Props {
+  beforeImage: string;
+  afterImage: string;
+  altText: string;
+}
+
+const { beforeImage, afterImage, altText } = Astro.props;
+---
+
+<div class="comparison-slider w-full max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl border border-slate-700 relative select-none bg-slate-800">
+  <div class="relative w-full h-full group">
+    
+    <!-- Imagem DEPOIS (Fundo) -->
+    <img 
+      src={afterImage} 
+      alt={`After: ${altText}`} 
+      class="w-full h-auto block"
+    />
+    
+    <span class="absolute top-4 right-4 bg-black/60 text-white text-[10px] font-bold px-2 py-1 rounded backdrop-blur-sm z-10 uppercase tracking-widest">
+      After
+    </span>
+
+    <!-- Imagem ANTES (Clipper) -->
+    <div class="img-clipper absolute top-0 left-0 h-full overflow-hidden z-10" style="width: 50%;">
+      <img 
+        src={beforeImage} 
+        alt={`Before: ${altText}`} 
+        class="max-w-none h-full w-auto block" 
+        style="width: 100cqw; object-fit: cover;"
+      />
+      <span class="absolute top-4 left-4 bg-black/60 text-white text-[10px] font-bold px-2 py-1 rounded backdrop-blur-sm z-20 uppercase tracking-widest">
+        Before
+      </span>
+    </div>
+
+    <!-- Controle do Slider -->
+    <input 
+      type="range" 
+      min="0" 
+      max="100" 
+      value="50" 
+      class="slider-input absolute top-0 left-0 w-full h-full opacity-0 cursor-ew-resize z-40 m-0 p-0"
+    />
+
+    <!-- Linha Divisória Visual -->
+    <div class="slider-line absolute top-0 bottom-0 w-1 bg-white shadow-[0_0_15px_rgba(0,0,0,0.5)] z-30 pointer-events-none" style="left: 50%;">
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-2xl flex items-center justify-center text-slate-900 border-4 border-white/20">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-5 h-5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" transform="rotate(-90 12 12)" />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function initSliders() {
+    const containers = document.querySelectorAll('.comparison-slider');
+    containers.forEach(container => {
+      const input = container.querySelector('.slider-input') as HTMLInputElement;
+      const clipper = container.querySelector('.img-clipper') as HTMLElement;
+      const line = container.querySelector('.slider-line') as HTMLElement;
+
+      if (input && clipper && line) {
+        input.addEventListener('input', () => {
+          const val = input.value + '%';
+          clipper.style.width = val;
+          line.style.left = val;
+        });
+      }
+    });
+  }
+
+  // Executa no carregamento inicial
+  initSliders();
+  // Executa se você navegar entre páginas (Astro transitions)
+  document.addEventListener('astro:after-swap', initSliders);
+</script>
+
+<style>
+  .comparison-slider {
+    container-type: inline-size;
+  }
+  .slider-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 40px;
+    height: 1000px;
+  }
+</style>

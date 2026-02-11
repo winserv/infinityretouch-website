@@ -1,0 +1,34 @@
+---
+const { lang } = Astro.props;
+
+const isBr = lang === 'pt-br';
+const homeLink = isBr ? '/br' : '/';
+const buyLink = isBr ? 'https://pay.kiwify.com.br/rAGSeeK' : 'https://pay.kiwify.com.br/itYbaeF'; // Ajuste seu link de checkout
+---
+
+<nav class="w-full fixed top-0 z-50 bg-slate-900/90 backdrop-blur border-b border-slate-700">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+      <!-- Logo -->
+      <a href={homeLink} class="font-bold text-xl tracking-tighter text-blue-400">
+        INFINITY RETOUCH
+      </a>
+
+      <!-- Links Desktop -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#features" class="text-slate-300 hover:text-white transition">{isBr ? 'Funcionalidades' : 'Features'}</a>
+        <a href="#compare" class="text-slate-300 hover:text-white transition">{isBr ? 'Comparativo' : 'Compare'}</a>
+        
+        <!-- Seletor de Língua Simples -->
+        <div class="flex items-center space-x-2 text-sm border-l border-slate-600 pl-4">
+            <a href="/" class={`hover:text-white ${!isBr ? 'text-white font-bold' : 'text-slate-400'}`}>EN</a>
+            <a href="/br" class={`hover:text-white ${isBr ? 'text-white font-bold' : 'text-slate-400'}`}>BR</a>
+        </div>
+
+        <a href={buyLink} class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-full font-semibold transition shadow-lg shadow-blue-500/30">
+          {isBr ? 'Comprar - $29' : 'Buy Now - $29'}
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
