@@ -53,48 +53,85 @@
 			gtag('js', new Date());
 			gtag('config', 'G-RN28DZF26K');
 		</script>
-	<link rel="stylesheet" href="/_astro/backdrop-cleaner.DJkBcJqb.css">
-<link rel="stylesheet" href="/_astro/backdrop-cleaner.BnxXTJr_.css"></head>
+
+	<!-- Script de Detecção de Idioma -->
+<script>
+  // Só executa se o usuário estiver na raiz "/" 
+  // e não em uma subpágina ou já em uma rota de idioma
+  if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+    
+    // Obtém o idioma do navegador (ex: "pt-BR", "en-US")
+    const browserLang = navigator.language || navigator.userLanguage;
+    
+    // Verifica se o usuário já escolheu um idioma manualmente nesta sessão
+    // (para evitar que ele fique "preso" se quiser mudar para inglês)
+    const hasSelectedLang = sessionStorage.getItem('lang-selected');
+
+    if (!hasSelectedLang && browserLang.startsWith('pt')) {
+      // Salva que redirecionamos para não entrar em loop
+      sessionStorage.setItem('lang-selected', 'true');
+      window.location.href = '/pt-br/';
+    }
+  }
+</script>
+	<link rel="stylesheet" href="/_astro/backdrop-cleaner.BO9nRC1g.css">
+<link rel="stylesheet" href="/_astro/backdrop-cleaner.BigPLOf-.css"></head>
 
 	<body class="bg-slate-900 text-white font-sans antialiased">
 		
     <nav class="fixed top-0 left-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-white/5" data-astro-cid-5blmo7yk>
   <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between" data-astro-cid-5blmo7yk>
     
-    <!-- LOGO CORRIGIDA -->
-    <a href="/pt-br/" class="flex items-center gap-3 group" data-astro-cid-5blmo7yk>
-      <div class="w-10 h-10 flex items-center justify-center" data-astro-cid-5blmo7yk>
-        <img src="/favicon.svg" alt="Infinity Retouch Logo" width="40" height="40" class="w-full h-full object-contain logo-sharp" data-astro-cid-5blmo7yk>
-      </div>
-      <span class="font-black text-xl tracking-tighter text-white italic group-hover:text-emerald-400 transition-colors uppercase" data-astro-cid-5blmo7yk>
-        INFINITY <span class="text-emerald-500 group-hover:text-white" data-astro-cid-5blmo7yk>RETOUCH</span>
+    <!-- LOGO -->
+    <a href="/pt-br/" class="flex items-center gap-3 group shrink-0" data-astro-cid-5blmo7yk>
+      <img src="/favicon.svg" alt="Infinity Retouch Logo" width="32" height="32" class="w-8 h-8 object-contain logo-sharp" data-astro-cid-5blmo7yk>
+      <span class="font-black text-lg tracking-tighter text-white italic uppercase" data-astro-cid-5blmo7yk>
+        INFINITY <span class="text-emerald-500" data-astro-cid-5blmo7yk>RETOUCH</span>
       </span>
     </a>
 
-    <!-- LINKS DE NAVEGAÇÃO -->
-    <div class="hidden md:flex items-center gap-8" data-astro-cid-5blmo7yk>
-      <a href="/pt-br/#features" class="text-[11px] font-black text-slate-400 hover:text-white transition-colors uppercase tracking-[0.2em]" data-astro-cid-5blmo7yk>Recursos</a>
-      <a href="/pt-br/docs/" class="text-[11px] font-black text-slate-400 hover:text-white transition-colors uppercase tracking-[0.2em]" data-astro-cid-5blmo7yk>Docs</a>
+    <!-- DIREITA: Idioma + Menu -->
+    <div class="flex items-center gap-3 md:gap-8" data-astro-cid-5blmo7yk>
       
-      <!-- BOTÃO DE IDIOMA -->
-      <a href="/docs/" class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-[10px] font-black text-slate-500 hover:text-white hover:border-white/20 transition-all uppercase tracking-tighter" data-astro-cid-5blmo7yk>
+      <!-- LINKS DESKTOP -->
+      <div class="hidden md:flex items-center gap-8 mr-4" data-astro-cid-5blmo7yk>
+        <a href="/pt-br/#features" class="text-[11px] font-black text-slate-400 hover:text-white transition-colors uppercase tracking-[0.2em]" data-astro-cid-5blmo7yk>Recursos</a>
+        <a href="/pt-br/docs/" class="text-[11px] font-black text-slate-400 hover:text-white transition-colors uppercase tracking-[0.2em]" data-astro-cid-5blmo7yk>Docs</a>
+      </div>
+
+      <!-- BOTÃO DE IDIOMA (Sempre Visível) -->
+      <a href="/docs/" class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-[10px] font-black text-slate-300 hover:text-white transition-all uppercase tracking-tighter shrink-0" data-astro-cid-5blmo7yk>
         🇺🇸 EN
       </a>
 
-      <!-- CTA BUTTON -->
-      <a href="/pt-br/buy/backdrop-cleaner/" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-[11px] font-black px-6 py-3 rounded-full transition-all shadow-lg shadow-emerald-500/20 transform hover:-translate-y-0.5 uppercase tracking-widest" data-astro-cid-5blmo7yk>
-        Comprar - R$ 145
+      <!-- BOTÃO COMPRAR (Desktop) -->
+      <a href="/pt-br/buy/backdrop-cleaner/" class="hidden md:block bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-[11px] font-black px-6 py-3 rounded-full transition-all shadow-lg shadow-emerald-500/20 transform hover:-translate-y-0.5 uppercase tracking-widest" data-astro-cid-5blmo7yk>
+        Comprar
       </a>
-    </div>
 
-    <!-- MOBILE MENU ICON -->
-    <div class="md:hidden text-white opacity-50" data-astro-cid-5blmo7yk>
+      <!-- MENU MOBILE (Hambúrguer) -->
+      <button id="menu-toggle" class="md:hidden text-white p-2 hover:bg-white/5 rounded-lg transition-colors" aria-label="Toggle Menu" data-astro-cid-5blmo7yk>
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-astro-cid-5blmo7yk>
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" data-astro-cid-5blmo7yk></path>
+            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" data-astro-cid-5blmo7yk></path>
         </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- DRAWER MOBILE -->
+  <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-slate-900 border-b border-white/10 shadow-2xl" data-astro-cid-5blmo7yk>
+    <div class="flex flex-col p-6 gap-2 font-black uppercase tracking-widest text-[11px]" data-astro-cid-5blmo7yk>
+        <a href="/pt-br/#features" class="py-4 border-b border-white/5 text-slate-400 hover:text-white" data-astro-cid-5blmo7yk>Recursos</a>
+        <a href="/pt-br/docs/" class="py-4 border-b border-white/5 text-slate-400 hover:text-white" data-astro-cid-5blmo7yk>Docs</a>
+        <a href="/pt-br/buy/backdrop-cleaner/" class="py-6 text-emerald-500 flex items-center justify-between" data-astro-cid-5blmo7yk>
+            Comprar Agora
+            <span class="bg-emerald-500/10 px-3 py-1 rounded-md text-[10px]" data-astro-cid-5blmo7yk>R$ 145</span>
+        </a>
     </div>
   </div>
 </nav>
+
+<script type="module" src="/_astro/Navbar.astro_astro_type_script_index_0_lang.DDz8_The.js"></script>
     
     <main class="pt-32 pb-16 px-4 bg-slate-900">
         <div class="max-w-4xl mx-auto text-center">
