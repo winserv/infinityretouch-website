@@ -1,8 +1,0 @@
-User-agent: *
-Disallow: /buy/
-Disallow: /br/buy/
-Disallow: /recover/
-Disallow: /docs/
-Disallow: /br/docs/
-
-Sitemap: https://infinityretouch.com/sitemap.xml
