@@ -4,7 +4,51 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
-		<!-- Favicons & Branding (Configuração PWA sugerida) -->
+		<!-- Verificação de Domínio da Meta (Facebook) -->
+		<meta name="facebook-domain-verification" content="81pm9o4zn4jpgdafczvg2dc2g0woia">
+
+		<!-- 1. Script de Detecção Automática de Idioma -->
+		<script>
+			(function() {
+				const path = window.location.pathname;
+				const isRoot = path === '/' || path === '/index.html' || path === '';
+				if (isRoot) {
+					const browserLang = (navigator.language || navigator.userUserLanguage || 'en').toLowerCase();
+					const userForcedEn = sessionStorage.getItem('user-preferred-en');
+					if (browserLang.startsWith('pt') && !userForcedEn) {
+						window.location.replace('/pt-br/');
+					}
+				}
+			})();
+		</script>
+
+		<!-- 2. Meta Pixel Code (ID: 1261263012570367) -->
+		<script>
+			!function(f,b,e,v,n,t,s)
+			{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+			n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+			if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+			n.queue=[];t=b.createElement(e);t.async=!0;
+			t.src=v;s=b.getElementsByTagName(e)[0];
+			s.parentNode.insertBefore(t,s)}(window, document,'script',
+			'https://connect.facebook.net/en_US/fbevents.js');
+			fbq('init', '1261263012570367');
+			fbq('track', 'PageView');
+		</script>
+		<noscript>
+			<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1261263012570367&ev=PageView&noscript=1">
+		</noscript>
+
+		<!-- 3. Google Analytics (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-RN28DZF26K"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-RN28DZF26K');
+		</script>
+
+		<!-- Favicons & Branding Professional -->
 		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 		<link rel="shortcut icon" href="/favicon.ico">
@@ -22,13 +66,13 @@
 		
 		
 		
-		<!-- SEO Internacional (Hreflang) corrigido para Raiz -->
+		<!-- SEO Internacional (Hreflang) -->
 		<link rel="canonical" href="https://infinityretouch.com/404/">
 		<link rel="alternate" hreflang="en" href="https://infinityretouch.com/">
 		<link rel="alternate" hreflang="pt-br" href="https://infinityretouch.com/pt-br/">
 		<link rel="alternate" hreflang="x-default" href="https://infinityretouch.com/">
 
-		<!-- Open Graph (WhatsApp, Facebook, LinkedIn) -->
+		<!-- Open Graph (Social Media) -->
 		<meta property="og:title" content="Page Not Found - Infinity Retouch">
 		<meta property="og:description" content="404 Error - Page not found">
 		<meta property="og:url" content="https://infinityretouch.com/404/">
@@ -44,37 +88,6 @@
 		<meta name="twitter:title" content="Page Not Found - Infinity Retouch">
 		<meta name="twitter:description" content="404 Error - Page not found">
 		<meta name="twitter:image" content="https://infinityretouch.com/og-infinity-backdrop-cleaner.jpg">
-
-		<!-- Google Analytics (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-RN28DZF26K"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-			gtag('config', 'G-RN28DZF26K');
-		</script>
-
-	<!-- Script de Detecção de Idioma -->
-<script>
-  (function() {
-    // 1. Verifica se estamos na raiz exata (localhost:4321/ ou infinityretouch.com/)
-    const path = window.location.pathname;
-    const isRoot = path === '/' || path === '/index.html' || path === '';
-
-    if (isRoot) {
-      // 2. Detecta o idioma do sistema/navegador
-      const browserLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
-      
-      // 3. Verifica se o usuário já clicou manualmente em EN nesta aba
-      const userForcedEn = sessionStorage.getItem('user-preferred-en');
-
-      // 4. Se for brasileiro (pt) e NÃO tiver forçado o inglês manualmente
-      if (browserLang.startsWith('pt') && !userForcedEn) {
-        window.location.replace('/pt-br/');
-      }
-    }
-  })();
-</script>
 	<link rel="stylesheet" href="/_astro/backdrop-cleaner.CgLOh0tO.css">
 <link rel="stylesheet" href="/_astro/backdrop-cleaner.BigPLOf-.css"></head>
 
@@ -171,6 +184,7 @@
         </div>
     </main>
 
-	</body></html>
+	</body>
+</html>
 
 <script type="module" src="/_astro/404.astro_astro_type_script_index_0_lang.CRY5NYgf.js"></script>
