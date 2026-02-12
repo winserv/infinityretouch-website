@@ -56,25 +56,26 @@
 
 	<!-- Script de Detecção de Idioma -->
 <script>
-  // Só executa se o usuário estiver na raiz "/" 
-  // e não em uma subpágina ou já em uma rota de idioma
-  if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
-    
-    // Obtém o idioma do navegador (ex: "pt-BR", "en-US")
-    const browserLang = navigator.language || navigator.userLanguage;
-    
-    // Verifica se o usuário já escolheu um idioma manualmente nesta sessão
-    // (para evitar que ele fique "preso" se quiser mudar para inglês)
-    const hasSelectedLang = sessionStorage.getItem('lang-selected');
+  (function() {
+    // 1. Verifica se estamos na raiz exata (localhost:4321/ ou infinityretouch.com/)
+    const path = window.location.pathname;
+    const isRoot = path === '/' || path === '/index.html' || path === '';
 
-    if (!hasSelectedLang && browserLang.startsWith('pt')) {
-      // Salva que redirecionamos para não entrar em loop
-      sessionStorage.setItem('lang-selected', 'true');
-      window.location.href = '/pt-br/';
+    if (isRoot) {
+      // 2. Detecta o idioma do sistema/navegador
+      const browserLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+      
+      // 3. Verifica se o usuário já clicou manualmente em EN nesta aba
+      const userForcedEn = sessionStorage.getItem('user-preferred-en');
+
+      // 4. Se for brasileiro (pt) e NÃO tiver forçado o inglês manualmente
+      if (browserLang.startsWith('pt') && !userForcedEn) {
+        window.location.replace('/pt-br/');
+      }
     }
-  }
+  })();
 </script>
-	<link rel="stylesheet" href="/_astro/backdrop-cleaner.qFAyGHvj.css"></head>
+	<link rel="stylesheet" href="/_astro/backdrop-cleaner.CgLOh0tO.css"></head>
 
 	<body class="bg-slate-900 text-white font-sans antialiased">
 		
