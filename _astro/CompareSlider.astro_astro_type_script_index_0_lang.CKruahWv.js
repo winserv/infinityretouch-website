@@ -1,0 +1,1 @@
+function c(){document.querySelectorAll(".compare-container").forEach(e=>{const t=e.querySelector(".slider-range"),l=e.querySelector(".image-before-clip"),s=e.querySelector(".slider-handle"),n=()=>{const r=t.value;l.style.clipPath=`inset(0 ${100-parseInt(r)}% 0 0)`,s.style.left=`${r}%`};t.addEventListener("input",n),n()})}c();document.addEventListener("astro:after-swap",c);
