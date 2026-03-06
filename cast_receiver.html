@@ -5,7 +5,7 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box }
     body { background: #000; width: 100vw; height: 100vh; overflow: hidden }
-    img { width: 100%; height: 100%; object-fit: contain; display: block }
+    img { width: 100%; height: 100%; object-fit: contain; display: block; transition: opacity 0.3s ease-in-out; }
   </style>
 </head>
 <body>
@@ -42,7 +42,9 @@
         }).catch(function() {});
     }, 1000);
 
-    ctx.start();
+    var options = new cast.framework.CastReceiverOptions();
+    options.maxInactivity = 3600;
+    ctx.start(options);
   </script>
 </body>
 </html>
