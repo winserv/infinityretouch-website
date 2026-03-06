@@ -1,0 +1,16 @@
+<script src="https://www.gstatic.com/cv/js/sender/v3/cast_sender.js"></script>
+<button onclick="launchApp()">Testar App 65DDAC2E</button>
+
+<script>
+  function launchApp() {
+    const sessionRequest = new chrome.cast.SessionRequest('65DDAC2E');
+    const apiConfig = new chrome.cast.ApiConfig(sessionRequest, () => {}, () => {});
+    chrome.cast.initialize(apiConfig, () => {
+      chrome.cast.requestSession((session) => {
+        console.log('Sucesso! App ID está online.', session);
+      }, (e) => {
+        console.error('Erro ao iniciar. Pode não estar publicado ainda.', e);
+      });
+    });
+  }
+</script>
