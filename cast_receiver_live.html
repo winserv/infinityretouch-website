@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box }
+    body { background: #000; width: 100vw; height: 100vh; overflow: hidden }
+    img { width: 100%; height: 100%; object-fit: contain; display: block }
+  </style>
+</head>
+<body>
+  <img id="s" alt="">
+  <script src="//www.gstatic.com/cast/sdk/libs/caf_receiver/v3/cast_receiver_framework.js"></script>
+  <script>
+    var NS  = 'urn:x-cast:com.infinityretouch.live';
+    var ctx = cast.framework.CastReceiverContext.getInstance();
+    var base = null;
+
+    ctx.addCustomMessageListener(NS, function(e) {
+      var d = e.data;
+      if (d.url && d.url !== base) {
+        base = d.url;
+        // Chromecast runs Chrome — MJPEG is natively supported via <img>
+        document.getElementById('s').src = base + '/stream';
+      }
+    });
+
+    ctx.start();
+  </script>
+</body>
+</html>
