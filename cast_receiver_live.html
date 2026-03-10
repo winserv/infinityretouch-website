@@ -15,29 +15,34 @@
     var NS  = 'urn:x-cast:com.infinityretouch.live';
     var ctx = cast.framework.CastReceiverContext.getInstance();
     var base = null;
-    var lastVer = null;
-    var img = document.getElementById('p');
+    var img  = document.getElementById('p');
+    var busy = false;
 
     ctx.addCustomMessageListener(NS, function(e) {
-      var d = e.data;
-      if (d.url) base = d.url;
+      if (e.data && e.data.url && !base) {
+        base = e.data.url;
+        pump();
+      }
     });
 
-    // Poll /version every 200ms — individual JPEG requests work even in HTTPS receiver context;
-    // long-lived MJPEG streams are blocked by Chromium's Mixed Content / Private Network Access.
-    setInterval(function() {
-      if (!base) return;
-      fetch(base + '/version?r=' + Date.now())
-        .then(function(r) { return r.text(); })
-        .then(function(v) {
-          v = v.trim();
-          if (v !== lastVer) {
-            lastVer = v;
-            img.src = base + '/cast_photo.jpg?t=' + v;
-          }
-        })
-        .catch(function() {});
-    }, 200);
+    // Chain loading: dispara o próximo frame imediatamente após o atual carregar.
+    // Elimina o round-trip extra de /version e o timer fixo de 200ms.
+    // Auto-throttle natural pela velocidade da rede — em Wi-Fi 5GHz local: ~15-25fps.
+    function pump() {
+      if (!base || busy) return;
+      busy = true;
+      var tmp = new Image();
+      tmp.onload = function() {
+        img.src = tmp.src;
+        busy = false;
+        pump();
+      };
+      tmp.onerror = function() {
+        busy = false;
+        setTimeout(pump, 200);
+      };
+      tmp.src = base + '/cast_photo.jpg?t=' + Date.now();
+    }
 
     var options = new cast.framework.CastReceiverOptions();
     options.maxInactivity = 3600;
