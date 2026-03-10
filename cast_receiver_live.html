@@ -5,25 +5,39 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box }
     body { background: #000; width: 100vw; height: 100vh; overflow: hidden }
-    img { width: 100%; height: 100%; object-fit: contain; display: block; transition: opacity 0.3s ease-in-out; }
+    img { width: 100%; height: 100%; object-fit: contain; display: block }
   </style>
 </head>
 <body>
-  <img id="s" alt="">
+  <img id="p" alt="">
   <script src="//www.gstatic.com/cast/sdk/libs/caf_receiver/v3/cast_receiver_framework.js"></script>
   <script>
     var NS  = 'urn:x-cast:com.infinityretouch.live';
     var ctx = cast.framework.CastReceiverContext.getInstance();
     var base = null;
+    var lastVer = null;
+    var img = document.getElementById('p');
 
     ctx.addCustomMessageListener(NS, function(e) {
       var d = e.data;
-      if (d.url && d.url !== base) {
-        base = d.url;
-        // Chromecast runs Chrome — MJPEG is natively supported via <img>
-        document.getElementById('s').src = base + '/stream';
-      }
+      if (d.url) base = d.url;
     });
+
+    // Poll /version every 200ms — individual JPEG requests work even in HTTPS receiver context;
+    // long-lived MJPEG streams are blocked by Chromium's Mixed Content / Private Network Access.
+    setInterval(function() {
+      if (!base) return;
+      fetch(base + '/version?r=' + Date.now())
+        .then(function(r) { return r.text(); })
+        .then(function(v) {
+          v = v.trim();
+          if (v !== lastVer) {
+            lastVer = v;
+            img.src = base + '/cast_photo.jpg?t=' + v;
+          }
+        })
+        .catch(function() {});
+    }, 200);
 
     var options = new cast.framework.CastReceiverOptions();
     options.maxInactivity = 3600;
