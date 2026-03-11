@@ -1,8 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-br" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Preconnect: reduz latência de recursos críticos -->
+		<link rel="preconnect" href="https://www.googletagmanager.com">
+		<link rel="preconnect" href="https://connect.facebook.net">
+		<link rel="preconnect" href="https://www.google-analytics.com">
 		
 		<!-- Verificação de Domínio da Meta (Facebook) -->
 		<meta name="facebook-domain-verification" content="81pm9o4zn4jpgdafczvg2dc2g0woia">
@@ -13,7 +18,7 @@
 				const path = window.location.pathname;
 				const isRoot = path === '/' || path === '/index.html' || path === '';
 				if (isRoot) {
-					const browserLang = (navigator.language || navigator.userUserLanguage || 'en').toLowerCase();
+					const browserLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
 					const userForcedEn = sessionStorage.getItem('user-preferred-en');
 					if (browserLang.startsWith('pt') && !userForcedEn) {
 						window.location.replace('/pt-br/');
@@ -68,9 +73,9 @@
 		
 		<!-- SEO Internacional (Hreflang) -->
 		<link rel="canonical" href="https://infinityretouch.com/br/buy/backdrop-cleaner/">
-		<link rel="alternate" hreflang="en" href="https://infinityretouch.com/">
-		<link rel="alternate" hreflang="pt-br" href="https://infinityretouch.com/pt-br/">
-		<link rel="alternate" hreflang="x-default" href="https://infinityretouch.com/">
+		<link rel="alternate" hreflang="en" href="https://infinityretouch.com/br/buy/backdrop-cleaner/">
+		<link rel="alternate" hreflang="pt-br" href="https://infinityretouch.com/pt-br/br/buy/backdrop-cleaner/">
+		<link rel="alternate" hreflang="x-default" href="https://infinityretouch.com/br/buy/backdrop-cleaner/">
 
 		<!-- Open Graph (Social Media) -->
 		<meta property="og:title" content="Finalizar Compra - Infinity Retouch">
@@ -79,16 +84,24 @@
 		<meta property="og:image" content="https://infinityretouch.com/og-infinity-backdrop-cleaner.jpg">
 		<meta property="og:image:width" content="1200">
 		<meta property="og:image:height" content="630">
+		<meta property="og:image:alt" content="Finalizar Compra - Infinity Retouch">
 		<meta property="og:type" content="website">
 		<meta property="og:site_name" content="Infinity Retouch">
 		<meta property="og:locale" content="pt_BR">
-		
+
 		<!-- Twitter Card -->
 		<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:title" content="Finalizar Compra - Infinity Retouch">
 		<meta name="twitter:description" content="Selecione sua região para concluir a compra do Infinity Backdrop Cleaner.">
 		<meta name="twitter:image" content="https://infinityretouch.com/og-infinity-backdrop-cleaner.jpg">
-	<link rel="stylesheet" href="/_astro/backdrop-cleaner.Cxgc5nD_.css">
+		<meta name="twitter:image:alt" content="Finalizar Compra - Infinity Retouch">
+
+		<!-- JSON-LD: Organization (todas as páginas) -->
+		<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Infinity Retouch","url":"https://infinityretouch.com","logo":"https://infinityretouch.com/favicon-96x96.png","contactPoint":{"@type":"ContactPoint","email":"sales@infinityretouch.com","contactType":"customer support"}}</script>
+
+		<!-- JSON-LD: Schema específico da página (opcional) -->
+		
+	<link rel="stylesheet" href="/_astro/backdrop-cleaner.BQCRF1d8.css">
 <link rel="stylesheet" href="/_astro/backdrop-cleaner.bkwbKytY.css"></head>
 
 	<body class="bg-slate-900 text-white font-sans antialiased">

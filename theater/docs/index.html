@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Preconnect: reduz latência de recursos críticos -->
+		<link rel="preconnect" href="https://www.googletagmanager.com">
+		<link rel="preconnect" href="https://connect.facebook.net">
+		<link rel="preconnect" href="https://www.google-analytics.com">
+		
+		<!-- Verificação de Domínio da Meta (Facebook) -->
+		<meta name="facebook-domain-verification" content="81pm9o4zn4jpgdafczvg2dc2g0woia">
+
+		<!-- 1. Script de Detecção Automática de Idioma -->
+		<script>
+			(function() {
+				const path = window.location.pathname;
+				const isRoot = path === '/' || path === '/index.html' || path === '';
+				if (isRoot) {
+					const browserLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+					const userForcedEn = sessionStorage.getItem('user-preferred-en');
+					if (browserLang.startsWith('pt') && !userForcedEn) {
+						window.location.replace('/pt-br/');
+					}
+				}
+			})();
+		</script>
+
+		<!-- 2. Meta Pixel Code (ID: 1261263012570367) -->
+		<script>
+			!function(f,b,e,v,n,t,s)
+			{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+			n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+			if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+			n.queue=[];t=b.createElement(e);t.async=!0;
+			t.src=v;s=b.getElementsByTagName(e)[0];
+			s.parentNode.insertBefore(t,s)}(window, document,'script',
+			'https://connect.facebook.net/en_US/fbevents.js');
+			fbq('init', '1261263012570367');
+			fbq('track', 'PageView');
+		</script>
+		<noscript>
+			<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1261263012570367&ev=PageView&noscript=1">
+		</noscript>
+
+		<!-- 3. Google Analytics (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-RN28DZF26K"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-RN28DZF26K');
+		</script>
+
+		<!-- Favicons & Branding Professional -->
+		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<meta name="apple-mobile-web-app-title" content="Infinity Retouch">
+		<link rel="manifest" href="/site.webmanifest">
+		<meta name="theme-color" content="#10b981">
+
+		<!-- SEO Básico -->
+		<title>Infinity Theater — User Manual</title>
+		<meta name="description" content="Complete guide for Infinity Theater: FTP setup, monitor configuration, display controls and troubleshooting.">
+		<meta name="keywords" content="photoshop plugin, backdrop cleaner, UXP plugin, infinite background, studio photography, photo retouching, background cleaning, photoshop automation">
+		<meta name="author" content="Infinity Retouch">
+		<meta name="generator" content="Astro v5.17.2">
+		
+		<meta name="robots" content="noindex, nofollow">
+		
+		<!-- SEO Internacional (Hreflang) -->
+		<link rel="canonical" href="https://infinityretouch.com/theater/docs/">
+		<link rel="alternate" hreflang="en" href="https://infinityretouch.com/theater/docs/">
+		<link rel="alternate" hreflang="pt-br" href="https://infinityretouch.com/pt-br/theater/docs/">
+		<link rel="alternate" hreflang="x-default" href="https://infinityretouch.com/theater/docs/">
+
+		<!-- Open Graph (Social Media) -->
+		<meta property="og:title" content="Infinity Theater — User Manual">
+		<meta property="og:description" content="Complete guide for Infinity Theater: FTP setup, monitor configuration, display controls and troubleshooting.">
+		<meta property="og:url" content="https://infinityretouch.com/theater/docs/">
+		<meta property="og:image" content="https://infinityretouch.com/og-infinity-backdrop-cleaner.jpg">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<meta property="og:image:alt" content="Infinity Theater — User Manual">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="Infinity Retouch">
+		<meta property="og:locale" content="en_US">
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Infinity Theater — User Manual">
+		<meta name="twitter:description" content="Complete guide for Infinity Theater: FTP setup, monitor configuration, display controls and troubleshooting.">
+		<meta name="twitter:image" content="https://infinityretouch.com/og-infinity-backdrop-cleaner.jpg">
+		<meta name="twitter:image:alt" content="Infinity Theater — User Manual">
+
+		<!-- JSON-LD: Organization (todas as páginas) -->
+		<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Infinity Retouch","url":"https://infinityretouch.com","logo":"https://infinityretouch.com/favicon-96x96.png","contactPoint":{"@type":"ContactPoint","email":"sales@infinityretouch.com","contactType":"customer support"}}</script>
+
+		<!-- JSON-LD: Schema específico da página (opcional) -->
+		<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Help Center","item":"https://infinityretouch.com/docs/"},{"@type":"ListItem","position":2,"name":"Infinity Theater","item":"https://infinityretouch.com/theater/docs/"}]}</script>
+	<link rel="stylesheet" href="/_astro/backdrop-cleaner.BQCRF1d8.css">
+<link rel="stylesheet" href="/_astro/backdrop-cleaner.BigPLOf-.css">
+<link rel="stylesheet" href="/_astro/index.CdEArooD.css"></head>
+
+	<body class="bg-slate-900 text-white font-sans antialiased">
+		
+  <nav class="fixed top-0 left-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-white/5" data-astro-cid-5blmo7yk>
+  <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between" data-astro-cid-5blmo7yk>
+    
+    <!-- LOGO -->
+    <a href="/" class="flex items-center gap-3 group shrink-0" data-astro-cid-5blmo7yk>
+      <img src="/favicon.svg" alt="Infinity Retouch Logo" width="32" height="32" class="w-8 h-8 object-contain logo-sharp" data-astro-cid-5blmo7yk>
+      <span class="font-black text-lg tracking-tighter text-white italic uppercase" data-astro-cid-5blmo7yk>
+        INFINITY <span class="text-emerald-500" data-astro-cid-5blmo7yk>RETOUCH</span>
+      </span>
+    </a>
+
+    <!-- DIREITA: Idioma + Menu -->
+    <div class="flex items-center gap-3 md:gap-8" data-astro-cid-5blmo7yk>
+      
+      <!-- LINKS DESKTOP -->
+      <div class="hidden md:flex items-center gap-8 mr-4" data-astro-cid-5blmo7yk>
+
+        <!-- Products Dropdown -->
+        <div class="relative group" data-astro-cid-5blmo7yk>
+          <button class="text-[11px] font-black text-slate-400 hover:text-white transition-colors uppercase tracking-[0.2em] flex items-center gap-1 cursor-pointer bg-transparent border-none p-0" data-astro-cid-5blmo7yk>
+            Products
+            <svg class="w-3 h-3 group-hover:rotate-180 transition-transform duration-150" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-astro-cid-5blmo7yk>
+              <path d="M19 9l-7 7-7-7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5blmo7yk></path>
+            </svg>
+          </button>
+          <div class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50" data-astro-cid-5blmo7yk>
+            <div class="bg-slate-800 border border-white/10 rounded-2xl shadow-2xl shadow-black/50 p-2 min-w-[270px]" data-astro-cid-5blmo7yk>
+              <a href="/" class="flex items-start gap-3 p-3 rounded-xl hover:bg-white/5 transition-colors group/item" data-astro-cid-5blmo7yk>
+                <span class="text-xl leading-none mt-0.5" data-astro-cid-5blmo7yk>🖼️</span>
+                <div data-astro-cid-5blmo7yk>
+                  <div class="text-white text-[11px] font-black uppercase tracking-wider group-hover/item:text-emerald-400 transition-colors" data-astro-cid-5blmo7yk>Backdrop Cleaner</div>
+                  <div class="text-slate-500 text-[10px] font-bold uppercase tracking-widest" data-astro-cid-5blmo7yk>Photoshop Plugin</div>
+                </div>
+              </a>
+              <!-- COMING SOON — descomentar quando Theater e Live forem lançados
+              <a href={links.theater} class="flex items-start gap-3 p-3 rounded-xl hover:bg-white/5 transition-colors group/item">
+                <span class="text-xl leading-none mt-0.5">📸</span>
+                <div>
+                  <div class="text-white text-[11px] font-black uppercase tracking-wider group-hover/item:text-emerald-400 transition-colors">Infinity Theater</div>
+                  <div class="text-slate-500 text-[10px] font-bold uppercase tracking-widest">{lang === 'en' ? 'Android App · Studio Photos' : 'App Android · Fotos de Estúdio'}</div>
+                </div>
+              </a>
+              <a href={links.live} class="flex items-start gap-3 p-3 rounded-xl hover:bg-white/5 transition-colors group/item">
+                <span class="text-xl leading-none mt-0.5">📱</span>
+                <div>
+                  <div class="text-white text-[11px] font-black uppercase tracking-wider group-hover/item:text-emerald-400 transition-colors">Infinity Live</div>
+                  <div class="text-slate-500 text-[10px] font-bold uppercase tracking-widest">{lang === 'en' ? 'Android App · Camera Streaming' : 'App Android · Streaming de Câmera'}</div>
+                </div>
+              </a>
+              -->
+            </div>
+          </div>
+        </div>
+
+        <a href="/#features" class="text-[11px] font-black text-slate-400 hover:text-white transition-colors uppercase tracking-[0.2em]" data-astro-cid-5blmo7yk>Features</a>
+        <a href="/docs/" class="text-[11px] font-black text-slate-400 hover:text-white transition-colors uppercase tracking-[0.2em]" data-astro-cid-5blmo7yk>Docs</a>
+      </div>
+
+      <!-- BOTÃO DE IDIOMA (Sempre Visível) -->
+      <a href="/pt-br/theater/docs/" onclick="if(this.innerText.includes('EN')) sessionStorage.setItem('user-preferred-en', 'true')" class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-[10px] font-black text-slate-300 hover:text-white hover:border-white/20 transition-colors" data-astro-cid-5blmo7yk>
+        <span class="opacity-50" data-astro-cid-5blmo7yk>PT</span>
+        <span class="w-px h-3 bg-white/20" data-astro-cid-5blmo7yk></span>
+        <span data-astro-cid-5blmo7yk>BR</span>
+      </a>
+
+      <!-- BOTÃO COMPRAR (Desktop) -->
+      <a href="/buy/backdrop-cleaner/" class="hidden md:block bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-[11px] font-black px-6 py-3 rounded-full transition-all shadow-lg shadow-emerald-500/20 transform hover:-translate-y-0.5 uppercase tracking-widest" data-astro-cid-5blmo7yk>
+        Buy Now
+      </a>
+
+      <!-- MENU MOBILE (Hambúrguer) -->
+      <button id="menu-toggle" class="md:hidden text-white p-2 hover:bg-white/5 rounded-lg transition-colors" aria-label="Toggle Menu" data-astro-cid-5blmo7yk>
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-astro-cid-5blmo7yk>
+            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" data-astro-cid-5blmo7yk></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- DRAWER MOBILE -->
+  <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-slate-900 border-b border-white/10 shadow-2xl" data-astro-cid-5blmo7yk>
+    <div class="flex flex-col p-6 gap-2 font-black uppercase tracking-widest text-[11px]" data-astro-cid-5blmo7yk>
+        <div class="py-3 border-b border-white/5" data-astro-cid-5blmo7yk>
+          <p class="text-slate-600 text-[9px] tracking-[0.3em] mb-2" data-astro-cid-5blmo7yk>Products</p>
+          <a href="/" class="flex items-center gap-2 py-2 text-slate-400 hover:text-white" data-astro-cid-5blmo7yk>🖼️ Backdrop Cleaner</a>
+          <!-- COMING SOON — descomentar quando Theater e Live forem lançados
+          <a href={links.theater} class="flex items-center gap-2 py-2 text-slate-400 hover:text-white">📸 Infinity Theater</a>
+          <a href={links.live} class="flex items-center gap-2 py-2 text-slate-400 hover:text-white">📱 Infinity Live</a>
+          -->
+        </div>
+        <a href="/#features" class="py-4 border-b border-white/5 text-slate-400 hover:text-white" data-astro-cid-5blmo7yk>Features</a>
+        <a href="/docs/" class="py-4 border-b border-white/5 text-slate-400 hover:text-white" data-astro-cid-5blmo7yk>Docs</a>
+        <a href="/buy/backdrop-cleaner/" class="py-6 text-emerald-500 flex items-center justify-between" data-astro-cid-5blmo7yk>
+            Buy Now
+            <span class="bg-emerald-500/10 px-3 py-1 rounded-md text-[10px]" data-astro-cid-5blmo7yk>$29</span>
+        </a>
+    </div>
+  </div>
+</nav>
+
+<script type="module" src="/_astro/Navbar.astro_astro_type_script_index_0_lang.DDz8_The.js"></script>
+
+  <main class="pt-32 pb-20 px-4 bg-slate-900 min-h-screen relative overflow-hidden" data-astro-cid-3twagrka>
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-emerald-500/5 blur-[120px] rounded-full pointer-events-none" data-astro-cid-3twagrka></div>
+
+    <div class="max-w-[900px] mx-auto relative z-10" data-astro-cid-3twagrka>
+
+      <!-- BREADCRUMB -->
+      <nav class="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-600 mb-12 border-b border-white/5 pb-6" data-astro-cid-3twagrka>
+        <a href="/docs/" class="hover:text-emerald-400 transition-colors" data-astro-cid-3twagrka>Help Center</a>
+        <span class="text-slate-800" data-astro-cid-3twagrka>/</span>
+        <a href="/theater/" class="hover:text-emerald-400 transition-colors" data-astro-cid-3twagrka>Infinity Theater</a>
+        <span class="text-slate-800" data-astro-cid-3twagrka>/</span>
+        <span class="text-white italic tracking-tighter" data-astro-cid-3twagrka>Infinity Theater</span>
+      </nav>
+
+      <!-- HEADER -->
+      <header class="text-center mb-20" data-astro-cid-3twagrka>
+        <h1 class="text-6xl lg:text-8xl font-black text-white italic tracking-tighter mb-6 uppercase leading-none" data-astro-cid-3twagrka>
+          Infinity Theater
+        </h1>
+        <p class="text-slate-400 text-xl font-medium max-w-2xl mx-auto" data-astro-cid-3twagrka>Complete user manual — FTP setup, monitors, controls and troubleshooting.</p>
+      </header>
+
+      <!-- TOC -->
+      <div class="bg-slate-800/40 border border-white/10 rounded-[2.5rem] p-10 mb-20 shadow-2xl backdrop-blur-sm relative overflow-hidden" data-astro-cid-3twagrka>
+        <div class="absolute top-0 right-0 w-40 h-40 bg-emerald-500/5 blur-3xl rounded-full" data-astro-cid-3twagrka></div>
+        <h3 class="text-sm font-black text-emerald-500 mb-8 uppercase tracking-[0.4em] italic" data-astro-cid-3twagrka>Contents</h3>
+        <ul class="grid md:grid-cols-2 gap-x-12 gap-y-4 text-[11px] font-black uppercase tracking-widest list-none" data-astro-cid-3twagrka>
+          <li data-astro-cid-3twagrka>
+              <a href="#quick-start" class="text-slate-400 hover:text-emerald-400 transition-colors flex items-center gap-2" data-astro-cid-3twagrka>
+                <span class="text-emerald-500/30" data-astro-cid-3twagrka>#</span> Quick Start
+              </a>
+            </li><li data-astro-cid-3twagrka>
+              <a href="#ftp-setup" class="text-slate-400 hover:text-emerald-400 transition-colors flex items-center gap-2" data-astro-cid-3twagrka>
+                <span class="text-emerald-500/30" data-astro-cid-3twagrka>#</span> FTP Configuration
+              </a>
+            </li><li data-astro-cid-3twagrka>
+              <a href="#monitors" class="text-slate-400 hover:text-emerald-400 transition-colors flex items-center gap-2" data-astro-cid-3twagrka>
+                <span class="text-emerald-500/30" data-astro-cid-3twagrka>#</span> Monitor Setup
+              </a>
+            </li><li data-astro-cid-3twagrka>
+              <a href="#controls" class="text-slate-400 hover:text-emerald-400 transition-colors flex items-center gap-2" data-astro-cid-3twagrka>
+                <span class="text-emerald-500/30" data-astro-cid-3twagrka>#</span> Display Controls
+              </a>
+            </li><li data-astro-cid-3twagrka>
+              <a href="#production" class="text-slate-400 hover:text-emerald-400 transition-colors flex items-center gap-2" data-astro-cid-3twagrka>
+                <span class="text-emerald-500/30" data-astro-cid-3twagrka>#</span> Production Tips
+              </a>
+            </li><li data-astro-cid-3twagrka>
+              <a href="#billing" class="text-slate-400 hover:text-emerald-400 transition-colors flex items-center gap-2" data-astro-cid-3twagrka>
+                <span class="text-emerald-500/30" data-astro-cid-3twagrka>#</span> Trial &amp; Billing
+              </a>
+            </li><li data-astro-cid-3twagrka>
+              <a href="#support" class="text-slate-400 hover:text-emerald-400 transition-colors flex items-center gap-2" data-astro-cid-3twagrka>
+                <span class="text-emerald-500/30" data-astro-cid-3twagrka>#</span> Support
+              </a>
+            </li>
+        </ul>
+      </div>
+
+      <div class="space-y-32" data-astro-cid-3twagrka>
+
+        <!-- QUICK START -->
+        <section id="quick-start" class="scroll-mt-32" data-astro-cid-3twagrka>
+          <h2 class="text-4xl lg:text-5xl font-black text-white border-b border-white/10 pb-6 mb-12 italic uppercase tracking-tighter" data-astro-cid-3twagrka>Quick Start</h2>
+          <div class="grid gap-6" data-astro-cid-3twagrka>
+            <div class="flex gap-8 p-8 bg-slate-800/20 rounded-[2rem] border border-white/5 items-start hover:border-emerald-500/30 transition-all group" data-astro-cid-3twagrka>
+                <span class="flex-shrink-0 w-12 h-12 bg-emerald-600 text-slate-950 rounded-2xl flex items-center justify-center font-black text-lg group-hover:scale-110 group-hover:rotate-3 transition-transform" data-astro-cid-3twagrka>
+                  1
+                </span>
+                <div data-astro-cid-3twagrka>
+                  <h3 class="text-white font-black text-xl mb-2 uppercase italic tracking-tight" data-astro-cid-3twagrka>Install</h3>
+                  <p class="text-slate-400 m-0 leading-relaxed text-sm font-medium" data-astro-cid-3twagrka>Download Infinity Theater from Google Play and install it on your Android phone.</p>
+                </div>
+              </div><div class="flex gap-8 p-8 bg-slate-800/20 rounded-[2rem] border border-white/5 items-start hover:border-emerald-500/30 transition-all group" data-astro-cid-3twagrka>
+                <span class="flex-shrink-0 w-12 h-12 bg-emerald-600 text-slate-950 rounded-2xl flex items-center justify-center font-black text-lg group-hover:scale-110 group-hover:rotate-3 transition-transform" data-astro-cid-3twagrka>
+                  2
+                </span>
+                <div data-astro-cid-3twagrka>
+                  <h3 class="text-white font-black text-xl mb-2 uppercase italic tracking-tight" data-astro-cid-3twagrka>Start Session</h3>
+                  <p class="text-slate-400 m-0 leading-relaxed text-sm font-medium" data-astro-cid-3twagrka>Open the app and tap <strong>START SESSION</strong>. The server starts and your phone's IP address is displayed.</p>
+                </div>
+              </div><div class="flex gap-8 p-8 bg-slate-800/20 rounded-[2rem] border border-white/5 items-start hover:border-emerald-500/30 transition-all group" data-astro-cid-3twagrka>
+                <span class="flex-shrink-0 w-12 h-12 bg-emerald-600 text-slate-950 rounded-2xl flex items-center justify-center font-black text-lg group-hover:scale-110 group-hover:rotate-3 transition-transform" data-astro-cid-3twagrka>
+                  3
+                </span>
+                <div data-astro-cid-3twagrka>
+                  <h3 class="text-white font-black text-xl mb-2 uppercase italic tracking-tight" data-astro-cid-3twagrka>Configure Camera</h3>
+                  <p class="text-slate-400 m-0 leading-relaxed text-sm font-medium" data-astro-cid-3twagrka>In your camera's FTP settings, enter the IP shown, port <strong>2121</strong>, user <strong>infinity</strong>, password <strong>theater</strong>, passive mode.</p>
+                </div>
+              </div><div class="flex gap-8 p-8 bg-slate-800/20 rounded-[2rem] border border-white/5 items-start hover:border-emerald-500/30 transition-all group" data-astro-cid-3twagrka>
+                <span class="flex-shrink-0 w-12 h-12 bg-emerald-600 text-slate-950 rounded-2xl flex items-center justify-center font-black text-lg group-hover:scale-110 group-hover:rotate-3 transition-transform" data-astro-cid-3twagrka>
+                  4
+                </span>
+                <div data-astro-cid-3twagrka>
+                  <h3 class="text-white font-black text-xl mb-2 uppercase italic tracking-tight" data-astro-cid-3twagrka>Connect Monitors</h3>
+                  <p class="text-slate-400 m-0 leading-relaxed text-sm font-medium" data-astro-cid-3twagrka>Open <code>http://IP:8080</code> in any browser, cast to Chromecast, or install the TV app on Android TV. Photos appear the moment the camera uploads them.</p>
+                </div>
+              </div>
+          </div>
+          <div class="mt-12 p-10 bg-emerald-500/5 border-l-4 border-emerald-500 rounded-r-[2rem]" data-astro-cid-3twagrka>
+            <strong class="text-emerald-400 block mb-4 uppercase tracking-[0.3em] text-[10px] font-black italic" data-astro-cid-3twagrka>Pro Tip</strong>
+            <p class="m-0 text-slate-300 italic font-medium leading-relaxed" data-astro-cid-3twagrka>Set your camera's FTP transfer to <strong>"Each Shot"</strong> (not batch) for the lowest possible latency on screen.</p>
+          </div>
+        </section>
+
+        <!-- FTP SETUP -->
+        <section id="ftp-setup" class="scroll-mt-32" data-astro-cid-3twagrka>
+          <h2 class="text-4xl lg:text-5xl font-black text-white border-b border-white/10 pb-6 mb-12 italic uppercase tracking-tighter" data-astro-cid-3twagrka>FTP Configuration</h2>
+          <p class="text-lg font-medium text-slate-400 mb-10" data-astro-cid-3twagrka>Use exactly these settings in your camera&#39;s FTP transfer menu:</p>
+          <div class="overflow-hidden rounded-3xl border border-white/10 mb-10" data-astro-cid-3twagrka>
+            <div class="flex gap-6 px-8 py-5 bg-slate-800/40 border-b border-white/5 last:border-0" data-astro-cid-3twagrka>
+                <span class="text-emerald-500 font-black text-[10px] uppercase tracking-widest w-40 shrink-0 flex items-center" data-astro-cid-3twagrka>Server / Host</span>
+                <code class="text-white font-mono text-sm" data-astro-cid-3twagrka>IP shown in the app (e.g. 192.168.1.15)</code>
+              </div><div class="flex gap-6 px-8 py-5 bg-slate-800/20 border-b border-white/5 last:border-0" data-astro-cid-3twagrka>
+                <span class="text-emerald-500 font-black text-[10px] uppercase tracking-widest w-40 shrink-0 flex items-center" data-astro-cid-3twagrka>Port</span>
+                <code class="text-white font-mono text-sm" data-astro-cid-3twagrka>2121</code>
+              </div><div class="flex gap-6 px-8 py-5 bg-slate-800/40 border-b border-white/5 last:border-0" data-astro-cid-3twagrka>
+                <span class="text-emerald-500 font-black text-[10px] uppercase tracking-widest w-40 shrink-0 flex items-center" data-astro-cid-3twagrka>Username</span>
+                <code class="text-white font-mono text-sm" data-astro-cid-3twagrka>infinity</code>
+              </div><div class="flex gap-6 px-8 py-5 bg-slate-800/20 border-b border-white/5 last:border-0" data-astro-cid-3twagrka>
+                <span class="text-emerald-500 font-black text-[10px] uppercase tracking-widest w-40 shrink-0 flex items-center" data-astro-cid-3twagrka>Password</span>
+                <code class="text-white font-mono text-sm" data-astro-cid-3twagrka>theater</code>
+              </div><div class="flex gap-6 px-8 py-5 bg-slate-800/40 border-b border-white/5 last:border-0" data-astro-cid-3twagrka>
+                <span class="text-emerald-500 font-black text-[10px] uppercase tracking-widest w-40 shrink-0 flex items-center" data-astro-cid-3twagrka>Mode</span>
+                <code class="text-white font-mono text-sm" data-astro-cid-3twagrka>Passive (PASV)</code>
+              </div><div class="flex gap-6 px-8 py-5 bg-slate-800/20 border-b border-white/5 last:border-0" data-astro-cid-3twagrka>
+                <span class="text-emerald-500 font-black text-[10px] uppercase tracking-widest w-40 shrink-0 flex items-center" data-astro-cid-3twagrka>Destination Folder</span>
+                <code class="text-white font-mono text-sm" data-astro-cid-3twagrka>/ (root) or leave blank</code>
+              </div>
+          </div>
+          <p class="text-slate-500 text-sm font-medium leading-relaxed italic" data-astro-cid-3twagrka>Compatible with Sony (Wi-Fi FTP), Canon (FTP Transfer), Nikon (WT series), Fujifilm (Wireless Settings &gt; FTP), and any camera with FTP transfer support.</p>
+        </section>
+
+        <!-- MONITORS -->
+        <section id="monitors" class="scroll-mt-32" data-astro-cid-3twagrka>
+          <h2 class="text-4xl lg:text-5xl font-black text-white border-b border-white/10 pb-6 mb-12 italic uppercase tracking-tighter" data-astro-cid-3twagrka>Monitor Setup</h2>
+          <div class="grid md:grid-cols-2 gap-6" data-astro-cid-3twagrka>
+            <div class="p-8 bg-slate-800/20 rounded-3xl border border-white/5 hover:border-emerald-500/20 transition-all" data-astro-cid-3twagrka>
+                <div class="text-2xl mb-4" data-astro-cid-3twagrka>🌐</div>
+                <h3 class="text-white font-black text-lg mb-3 uppercase italic tracking-tight" data-astro-cid-3twagrka>Web Browser</h3>
+                <p class="text-slate-400 text-sm leading-relaxed font-medium" data-astro-cid-3twagrka>Open <code>http://IP:8080</code> in any browser on the same Wi-Fi network. Works on laptops, tablets, phones and most Smart TV browsers.</p>
+              </div><div class="p-8 bg-slate-800/20 rounded-3xl border border-white/5 hover:border-emerald-500/20 transition-all" data-astro-cid-3twagrka>
+                <div class="text-2xl mb-4" data-astro-cid-3twagrka>📡</div>
+                <h3 class="text-white font-black text-lg mb-3 uppercase italic tracking-tight" data-astro-cid-3twagrka>Chromecast</h3>
+                <p class="text-slate-400 text-sm leading-relaxed font-medium" data-astro-cid-3twagrka>Tap the <strong>Cast</strong> icon at the top of the app and select your Chromecast or TV with built-in Chromecast.</p>
+              </div><div class="p-8 bg-slate-800/20 rounded-3xl border border-white/5 hover:border-emerald-500/20 transition-all" data-astro-cid-3twagrka>
+                <div class="text-2xl mb-4" data-astro-cid-3twagrka>📺</div>
+                <h3 class="text-white font-black text-lg mb-3 uppercase italic tracking-tight" data-astro-cid-3twagrka>Android TV</h3>
+                <p class="text-slate-400 text-sm leading-relaxed font-medium" data-astro-cid-3twagrka>Install the Infinity Theater companion app on your Android TV. It auto-discovers the phone via Wi-Fi — no IP entry needed.</p>
+              </div><div class="p-8 bg-slate-800/20 rounded-3xl border border-white/5 hover:border-emerald-500/20 transition-all" data-astro-cid-3twagrka>
+                <div class="text-2xl mb-4" data-astro-cid-3twagrka>🖥️</div>
+                <h3 class="text-white font-black text-lg mb-3 uppercase italic tracking-tight" data-astro-cid-3twagrka>Samsung / LG Smart TV (DLNA)</h3>
+                <p class="text-slate-400 text-sm leading-relaxed font-medium" data-astro-cid-3twagrka>Tap the <strong>DLNA</strong> pill in the app, select your TV from the list, and photos are pushed directly. No app installation needed on the TV.</p>
+              </div>
+          </div>
+        </section>
+
+        <!-- CONTROLS -->
+        <section id="controls" class="scroll-mt-32" data-astro-cid-3twagrka>
+          <h2 class="text-4xl lg:text-5xl font-black text-white border-b border-white/10 pb-6 mb-12 italic uppercase tracking-tighter" data-astro-cid-3twagrka>Display Controls</h2>
+          <p class="text-lg font-medium text-slate-400 mb-8" data-astro-cid-3twagrka>Tap the gear icon in the center of the screen to open the settings menu. Each output has independent rotation:</p>
+          <ul class="space-y-4" data-astro-cid-3twagrka>
+            <li class="flex items-center gap-4 p-5 bg-slate-800/20 rounded-2xl border border-white/5 text-slate-300 text-sm font-medium" data-astro-cid-3twagrka>
+                <span class="text-emerald-500" data-astro-cid-3twagrka>✔</span> Chromecast: Portrait / Inverted
+              </li><li class="flex items-center gap-4 p-5 bg-slate-800/20 rounded-2xl border border-white/5 text-slate-300 text-sm font-medium" data-astro-cid-3twagrka>
+                <span class="text-emerald-500" data-astro-cid-3twagrka>✔</span> Web Monitor / Android TV: 0° / 90° / 180° / 270°
+              </li><li class="flex items-center gap-4 p-5 bg-slate-800/20 rounded-2xl border border-white/5 text-slate-300 text-sm font-medium" data-astro-cid-3twagrka>
+                <span class="text-emerald-500" data-astro-cid-3twagrka>✔</span> DLNA: independent rotation in the DLNA section
+              </li>
+          </ul>
+          <p class="mt-6 text-slate-500 text-sm italic font-medium" data-astro-cid-3twagrka>Rotation settings are saved per output and persist across sessions.</p>
+        </section>
+
+        <!-- PRODUCTION -->
+        <section id="production" class="scroll-mt-32" data-astro-cid-3twagrka>
+          <h2 class="text-4xl lg:text-5xl font-black text-white border-b border-white/10 pb-6 mb-12 italic uppercase tracking-tighter" data-astro-cid-3twagrka>Production Tips</h2>
+          <div class="grid md:grid-cols-2 gap-6" data-astro-cid-3twagrka>
+            <div class="p-8 bg-slate-800/20 rounded-3xl border border-white/5" data-astro-cid-3twagrka>
+                <h3 class="text-emerald-400 font-black mb-4 uppercase italic text-xs tracking-[0.3em]" data-astro-cid-3twagrka>Quality Settings</h3>
+                <p class="text-slate-400 text-sm leading-relaxed font-medium" data-astro-cid-3twagrka>Choose Full HD (1920px) for maximum speed, 2K (2560px) for balance, or 4K (3840px) for maximum quality on large TVs.</p>
+              </div><div class="p-8 bg-slate-800/20 rounded-3xl border border-white/5" data-astro-cid-3twagrka>
+                <h3 class="text-emerald-400 font-black mb-4 uppercase italic text-xs tracking-[0.3em]" data-astro-cid-3twagrka>Disk Cache</h3>
+                <p class="text-slate-400 text-sm leading-relaxed font-medium" data-astro-cid-3twagrka>Photos are cached to disk, allowing 100+ photo history without consuming device RAM. History is cleared when starting a new session.</p>
+              </div><div class="p-8 bg-slate-800/20 rounded-3xl border border-white/5" data-astro-cid-3twagrka>
+                <h3 class="text-emerald-400 font-black mb-4 uppercase italic text-xs tracking-[0.3em]" data-astro-cid-3twagrka>Post-Session Review</h3>
+                <p class="text-slate-400 text-sm leading-relaxed font-medium" data-astro-cid-3twagrka>Tap <strong>STOP SESSION</strong> to end shooting. The photo strip remains on screen for client review. Cleared only when starting a new session.</p>
+              </div><div class="p-8 bg-slate-800/20 rounded-3xl border border-white/5" data-astro-cid-3twagrka>
+                <h3 class="text-emerald-400 font-black mb-4 uppercase italic text-xs tracking-[0.3em]" data-astro-cid-3twagrka>Burst Protection</h3>
+                <p class="text-slate-400 text-sm leading-relaxed font-medium" data-astro-cid-3twagrka>When the camera shoots rapidly, the app prioritizes the latest photo and drops intermediates to prevent display lag.</p>
+              </div>
+          </div>
+        </section>
+
+        <!-- BILLING -->
+        <section id="billing" class="scroll-mt-32" data-astro-cid-3twagrka>
+          <h2 class="text-4xl lg:text-5xl font-black text-white border-b border-white/10 pb-6 mb-12 italic uppercase tracking-tighter" data-astro-cid-3twagrka>Trial &amp; Billing</h2>
+          <div class="grid md:grid-cols-3 gap-6" data-astro-cid-3twagrka>
+            <div class="p-8 bg-white/5 rounded-3xl border border-white/5" data-astro-cid-3twagrka>
+                <h3 class="text-emerald-500 font-black mb-4 uppercase italic text-[10px] tracking-widest" data-astro-cid-3twagrka>7-Day Free Trial</h3>
+                <p class="text-sm font-medium leading-relaxed text-slate-400" data-astro-cid-3twagrka>All features are fully available for 7 days from first use. No credit card required.</p>
+              </div><div class="p-8 bg-white/5 rounded-3xl border border-white/5" data-astro-cid-3twagrka>
+                <h3 class="text-emerald-500 font-black mb-4 uppercase italic text-[10px] tracking-widest" data-astro-cid-3twagrka>Free Tier After Trial</h3>
+                <p class="text-sm font-medium leading-relaxed text-slate-400" data-astro-cid-3twagrka>After the trial, 30 photos per session are available at no cost. Perfect for testing on real sets.</p>
+              </div><div class="p-8 bg-white/5 rounded-3xl border border-white/5" data-astro-cid-3twagrka>
+                <h3 class="text-emerald-500 font-black mb-4 uppercase italic text-[10px] tracking-widest" data-astro-cid-3twagrka>One-Time Purchase</h3>
+                <p class="text-sm font-medium leading-relaxed text-slate-400" data-astro-cid-3twagrka>Upgrade to unlimited via Google Play. One payment, lifetime license — no subscriptions.</p>
+              </div>
+          </div>
+        </section>
+
+        <!-- SUPPORT -->
+        <section id="support" class="pt-10" data-astro-cid-3twagrka>
+          <div class="bg-gradient-to-br from-emerald-600 to-emerald-900 p-16 rounded-[3rem] text-center shadow-2xl relative overflow-hidden" data-astro-cid-3twagrka>
+            <div class="relative z-10" data-astro-cid-3twagrka>
+              <h3 class="text-5xl font-black text-white mb-6 italic uppercase tracking-tighter leading-none" data-astro-cid-3twagrka>Need Help?</h3>
+              <p class="text-emerald-100 text-xl mb-12 max-w-md mx-auto font-medium leading-relaxed" data-astro-cid-3twagrka>Technical issues or questions? Reply directly or email us.</p>
+              <a href="mailto:sales@infinityretouch.com" class="text-3xl font-black text-white hover:text-slate-900 transition-all border-b-4 border-white pb-2" data-astro-cid-3twagrka>
+                sales@infinityretouch.com
+              </a>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="py-24 bg-black border-t border-white/5 text-center px-4 relative z-20">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-emerald-500 font-black text-2xl mb-8 tracking-tighter italic uppercase">INFINITY RETOUCH</div>
+        
+        <p class="text-slate-400 font-bold mb-6 uppercase text-xs tracking-[0.2em]">© 2026 Infinity Retouch / WINSERV TECNOLOGIA DA INFORMACAO.</p>
+        
+        <div class="max-w-4xl mx-auto mb-16 text-[10px] text-slate-600 leading-relaxed uppercase tracking-[0.2em] font-bold">
+            Adobe® and Photoshop® are registered trademarks of Adobe Inc. in the United States and/or other countries. This plugin is an independent product and is not affiliated with, sponsored by, or endorsed by Adobe Inc.
+        </div>
+
+        <!-- Products -->
+        <div class="flex flex-wrap justify-center gap-x-10 gap-y-3 mb-10">
+          <a href="/" class="flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.2em] text-slate-500 hover:text-emerald-400 transition-colors">
+            <span>🖼️</span> Backdrop Cleaner
+          </a>
+          <!-- COMING SOON — descomentar quando Theater e Live forem lançados
+          <a href={`${base}${langPrefix}/theater/`} class="flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.2em] text-slate-500 hover:text-emerald-400 transition-colors">
+            <span>📸</span> Infinity Theater
+          </a>
+          <a href={`${base}${langPrefix}/live/`} class="flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.2em] text-slate-500 hover:text-emerald-400 transition-colors">
+            <span>📱</span> Infinity Live
+          </a>
+          -->
+        </div>
+
+        <div class="h-px bg-white/5 max-w-xs mx-auto mb-10"></div>
+
+        <nav class="flex flex-wrap justify-center gap-x-12 gap-y-6 text-[11px] font-black uppercase tracking-[0.3em] text-slate-500">
+            <a href="/docs/" class="hover:text-emerald-400 transition-colors">
+                    Help Center
+                </a><a href="/download/" class="hover:text-emerald-400 transition-colors">
+                    Download Plugin
+                </a><a href="/recover/" class="hover:text-emerald-400 transition-colors">
+                    Recover License
+                </a><a href="/privacy-policy/" class="hover:text-emerald-400 transition-colors">
+                    Privacy Policy
+                </a><a href="/terms-of-service/" class="hover:text-emerald-400 transition-colors">
+                    Terms of Service
+                </a><a href="/refund-policy/" class="hover:text-emerald-400 transition-colors">
+                    Refund Policy
+                </a><a href="mailto:sales@infinityretouch.com" class="hover:text-emerald-400 transition-colors">
+                    Contact Support
+                </a>
+        </nav>
+    </div>
+</footer>
+
+	</body>
+</html>

@@ -1,8 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-br" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Preconnect: reduz latência de recursos críticos -->
+		<link rel="preconnect" href="https://www.googletagmanager.com">
+		<link rel="preconnect" href="https://connect.facebook.net">
+		<link rel="preconnect" href="https://www.google-analytics.com">
 		
 		<!-- Verificação de Domínio da Meta (Facebook) -->
 		<meta name="facebook-domain-verification" content="81pm9o4zn4jpgdafczvg2dc2g0woia">
@@ -13,7 +18,7 @@
 				const path = window.location.pathname;
 				const isRoot = path === '/' || path === '/index.html' || path === '';
 				if (isRoot) {
-					const browserLang = (navigator.language || navigator.userUserLanguage || 'en').toLowerCase();
+					const browserLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
 					const userForcedEn = sessionStorage.getItem('user-preferred-en');
 					if (browserLang.startsWith('pt') && !userForcedEn) {
 						window.location.replace('/pt-br/');
@@ -68,9 +73,9 @@
 		
 		<!-- SEO Internacional (Hreflang) -->
 		<link rel="canonical" href="https://infinityretouch.com/br/">
-		<link rel="alternate" hreflang="en" href="https://infinityretouch.com/">
-		<link rel="alternate" hreflang="pt-br" href="https://infinityretouch.com/pt-br/">
-		<link rel="alternate" hreflang="x-default" href="https://infinityretouch.com/">
+		<link rel="alternate" hreflang="en" href="https://infinityretouch.com/br/">
+		<link rel="alternate" hreflang="pt-br" href="https://infinityretouch.com/pt-br/br/">
+		<link rel="alternate" hreflang="x-default" href="https://infinityretouch.com/br/">
 
 		<!-- Open Graph (Social Media) -->
 		<meta property="og:title" content="Infinity Backdrop Cleaner - Plugin Profissional para Adobe® Photoshop®">
@@ -79,16 +84,24 @@
 		<meta property="og:image" content="https://infinityretouch.com/og-infinity-backdrop-cleaner.jpg">
 		<meta property="og:image:width" content="1200">
 		<meta property="og:image:height" content="630">
+		<meta property="og:image:alt" content="Infinity Backdrop Cleaner - Plugin Profissional para Adobe® Photoshop®">
 		<meta property="og:type" content="website">
 		<meta property="og:site_name" content="Infinity Retouch">
 		<meta property="og:locale" content="pt_BR">
-		
+
 		<!-- Twitter Card -->
 		<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:title" content="Infinity Backdrop Cleaner - Plugin Profissional para Adobe® Photoshop®">
 		<meta name="twitter:description" content="Automatize a limpeza de fundos infinitos no Adobe® Photoshop® com processamento 16-bit. Plugin UXP profissional para fotógrafos de estúdio.">
 		<meta name="twitter:image" content="https://infinityretouch.com/og-infinity-backdrop-cleaner.jpg">
-	<link rel="stylesheet" href="/_astro/backdrop-cleaner.Cxgc5nD_.css">
+		<meta name="twitter:image:alt" content="Infinity Backdrop Cleaner - Plugin Profissional para Adobe® Photoshop®">
+
+		<!-- JSON-LD: Organization (todas as páginas) -->
+		<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Infinity Retouch","url":"https://infinityretouch.com","logo":"https://infinityretouch.com/favicon-96x96.png","contactPoint":{"@type":"ContactPoint","email":"sales@infinityretouch.com","contactType":"customer support"}}</script>
+
+		<!-- JSON-LD: Schema específico da página (opcional) -->
+		<script type="application/ld+json">[{"@context":"https://schema.org","@type":"VideoObject","name":"Infinity Backdrop Cleaner — Demonstração","description":"Veja como o Infinity Backdrop Cleaner remove fundos infinitos no Adobe Photoshop em segundos.","thumbnailUrl":"https://infinityretouch.com/video-poster.jpg","contentUrl":"https://infinityretouch.com/demo-plugin-01.mp4","uploadDate":"2025-01-01","publisher":{"@type":"Organization","name":"Infinity Retouch","url":"https://infinityretouch.com"}},{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Infinity Backdrop Cleaner","applicationCategory":"GraphicsApplication","operatingSystem":"Windows, macOS","offers":{"@type":"Offer","price":"29.00","priceCurrency":"USD","availability":"https://schema.org/InStock"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"5","ratingCount":"1"}}]</script>
+	<link rel="stylesheet" href="/_astro/backdrop-cleaner.BQCRF1d8.css">
 <link rel="stylesheet" href="/_astro/backdrop-cleaner.BigPLOf-.css">
 <link rel="stylesheet" href="/_astro/index.BJ0Y51He.css"></head>
 
@@ -110,18 +123,54 @@
       
       <!-- LINKS DESKTOP -->
       <div class="hidden md:flex items-center gap-8 mr-4" data-astro-cid-5blmo7yk>
+
+        <!-- Products Dropdown -->
+        <div class="relative group" data-astro-cid-5blmo7yk>
+          <button class="text-[11px] font-black text-slate-400 hover:text-white transition-colors uppercase tracking-[0.2em] flex items-center gap-1 cursor-pointer bg-transparent border-none p-0" data-astro-cid-5blmo7yk>
+            Produtos
+            <svg class="w-3 h-3 group-hover:rotate-180 transition-transform duration-150" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-astro-cid-5blmo7yk>
+              <path d="M19 9l-7 7-7-7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5blmo7yk></path>
+            </svg>
+          </button>
+          <div class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50" data-astro-cid-5blmo7yk>
+            <div class="bg-slate-800 border border-white/10 rounded-2xl shadow-2xl shadow-black/50 p-2 min-w-[270px]" data-astro-cid-5blmo7yk>
+              <a href="/pt-br/" class="flex items-start gap-3 p-3 rounded-xl hover:bg-white/5 transition-colors group/item" data-astro-cid-5blmo7yk>
+                <span class="text-xl leading-none mt-0.5" data-astro-cid-5blmo7yk>🖼️</span>
+                <div data-astro-cid-5blmo7yk>
+                  <div class="text-white text-[11px] font-black uppercase tracking-wider group-hover/item:text-emerald-400 transition-colors" data-astro-cid-5blmo7yk>Backdrop Cleaner</div>
+                  <div class="text-slate-500 text-[10px] font-bold uppercase tracking-widest" data-astro-cid-5blmo7yk>Plugin para Photoshop</div>
+                </div>
+              </a>
+              <!-- COMING SOON — descomentar quando Theater e Live forem lançados
+              <a href={links.theater} class="flex items-start gap-3 p-3 rounded-xl hover:bg-white/5 transition-colors group/item">
+                <span class="text-xl leading-none mt-0.5">📸</span>
+                <div>
+                  <div class="text-white text-[11px] font-black uppercase tracking-wider group-hover/item:text-emerald-400 transition-colors">Infinity Theater</div>
+                  <div class="text-slate-500 text-[10px] font-bold uppercase tracking-widest">{lang === 'en' ? 'Android App · Studio Photos' : 'App Android · Fotos de Estúdio'}</div>
+                </div>
+              </a>
+              <a href={links.live} class="flex items-start gap-3 p-3 rounded-xl hover:bg-white/5 transition-colors group/item">
+                <span class="text-xl leading-none mt-0.5">📱</span>
+                <div>
+                  <div class="text-white text-[11px] font-black uppercase tracking-wider group-hover/item:text-emerald-400 transition-colors">Infinity Live</div>
+                  <div class="text-slate-500 text-[10px] font-bold uppercase tracking-widest">{lang === 'en' ? 'Android App · Camera Streaming' : 'App Android · Streaming de Câmera'}</div>
+                </div>
+              </a>
+              -->
+            </div>
+          </div>
+        </div>
+
         <a href="/pt-br/#features" class="text-[11px] font-black text-slate-400 hover:text-white transition-colors uppercase tracking-[0.2em]" data-astro-cid-5blmo7yk>Recursos</a>
         <a href="/pt-br/docs/" class="text-[11px] font-black text-slate-400 hover:text-white transition-colors uppercase tracking-[0.2em]" data-astro-cid-5blmo7yk>Docs</a>
       </div>
 
       <!-- BOTÃO DE IDIOMA (Sempre Visível) -->
-<!-- No Navbar.astro, onde está o botão de idioma -->
-<a href="/br/" onclick="if(this.innerText.includes('EN')) sessionStorage.setItem('user-preferred-en', 'true')" class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-[10px] font-black text-slate-300 ..." data-astro-cid-5blmo7yk>
-  <!-- Conteúdo do botão que definimos antes (PT | BR ou EN | US) -->
-  <span class="opacity-50" data-astro-cid-5blmo7yk>EN</span>
-  <span class="w-px h-3 bg-white/20" data-astro-cid-5blmo7yk></span>
-  <span data-astro-cid-5blmo7yk>US</span>
-</a>
+      <a href="/br/" onclick="if(this.innerText.includes('EN')) sessionStorage.setItem('user-preferred-en', 'true')" class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-[10px] font-black text-slate-300 hover:text-white hover:border-white/20 transition-colors" data-astro-cid-5blmo7yk>
+        <span class="opacity-50" data-astro-cid-5blmo7yk>EN</span>
+        <span class="w-px h-3 bg-white/20" data-astro-cid-5blmo7yk></span>
+        <span data-astro-cid-5blmo7yk>US</span>
+      </a>
 
       <!-- BOTÃO COMPRAR (Desktop) -->
       <a href="/pt-br/buy/backdrop-cleaner/" class="hidden md:block bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-[11px] font-black px-6 py-3 rounded-full transition-all shadow-lg shadow-emerald-500/20 transform hover:-translate-y-0.5 uppercase tracking-widest" data-astro-cid-5blmo7yk>
@@ -140,6 +189,14 @@
   <!-- DRAWER MOBILE -->
   <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-slate-900 border-b border-white/10 shadow-2xl" data-astro-cid-5blmo7yk>
     <div class="flex flex-col p-6 gap-2 font-black uppercase tracking-widest text-[11px]" data-astro-cid-5blmo7yk>
+        <div class="py-3 border-b border-white/5" data-astro-cid-5blmo7yk>
+          <p class="text-slate-600 text-[9px] tracking-[0.3em] mb-2" data-astro-cid-5blmo7yk>Produtos</p>
+          <a href="/pt-br/" class="flex items-center gap-2 py-2 text-slate-400 hover:text-white" data-astro-cid-5blmo7yk>🖼️ Backdrop Cleaner</a>
+          <!-- COMING SOON — descomentar quando Theater e Live forem lançados
+          <a href={links.theater} class="flex items-center gap-2 py-2 text-slate-400 hover:text-white">📸 Infinity Theater</a>
+          <a href={links.live} class="flex items-center gap-2 py-2 text-slate-400 hover:text-white">📱 Infinity Live</a>
+          -->
+        </div>
         <a href="/pt-br/#features" class="py-4 border-b border-white/5 text-slate-400 hover:text-white" data-astro-cid-5blmo7yk>Recursos</a>
         <a href="/pt-br/docs/" class="py-4 border-b border-white/5 text-slate-400 hover:text-white" data-astro-cid-5blmo7yk>Docs</a>
         <a href="/pt-br/buy/backdrop-cleaner/" class="py-6 text-emerald-500 flex items-center justify-between" data-astro-cid-5blmo7yk>
@@ -190,7 +247,7 @@
 					</a>
 
                     <div class="flex flex-col items-center gap-4" data-astro-cid-mj6ar3np>
-                        <a href="https://adobe.com/go/cc_plugins_discover_plugin?pluginId=680f99b1&workflow=share" target="_blank" rel="noopener" class="text-slate-400 text-sm font-medium hover:text-emerald-400 transition-colors flex items-center gap-2" data-astro-cid-mj6ar3np>
+                        <a href="https://adobe.com/go/cc_plugins_discover_plugin?pluginId=680f99b1&workflow=share" target="_blank" rel="noopener nofollow" class="text-slate-400 text-sm font-medium hover:text-emerald-400 transition-colors flex items-center gap-2" data-astro-cid-mj6ar3np>
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" data-astro-cid-mj6ar3np>
                                 <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" data-astro-cid-mj6ar3np></path>
                                 <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" data-astro-cid-mj6ar3np></path>
@@ -211,9 +268,9 @@
             <div class="max-w-7xl mx-auto px-4 text-center" data-astro-cid-mj6ar3np>
                 <span class="text-emerald-500 text-sm font-black uppercase tracking-[0.3em] block mb-8 md:mb-12 italic font-medium" data-astro-cid-mj6ar3np>Principais Benefícios</span>
                 <div class="grid md:grid-cols-3 gap-6 md:gap-8 text-left" data-astro-cid-mj6ar3np>
-                    <div class="p-8 bg-slate-800/40 border border-white/5 rounded-3xl hover:border-blue-500/30 transition-all group">
-  <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-    <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="p-8 bg-slate-800/40 border border-white/5 rounded-3xl hover:border-emerald-500/30 transition-all group">
+  <div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+    <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
       </svg>
     
@@ -221,21 +278,21 @@
   </div>
   <h3 class="text-xl font-bold text-white mb-3 tracking-tight">⚡ Fluxo Rápido</h3>
   <p class="text-slate-400 leading-relaxed text-sm">Automatize a parte tediosa do retoque. Economize mais de 10 minutos por foto com nossos algoritmos nativos otimizados.</p>
-</div><div class="p-8 bg-slate-800/40 border border-white/5 rounded-3xl hover:border-blue-500/30 transition-all group">
-  <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+</div><div class="p-8 bg-slate-800/40 border border-white/5 rounded-3xl hover:border-emerald-500/30 transition-all group">
+  <div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
     
-    <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
       </svg>
     
   </div>
   <h3 class="text-xl font-bold text-white mb-3 tracking-tight">🎨 Qualidade 16-Bit</h3>
   <p class="text-slate-400 leading-relaxed text-sm">Zero banding de cor. Processamento em alta profundidade garante gradientes perfeitamente suaves em pisos de estúdio.</p>
-</div><div class="p-8 bg-slate-800/40 border border-white/5 rounded-3xl hover:border-blue-500/30 transition-all group">
-  <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+</div><div class="p-8 bg-slate-800/40 border border-white/5 rounded-3xl hover:border-emerald-500/30 transition-all group">
+  <div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
     
     
-    <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
       </svg>
   </div>
@@ -324,6 +381,50 @@
             </div>
         </section>
 
+        <!-- COMING SOON — descomentar quando Theater e Live forem lançados
+        <section class="py-12 md:py-24 px-4 border-t border-white/5">
+          <div class="max-w-4xl mx-auto text-center">
+            <span class="text-emerald-500 text-sm font-black uppercase tracking-[0.3em] block mb-12 italic">
+              {locale === 'pt-br' ? 'Mais da Infinity Retouch' : 'More from Infinity Retouch'}
+            </span>
+            <div class="grid md:grid-cols-2 gap-6 text-left">
+              <a href={`${base}${locale === 'pt-br' ? '/pt-br' : ''}/theater/`} class="group p-8 bg-slate-800/30 border border-white/5 rounded-3xl hover:border-emerald-500/30 hover:bg-slate-800/50 transition-all flex flex-col gap-4">
+                <div class="text-4xl">📸</div>
+                <div>
+                  <div class="text-[10px] font-black text-emerald-500 uppercase tracking-[0.3em] mb-1">{locale === 'pt-br' ? 'App Android' : 'Android App'}</div>
+                  <h3 class="text-xl font-black text-white uppercase italic tracking-tight mb-2">Infinity Theater</h3>
+                  <p class="text-slate-400 text-sm leading-relaxed">
+                    {locale === 'pt-br'
+                      ? 'Transmita fotos ao vivo da câmera para Android TV, Chromecast e Smart TVs durante sessões de estúdio.'
+                      : 'Stream live photos from your camera to Android TV, Chromecast and Smart TVs during studio sessions.'}
+                  </p>
+                </div>
+                <span class="text-emerald-400 text-xs font-black uppercase tracking-widest flex items-center gap-1 mt-auto">
+                  {locale === 'pt-br' ? 'Saiba mais' : 'Learn more'}
+                  <svg class="w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 7l5 5m0 0l-5 5m5-5H6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </a>
+              <a href={`${base}${locale === 'pt-br' ? '/pt-br' : ''}/live/`} class="group p-8 bg-slate-800/30 border border-white/5 rounded-3xl hover:border-emerald-500/30 hover:bg-slate-800/50 transition-all flex flex-col gap-4">
+                <div class="text-4xl">📱</div>
+                <div>
+                  <div class="text-[10px] font-black text-emerald-500 uppercase tracking-[0.3em] mb-1">{locale === 'pt-br' ? 'App Android' : 'Android App'}</div>
+                  <h3 class="text-xl font-black text-white uppercase italic tracking-tight mb-2">Infinity Live</h3>
+                  <p class="text-slate-400 text-sm leading-relaxed">
+                    {locale === 'pt-br'
+                      ? 'Transmita vídeo ao vivo do celular ou câmera mirrorless para Android TV, Chromecast e navegadores via Wi-Fi.'
+                      : 'Stream live video from your phone or mirrorless camera to Android TV, Chromecast and browsers via Wi-Fi.'}
+                  </p>
+                </div>
+                <span class="text-emerald-400 text-xs font-black uppercase tracking-widest flex items-center gap-1 mt-auto">
+                  {locale === 'pt-br' ? 'Saiba mais' : 'Learn more'}
+                  <svg class="w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 7l5 5m0 0l-5 5m5-5H6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </section>
+        -->
+
         <!-- CTA FINAL -->
         <section class="py-16 md:py-32 text-center relative overflow-hidden bg-gradient-to-b from-transparent to-emerald-900/10 px-4" data-astro-cid-mj6ar3np>
             <div class="max-w-3xl mx-auto relative z-10" data-astro-cid-mj6ar3np>
@@ -334,37 +435,58 @@
                     Pare de lutar com a ferramenta Carimbo. Junte-se a milhares de fotógrafos usando o padrão profissional para limpeza de fundos.
                 </p>
                 <a href="/br/buy/backdrop-cleaner/" class="w-full md:w-auto inline-block bg-white text-slate-950 text-xl px-16 py-6 rounded-2xl font-black hover:bg-emerald-400 hover:text-white transition-all transform hover:scale-105 shadow-2xl shadow-white/5" data-astro-cid-mj6ar3np>
-                    OBTER INFINITY RETOUCH AGORA
+                    Obter Infinity Backdrop Cleaner Agora
                 </a>
             </div>
         </section>
 	</main>
 
-    <footer class="py-16 md:py-24 bg-black border-t border-white/5 text-center px-4 relative z-20" data-astro-cid-mj6ar3np>
-        <div class="max-w-7xl mx-auto" data-astro-cid-mj6ar3np>
-            <div class="text-emerald-500 font-black text-2xl mb-8 tracking-tighter italic uppercase" data-astro-cid-mj6ar3np>INFINITY RETOUCH</div>
-            
-            <p class="text-slate-400 font-bold mb-6 uppercase text-xs tracking-[0.2em]" data-astro-cid-mj6ar3np>© 2026 Infinity Retouch / WINSERV TECNOLOGIA DA INFORMACAO.</p>
-            
-            <div class="max-w-4xl mx-auto mb-16 text-[10px] text-slate-600 leading-relaxed uppercase tracking-[0.2em] font-bold" data-astro-cid-mj6ar3np>
-                Adobe® e Photoshop® são marcas registradas da Adobe Inc. nos Estados Unidos e/ou outros países. Este plugin é um produto independente e não é afiliado, patrocinado ou endossado pela Adobe Inc.
-            </div>
-
-            <nav class="flex flex-wrap justify-center gap-x-8 md:gap-x-12 gap-y-6 text-[11px] font-black uppercase tracking-[0.3em] text-slate-500" data-astro-cid-mj6ar3np>
-                <a href="/br/docs/" class="hover:text-emerald-400 transition-colors" data-astro-cid-mj6ar3np>
-                        Central de Ajuda
-                    </a><a href="/br/privacy-policy/" class="hover:text-emerald-400 transition-colors" data-astro-cid-mj6ar3np>
-                        Política de Privacidade
-                    </a><a href="/br/terms-of-service/" class="hover:text-emerald-400 transition-colors" data-astro-cid-mj6ar3np>
-                        Termos de Serviço
-                    </a><a href="/br/refund-policy/" class="hover:text-emerald-400 transition-colors" data-astro-cid-mj6ar3np>
-                        Política de Reembolso
-                    </a><a href="mailto:sales@infinityretouch.com" class="hover:text-emerald-400 transition-colors" data-astro-cid-mj6ar3np>
-                        Suporte
-                    </a>
-            </nav>
+    <footer class="py-24 bg-black border-t border-white/5 text-center px-4 relative z-20">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-emerald-500 font-black text-2xl mb-8 tracking-tighter italic uppercase">INFINITY RETOUCH</div>
+        
+        <p class="text-slate-400 font-bold mb-6 uppercase text-xs tracking-[0.2em]">© 2026 Infinity Retouch / WINSERV TECNOLOGIA DA INFORMACAO.</p>
+        
+        <div class="max-w-4xl mx-auto mb-16 text-[10px] text-slate-600 leading-relaxed uppercase tracking-[0.2em] font-bold">
+            Adobe® e Photoshop® são marcas registradas da Adobe Inc. nos Estados Unidos e/ou outros países. Este plugin é um produto independente e não é afiliado, patrocinado ou endossado pela Adobe Inc.
         </div>
-    </footer>
+
+        <!-- Products -->
+        <div class="flex flex-wrap justify-center gap-x-10 gap-y-3 mb-10">
+          <a href="/pt-br/" class="flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.2em] text-slate-500 hover:text-emerald-400 transition-colors">
+            <span>🖼️</span> Backdrop Cleaner
+          </a>
+          <!-- COMING SOON — descomentar quando Theater e Live forem lançados
+          <a href={`${base}${langPrefix}/theater/`} class="flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.2em] text-slate-500 hover:text-emerald-400 transition-colors">
+            <span>📸</span> Infinity Theater
+          </a>
+          <a href={`${base}${langPrefix}/live/`} class="flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.2em] text-slate-500 hover:text-emerald-400 transition-colors">
+            <span>📱</span> Infinity Live
+          </a>
+          -->
+        </div>
+
+        <div class="h-px bg-white/5 max-w-xs mx-auto mb-10"></div>
+
+        <nav class="flex flex-wrap justify-center gap-x-12 gap-y-6 text-[11px] font-black uppercase tracking-[0.3em] text-slate-500">
+            <a href="/pt-br/docs/" class="hover:text-emerald-400 transition-colors">
+                    Central de Ajuda
+                </a><a href="/pt-br/download/" class="hover:text-emerald-400 transition-colors">
+                    Baixar Plugin
+                </a><a href="/pt-br/recover/" class="hover:text-emerald-400 transition-colors">
+                    Recuperar Licença
+                </a><a href="/pt-br/privacy-policy/" class="hover:text-emerald-400 transition-colors">
+                    Política de Privacidade
+                </a><a href="/pt-br/terms-of-service/" class="hover:text-emerald-400 transition-colors">
+                    Termos de Serviço
+                </a><a href="/pt-br/refund-policy/" class="hover:text-emerald-400 transition-colors">
+                    Política de Reembolso
+                </a><a href="mailto:sales@infinityretouch.com" class="hover:text-emerald-400 transition-colors">
+                    Suporte
+                </a>
+        </nav>
+    </div>
+</footer>
 
 	</body>
 </html>

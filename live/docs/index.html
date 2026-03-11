@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Preconnect: reduz latência de recursos críticos -->
+		<link rel="preconnect" href="https://www.googletagmanager.com">
+		<link rel="preconnect" href="https://connect.facebook.net">
+		<link rel="preconnect" href="https://www.google-analytics.com">
+		
+		<!-- Verificação de Domínio da Meta (Facebook) -->
+		<meta name="facebook-domain-verification" content="81pm9o4zn4jpgdafczvg2dc2g0woia">
+
+		<!-- 1. Script de Detecção Automática de Idioma -->
+		<script>
+			(function() {
+				const path = window.location.pathname;
+				const isRoot = path === '/' || path === '/index.html' || path === '';
+				if (isRoot) {
+					const browserLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+					const userForcedEn = sessionStorage.getItem('user-preferred-en');
+					if (browserLang.startsWith('pt') && !userForcedEn) {
+						window.location.replace('/pt-br/');
+					}
+				}
+			})();
+		</script>
+
+		<!-- 2. Meta Pixel Code (ID: 1261263012570367) -->
+		<script>
+			!function(f,b,e,v,n,t,s)
+			{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+			n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+			if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+			n.queue=[];t=b.createElement(e);t.async=!0;
+			t.src=v;s=b.getElementsByTagName(e)[0];
+			s.parentNode.insertBefore(t,s)}(window, document,'script',
+			'https://connect.facebook.net/en_US/fbevents.js');
+			fbq('init', '1261263012570367');
+			fbq('track', 'PageView');
+		</script>
+		<noscript>
+			<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1261263012570367&ev=PageView&noscript=1">
+		</noscript>
+
+		<!-- 3. Google Analytics (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-RN28DZF26K"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-RN28DZF26K');
+		</script>
+
+		<!-- Favicons & Branding Professional -->
+		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<meta name="apple-mobile-web-app-title" content="Infinity Retouch">
+		<link rel="manifest" href="/site.webmanifest">
+		<meta name="theme-color" content="#10b981">
+
+		<!-- SEO Básico -->
+		<title>Infinity Live — User Manual</title>
+		<meta name="description" content="Complete guide for Infinity Live: phone camera setup, USB mirrorless connection, monitor configuration, settings and troubleshooting.">
+		<meta name="keywords" content="photoshop plugin, backdrop cleaner, UXP plugin, infinite background, studio photography, photo retouching, background cleaning, photoshop automation">
+		<meta name="author" content="Infinity Retouch">
+		<meta name="generator" content="Astro v5.17.2">
+		
+		<meta name="robots" content="noindex, nofollow">
+		
+		<!-- SEO Internacional (Hreflang) -->
+		<link rel="canonical" href="https://infinityretouch.com/live/docs/">
+		<link rel="alternate" hreflang="en" href="https://infinityretouch.com/live/docs/">
+		<link rel="alternate" hreflang="pt-br" href="https://infinityretouch.com/pt-br/live/docs/">
+		<link rel="alternate" hreflang="x-default" href="https://infinityretouch.com/live/docs/">
+
+		<!-- Open Graph (Social Media) -->
+		<meta property="og:title" content="Infinity Live — User Manual">
+		<meta property="og:description" content="Complete guide for Infinity Live: phone camera setup, USB mirrorless connection, monitor configuration, settings and troubleshooting.">
+		<meta property="og:url" content="https://infinityretouch.com/live/docs/">
+		<meta property="og:image" content="https://infinityretouch.com/og-infinity-backdrop-cleaner.jpg">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<meta property="og:image:alt" content="Infinity Live — User Manual">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="Infinity Retouch">
+		<meta property="og:locale" content="en_US">
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Infinity Live — User Manual">
+		<meta name="twitter:description" content="Complete guide for Infinity Live: phone camera setup, USB mirrorless connection, monitor configuration, settings and troubleshooting.">
+		<meta name="twitter:image" content="https://infinityretouch.com/og-infinity-backdrop-cleaner.jpg">
+		<meta name="twitter:image:alt" content="Infinity Live — User Manual">
+
+		<!-- JSON-LD: Organization (todas as páginas) -->
+		<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Infinity Retouch","url":"https://infinityretouch.com","logo":"https://infinityretouch.com/favicon-96x96.png","contactPoint":{"@type":"ContactPoint","email":"sales@infinityretouch.com","contactType":"customer support"}}</script>
+
+		<!-- JSON-LD: Schema específico da página (opcional) -->
+		<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Help Center","item":"https://infinityretouch.com/docs/"},{"@type":"ListItem","position":2,"name":"Infinity Live","item":"https://infinityretouch.com/live/docs/"}]}</script>
+	<link rel="stylesheet" href="/_astro/backdrop-cleaner.BQCRF1d8.css">
+<link rel="stylesheet" href="/_astro/backdrop-cleaner.BigPLOf-.css">
+<link rel="stylesheet" href="/_astro/index.7QP4hh0h.css"></head>
+
+	<body class="bg-slate-900 text-white font-sans antialiased">
+		
+  <nav class="fixed top-0 left-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-white/5" data-astro-cid-5blmo7yk>
+  <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between" data-astro-cid-5blmo7yk>
+    
+    <!-- LOGO -->
+    <a href="/" class="flex items-center gap-3 group shrink-0" data-astro-cid-5blmo7yk>
+      <img src="/favicon.svg" alt="Infinity Retouch Logo" width="32" height="32" class="w-8 h-8 object-contain logo-sharp" data-astro-cid-5blmo7yk>
+      <span class="font-black text-lg tracking-tighter text-white italic uppercase" data-astro-cid-5blmo7yk>
+        INFINITY <span class="text-emerald-500" data-astro-cid-5blmo7yk>RETOUCH</span>
+      </span>
+    </a>
+
+    <!-- DIREITA: Idioma + Menu -->
+    <div class="flex items-center gap-3 md:gap-8" data-astro-cid-5blmo7yk>
+      
+      <!-- LINKS DESKTOP -->
+      <div class="hidden md:flex items-center gap-8 mr-4" data-astro-cid-5blmo7yk>
+
+        <!-- Products Dropdown -->
+        <div class="relative group" data-astro-cid-5blmo7yk>
+          <button class="text-[11px] font-black text-slate-400 hover:text-white transition-colors uppercase tracking-[0.2em] flex items-center gap-1 cursor-pointer bg-transparent border-none p-0" data-astro-cid-5blmo7yk>
+            Products
+            <svg class="w-3 h-3 group-hover:rotate-180 transition-transform duration-150" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-astro-cid-5blmo7yk>
+              <path d="M19 9l-7 7-7-7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5blmo7yk></path>
+            </svg>
+          </button>
+          <div class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50" data-astro-cid-5blmo7yk>
+            <div class="bg-slate-800 border border-white/10 rounded-2xl shadow-2xl shadow-black/50 p-2 min-w-[270px]" data-astro-cid-5blmo7yk>
+              <a href="/" class="flex items-start gap-3 p-3 rounded-xl hover:bg-white/5 transition-colors group/item" data-astro-cid-5blmo7yk>
+                <span class="text-xl leading-none mt-0.5" data-astro-cid-5blmo7yk>🖼️</span>
+                <div data-astro-cid-5blmo7yk>
+                  <div class="text-white text-[11px] font-black uppercase tracking-wider group-hover/item:text-emerald-400 transition-colors" data-astro-cid-5blmo7yk>Backdrop Cleaner</div>
+                  <div class="text-slate-500 text-[10px] font-bold uppercase tracking-widest" data-astro-cid-5blmo7yk>Photoshop Plugin</div>
+                </div>
+              </a>
+              <!-- COMING SOON — descomentar quando Theater e Live forem lançados
+              <a href={links.theater} class="flex items-start gap-3 p-3 rounded-xl hover:bg-white/5 transition-colors group/item">
+                <span class="text-xl leading-none mt-0.5">📸</span>
+                <div>
+                  <div class="text-white text-[11px] font-black uppercase tracking-wider group-hover/item:text-emerald-400 transition-colors">Infinity Theater</div>
+                  <div class="text-slate-500 text-[10px] font-bold uppercase tracking-widest">{lang === 'en' ? 'Android App · Studio Photos' : 'App Android · Fotos de Estúdio'}</div>
+                </div>
+              </a>
+              <a href={links.live} class="flex items-start gap-3 p-3 rounded-xl hover:bg-white/5 transition-colors group/item">
+                <span class="text-xl leading-none mt-0.5">📱</span>
+                <div>
+                  <div class="text-white text-[11px] font-black uppercase tracking-wider group-hover/item:text-emerald-400 transition-colors">Infinity Live</div>
+                  <div class="text-slate-500 text-[10px] font-bold uppercase tracking-widest">{lang === 'en' ? 'Android App · Camera Streaming' : 'App Android · Streaming de Câmera'}</div>
+                </div>
+              </a>
+              -->
+            </div>
+          </div>
+        </div>
+
+        <a href="/#features" class="text-[11px] font-black text-slate-400 hover:text-white transition-colors uppercase tracking-[0.2em]" data-astro-cid-5blmo7yk>Features</a>
+        <a href="/docs/" class="text-[11px] font-black text-slate-400 hover:text-white transition-colors uppercase tracking-[0.2em]" data-astro-cid-5blmo7yk>Docs</a>
+      </div>
+
+      <!-- BOTÃO DE IDIOMA (Sempre Visível) -->
+      <a href="/pt-br/live/docs/" onclick="if(this.innerText.includes('EN')) sessionStorage.setItem('user-preferred-en', 'true')" class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-[10px] font-black text-slate-300 hover:text-white hover:border-white/20 transition-colors" data-astro-cid-5blmo7yk>
+        <span class="opacity-50" data-astro-cid-5blmo7yk>PT</span>
+        <span class="w-px h-3 bg-white/20" data-astro-cid-5blmo7yk></span>
+        <span data-astro-cid-5blmo7yk>BR</span>
+      </a>
+
+      <!-- BOTÃO COMPRAR (Desktop) -->
+      <a href="/buy/backdrop-cleaner/" class="hidden md:block bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-[11px] font-black px-6 py-3 rounded-full transition-all shadow-lg shadow-emerald-500/20 transform hover:-translate-y-0.5 uppercase tracking-widest" data-astro-cid-5blmo7yk>
+        Buy Now
+      </a>
+
+      <!-- MENU MOBILE (Hambúrguer) -->
+      <button id="menu-toggle" class="md:hidden text-white p-2 hover:bg-white/5 rounded-lg transition-colors" aria-label="Toggle Menu" data-astro-cid-5blmo7yk>
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-astro-cid-5blmo7yk>
+            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" data-astro-cid-5blmo7yk></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- DRAWER MOBILE -->
+  <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-slate-900 border-b border-white/10 shadow-2xl" data-astro-cid-5blmo7yk>
+    <div class="flex flex-col p-6 gap-2 font-black uppercase tracking-widest text-[11px]" data-astro-cid-5blmo7yk>
+        <div class="py-3 border-b border-white/5" data-astro-cid-5blmo7yk>
+          <p class="text-slate-600 text-[9px] tracking-[0.3em] mb-2" data-astro-cid-5blmo7yk>Products</p>
+          <a href="/" class="flex items-center gap-2 py-2 text-slate-400 hover:text-white" data-astro-cid-5blmo7yk>🖼️ Backdrop Cleaner</a>
+          <!-- COMING SOON — descomentar quando Theater e Live forem lançados
+          <a href={links.theater} class="flex items-center gap-2 py-2 text-slate-400 hover:text-white">📸 Infinity Theater</a>
+          <a href={links.live} class="flex items-center gap-2 py-2 text-slate-400 hover:text-white">📱 Infinity Live</a>
+          -->
+        </div>
+        <a href="/#features" class="py-4 border-b border-white/5 text-slate-400 hover:text-white" data-astro-cid-5blmo7yk>Features</a>
+        <a href="/docs/" class="py-4 border-b border-white/5 text-slate-400 hover:text-white" data-astro-cid-5blmo7yk>Docs</a>
+        <a href="/buy/backdrop-cleaner/" class="py-6 text-emerald-500 flex items-center justify-between" data-astro-cid-5blmo7yk>
+            Buy Now
+            <span class="bg-emerald-500/10 px-3 py-1 rounded-md text-[10px]" data-astro-cid-5blmo7yk>$29</span>
+        </a>
+    </div>
+  </div>
+</nav>
+
+<script type="module" src="/_astro/Navbar.astro_astro_type_script_index_0_lang.DDz8_The.js"></script>
+
+  <main class="pt-32 pb-20 px-4 bg-slate-900 min-h-screen relative overflow-hidden" data-astro-cid-wernc5z7>
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-emerald-500/5 blur-[120px] rounded-full pointer-events-none" data-astro-cid-wernc5z7></div>
+
+    <div class="max-w-[900px] mx-auto relative z-10" data-astro-cid-wernc5z7>
+
+      <!-- BREADCRUMB -->
+      <nav class="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-600 mb-12 border-b border-white/5 pb-6" data-astro-cid-wernc5z7>
+        <a href="/docs/" class="hover:text-emerald-400 transition-colors" data-astro-cid-wernc5z7>Help Center</a>
+        <span class="text-slate-800" data-astro-cid-wernc5z7>/</span>
+        <a href="/live/" class="hover:text-emerald-400 transition-colors" data-astro-cid-wernc5z7>Infinity Live</a>
+        <span class="text-slate-800" data-astro-cid-wernc5z7>/</span>
+        <span class="text-white italic tracking-tighter" data-astro-cid-wernc5z7>Infinity Live</span>
+      </nav>
+
+      <!-- HEADER -->
+      <header class="text-center mb-20" data-astro-cid-wernc5z7>
+        <h1 class="text-6xl lg:text-8xl font-black text-white italic tracking-tighter mb-6 uppercase leading-none" data-astro-cid-wernc5z7>
+          Infinity Live
+        </h1>
+        <p class="text-slate-400 text-xl font-medium max-w-2xl mx-auto" data-astro-cid-wernc5z7>Complete user manual — phone camera, USB mirrorless, monitors and settings.</p>
+      </header>
+
+      <!-- TOC -->
+      <div class="bg-slate-800/40 border border-white/10 rounded-[2.5rem] p-10 mb-20 shadow-2xl backdrop-blur-sm relative overflow-hidden" data-astro-cid-wernc5z7>
+        <div class="absolute top-0 right-0 w-40 h-40 bg-emerald-500/5 blur-3xl rounded-full" data-astro-cid-wernc5z7></div>
+        <h3 class="text-sm font-black text-emerald-500 mb-8 uppercase tracking-[0.4em] italic" data-astro-cid-wernc5z7>Contents</h3>
+        <ul class="grid md:grid-cols-2 gap-x-12 gap-y-4 text-[11px] font-black uppercase tracking-widest list-none" data-astro-cid-wernc5z7>
+          <li data-astro-cid-wernc5z7>
+              <a href="#quick-start" class="text-slate-400 hover:text-emerald-400 transition-colors flex items-center gap-2" data-astro-cid-wernc5z7>
+                <span class="text-emerald-500/30" data-astro-cid-wernc5z7>#</span> Quick Start
+              </a>
+            </li><li data-astro-cid-wernc5z7>
+              <a href="#sources" class="text-slate-400 hover:text-emerald-400 transition-colors flex items-center gap-2" data-astro-cid-wernc5z7>
+                <span class="text-emerald-500/30" data-astro-cid-wernc5z7>#</span> Camera Sources
+              </a>
+            </li><li data-astro-cid-wernc5z7>
+              <a href="#monitors" class="text-slate-400 hover:text-emerald-400 transition-colors flex items-center gap-2" data-astro-cid-wernc5z7>
+                <span class="text-emerald-500/30" data-astro-cid-wernc5z7>#</span> Monitor Setup
+              </a>
+            </li><li data-astro-cid-wernc5z7>
+              <a href="#settings" class="text-slate-400 hover:text-emerald-400 transition-colors flex items-center gap-2" data-astro-cid-wernc5z7>
+                <span class="text-emerald-500/30" data-astro-cid-wernc5z7>#</span> Settings
+              </a>
+            </li><li data-astro-cid-wernc5z7>
+              <a href="#web-monitor" class="text-slate-400 hover:text-emerald-400 transition-colors flex items-center gap-2" data-astro-cid-wernc5z7>
+                <span class="text-emerald-500/30" data-astro-cid-wernc5z7>#</span> Web Monitor
+              </a>
+            </li><li data-astro-cid-wernc5z7>
+              <a href="#support" class="text-slate-400 hover:text-emerald-400 transition-colors flex items-center gap-2" data-astro-cid-wernc5z7>
+                <span class="text-emerald-500/30" data-astro-cid-wernc5z7>#</span> Support
+              </a>
+            </li>
+        </ul>
+      </div>
+
+      <div class="space-y-32" data-astro-cid-wernc5z7>
+
+        <!-- QUICK START -->
+        <section id="quick-start" class="scroll-mt-32" data-astro-cid-wernc5z7>
+          <h2 class="text-4xl lg:text-5xl font-black text-white border-b border-white/10 pb-6 mb-12 italic uppercase tracking-tighter" data-astro-cid-wernc5z7>Quick Start</h2>
+          <div class="grid md:grid-cols-2 gap-8 mb-12" data-astro-cid-wernc5z7>
+            <!-- Phone -->
+            <div class="p-8 bg-slate-800/20 rounded-[2rem] border border-white/5" data-astro-cid-wernc5z7>
+              <h3 class="text-emerald-400 font-black mb-6 uppercase italic text-xs tracking-[0.3em]" data-astro-cid-wernc5z7>Phone Camera</h3>
+              <ol class="space-y-4" data-astro-cid-wernc5z7>
+                <li class="flex gap-4 items-start text-slate-400 text-sm font-medium" data-astro-cid-wernc5z7>
+                    <span class="text-emerald-500 font-black shrink-0" data-astro-cid-wernc5z7>01.</span>
+                    <span data-astro-cid-wernc5z7>Select PHONE in the source selector (default).</span>
+                  </li><li class="flex gap-4 items-start text-slate-400 text-sm font-medium" data-astro-cid-wernc5z7>
+                    <span class="text-emerald-500 font-black shrink-0" data-astro-cid-wernc5z7>02.</span>
+                    <span data-astro-cid-wernc5z7>Tap CONNECT — the app requests camera permission on first use.</span>
+                  </li><li class="flex gap-4 items-start text-slate-400 text-sm font-medium" data-astro-cid-wernc5z7>
+                    <span class="text-emerald-500 font-black shrink-0" data-astro-cid-wernc5z7>03.</span>
+                    <span data-astro-cid-wernc5z7>The stream starts automatically. Tap ⟳ FLIP to switch front/back camera.</span>
+                  </li>
+              </ol>
+            </div>
+            <!-- USB -->
+            <div class="p-8 bg-slate-800/20 rounded-[2rem] border border-white/5" data-astro-cid-wernc5z7>
+              <h3 class="text-emerald-400 font-black mb-6 uppercase italic text-xs tracking-[0.3em]" data-astro-cid-wernc5z7>USB Mirrorless Camera</h3>
+              <ol class="space-y-4" data-astro-cid-wernc5z7>
+                <li class="flex gap-4 items-start text-slate-400 text-sm font-medium" data-astro-cid-wernc5z7>
+                    <span class="text-emerald-500 font-black shrink-0" data-astro-cid-wernc5z7>01.</span>
+                    <span data-astro-cid-wernc5z7>Enable USB Streaming or UVC mode on your camera.</span>
+                  </li><li class="flex gap-4 items-start text-slate-400 text-sm font-medium" data-astro-cid-wernc5z7>
+                    <span class="text-emerald-500 font-black shrink-0" data-astro-cid-wernc5z7>02.</span>
+                    <span data-astro-cid-wernc5z7>Connect the camera to your phone via USB-C OTG cable.</span>
+                  </li><li class="flex gap-4 items-start text-slate-400 text-sm font-medium" data-astro-cid-wernc5z7>
+                    <span class="text-emerald-500 font-black shrink-0" data-astro-cid-wernc5z7>03.</span>
+                    <span data-astro-cid-wernc5z7>Select USB CAMERA and tap CONNECT.</span>
+                  </li><li class="flex gap-4 items-start text-slate-400 text-sm font-medium" data-astro-cid-wernc5z7>
+                    <span class="text-emerald-500 font-black shrink-0" data-astro-cid-wernc5z7>04.</span>
+                    <span data-astro-cid-wernc5z7>Confirm the USB permission dialog, then choose the desired resolution.</span>
+                  </li>
+              </ol>
+            </div>
+          </div>
+          <div class="p-10 bg-emerald-500/5 border-l-4 border-emerald-500 rounded-r-[2rem]" data-astro-cid-wernc5z7>
+            <strong class="text-emerald-400 block mb-4 uppercase tracking-[0.3em] text-[10px] font-black italic" data-astro-cid-wernc5z7>Pro Tip</strong>
+            <p class="m-0 text-slate-300 italic font-medium leading-relaxed" data-astro-cid-wernc5z7>After connecting, tap the <strong>QR</strong> button next to the URL to generate a QR code — anyone on the same Wi-Fi can scan it to open the web monitor instantly.</p>
+          </div>
+        </section>
+
+        <!-- SOURCES -->
+        <section id="sources" class="scroll-mt-32" data-astro-cid-wernc5z7>
+          <h2 class="text-4xl lg:text-5xl font-black text-white border-b border-white/10 pb-6 mb-12 italic uppercase tracking-tighter" data-astro-cid-wernc5z7>Camera Sources</h2>
+          <div class="grid md:grid-cols-2 gap-8" data-astro-cid-wernc5z7>
+            <div class="p-8 bg-slate-800/20 rounded-3xl border border-white/5 hover:border-emerald-500/20 transition-all" data-astro-cid-wernc5z7>
+                <div class="text-2xl mb-4" data-astro-cid-wernc5z7>📱</div>
+                <h3 class="text-white font-black text-lg mb-3 uppercase italic tracking-tight" data-astro-cid-wernc5z7>Phone Camera (PHONE)</h3>
+                <p class="text-slate-400 text-sm leading-relaxed font-medium" data-astro-cid-wernc5z7>Uses CameraX ImageAnalysis pipeline. Supports front and rear cameras. Resolution: 480p / 720p / 1080p (configurable). Tap FLIP anytime to switch without disconnecting.</p>
+              </div><div class="p-8 bg-slate-800/20 rounded-3xl border border-white/5 hover:border-emerald-500/20 transition-all" data-astro-cid-wernc5z7>
+                <div class="text-2xl mb-4" data-astro-cid-wernc5z7>🎥</div>
+                <h3 class="text-white font-black text-lg mb-3 uppercase italic tracking-tight" data-astro-cid-wernc5z7>USB Mirrorless (USB CAMERA)</h3>
+                <p class="text-slate-400 text-sm leading-relaxed font-medium" data-astro-cid-wernc5z7>UVC via USB Host. Compatible with Sony A7 series, Canon R series, and Fujifilm (with USB Streaming / UVC mode enabled). Requires USB-C OTG cable. Resolution selected after connecting.</p>
+              </div>
+          </div>
+        </section>
+
+        <!-- MONITORS -->
+        <section id="monitors" class="scroll-mt-32" data-astro-cid-wernc5z7>
+          <h2 class="text-4xl lg:text-5xl font-black text-white border-b border-white/10 pb-6 mb-12 italic uppercase tracking-tighter" data-astro-cid-wernc5z7>Monitor Setup</h2>
+          <div class="grid md:grid-cols-3 gap-6" data-astro-cid-wernc5z7>
+            <div class="p-8 bg-slate-800/20 rounded-3xl border border-white/5 hover:border-emerald-500/20 transition-all" data-astro-cid-wernc5z7>
+                <div class="text-2xl mb-4" data-astro-cid-wernc5z7>📺</div>
+                <h3 class="text-white font-black text-lg mb-3 uppercase italic tracking-tight" data-astro-cid-wernc5z7>Android TV</h3>
+                <p class="text-slate-400 text-sm leading-relaxed font-medium" data-astro-cid-wernc5z7>Install the Infinity Live companion app on Android TV. It discovers the phone automatically via Wi-Fi NSD. No IP entry needed.</p>
+              </div><div class="p-8 bg-slate-800/20 rounded-3xl border border-white/5 hover:border-emerald-500/20 transition-all" data-astro-cid-wernc5z7>
+                <div class="text-2xl mb-4" data-astro-cid-wernc5z7>📡</div>
+                <h3 class="text-white font-black text-lg mb-3 uppercase italic tracking-tight" data-astro-cid-wernc5z7>Chromecast / Mi Stick</h3>
+                <p class="text-slate-400 text-sm leading-relaxed font-medium" data-astro-cid-wernc5z7>Tap CAST in the app and select your device. The receiver uses chain-loading for ~15–25fps. PNA headers ensure Mi Stick compatibility.</p>
+              </div><div class="p-8 bg-slate-800/20 rounded-3xl border border-white/5 hover:border-emerald-500/20 transition-all" data-astro-cid-wernc5z7>
+                <div class="text-2xl mb-4" data-astro-cid-wernc5z7>🌐</div>
+                <h3 class="text-white font-black text-lg mb-3 uppercase italic tracking-tight" data-astro-cid-wernc5z7>Web Browser</h3>
+                <p class="text-slate-400 text-sm leading-relaxed font-medium" data-astro-cid-wernc5z7>Open <code>http://IP:8080</code> on any device in the same network. Supports MJPEG (~25fps) with automatic fallback to snapshot polling for Safari.</p>
+              </div>
+          </div>
+        </section>
+
+        <!-- SETTINGS -->
+        <section id="settings" class="scroll-mt-32" data-astro-cid-wernc5z7>
+          <h2 class="text-4xl lg:text-5xl font-black text-white border-b border-white/10 pb-6 mb-12 italic uppercase tracking-tighter" data-astro-cid-wernc5z7>Settings</h2>
+          <p class="text-lg font-medium text-slate-400 mb-10" data-astro-cid-wernc5z7>Tap the ⚙ button to open the settings menu. Each item shows its current value:</p>
+          <div class="overflow-hidden rounded-3xl border border-white/10" data-astro-cid-wernc5z7>
+            <div class="flex flex-col md:flex-row gap-2 md:gap-6 px-8 py-5 bg-slate-800/40 border-b border-white/5 last:border-0" data-astro-cid-wernc5z7>
+                <span class="text-emerald-500 font-black text-[10px] uppercase tracking-widest md:w-44 shrink-0" data-astro-cid-wernc5z7>Web Rotation</span>
+                <span class="text-slate-400 text-sm font-medium" data-astro-cid-wernc5z7>0° / 90° / 180° / 270° — affects the browser web monitor</span>
+              </div><div class="flex flex-col md:flex-row gap-2 md:gap-6 px-8 py-5 bg-slate-800/20 border-b border-white/5 last:border-0" data-astro-cid-wernc5z7>
+                <span class="text-emerald-500 font-black text-[10px] uppercase tracking-widest md:w-44 shrink-0" data-astro-cid-wernc5z7>TV Rotation</span>
+                <span class="text-slate-400 text-sm font-medium" data-astro-cid-wernc5z7>0° / 90° / 180° / 270° — affects the Android TV app</span>
+              </div><div class="flex flex-col md:flex-row gap-2 md:gap-6 px-8 py-5 bg-slate-800/40 border-b border-white/5 last:border-0" data-astro-cid-wernc5z7>
+                <span class="text-emerald-500 font-black text-[10px] uppercase tracking-widest md:w-44 shrink-0" data-astro-cid-wernc5z7>Cast Rotation</span>
+                <span class="text-slate-400 text-sm font-medium" data-astro-cid-wernc5z7>0° / 90° / 180° / 270° — affects Chromecast / Mi Stick</span>
+              </div><div class="flex flex-col md:flex-row gap-2 md:gap-6 px-8 py-5 bg-slate-800/20 border-b border-white/5 last:border-0" data-astro-cid-wernc5z7>
+                <span class="text-emerald-500 font-black text-[10px] uppercase tracking-widest md:w-44 shrink-0" data-astro-cid-wernc5z7>JPEG Quality</span>
+                <span class="text-slate-400 text-sm font-medium" data-astro-cid-wernc5z7>60 / 70 / 85 (default) / 95 — applies to all outputs</span>
+              </div><div class="flex flex-col md:flex-row gap-2 md:gap-6 px-8 py-5 bg-slate-800/40 border-b border-white/5 last:border-0" data-astro-cid-wernc5z7>
+                <span class="text-emerald-500 font-black text-[10px] uppercase tracking-widest md:w-44 shrink-0" data-astro-cid-wernc5z7>Cast Quality</span>
+                <span class="text-slate-400 text-sm font-medium" data-astro-cid-wernc5z7>60 (default) / 70 / 85 / 95 — independent Cast quality</span>
+              </div><div class="flex flex-col md:flex-row gap-2 md:gap-6 px-8 py-5 bg-slate-800/20 border-b border-white/5 last:border-0" data-astro-cid-wernc5z7>
+                <span class="text-emerald-500 font-black text-[10px] uppercase tracking-widest md:w-44 shrink-0" data-astro-cid-wernc5z7>Camera Resolution</span>
+                <span class="text-slate-400 text-sm font-medium" data-astro-cid-wernc5z7>480p / 720p / 1080p — phone camera only</span>
+              </div><div class="flex flex-col md:flex-row gap-2 md:gap-6 px-8 py-5 bg-slate-800/40 border-b border-white/5 last:border-0" data-astro-cid-wernc5z7>
+                <span class="text-emerald-500 font-black text-[10px] uppercase tracking-widest md:w-44 shrink-0" data-astro-cid-wernc5z7>Watermark</span>
+                <span class="text-slate-400 text-sm font-medium" data-astro-cid-wernc5z7>Select PNG/JPEG from gallery — shown bottom-right on all outputs, persisted between sessions</span>
+              </div>
+          </div>
+        </section>
+
+        <!-- WEB MONITOR -->
+        <section id="web-monitor" class="scroll-mt-32" data-astro-cid-wernc5z7>
+          <h2 class="text-4xl lg:text-5xl font-black text-white border-b border-white/10 pb-6 mb-12 italic uppercase tracking-tighter" data-astro-cid-wernc5z7>Web Monitor</h2>
+          <p class="text-lg font-medium text-slate-400 mb-8" data-astro-cid-wernc5z7>When connected, the address http://IP:8080 is shown in the app with:</p>
+          <ul class="space-y-4" data-astro-cid-wernc5z7>
+            <li class="flex items-start gap-4 p-5 bg-slate-800/20 rounded-2xl border border-white/5 text-slate-300 text-sm font-medium" data-astro-cid-wernc5z7>
+                <span class="text-emerald-500 shrink-0 mt-0.5" data-astro-cid-wernc5z7>✔</span> Tap the URL to copy it to clipboard.
+              </li><li class="flex items-start gap-4 p-5 bg-slate-800/20 rounded-2xl border border-white/5 text-slate-300 text-sm font-medium" data-astro-cid-wernc5z7>
+                <span class="text-emerald-500 shrink-0 mt-0.5" data-astro-cid-wernc5z7>✔</span> Tap QR to generate a QR code (512×512) scannable by other devices on the network.
+              </li><li class="flex items-start gap-4 p-5 bg-slate-800/20 rounded-2xl border border-white/5 text-slate-300 text-sm font-medium" data-astro-cid-wernc5z7>
+                <span class="text-emerald-500 shrink-0 mt-0.5" data-astro-cid-wernc5z7>✔</span> The web page includes an fps counter, rotation button for the web output, fullscreen mode, and automatic Safari fallback.
+              </li><li class="flex items-start gap-4 p-5 bg-slate-800/20 rounded-2xl border border-white/5 text-slate-300 text-sm font-medium" data-astro-cid-wernc5z7>
+                <span class="text-emerald-500 shrink-0 mt-0.5" data-astro-cid-wernc5z7>✔</span> TV and Cast rotation: controlled exclusively in the operator app.
+              </li>
+          </ul>
+        </section>
+
+        <!-- SUPPORT -->
+        <section id="support" class="pt-10" data-astro-cid-wernc5z7>
+          <div class="bg-gradient-to-br from-emerald-600 to-emerald-900 p-16 rounded-[3rem] text-center shadow-2xl relative overflow-hidden" data-astro-cid-wernc5z7>
+            <div class="relative z-10" data-astro-cid-wernc5z7>
+              <h3 class="text-5xl font-black text-white mb-6 italic uppercase tracking-tighter leading-none" data-astro-cid-wernc5z7>Need Help?</h3>
+              <p class="text-emerald-100 text-xl mb-12 max-w-md mx-auto font-medium leading-relaxed" data-astro-cid-wernc5z7>Technical issues or questions? Our team responds within 24 business hours.</p>
+              <a href="mailto:sales@infinityretouch.com" class="text-3xl font-black text-white hover:text-slate-900 transition-all border-b-4 border-white pb-2" data-astro-cid-wernc5z7>
+                sales@infinityretouch.com
+              </a>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="py-24 bg-black border-t border-white/5 text-center px-4 relative z-20">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-emerald-500 font-black text-2xl mb-8 tracking-tighter italic uppercase">INFINITY RETOUCH</div>
+        
+        <p class="text-slate-400 font-bold mb-6 uppercase text-xs tracking-[0.2em]">© 2026 Infinity Retouch / WINSERV TECNOLOGIA DA INFORMACAO.</p>
+        
+        <div class="max-w-4xl mx-auto mb-16 text-[10px] text-slate-600 leading-relaxed uppercase tracking-[0.2em] font-bold">
+            Adobe® and Photoshop® are registered trademarks of Adobe Inc. in the United States and/or other countries. This plugin is an independent product and is not affiliated with, sponsored by, or endorsed by Adobe Inc.
+        </div>
+
+        <!-- Products -->
+        <div class="flex flex-wrap justify-center gap-x-10 gap-y-3 mb-10">
+          <a href="/" class="flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.2em] text-slate-500 hover:text-emerald-400 transition-colors">
+            <span>🖼️</span> Backdrop Cleaner
+          </a>
+          <!-- COMING SOON — descomentar quando Theater e Live forem lançados
+          <a href={`${base}${langPrefix}/theater/`} class="flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.2em] text-slate-500 hover:text-emerald-400 transition-colors">
+            <span>📸</span> Infinity Theater
+          </a>
+          <a href={`${base}${langPrefix}/live/`} class="flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.2em] text-slate-500 hover:text-emerald-400 transition-colors">
+            <span>📱</span> Infinity Live
+          </a>
+          -->
+        </div>
+
+        <div class="h-px bg-white/5 max-w-xs mx-auto mb-10"></div>
+
+        <nav class="flex flex-wrap justify-center gap-x-12 gap-y-6 text-[11px] font-black uppercase tracking-[0.3em] text-slate-500">
+            <a href="/docs/" class="hover:text-emerald-400 transition-colors">
+                    Help Center
+                </a><a href="/download/" class="hover:text-emerald-400 transition-colors">
+                    Download Plugin
+                </a><a href="/recover/" class="hover:text-emerald-400 transition-colors">
+                    Recover License
+                </a><a href="/privacy-policy/" class="hover:text-emerald-400 transition-colors">
+                    Privacy Policy
+                </a><a href="/terms-of-service/" class="hover:text-emerald-400 transition-colors">
+                    Terms of Service
+                </a><a href="/refund-policy/" class="hover:text-emerald-400 transition-colors">
+                    Refund Policy
+                </a><a href="mailto:sales@infinityretouch.com" class="hover:text-emerald-400 transition-colors">
+                    Contact Support
+                </a>
+        </nav>
+    </div>
+</footer>
+
+	</body>
+</html>
